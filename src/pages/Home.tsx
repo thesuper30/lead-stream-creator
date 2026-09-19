@@ -300,7 +300,7 @@ const Home = () => {
               ))}
             </div>
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
-              <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
+              <p className="min-h-[48px] pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
               {differenceRows.map((row, i) => (
                 <p
                   key={row.matter}
