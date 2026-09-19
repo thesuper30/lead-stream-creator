@@ -345,7 +345,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
         {clients.slice(0, limit).map((client) => (
           <div
             key={client.name}
-            className="group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
+            className={`group relative overflow-hidden rounded-2xl border-2 border-border/50 hover:shadow-2xl transition-all duration-500 ${homePreview ? "bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-primary/5" : "bg-card/90 hover:border-brand/60 hover:shadow-brand/5"}`}
           >
             <div className="flex flex-col">
               {/* Logo area */}
