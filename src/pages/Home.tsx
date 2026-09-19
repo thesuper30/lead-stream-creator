@@ -17,6 +17,7 @@ import {
   Search,
   ShoppingBag,
   Sparkles,
+  Star,
   Target,
   TrendingUp,
   Users,
@@ -44,6 +45,11 @@ import upgradLogo from "@/assets/clients/upgrad.png";
 import tata1mgLogo from "@/assets/clients/tata1mg.png";
 import shriramLogo from "@/assets/clients/shriram-properties.png";
 import jainLogo from "@/assets/clients/jain-university.png";
+import harvestLogo from "@/assets/clients/harvest-international.png";
+import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
+import smrLogo from "@/assets/clients/smr-university.png";
+import atriaLogo from "@/assets/clients/atria-institute.png";
+import lancesoftLogo from "@/assets/clients/lancesoft.png";
 import indEcommerce from "@/assets/ind-ecommerce.jpg";
 import indSaas from "@/assets/ind-saas.jpg";
 import indLifestyle from "@/assets/ind-lifestyle.jpg";
@@ -95,12 +101,17 @@ const process = [
 ];
 
 const clientLogos = [
-  { src: magicbricksLogo, name: "Magicbricks" },
-  { src: mamaearthLogo, name: "Mamaearth" },
-  { src: upgradLogo, name: "upGrad" },
-  { src: tata1mgLogo, name: "Tata 1mg" },
-  { src: shriramLogo, name: "Shriram Properties" },
-  { src: jainLogo, name: "Jain University" },
+  { src: magicbricksLogo, name: "Magicbricks", industry: "Real Estate" },
+  { src: bhrighuLogo, name: "Bhrighu Academy", industry: "Education" },
+  { src: mamaearthLogo, name: "Mamaearth", industry: "D2C / E-commerce" },
+  { src: jainLogo, name: "Jain University", industry: "Education" },
+  { src: upgradLogo, name: "upGrad", industry: "Education" },
+  { src: harvestLogo, name: "Harvest International School", industry: "Education" },
+  { src: tata1mgLogo, name: "Tata 1mg", industry: "Healthcare" },
+  { src: smrLogo, name: "SMR University", industry: "Education" },
+  { src: shriramLogo, name: "Shriram Properties", industry: "Real Estate" },
+  { src: atriaLogo, name: "Atria Institute of Technology", industry: "Education" },
+  { src: lancesoftLogo, name: "Lancesoft", industry: "Healthcare" },
 ];
 
 const heroUsps = [
@@ -186,14 +197,63 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="border-b border-border bg-muted/30 py-8">
+      <section className="border-b border-border bg-background py-8 md:py-10">
         <div className="container mx-auto px-4">
-          <p className="mb-7 text-center text-[11px] font-semibold uppercase text-muted-foreground">Trusted by ambitious brands</p>
-          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-            <div className="animate-marquee flex w-max items-center gap-16 pr-16">
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
-                <img key={`${logo.name}-${i}`} src={logo.src} alt={logo.name} className="h-12 w-auto max-w-[180px] object-contain md:h-14 md:max-w-[200px]" loading="lazy" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
+            <div className="flex items-center gap-1">
+              {[1,2,3,4,5].map((i) => (
+                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
+            </div>
+            <p className="text-sm font-medium text-foreground">
+              Trusted by <span className="text-brand font-bold">50+ leading companies</span> across industries
+            </p>
+          </div>
+
+          <div className="overflow-hidden">
+            <div className="flex gap-4 animate-marquee" style={{ width: "max-content" }}>
+              {[...clientLogos, ...clientLogos].map((client, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 flex items-center gap-3 px-4 py-2.5 bg-muted rounded-xl border border-border"
+                >
+                  <img
+                    src={client.src}
+                    alt={client.name}
+                    className="w-12 h-12 object-cover rounded-lg"
+                    loading="lazy"
+                    decoding="async"
+                    width="48"
+                    height="48"
+                  />
+                  <div>
+                    <span className="text-foreground font-medium whitespace-nowrap block text-sm">{client.name}</span>
+                    <span className="text-muted-foreground text-xs">{client.industry}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mt-6 md:mt-8 pt-4 md:pt-5 border-t border-border">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-foreground">300%+</p>
+              <p className="text-xs text-muted-foreground">Avg. Traffic Growth</p>
+            </div>
+            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="text-center">
+              <p className="text-2xl font-bold text-foreground">50+</p>
+              <p className="text-xs text-muted-foreground">AI Audits Delivered</p>
+            </div>
+            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="text-center">
+              <p className="text-2xl font-bold text-foreground">$2M+</p>
+              <p className="text-xs text-muted-foreground">Revenue Generated</p>
+            </div>
+            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="text-center">
+              <p className="text-2xl font-bold text-foreground">4.8/5</p>
+              <p className="text-xs text-muted-foreground">Client Rating</p>
             </div>
           </div>
         </div>
