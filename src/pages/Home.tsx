@@ -252,25 +252,21 @@ const Home = () => {
           </div>
 
           <div className="overflow-hidden">
-            <div className="flex gap-4 animate-marquee" style={{ width: "max-content" }}>
+            <div className="flex gap-5 animate-marquee" style={{ width: "max-content" }}>
               {[...clientLogos, ...clientLogos].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center gap-3 px-4 py-2.5 rounded-xl border border-border/20 bg-background/10 backdrop-blur-sm"
+                  className="flex-shrink-0 flex items-center justify-center px-5 py-3 rounded-xl border border-border/20 bg-background/10 backdrop-blur-sm"
                 >
                   <img
                     src={client.src}
                     alt={client.name}
-                    className="w-12 h-12 object-cover rounded-lg"
+                    className="h-14 w-auto object-contain"
                     loading="lazy"
                     decoding="async"
-                    width="48"
-                    height="48"
+                    width="96"
+                    height="64"
                   />
-                  <div>
-                    <span className="text-primary-foreground font-medium whitespace-nowrap block text-sm">{client.name}</span>
-                    <span className="text-primary-foreground/60 text-xs">{client.industry}</span>
-                  </div>
                 </div>
               ))}
             </div>
