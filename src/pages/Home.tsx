@@ -142,9 +142,9 @@ const Home = () => {
     <Navbar />
     <main className="min-h-screen bg-background pt-16 md:pt-20">
       <section className="relative overflow-hidden border-b border-border bg-background lg:min-h-[590px]">
-        <div className="relative h-[330px] overflow-hidden sm:h-[390px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[61%]">
+        <div className="relative h-[330px] overflow-hidden sm:h-[390px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[66%]">
           <img src={heroImage} alt="Digital marketing team collaborating in a bright office" className="absolute inset-0 h-full w-full object-cover object-center" width={1600} height={1104} fetchPriority="high" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/35 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/25 lg:to-transparent" />
           <div className="absolute right-5 top-5 hidden text-left lg:block xl:right-9 xl:top-8">
             <p className="text-xl font-semibold leading-[1.35] text-foreground xl:text-2xl">Ideas<br />Strategy<br />Execution<br />Growth</p>
             <span className="mt-3 block h-1 w-12 bg-brand" />
@@ -157,7 +157,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative z-10 -mt-1 px-5 pb-7 sm:px-8 sm:pb-9 lg:mt-0 lg:flex lg:min-h-[590px] lg:w-[57%] lg:flex-col lg:justify-center lg:px-12 lg:py-12 xl:px-16">
+        <div className="relative z-10 -mt-1 px-5 pb-7 sm:px-8 sm:pb-9 lg:mt-0 lg:flex lg:min-h-[590px] lg:w-[50%] lg:flex-col lg:justify-center lg:pl-16 lg:pr-6 lg:py-12 xl:pl-24">
           <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-brand/20 bg-brand-light px-3 py-1.5 text-[10px] font-semibold uppercase text-brand sm:text-xs">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" /> AI-powered digital marketing agency
           </p>
