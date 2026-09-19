@@ -114,6 +114,8 @@ const leadGenClients = [
 /* ── Demo content for non-report tabs ── */
 
 const logoImages = [
+  { src: da360Logo, alt: "Digital Academy 360 logo design" },
+  { src: icsLogo, alt: "ICS logo design" },
   { src: aasaanImpexLogo, alt: "Aasaan Impex logo design" },
   { src: berylLogo, alt: "Beryl Luxury Interiors logo design" },
   { src: brownBakeLogo, alt: "Brown Bake Company logo design" },
@@ -129,9 +131,7 @@ const logoImages = [
   { src: pebbleLogo, alt: "Pebble logo design" },
   { src: weAreTravellersLogo, alt: "We Are Travellers logo design" },
   { src: nishitaEximLogo, alt: "Nishita Exim logo design" },
-  { src: da360Logo, alt: "Digital Academy 360 logo design" },
   { src: kashtiLogo, alt: "Kashti logo design" },
-  { src: icsLogo, alt: "ICS logo design" },
   { src: logo1, alt: "Logo design portfolio project 1" },
   { src: logo2, alt: "Logo design portfolio project 2" },
   { src: logo3, alt: "Logo design portfolio project 3" },
