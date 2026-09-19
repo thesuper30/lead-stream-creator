@@ -196,11 +196,12 @@ const Home = () => {
 
     <Navbar />
     <main className="min-h-screen bg-background pt-16 md:pt-20">
-      <section className="relative overflow-hidden border-b border-border bg-background lg:min-h-[590px]">
+      <section className="relative overflow-hidden bg-background lg:min-h-[590px]">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-0">
           <div className="relative h-[330px] overflow-hidden sm:h-[390px] lg:absolute lg:inset-y-0 lg:right-8 lg:h-auto lg:w-[55%]">
             <img src={heroImage} alt="Digital marketing team collaborating in a bright office" className="absolute inset-0 h-full w-full object-cover object-center" width={1600} height={1104} fetchPriority="high" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/30 lg:to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background to-transparent lg:h-28" />
             <div className="absolute bottom-5 right-5 rounded-lg border border-border bg-background/95 p-4 shadow-xl backdrop-blur-md sm:bottom-7 sm:right-7 lg:right-0 lg:bottom-10">
               <div className="flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-md bg-brand-light text-brand"><BarChart3 className="h-6 w-6" /></span>
