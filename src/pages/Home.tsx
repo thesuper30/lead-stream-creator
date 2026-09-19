@@ -189,8 +189,12 @@ const Home = () => {
       <section className="border-b border-border bg-muted/30 py-8">
         <div className="container mx-auto px-4">
           <p className="mb-7 text-center text-[11px] font-semibold uppercase text-muted-foreground">Trusted by ambitious brands</p>
-          <div className="grid grid-cols-3 items-center gap-5 md:grid-cols-6 md:gap-10">
-            {clientLogos.map((logo) => <img key={logo.name} src={logo.src} alt={logo.name} className="mx-auto h-9 w-full max-w-[130px] object-contain grayscale transition duration-300 hover:grayscale-0" loading="lazy" />)}
+          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="animate-marquee flex w-max items-center gap-16 pr-16">
+              {[...clientLogos, ...clientLogos].map((logo, i) => (
+                <img key={`${logo.name}-${i}`} src={logo.src} alt={logo.name} className="h-12 w-auto max-w-[180px] object-contain md:h-14 md:max-w-[200px]" loading="lazy" />
+              ))}
+            </div>
           </div>
         </div>
       </section>
