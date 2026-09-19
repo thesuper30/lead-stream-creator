@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -70,6 +70,15 @@ const industries = [
   { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate", image: indRealEstate, text: "Builders, developers & brokers" },
   { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes", image: indEducation, text: "Institutes, coaching & ed-tech" },
   { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", image: indHospitality, text: "Hotels, resorts & venues" },
+];
+
+const differenceRows = [
+  { matter: "Strategy & Execution", super30: "End-to-end, ROI focused", others: "Only execution or limited strategy" },
+  { matter: "Use of AI & Automation", super30: "Integrated across all services", others: "Minimal or no AI adoption" },
+  { matter: "Reporting & Transparency", super30: "Real-time, transparent reporting", others: "Basic, delayed reports" },
+  { matter: "Focus on Business Outcomes", super30: "Revenue & long-term growth", others: "Focus on vanity metrics" },
+  { matter: "Dedicated Expert Team", super30: "Senior specialists, hands-on", others: "Junior resources, high turnover" },
+  { matter: "Flexibility & Personalization", super30: "Tailored to your business goals", others: "One-size-fits-all approach" },
 ];
 
 const caseStudies = [
