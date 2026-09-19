@@ -216,8 +216,27 @@ const Home = () => (
       <section className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"><SectionIntro eyebrow="Industries We Serve" title="Growth marketing shaped for your market." /><Link to="/industries" className="inline-flex items-center text-sm font-semibold text-brand">Explore industries <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {industries.map((industry) => <Link key={industry.label} to={industry.href} className="group rounded-lg border border-border bg-background p-5 text-center transition hover:border-brand/40 hover:shadow-md"><industry.icon className="mx-auto h-7 w-7 text-foreground transition group-hover:text-brand" /><p className="mt-4 text-sm font-semibold text-foreground">{industry.label}</p></Link>)}
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {industries.map((industry) => (
+              <Link key={industry.label} to={industry.href} className="group relative overflow-hidden rounded-2xl border border-border bg-background transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={industry.image} alt={`${industry.label} marketing`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" width={768} height={960} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
+                  <span className="absolute left-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/90 text-foreground backdrop-blur transition group-hover:bg-brand group-hover:text-primary-foreground">
+                    <industry.icon className="h-4 w-4" />
+                  </span>
+                </div>
+                <div className="flex items-center justify-between gap-3 p-5">
+                  <div>
+                    <h3 className="text-base font-semibold text-foreground">{industry.label}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground">{industry.text}</p>
+                  </div>
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition group-hover:border-brand group-hover:bg-brand group-hover:text-primary-foreground">
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
