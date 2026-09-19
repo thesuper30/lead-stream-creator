@@ -292,17 +292,12 @@ const Home = () => {
               {differenceRows.map((row, i) => (
                 <p
                   key={row.matter}
-                  className={`flex items-center gap-3 border-t border-brand/10 py-4 text-sm font-medium transition-all duration-300 ${activeRow === i ? "translate-x-1 text-foreground" : "text-foreground/70"}`}
+                  className={`flex items-center gap-3 border-t border-brand/10 px-2 py-4 text-sm font-medium rounded-lg transition-all duration-300 ${activeRow === i ? "translate-x-1 bg-background/70 text-foreground shadow-sm" : "text-foreground/70"}`}
                 >
                   <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand transition-transform duration-300 ${activeRow === i ? "scale-110" : ""}`}><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>
                   {row.super30}
                 </p>
               ))}
-              <div className="pointer-events-none absolute inset-x-6 top-[4.5rem] bottom-6 flex flex-col">
-                {differenceRows.map((row, i) => (
-                  <div key={row.matter} className={`flex-1 rounded-lg bg-brand/10 ring-1 ring-brand/30 transition-opacity duration-300 ${activeRow === i ? "opacity-100" : "opacity-0"}`} style={{ marginTop: i === 0 ? 0 : "0.5rem", marginBottom: "0.25rem" }} />
-                ))}
-              </div>
             </div>
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
               <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
