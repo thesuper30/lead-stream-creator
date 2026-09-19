@@ -161,7 +161,7 @@ const whySuper30 = [
 
 const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) => (
   <div className="max-w-2xl">
-    <p className="mb-3 text-xs font-semibold uppercase text-brand">— {eyebrow}</p>
+    <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— {eyebrow}</p>
     <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">{title}</h2>
     {copy && <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{copy}</p>}
   </div>
