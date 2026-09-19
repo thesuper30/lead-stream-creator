@@ -252,25 +252,21 @@ const Home = () => {
           </div>
 
           <div className="overflow-hidden">
-            <div className="flex gap-4 animate-marquee" style={{ width: "max-content" }}>
+            <div className="flex gap-5 animate-marquee" style={{ width: "max-content" }}>
               {[...clientLogos, ...clientLogos].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center gap-3 px-4 py-2.5 rounded-xl border border-border/20 bg-background/10 backdrop-blur-sm"
+                  className="flex-shrink-0 flex items-center justify-center px-5 py-3 rounded-xl border border-border/20 bg-background/10 backdrop-blur-sm"
                 >
                   <img
                     src={client.src}
                     alt={client.name}
-                    className="w-12 h-12 object-cover rounded-lg"
+                    className="h-14 w-auto object-contain"
                     loading="lazy"
                     decoding="async"
-                    width="48"
-                    height="48"
+                    width="96"
+                    height="64"
                   />
-                  <div>
-                    <span className="text-primary-foreground font-medium whitespace-nowrap block text-sm">{client.name}</span>
-                    <span className="text-primary-foreground/60 text-xs">{client.industry}</span>
-                  </div>
                 </div>
               ))}
             </div>
@@ -414,8 +410,7 @@ const Home = () => {
 
       <WorkPortfolioTabs homePreview />
 
-      <section className="relative overflow-hidden bg-background py-16 md:py-24">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border" />
+      <section className="relative overflow-hidden bg-brand/5 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
