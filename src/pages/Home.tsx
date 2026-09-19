@@ -54,12 +54,6 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import indEcommerce from "@/assets/ind-ecommerce.jpg";
-import indSaas from "@/assets/ind-saas.jpg";
-import indLifestyle from "@/assets/ind-lifestyle.jpg";
-import indRealEstate from "@/assets/ind-real-estate.jpg";
-import indEducation from "@/assets/ind-education.jpg";
-import indHospitality from "@/assets/ind-hospitality.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 const FAQSection = lazy(() => import("@/components/landing/FAQSection").then((m) => ({ default: m.FAQSection })));
@@ -74,12 +68,12 @@ const services = [
 ];
 
 const industries = [
-  { icon: ShoppingBag, label: "Ecommerce", href: "/ecommerce-marketing-agency-bangalore", image: indEcommerce, text: "Stores, marketplaces & D2C brands" },
-  { icon: Sparkles, label: "SaaS", href: "/industries/technology", image: indSaas, text: "Software & tech products" },
-  { icon: HeartPulse, label: "Lifestyle", href: "/industries/lifestyle", image: indLifestyle, text: "Wellness, beauty & retail" },
-  { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate", image: indRealEstate, text: "Builders, developers & brokers" },
-  { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes", image: indEducation, text: "Institutes, coaching & ed-tech" },
-  { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", image: indHospitality, text: "Hotels, resorts & venues" },
+  { icon: ShoppingBag, label: "Ecommerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven marketing for stores, marketplaces, and D2C brands focused on profitable growth." },
+  { icon: Sparkles, label: "SaaS & Technology", href: "/industries/technology", text: "Full-funnel growth systems that turn complex products into clear demand and qualified leads." },
+  { icon: HeartPulse, label: "Lifestyle", href: "/industries/lifestyle", text: "Brand, social, and performance campaigns for wellness, beauty, and modern retail businesses." },
+  { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate", text: "Search, paid media, and conversion journeys that help developers attract serious enquiries." },
+  { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes", text: "Digital acquisition for institutes, coaching brands, and ed-tech businesses ready to scale." },
+  { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", text: "Integrated visibility and booking campaigns for hotels, resorts, restaurants, and venues." },
 ];
 
 const differenceRows = [
@@ -372,30 +366,38 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"><SectionIntro eyebrow="Industries We Serve" title="Growth marketing shaped for your market." /><Link to="/industries" className="inline-flex items-center text-sm font-semibold text-brand">Explore industries <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {industries.map((industry) => (
-              <Link key={industry.label} to={industry.href} className="group relative overflow-hidden rounded-2xl border border-border bg-background transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={industry.image} alt={`${industry.label} marketing`} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" width={768} height={960} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
-                  <span className="absolute left-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/90 text-foreground backdrop-blur transition group-hover:bg-brand group-hover:text-primary-foreground">
-                    <industry.icon className="h-4 w-4" />
-                  </span>
-                </div>
-                <div className="flex items-center justify-between gap-3 p-5">
-                  <div>
-                    <h3 className="text-base font-semibold text-foreground">{industry.label}</h3>
-                    <p className="mt-1 text-xs text-muted-foreground">{industry.text}</p>
+      <section className="dark relative overflow-hidden bg-background py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.45)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.45)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="container relative mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex rounded-full border border-brand/40 bg-brand/10 px-4 py-2 text-xs font-semibold text-brand">Industries We Serve</span>
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses ready to grow.</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry, index) => (
+              <Link key={industry.label} to={industry.href} className="group flex min-h-[172px] gap-5 rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand/60 hover:bg-card">
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-brand transition duration-300 group-hover:bg-brand group-hover:text-primary-foreground ${index === 0 ? "bg-brand" : "bg-brand/15"}`}>
+                  <industry.icon className={`h-5 w-5 ${index === 0 ? "text-primary-foreground" : ""}`} />
+                </span>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className={`text-lg font-semibold transition-colors ${index === 0 ? "text-brand" : "text-foreground group-hover:text-brand"}`}>{industry.label}</h3>
+                    <ArrowRight className="h-4 w-4 text-brand opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100" />
                   </div>
-                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition group-hover:border-brand group-hover:bg-brand group-hover:text-primary-foreground">
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{industry.text}</p>
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="mt-9 text-center">
+            <p className="text-sm text-muted-foreground">Don&apos;t see your industry? We work with all growth-focused businesses.</p>
+            <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" className="rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get a Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-transparent px-7 text-foreground hover:bg-muted"><Link to="/industries">Explore All Industries <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            </div>
           </div>
         </div>
       </section>
