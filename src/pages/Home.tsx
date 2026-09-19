@@ -410,8 +410,7 @@ const Home = () => {
 
       <WorkPortfolioTabs homePreview />
 
-      <section className="relative overflow-hidden bg-background py-16 md:py-24">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border" />
+      <section className="relative overflow-hidden bg-brand/5 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
