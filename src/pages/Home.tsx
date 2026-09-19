@@ -118,7 +118,9 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
   </div>
 );
 
-const Home = () => (
+const Home = () => {
+  const [activeRow, setActiveRow] = useState(0);
+  return (
   <>
     <Helmet>
       <title>Digital Marketing Agency &amp; AI Growth Company | TheSuper30</title>
@@ -310,6 +312,7 @@ const Home = () => (
       <Footer />
     </main>
   </>
-);
+  );
+};
 
 export default Home;
