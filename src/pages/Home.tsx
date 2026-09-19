@@ -466,10 +466,9 @@ const Home = () => {
                   <img src={member.image} alt={`${member.name} at The Super 30`} width={800} height={1000} className={`relative h-full w-full object-cover object-top transition duration-700 motion-reduce:transition-none ${isActive ? "scale-[1.02] saturate-100" : "saturate-[.85] group-hover:scale-[1.02] group-hover:saturate-100"}`} loading="lazy" />
                   <span className={`absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-semibold backdrop-blur-md transition-all duration-300 sm:left-5 sm:top-5 ${isActive ? "rotate-0 border-brand bg-brand text-primary-foreground" : "-rotate-12 border-border bg-background/80 text-foreground group-hover:rotate-0 group-hover:border-brand group-hover:bg-brand group-hover:text-primary-foreground"}`}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={`absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wide backdrop-blur-md transition-all duration-300 ${isActive ? "bg-brand text-primary-foreground" : "translate-y-1 bg-background/85 text-foreground opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.category}</span>
-                  <div className="absolute inset-x-0 bottom-0 bg-background/95 p-4 backdrop-blur-sm sm:p-5">
-                    <span className={`mb-3 block h-0.5 bg-brand transition-all duration-500 ${isActive ? "w-10" : "w-0 group-hover:w-10"}`} />
-                    <h3 className="text-base font-semibold text-foreground sm:text-xl">{member.name}</h3>
-                    <p className={`mt-1 max-w-sm text-xs leading-snug text-muted-foreground transition-all duration-300 sm:text-sm ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.expertise}</p>
+                  <div className="absolute inset-x-0 bottom-0 bg-background/95 px-3 py-2 backdrop-blur-sm sm:px-4 sm:py-3">
+                    <h3 className="text-sm font-semibold text-foreground sm:text-base">{member.name}</h3>
+                    <p className="mt-0.5 max-w-sm text-[11px] leading-snug text-muted-foreground sm:text-xs">{member.expertise}</p>
                   </div>
                 </button>
               );
