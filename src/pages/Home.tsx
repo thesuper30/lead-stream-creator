@@ -67,7 +67,6 @@ import abhishekTeam from "@/assets/team/abhishek.png";
 import azarudheenTeam from "@/assets/team/azarudheen.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
-const FAQSection = lazy(() => import("@/components/landing/FAQSection").then((m) => ({ default: m.FAQSection })));
 
 const services = [
   { icon: Search, title: "AI SEO", text: "Build visibility across Google and AI search with technical, content, and authority systems.", href: "/seo-company-bangalore", image: aiSeoImage },
@@ -511,7 +510,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Suspense fallback={null}><BlogSection /><FAQSection slug="home" /></Suspense>
+      <Suspense fallback={null}><BlogSection /></Suspense>
       <Footer />
     </main>
   </>
