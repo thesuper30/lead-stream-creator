@@ -7,7 +7,6 @@ import {
   Bot,
   BriefcaseBusiness,
   Building2,
-  Check,
   CirclePlay,
   Code2,
   Eye,
@@ -29,7 +28,6 @@ import {
   TrendingUp,
   Users,
   Zap,
-  X,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -57,6 +55,20 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
+import amitTeam from "@/assets/team/amit.png";
+import lalitTeam from "@/assets/team/lalit.png";
+import mayankTeam from "@/assets/team/mayank.png";
+import vigneshTeam from "@/assets/team/vignesh.png";
+import sujeetTeam from "@/assets/team/sujeet.png";
+import swanandTeam from "@/assets/team/swanand.png";
+import sathyaTeam from "@/assets/team/sathya.png";
+import monishaTeam from "@/assets/team/monisha.png";
+import kailashTeam from "@/assets/team/kailash.png";
+import deepakTeam from "@/assets/team/deepak.png";
+import madhuTeam from "@/assets/team/madhu.png";
+import anushTeam from "@/assets/team/anush.png";
+import abhishekTeam from "@/assets/team/abhishek.png";
+import azarudheenTeam from "@/assets/team/azarudheen.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 const FAQSection = lazy(() => import("@/components/landing/FAQSection").then((m) => ({ default: m.FAQSection })));
@@ -82,14 +94,24 @@ const industries = [
   { icon: Hotel, label: "Hospitality & Travel", href: "/industries/hospitality", text: "Social media, SEO, and paid campaigns that help hotels, resorts, and travel businesses drive bookings." },
 ];
 
-const differenceRows = [
-  { matter: "Strategy & Execution", super30: "End-to-end, ROI focused", others: "Only execution or limited strategy" },
-  { matter: "Use of AI & Automation", super30: "Integrated across all services", others: "Minimal or no AI adoption" },
-  { matter: "Reporting & Transparency", super30: "Real-time, transparent reporting", others: "Basic, delayed reports" },
-  { matter: "Focus on Business Outcomes", super30: "Revenue & long-term growth", others: "Focus on vanity metrics" },
-  { matter: "Dedicated Expert Team", super30: "Senior specialists, hands-on", others: "Junior resources, high turnover" },
-  { matter: "Flexibility & Personalization", super30: "Tailored to your business goals", others: "One-size-fits-all approach" },
+const teamMembers = [
+  { name: "Amit", expertise: "Growth Strategy & Business Development", category: "Strategy", image: amitTeam },
+  { name: "Lalit", expertise: "SEO Architecture & Technical Audits", category: "Search", image: lalitTeam },
+  { name: "Mayank", expertise: "Digital Strategy & Analytics", category: "Strategy", image: mayankTeam },
+  { name: "Vignesh", expertise: "Ex-Google, 12+ years in SEO", category: "Search", image: vigneshTeam },
+  { name: "Sujeet", expertise: "AI/ML SEO Specialist", category: "Search", image: sujeetTeam },
+  { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", category: "Performance", image: swanandTeam },
+  { name: "Sathya", expertise: "Content Strategy & SEO Expert", category: "Creative", image: sathyaTeam },
+  { name: "Monisha", expertise: "Full-stack Developer, SEO Engineer", category: "Technology", image: monishaTeam },
+  { name: "Kailash", expertise: "IIT Delhi, Analytics Expert", category: "Strategy", image: kailashTeam },
+  { name: "Deepak", expertise: "10+ years in SEO & PPC", category: "Performance", image: deepakTeam },
+  { name: "Madhu", expertise: "E-commerce SEO Expert", category: "Search", image: madhuTeam },
+  { name: "Anush", expertise: "Google Ads Certified, ROI Expert", category: "Performance", image: anushTeam },
+  { name: "Abhishek", expertise: "React & Node.js Expert", category: "Technology", image: abhishekTeam },
+  { name: "Azarudheen", expertise: "UI/UX & Creative Design", category: "Creative", image: azarudheenTeam },
 ];
+
+const teamCategories = ["All", "Strategy", "Search", "Performance", "Technology", "Creative"];
 
 const process = [
   { number: "01", title: "Discover", text: "Understand your market, goals, and growth constraints.", image: auditImage },
@@ -159,7 +181,9 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
 );
 
 const Home = () => {
-  const [activeRow, setActiveRow] = useState(0);
+  const [teamCategory, setTeamCategory] = useState("All");
+  const [activeMember, setActiveMember] = useState(teamMembers[0].name);
+  const visibleTeam = teamCategory === "All" ? teamMembers : teamMembers.filter((member) => member.category === teamCategory);
   return (
   <>
     <Helmet>
@@ -404,60 +428,67 @@ const Home = () => {
 
       <WorkPortfolioTabs homePreview />
 
-      <section className="bg-muted/30 py-16 md:py-24">
+      <section className="relative overflow-hidden bg-muted/30 py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-border" />
         <div className="container mx-auto px-4">
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-brand">The Super 30 Difference</p>
-              <h2 className="mt-3 max-w-xl text-3xl font-semibold leading-tight text-foreground md:text-4xl">Not Just Another Agency.<br />A True Growth Partner.</h2>
+          <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand">The people behind the work</p>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">Meet Our <span className="text-brand">Super 30</span></h2>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Strategists, search specialists, media experts, developers, and designers — one focused team built around your growth.</p>
             </div>
-            <Link to="/about" className="inline-flex items-center text-sm font-semibold text-brand">See Why We’re Different <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            <Button asChild variant="outline" className="w-fit rounded-full border-border bg-background px-6"><Link to="/about">Meet the whole team <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
           </div>
-          <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Tap a row to compare</p>
-          <div className="mt-3 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
-            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
-              <div className="min-h-[48px] pb-4" aria-hidden="true" />
-              {differenceRows.map((row, i) => (
+
+          <div className="mt-9 flex gap-2 overflow-x-auto pb-2" aria-label="Filter team by specialty">
+            {teamCategories.map((category) => (
+              <Button
+                key={category}
+                type="button"
+                size="sm"
+                variant={teamCategory === category ? "default" : "outline"}
+                className={`shrink-0 rounded-full px-5 ${teamCategory === category ? "bg-brand text-primary-foreground hover:bg-brand-dark" : "border-border bg-background text-foreground hover:border-brand/40 hover:bg-brand-light"}`}
+                onClick={() => {
+                  setTeamCategory(category);
+                  const firstMember = category === "All" ? teamMembers[0] : teamMembers.find((member) => member.category === category);
+                  if (firstMember) setActiveMember(firstMember.name);
+                }}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
+          <div className="mt-6 grid auto-rows-[250px] grid-cols-2 gap-3 sm:auto-rows-[290px] lg:grid-cols-4 lg:gap-4">
+            {visibleTeam.map((member, index) => {
+              const isActive = activeMember === member.name;
+              const isFeatured = teamCategory === "All" && (index === 0 || index === 7);
+              return (
                 <button
-                  key={row.matter}
+                  key={member.name}
                   type="button"
-                  onClick={() => setActiveRow(i)}
-                  onMouseEnter={() => setActiveRow(i)}
-                  className={`flex w-full items-center justify-between gap-2 border-t border-border py-4 text-left text-sm font-medium transition-all duration-300 ${activeRow === i ? "text-brand" : "text-foreground hover:text-brand/70"}`}
+                  onClick={() => setActiveMember(member.name)}
+                  onMouseEnter={() => setActiveMember(member.name)}
+                  className={`group relative overflow-hidden rounded-lg border text-left outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:rounded-xl ${isFeatured ? "sm:col-span-2 sm:row-span-2" : ""} ${isActive ? "border-brand shadow-xl" : "border-border shadow-sm hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"}`}
+                  aria-pressed={isActive}
+                  aria-label={`View ${member.name}, ${member.expertise}`}
                 >
-                  {row.matter}
-                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-brand transition-all duration-300 ${activeRow === i ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
+                  <img src={member.image} alt={`${member.name} at The Super 30`} className={`h-full w-full object-cover transition duration-700 motion-reduce:transition-none ${isActive ? "scale-105" : "group-hover:scale-105"}`} loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/5 to-transparent" />
+                  <span className={`absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wide backdrop-blur-md transition-all duration-300 ${isActive ? "bg-brand text-primary-foreground" : "translate-y-1 bg-background/85 text-foreground opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.category}</span>
+                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                    <span className={`mb-3 block h-0.5 bg-brand transition-all duration-500 ${isActive ? "w-10" : "w-0 group-hover:w-10"}`} />
+                    <h3 className={`font-semibold text-primary-foreground ${isFeatured ? "text-xl sm:text-3xl" : "text-base sm:text-xl"}`}>{member.name}</h3>
+                    <p className={`mt-1 max-w-sm leading-snug text-primary-foreground/80 transition-all duration-300 ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"} ${isFeatured ? "text-sm sm:text-base" : "text-xs sm:text-sm"}`}>{member.expertise}</p>
+                  </div>
                 </button>
-              ))}
-            </div>
-            <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
-              <p className="min-h-[48px] pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
-              {differenceRows.map((row, i) => (
-                <p
-                  key={row.matter}
-                  className={`flex items-center gap-3 border-t border-brand/10 px-2 py-4 text-sm font-medium rounded-lg transition-all duration-300 ${activeRow === i ? "translate-x-1 bg-background/70 text-foreground shadow-sm" : "text-foreground/70"}`}
-                >
-                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand transition-transform duration-300 ${activeRow === i ? "scale-110" : ""}`}><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>
-                  {row.super30}
-                </p>
-              ))}
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
-              <p className="min-h-[48px] pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
-              {differenceRows.map((row, i) => (
-                <p
-                  key={row.matter}
-                  className={`flex items-center gap-3 border-t border-border py-4 text-sm transition-all duration-300 ${activeRow === i ? "text-foreground" : "text-muted-foreground"}`}
-                >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>
-                  {row.others}
-                </p>
-              ))}
-            </div>
+              );
+            })}
           </div>
-          <div className="mt-10 flex flex-col items-center gap-3 text-center">
-            <Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Experience the Difference <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
-            <p className="text-xs text-muted-foreground">Start with a free growth audit — no commitments, just clarity.</p>
+
+          <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-border bg-background px-5 py-4 sm:flex-row sm:items-center sm:rounded-xl">
+            <p className="text-sm text-muted-foreground"><span className="font-semibold text-foreground">{visibleTeam.find((member) => member.name === activeMember)?.name}</span> — {visibleTeam.find((member) => member.name === activeMember)?.expertise}</p>
+            <span className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Selected specialist</span>
           </div>
         </div>
       </section>
