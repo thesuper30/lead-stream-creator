@@ -347,7 +347,7 @@ const Home = () => {
               Why Us
             </span>
             <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-              Why We Are the Preferred AI Digital Marketing Company for Rapid Growth
+              Why We Are Your AI Growth Partner
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               We combine human creativity with AI-led insight to anticipate market shifts, sharpen decisions, and help brands grow profitably.
