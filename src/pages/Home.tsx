@@ -288,7 +288,7 @@ const Home = () => {
               ))}
             </div>
             <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
-              <p className="pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
+              <p className="min-h-[48px] pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
               {differenceRows.map((row, i) => (
                 <p
                   key={row.matter}
