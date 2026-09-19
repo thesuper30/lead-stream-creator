@@ -51,13 +51,13 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import amitTeamAsset from "@/assets/team/Amit_Singh.png.asset.json";
-import mayankTeamAsset from "@/assets/team/Mayank_1.png.asset.json";
-import praveenTeamAsset from "@/assets/team/Praveen_1.png.asset.json";
-import harshavardhanTeamAsset from "@/assets/team/Harshavardhan.png.asset.json";
-import chandrashekarTeamAsset from "@/assets/team/Chandrashekar.png.asset.json";
-import anandTeamAsset from "@/assets/team/Anand_3.png.asset.json";
-import likhithTeamAsset from "@/assets/team/Likith_1.png.asset.json";
+import amitTeam from "@/assets/team/amit-singh.png";
+import mayankTeam from "@/assets/team/mayank-1.png";
+import praveenTeam from "@/assets/team/praveen-1.png";
+import harshavardhanTeam from "@/assets/team/harshavardhan.png";
+import chandrasekharTeam from "@/assets/team/chandrashekar.png";
+import anandTeam from "@/assets/team/anand-3.png";
+import likhithTeam from "@/assets/team/likith-1.png";
 import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
@@ -84,14 +84,14 @@ const industries = [
 ];
 
 const teamMembers = [
-  { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeamAsset.url },
-  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeamAsset.url },
+  { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeam },
+  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeam },
   { name: "Gagan", expertise: "VP - Digital Marketing", category: "Strategy", image: gaganTeam },
-  { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeamAsset.url },
-  { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeamAsset.url },
-  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrashekarTeamAsset.url },
-  { name: "Anand Kumar", expertise: "Performance Marketing Manager", category: "Performance", image: anandTeamAsset.url },
-  { name: "Likhith P", expertise: "Video Editor", category: "Creative", image: likhithTeamAsset.url },
+  { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeam },
+  { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeam },
+  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrasekharTeam },
+  { name: "Anand Kumar", expertise: "Performance Marketing Manager", category: "Performance", image: anandTeam },
+  { name: "Likhith P", expertise: "Video Editor", category: "Creative", image: likhithTeam },
 ];
 
 const teamCategories = ["All", "Strategy", "Performance", "Creative"];
@@ -445,18 +445,17 @@ const Home = () => {
                   type="button"
                   onClick={() => setActiveMember(member.name)}
                   onMouseEnter={() => setActiveMember(member.name)}
-                  className={`group relative aspect-[4/5] overflow-hidden rounded-lg border bg-background text-left outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:rounded-xl ${isActive ? "border-brand shadow-xl" : "border-border/70 shadow-sm hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl"}`}
+                  className={`group relative aspect-[4/5] overflow-hidden rounded-lg border bg-red-500 text-left outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:rounded-xl ${isActive ? "border-brand shadow-xl" : "border-border/70 shadow-sm hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl"}`}
                   aria-pressed={isActive}
                   aria-label={`View ${member.name}, ${member.expertise}`}
                 >
                   <img src={member.image} alt={`${member.name} at The Super 30`} width={800} height={1000} className={`h-full w-full object-cover object-top transition duration-700 motion-reduce:transition-none ${isActive ? "scale-[1.02] saturate-100" : "saturate-[.8] group-hover:scale-[1.02] group-hover:saturate-100"}`} loading="lazy" />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/5 to-transparent transition-opacity duration-500 ${isActive ? "opacity-90" : "opacity-75 group-hover:opacity-90"}`} />
                   <span className={`absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-semibold backdrop-blur-md transition-all duration-300 sm:left-5 sm:top-5 ${isActive ? "rotate-0 border-brand bg-brand text-primary-foreground" : "-rotate-12 border-border bg-background/80 text-foreground group-hover:rotate-0 group-hover:border-brand group-hover:bg-brand group-hover:text-primary-foreground"}`}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={`absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wide backdrop-blur-md transition-all duration-300 ${isActive ? "bg-brand text-primary-foreground" : "translate-y-1 bg-background/85 text-foreground opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.category}</span>
-                  <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                  <div className="absolute inset-x-0 bottom-0 bg-red-500 p-4 sm:p-5">
                     <span className={`mb-3 block h-0.5 bg-brand transition-all duration-500 ${isActive ? "w-10" : "w-0 group-hover:w-10"}`} />
-                    <h3 className="text-base font-semibold text-foreground sm:text-xl">{member.name}</h3>
-                    <p className={`mt-1 max-w-sm text-xs leading-snug text-muted-foreground transition-all duration-300 sm:text-sm ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.expertise}</p>
+                    <h3 className="text-base font-semibold text-white sm:text-xl">{member.name}</h3>
+                    <p className={`mt-1 max-w-sm text-xs leading-snug text-white/80 transition-all duration-300 sm:text-sm ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.expertise}</p>
                   </div>
                 </button>
               );
