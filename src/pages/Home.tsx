@@ -85,7 +85,7 @@ const industries = [
 
 const teamMembers = [
   { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeam },
-  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeam },
+  { name: "Mayank", expertise: "VP - Business Growth", category: "Strategy", image: mayankTeam },
   { name: "Gagan", expertise: "VP - Digital Marketing", category: "Strategy", image: gaganTeam },
   { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeam },
   { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeam },
@@ -238,7 +238,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-foreground pt-14 pb-8 md:pt-20 md:pb-10">
+      <section className="bg-foreground py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
             <div className="flex items-center gap-1">
