@@ -74,9 +74,7 @@ export const DashboardPreview = () => {
       
       <div className="container mx-auto px-4 relative">
         <div className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 bg-orange-100 text-orange-600 rounded-full text-sm font-medium mb-4">
-            Analytics
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Analytics</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Reporting & Dashboard
           </h2>
