@@ -40,10 +40,6 @@ import aiSeoImage from "@/assets/services/ai-seo-card.jpg";
 import socialImage from "@/assets/services/social-media-card.jpg";
 import webImage from "@/assets/services/web-design-card.jpg";
 import emailImage from "@/assets/services/email-marketing-card.jpg";
-import auditImage from "@/assets/process/step-audit.jpg";
-import strategyStepImage from "@/assets/process/step-strategy.jpg";
-import launchImage from "@/assets/process/step-launch.jpg";
-import reportingImage from "@/assets/process/step-reporting.jpg";
 import magicbricksLogo from "@/assets/clients/magicbricks.png";
 import mamaearthLogo from "@/assets/clients/mamaearth.png";
 import upgradLogo from "@/assets/clients/upgrad.png";
@@ -112,13 +108,6 @@ const teamMembers = [
 ];
 
 const teamCategories = ["All", "Strategy", "Search", "Performance", "Technology", "Creative"];
-
-const process = [
-  { number: "01", title: "Discover", text: "Understand your market, goals, and growth constraints.", image: auditImage },
-  { number: "02", title: "Strategize", text: "Shape a focused, data-led plan around your priorities.", image: strategyStepImage },
-  { number: "03", title: "Execute", text: "Launch coordinated creative, media, search, and web work.", image: launchImage },
-  { number: "04", title: "Improve", text: "Read the signal, report clearly, and keep refining performance.", image: reportingImage },
-];
 
 const clientLogos = [
   { src: magicbricksLogo, name: "Magicbricks", industry: "Real Estate" },
@@ -509,14 +498,6 @@ const Home = () => {
             ) : (
               <span className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Selected specialist</span>
             )}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-muted/30 py-16 md:py-24">
-        <div className="container mx-auto px-4"><SectionIntro eyebrow="Our Process" title="A simple path from ambition to action." copy="Every engagement begins with context, moves through a focused plan, and improves through transparent learning." />
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {process.map((step) => <div key={step.number} className="overflow-hidden rounded-lg border border-border bg-background"><img src={step.image} alt="" className="aspect-[16/9] w-full object-cover" loading="lazy" /><div className="p-5"><span className="text-3xl font-semibold text-brand">{step.number}</span><h3 className="mt-4 text-lg font-semibold text-foreground">{step.title}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p></div></div>)}
           </div>
         </div>
       </section>
