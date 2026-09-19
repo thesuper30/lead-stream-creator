@@ -238,15 +238,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-background pt-14 pb-8 md:pt-20 md:pb-10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-foreground pt-14 pb-8 md:pt-20 md:pb-10">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
             <div className="flex items-center gap-1">
               {[1,2,3,4,5].map((i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <p className="text-sm font-medium text-foreground">
+            <p className="text-sm font-medium text-primary-foreground">
               Trusted by <span className="text-brand font-bold">50+ leading companies</span> across industries
             </p>
           </div>
@@ -256,7 +257,7 @@ const Home = () => {
               {[...clientLogos, ...clientLogos].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center gap-3 px-4 py-2.5 bg-muted rounded-xl border border-border"
+                  className="flex-shrink-0 flex items-center gap-3 px-4 py-2.5 rounded-xl border border-border/20 bg-background/10 backdrop-blur-sm"
                 >
                   <img
                     src={client.src}
@@ -268,8 +269,8 @@ const Home = () => {
                     height="48"
                   />
                   <div>
-                    <span className="text-foreground font-medium whitespace-nowrap block text-sm">{client.name}</span>
-                    <span className="text-muted-foreground text-xs">{client.industry}</span>
+                    <span className="text-primary-foreground font-medium whitespace-nowrap block text-sm">{client.name}</span>
+                    <span className="text-primary-foreground/60 text-xs">{client.industry}</span>
                   </div>
                 </div>
               ))}
@@ -278,23 +279,23 @@ const Home = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mt-6 md:mt-8 pt-4 md:pt-5">
             <div className="text-center">
-              <p className="text-2xl font-bold text-foreground">300%+</p>
-              <p className="text-xs text-muted-foreground">Avg. Traffic Growth</p>
+              <p className="text-2xl font-bold text-primary-foreground">300%+</p>
+              <p className="text-xs text-primary-foreground/60">Avg. Traffic Growth</p>
             </div>
-            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="w-px h-8 bg-border/20 hidden sm:block" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-foreground">50+</p>
-              <p className="text-xs text-muted-foreground">AI Audits Delivered</p>
+              <p className="text-2xl font-bold text-primary-foreground">50+</p>
+              <p className="text-xs text-primary-foreground/60">AI Audits Delivered</p>
             </div>
-            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="w-px h-8 bg-border/20 hidden sm:block" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-foreground">$2M+</p>
-              <p className="text-xs text-muted-foreground">Revenue Generated</p>
+              <p className="text-2xl font-bold text-primary-foreground">$2M+</p>
+              <p className="text-xs text-primary-foreground/60">Revenue Generated</p>
             </div>
-            <div className="w-px h-8 bg-border hidden sm:block" />
+            <div className="w-px h-8 bg-border/20 hidden sm:block" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-foreground">4.8/5</p>
-              <p className="text-xs text-muted-foreground">Client Rating</p>
+              <p className="text-2xl font-bold text-primary-foreground">4.8/5</p>
+              <p className="text-xs text-primary-foreground/60">Client Rating</p>
             </div>
           </div>
         </div>
