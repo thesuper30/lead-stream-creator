@@ -5,4 +5,4 @@
 - [x] Rewrite coaching institute landing page: remove outcome section + metrics, reposition around services
 
 - [x] Finish and visually verify the AI SEO page redesign
-- [ ] Rebuild and visually verify the homepage against the supplied reference
+- [x] Rebuild and visually verify the homepage against the supplied reference
