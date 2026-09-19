@@ -38,9 +38,7 @@ export const DMWhyBangaloreSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
           {/* Left: Sticky heading */}
           <div className="lg:sticky lg:top-32">
-            <span className="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
-              Why Us
-            </span>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why Us</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-6">
               Is Your Marketing Partner Actually Growing Your{" "}
               <span className="text-brand">Business in Bangalore?</span>
