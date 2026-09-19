@@ -294,7 +294,7 @@ const photoshootProjects = [
 const PhotoshootGrid = () => (
   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
     {photoshootProjects.map((p, i) => (
-      <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={i} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
