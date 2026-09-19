@@ -415,8 +415,11 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
   const previewLimit = homePreview ? 8 : undefined;
 
   return (
-    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} bg-background`}>
-      <div className="container mx-auto px-3 md:px-4">
+    <section className={`${homePreview ? "py-16 md:py-24 bg-background" : "py-16 md:py-20 dark relative overflow-hidden bg-background"}`}>
+      {!homePreview && (
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:52px_52px]" />
+      )}
+      <div className="container relative mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span>
