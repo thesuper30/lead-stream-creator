@@ -166,7 +166,7 @@ const brandImages = [brand14, brand15, brand16, brand17, brand18, brand19, brand
 const BrandIdentityGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     {brandImages.slice(0, limit).map((img, i) => (
-      <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={i} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
