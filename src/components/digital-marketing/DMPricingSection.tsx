@@ -46,9 +46,7 @@ export const DMPricingSection = () => {
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 md:mb-20">
             <div>
-              <span className="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
-                Pricing
-              </span>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Pricing</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-background leading-[1.1]">
                 Simple, transparent<br className="hidden md:block" />
                 <span className="text-brand"> pricing</span>
