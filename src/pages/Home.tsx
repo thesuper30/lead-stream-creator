@@ -23,6 +23,7 @@ import {
   Target,
   TrendingUp,
   Users,
+  Zap,
   X,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -130,6 +131,29 @@ const seoTeamSkills = [
   { icon: Bot, title: "AIO", text: "AI Overviews" },
   { icon: MapPin, title: "GEO", text: "Local & Maps" },
   { icon: BarChart3, title: "More", text: "Across Platforms" },
+];
+
+const whySuper30 = [
+  {
+    icon: Users,
+    title: "30+ Expert Marketers",
+    text: "A focused team of digital specialists bringing strategy, creative, media, and technology together.",
+  },
+  {
+    icon: Bot,
+    title: "AI-Powered Strategies",
+    text: "We use AI tools and automation to make campaigns smarter, faster, and more responsive.",
+  },
+  {
+    icon: BarChart3,
+    title: "Data-Driven Growth",
+    text: "Every campaign is guided by clear performance signals, testing, and measurable business goals.",
+  },
+  {
+    icon: Zap,
+    title: "Fast & Flexible",
+    text: "Agile execution, transparent reporting, and strategies that adapt as your priorities change.",
+  },
 ];
 
 const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) => (
@@ -302,6 +326,34 @@ const Home = () => {
             </div>
 
             <Button asChild size="lg" className="mt-8 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark"><Link to="/about">Meet Our Team <ArrowRight className="ml-3 h-5 w-5" /></Link></Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-muted/30 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex rounded-full bg-background px-4 py-2 text-xs font-semibold text-foreground shadow-sm ring-1 ring-border">
+              Why Us
+            </span>
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+              Why We Are the Preferred AI Digital Marketing Company for Rapid Growth
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              We combine human creativity with AI-led insight to anticipate market shifts, sharpen decisions, and help brands grow profitably.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {whySuper30.map((item) => (
+              <article key={item.title} className="group rounded-lg border border-border bg-background p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg">
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-light text-brand transition duration-300 group-hover:bg-brand group-hover:text-primary-foreground">
+                  <item.icon className="h-5 w-5" />
+                </span>
+                <h3 className="mt-5 text-base font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
