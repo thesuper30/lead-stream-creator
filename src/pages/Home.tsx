@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -72,6 +72,15 @@ const industries = [
   { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", image: indHospitality, text: "Hotels, resorts & venues" },
 ];
 
+const differenceRows = [
+  { matter: "Strategy & Execution", super30: "End-to-end, ROI focused", others: "Only execution or limited strategy" },
+  { matter: "Use of AI & Automation", super30: "Integrated across all services", others: "Minimal or no AI adoption" },
+  { matter: "Reporting & Transparency", super30: "Real-time, transparent reporting", others: "Basic, delayed reports" },
+  { matter: "Focus on Business Outcomes", super30: "Revenue & long-term growth", others: "Focus on vanity metrics" },
+  { matter: "Dedicated Expert Team", super30: "Senior specialists, hands-on", others: "Junior resources, high turnover" },
+  { matter: "Flexibility & Personalization", super30: "Tailored to your business goals", others: "One-size-fits-all approach" },
+];
+
 const caseStudies = [
   { title: "Surana Educational Institutions", service: "AI SEO & Content", image: suranaCase },
   { title: "Magicbricks", service: "Integrated Digital Growth", image: magicbricksCase },
@@ -109,7 +118,9 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
   </div>
 );
 
-const Home = () => (
+const Home = () => {
+  const [activeRow, setActiveRow] = useState(0);
+  return (
   <>
     <Helmet>
       <title>Digital Marketing Agency &amp; AI Growth Company | TheSuper30</title>
@@ -259,18 +270,46 @@ const Home = () => (
             </div>
             <Link to="/about" className="inline-flex items-center text-sm font-semibold text-brand">See Why We’re Different <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </div>
-          <div className="mt-10 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
+          <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Tap a row to compare</p>
+          <div className="mt-3 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
               <p className="pb-4 text-sm font-semibold text-foreground">What Matters</p>
-              {["Strategy & Execution", "Use of AI & Automation", "Reporting & Transparency", "Focus on Business Outcomes", "Dedicated Expert Team", "Flexibility & Personalization"].map((item) => <p key={item} className="border-t border-border py-4 text-sm font-medium text-foreground">{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <button
+                  key={row.matter}
+                  type="button"
+                  onClick={() => setActiveRow(i)}
+                  onMouseEnter={() => setActiveRow(i)}
+                  className={`flex w-full items-center justify-between gap-2 border-t border-border py-4 text-left text-sm font-medium transition-all duration-300 ${activeRow === i ? "text-brand" : "text-foreground hover:text-brand/70"}`}
+                >
+                  {row.matter}
+                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-brand transition-all duration-300 ${activeRow === i ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
+                </button>
+              ))}
             </div>
             <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
               <p className="pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
-              {["End-to-end, ROI focused", "Integrated across all services", "Real-time, transparent reporting", "Revenue & long-term growth", "Senior specialists, hands-on", "Tailored to your business goals"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-brand/10 py-4 text-sm font-medium text-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-brand/10 px-2 py-4 text-sm font-medium rounded-lg transition-all duration-300 ${activeRow === i ? "translate-x-1 bg-background/70 text-foreground shadow-sm" : "text-foreground/70"}`}
+                >
+                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand transition-transform duration-300 ${activeRow === i ? "scale-110" : ""}`}><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>
+                  {row.super30}
+                </p>
+              ))}
             </div>
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
               <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
-              {["Only execution or limited strategy", "Minimal or no AI adoption", "Basic, delayed reports", "Focus on vanity metrics", "Junior resources, high turnover", "One-size-fits-all approach"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-border py-4 text-sm text-muted-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-border py-4 text-sm transition-all duration-300 ${activeRow === i ? "text-foreground" : "text-muted-foreground"}`}
+                >
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>
+                  {row.others}
+                </p>
+              ))}
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center gap-3 text-center">
@@ -301,6 +340,7 @@ const Home = () => (
       <Footer />
     </main>
   </>
-);
+  );
+};
 
 export default Home;
