@@ -380,8 +380,8 @@ const Home = () => {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.45)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.45)_1px,transparent_1px)] bg-[size:52px_52px]" />
         <div className="container relative mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex rounded-full border border-brand/40 bg-brand/10 px-4 py-2 text-xs font-semibold text-brand">Industries We Serve</span>
-            <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses ready to grow.</h2>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Industries We Serve</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses ready to grow.</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
           </div>
 
