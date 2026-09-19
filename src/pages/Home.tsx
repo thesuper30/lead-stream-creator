@@ -336,7 +336,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-muted/30 py-16 md:py-24">
+      <section className="bg-brand/5 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why Us</p>
