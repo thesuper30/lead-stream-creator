@@ -84,14 +84,14 @@ const industries = [
 ];
 
 const teamMembers = [
-  { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeamAsset.url },
-  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeamAsset.url },
+  { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeam },
+  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeam },
   { name: "Gagan", expertise: "VP - Digital Marketing", category: "Strategy", image: gaganTeam },
-  { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeamAsset.url },
-  { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeamAsset.url },
-  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrashekarTeamAsset.url },
-  { name: "Anand Kumar", expertise: "Performance Marketing Manager", category: "Performance", image: anandTeamAsset.url },
-  { name: "Likhith P", expertise: "Video Editor", category: "Creative", image: likhithTeamAsset.url },
+  { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeam },
+  { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeam },
+  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrasekharTeam },
+  { name: "Anand Kumar", expertise: "Performance Marketing Manager", category: "Performance", image: anandTeam },
+  { name: "Likhith P", expertise: "Video Editor", category: "Creative", image: likhithTeam },
 ];
 
 const teamCategories = ["All", "Strategy", "Performance", "Creative"];
