@@ -458,11 +458,11 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
           </TabsContent>
 
           <TabsContent value="seo">
-            <BentoClientGrid clients={seoClients} limit={previewLimit} />
+            <BentoClientGrid clients={seoClients} limit={previewLimit} homePreview={homePreview} />
           </TabsContent>
 
           <TabsContent value="lead-generation">
-            <BentoClientGrid clients={leadGenClients} limit={previewLimit} />
+            <BentoClientGrid clients={leadGenClients} limit={previewLimit} homePreview={homePreview} />
           </TabsContent>
 
           <TabsContent value="ugc-content">
