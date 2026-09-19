@@ -339,10 +339,8 @@ const Home = () => {
       <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex rounded-full bg-background px-4 py-2 text-xs font-semibold text-foreground shadow-sm ring-1 ring-border">
-              Why Us
-            </span>
-            <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why Us</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
               Why We Are Your AI Growth Partner
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
