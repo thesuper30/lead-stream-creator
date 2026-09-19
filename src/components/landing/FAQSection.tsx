@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowRight, Plus } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -12,45 +14,56 @@ export const FAQSection = ({ slug = "home" }: { slug?: string } = {}) => {
   const faqs = getFaqs(slug);
   if (!faqs.length) return null;
 
+  const half = Math.ceil(faqs.length / 2);
+  const columns = [faqs.slice(0, half), faqs.slice(half)];
+
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="py-6 md:py-10 lg:py-16 bg-muted/30 relative overflow-hidden"
+      className="py-12 md:py-16 lg:py-20 bg-muted/30 relative overflow-hidden"
     >
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
-      
-      <div className="container mx-auto px-3 md:px-4 relative">
-        <div className={`text-center max-w-3xl mx-auto mb-5 md:mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="badge-brand mb-4">
-            FAQ
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            Everything you need to know about AI SEO
-          </p>
+      <div className="container mx-auto px-4 md:px-6 relative">
+        <div
+          className={`flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8 md:mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <div>
+            <span className="badge-brand mb-4">FAQ</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              Got Questions? We've Got Answers.
+            </h2>
+          </div>
+          <Link
+            to="/contact-us"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:gap-2.5 transition-all shrink-0"
+          >
+            View All FAQs <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className={`bento-card px-4 md:px-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{ transitionDelay: `${(index + 1) * 50}ms` }}
-              >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-brand transition-colors py-4 text-sm md:text-base">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-4 leading-relaxed text-sm md:text-base">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-start">
+          {columns.map((columnFaqs, colIndex) => (
+            <Accordion key={colIndex} type="single" collapsible className="space-y-3 md:space-y-4">
+              {columnFaqs.map((faq, index) => {
+                const globalIndex = colIndex * half + index;
+                return (
+                  <AccordionItem
+                    key={globalIndex}
+                    value={`item-${globalIndex}`}
+                    className={`bento-card px-4 md:px-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                    style={{ transitionDelay: `${(globalIndex + 1) * 50}ms` }}
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:text-brand transition-colors py-4 text-sm md:text-base [&>svg]:hidden">
+                      <span className="flex-1 pr-3">{faq.question}</span>
+                      <Plus className="w-4 h-4 shrink-0 text-foreground" />
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-4 leading-relaxed text-sm md:text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
+          ))}
         </div>
       </div>
     </section>
