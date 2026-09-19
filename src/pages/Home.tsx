@@ -44,6 +44,12 @@ import upgradLogo from "@/assets/clients/upgrad.png";
 import tata1mgLogo from "@/assets/clients/tata1mg.png";
 import shriramLogo from "@/assets/clients/shriram-properties.png";
 import jainLogo from "@/assets/clients/jain-university.png";
+import indEcommerce from "@/assets/ind-ecommerce.jpg";
+import indSaas from "@/assets/ind-saas.jpg";
+import indLifestyle from "@/assets/ind-lifestyle.jpg";
+import indRealEstate from "@/assets/ind-real-estate.jpg";
+import indEducation from "@/assets/ind-education.jpg";
+import indHospitality from "@/assets/ind-hospitality.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 const FAQSection = lazy(() => import("@/components/landing/FAQSection").then((m) => ({ default: m.FAQSection })));
@@ -58,12 +64,12 @@ const services = [
 ];
 
 const industries = [
-  { icon: ShoppingBag, label: "Ecommerce", href: "/ecommerce-marketing-agency-bangalore" },
-  { icon: Sparkles, label: "SaaS", href: "/industries/technology" },
-  { icon: HeartPulse, label: "Lifestyle", href: "/industries/lifestyle" },
-  { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate" },
-  { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes" },
-  { icon: Hotel, label: "Hospitality", href: "/industries/hospitality" },
+  { icon: ShoppingBag, label: "Ecommerce", href: "/ecommerce-marketing-agency-bangalore", image: indEcommerce, text: "Stores, marketplaces & D2C brands" },
+  { icon: Sparkles, label: "SaaS", href: "/industries/technology", image: indSaas, text: "Software & tech products" },
+  { icon: HeartPulse, label: "Lifestyle", href: "/industries/lifestyle", image: indLifestyle, text: "Wellness, beauty & retail" },
+  { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate", image: indRealEstate, text: "Builders, developers & brokers" },
+  { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes", image: indEducation, text: "Institutes, coaching & ed-tech" },
+  { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", image: indHospitality, text: "Hotels, resorts & venues" },
 ];
 
 const caseStudies = [
