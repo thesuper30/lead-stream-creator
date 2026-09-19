@@ -63,12 +63,12 @@ import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
 const services = [
-  { icon: Search, title: "AI SEO", text: "Build visibility across Google and AI search with technical, content, and authority systems.", href: "/seo-company-bangalore", image: aiSeoImage },
-  { icon: Target, title: "Lead Generation", text: "Turn intent into qualified enquiries through focused paid campaigns and conversion journeys.", href: "/lead-generation-agency-bangalore", image: strategyImage },
-  { icon: Megaphone, title: "Social Media", text: "Create a brand people recognize, follow, and remember across every social touchpoint.", href: "/social-media-marketing-agency-bangalore", image: socialImage },
-  { icon: Palette, title: "Design & Creative", text: "Give campaigns the visual clarity and creative strength they need to earn attention.", href: "/graphic-design-agency-bangalore", image: emailImage },
-  { icon: Bot, title: "AI & Automation", text: "Connect faster workflows, sharper insights, and smarter customer communication.", href: "/digital-marketing-agency-bangalore", image: strategyImage },
-  { icon: Code2, title: "Web Design & CRO", text: "Build fast, persuasive digital experiences designed to move visitors toward action.", href: "/web-design-company-bangalore", image: webImage },
+  { icon: Search, title: "AI SEO", text: "Build long-term visibility across Google, AI search, and answer engines with technical SEO, content clusters, authority building, and intent-focused optimization.", href: "/seo-company-bangalore", image: aiSeoImage },
+  { icon: Target, title: "Lead Generation", text: "Turn high-intent traffic into qualified prospects through targeted paid campaigns, conversion-focused landing pages, lead nurturing workflows, and continuous funnel optimization.", href: "/lead-generation-agency-bangalore", image: strategyImage },
+  { icon: Megaphone, title: "Social Media", text: "Create a recognizable brand presence across every social touchpoint with platform strategy, content calendars, community management, and performance-driven paid social campaigns.", href: "/social-media-marketing-agency-bangalore", image: socialImage },
+  { icon: Palette, title: "Design & Creative", text: "Give campaigns the visual clarity and creative strength they need to earn attention, with brand-aligned design systems, scroll-stopping social creatives, and conversion-focused visual assets.", href: "/graphic-design-agency-bangalore", image: emailImage },
+  { icon: Bot, title: "AI & Automation", text: "Connect faster workflows, sharper insights, and smarter customer communication with AI-powered automation, predictive analytics, and integrated marketing operations across channels.", href: "/digital-marketing-agency-bangalore", image: strategyImage },
+  { icon: Code2, title: "Web Design & CRO", text: "Build fast, persuasive digital experiences designed to move visitors toward action, combining UX design, conversion rate optimization, and performance-focused development.", href: "/web-design-company-bangalore", image: webImage },
 ];
 
 const industries = [
