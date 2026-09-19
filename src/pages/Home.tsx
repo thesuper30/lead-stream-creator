@@ -270,18 +270,51 @@ const Home = () => {
             </div>
             <Link to="/about" className="inline-flex items-center text-sm font-semibold text-brand">See Why We’re Different <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </div>
-          <div className="mt-10 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
+          <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Tap a row to compare</p>
+          <div className="mt-3 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
               <p className="pb-4 text-sm font-semibold text-foreground">What Matters</p>
-              {["Strategy & Execution", "Use of AI & Automation", "Reporting & Transparency", "Focus on Business Outcomes", "Dedicated Expert Team", "Flexibility & Personalization"].map((item) => <p key={item} className="border-t border-border py-4 text-sm font-medium text-foreground">{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <button
+                  key={row.matter}
+                  type="button"
+                  onClick={() => setActiveRow(i)}
+                  onMouseEnter={() => setActiveRow(i)}
+                  className={`flex w-full items-center justify-between gap-2 border-t border-border py-4 text-left text-sm font-medium transition-all duration-300 ${activeRow === i ? "text-brand" : "text-foreground hover:text-brand/70"}`}
+                >
+                  {row.matter}
+                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-brand transition-all duration-300 ${activeRow === i ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
+                </button>
+              ))}
             </div>
             <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
               <p className="pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
-              {["End-to-end, ROI focused", "Integrated across all services", "Real-time, transparent reporting", "Revenue & long-term growth", "Senior specialists, hands-on", "Tailored to your business goals"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-brand/10 py-4 text-sm font-medium text-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-brand/10 py-4 text-sm font-medium transition-all duration-300 ${activeRow === i ? "translate-x-1 text-foreground" : "text-foreground/70"}`}
+                >
+                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand transition-transform duration-300 ${activeRow === i ? "scale-110" : ""}`}><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>
+                  {row.super30}
+                </p>
+              ))}
+              <div className="pointer-events-none absolute inset-x-6 top-[4.5rem] bottom-6 flex flex-col">
+                {differenceRows.map((row, i) => (
+                  <div key={row.matter} className={`flex-1 rounded-lg bg-brand/10 ring-1 ring-brand/30 transition-opacity duration-300 ${activeRow === i ? "opacity-100" : "opacity-0"}`} style={{ marginTop: i === 0 ? 0 : "0.5rem", marginBottom: "0.25rem" }} />
+                ))}
+              </div>
             </div>
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
               <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
-              {["Only execution or limited strategy", "Minimal or no AI adoption", "Basic, delayed reports", "Focus on vanity metrics", "Junior resources, high turnover", "One-size-fits-all approach"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-border py-4 text-sm text-muted-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>{item}</p>)}
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-border py-4 text-sm transition-all duration-300 ${activeRow === i ? "text-foreground" : "text-muted-foreground"}`}
+                >
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>
+                  {row.others}
+                </p>
+              ))}
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center gap-3 text-center">
