@@ -101,12 +101,17 @@ const process = [
 ];
 
 const clientLogos = [
-  { src: magicbricksLogo, name: "Magicbricks" },
-  { src: mamaearthLogo, name: "Mamaearth" },
-  { src: upgradLogo, name: "upGrad" },
-  { src: tata1mgLogo, name: "Tata 1mg" },
-  { src: shriramLogo, name: "Shriram Properties" },
-  { src: jainLogo, name: "Jain University" },
+  { src: magicbricksLogo, name: "Magicbricks", industry: "Real Estate" },
+  { src: bhrighuLogo, name: "Bhrighu Academy", industry: "Education" },
+  { src: mamaearthLogo, name: "Mamaearth", industry: "D2C / E-commerce" },
+  { src: jainLogo, name: "Jain University", industry: "Education" },
+  { src: upgradLogo, name: "upGrad", industry: "Education" },
+  { src: harvestLogo, name: "Harvest International School", industry: "Education" },
+  { src: tata1mgLogo, name: "Tata 1mg", industry: "Healthcare" },
+  { src: smrLogo, name: "SMR University", industry: "Education" },
+  { src: shriramLogo, name: "Shriram Properties", industry: "Real Estate" },
+  { src: atriaLogo, name: "Atria Institute of Technology", industry: "Education" },
+  { src: lancesoftLogo, name: "Lancesoft", industry: "Healthcare" },
 ];
 
 const heroUsps = [
