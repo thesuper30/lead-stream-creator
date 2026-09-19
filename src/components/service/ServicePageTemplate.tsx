@@ -105,7 +105,7 @@ export interface ServicePageConfig {
 // ── Shared eyebrow ──
 const SectionEyebrow = ({ children }: { children?: React.ReactNode }) =>
   children ? (
-    <span className="text-brand text-xs font-bold uppercase tracking-[0.25em] mb-3 block">{children}</span>
+    <span className="mb-3 block text-sm font-semibold uppercase tracking-wider text-brand">— {children}</span>
   ) : null;
 
 // ── Problem Section ──
@@ -392,9 +392,7 @@ const FinalCTASection = ({ data }: { data: ServicePageConfig["finalCTA"] }) => (
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
         <div className="relative">
-          {data.eyebrow && (
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand mb-3">{data.eyebrow}</span>
-          )}
+          <SectionEyebrow>{data.eyebrow}</SectionEyebrow>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">{data.headline}</h2>
           <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto mb-8">{data.description}</p>
           <Link

@@ -219,9 +219,7 @@ export const CourseVideoTestimonialsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 bg-[hsl(var(--brand-orange))]/20 rounded-full text-[hsl(var(--brand-orange))] font-medium text-sm mb-4 border border-[hsl(var(--brand-orange))]/30">
-            Video Testimonials
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Video Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Hear From Our Alumni
           </h2>

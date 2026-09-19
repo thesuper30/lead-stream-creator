@@ -45,9 +45,7 @@ export const BlogSection = forwardRef<HTMLElement>((_, ref) => {
       
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl lg:max-w-4xl mx-auto mb-5 md:mb-10">
-          <span className="inline-block px-4 py-1.5 bg-accent text-primary rounded-full text-sm font-medium mb-4">
-            Blog
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Blog</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Latest Insights
           </h2>

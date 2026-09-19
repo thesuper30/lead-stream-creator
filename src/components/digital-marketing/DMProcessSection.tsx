@@ -50,9 +50,7 @@ export const DMProcessSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-14 md:mb-20">
-            <span className="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
-              How We Work
-            </span>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— How We Work</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-4">
               Our AI Powered <span className="text-brand">Strategy for Scalable Business Growth</span>
             </h2>

@@ -72,8 +72,8 @@ export const ProjectShowcaseSection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Text content */}
           <div className="space-y-6 text-center md:text-left" key={activeIndex}>
-            <p className="text-brand text-xs md:text-sm font-semibold tracking-[0.2em] uppercase animate-fade-in">
-              {project.category}
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand animate-fade-in">
+              — {project.category}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in" style={{ animationDelay: "50ms" }}>
               {project.title}

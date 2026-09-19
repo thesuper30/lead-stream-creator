@@ -8,9 +8,7 @@ export const DMBenefitsSection = () => (
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14 md:mb-20">
-          <span className="inline-block text-brand text-xs font-bold uppercase tracking-[0.25em] mb-5 px-4 py-1.5 rounded-full border border-brand/20 bg-brand/5">
-            Why Choose Us
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why Choose Us</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.08] mb-5">
             Why Choose Our
             <span className="text-brand"> Digital Marketing Company in Bangalore?</span>

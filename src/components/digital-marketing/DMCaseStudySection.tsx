@@ -43,9 +43,7 @@ export const DMCaseStudySection = () => (
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 md:mb-20">
           <div>
-            <span className="text-brand text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
-              Real Results
-            </span>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Real Results</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1]">
               Before & after:<br className="hidden md:block" />
               <span className="text-brand"> Bangalore businesses</span>

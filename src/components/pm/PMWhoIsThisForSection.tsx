@@ -53,9 +53,7 @@ export const PMWhoIsThisForSection = () => {
       
       <div className="container mx-auto px-3 md:px-4 relative">
         <div className={`text-center max-w-3xl mx-auto mb-5 md:mb-10 transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <span className="inline-block px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium mb-4 border border-orange-500/30">
-            Perfect Fit
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Perfect Fit</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
             Who Benefits Most From This?
           </h2>

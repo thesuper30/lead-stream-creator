@@ -114,9 +114,7 @@ export const DMToolsRainSection = () => {
         <div
           className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <span className="inline-block px-4 py-1.5 bg-brand/15 text-brand rounded-full text-xs font-medium tracking-widest uppercase mb-6 border border-brand/20">
-            Our Arsenal
-          </span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our Arsenal</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-tight tracking-tight">
             Every Tool. One Team.
           </h2>
