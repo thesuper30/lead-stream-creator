@@ -183,7 +183,7 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
 const Home = () => {
   const [teamCategory, setTeamCategory] = useState("All");
   const [activeMember, setActiveMember] = useState(teamMembers[0].name);
-  const featuredTeamNames = ["Amit", "Lalit", "Vignesh", "Swanand", "Monisha", "Azarudheen"];
+  const featuredTeamNames = ["Amit", "Lalit", "Vignesh", "Swanand", "Monisha", "Azarudheen", "Mayank", "Sujeet"];
   const visibleTeam = teamCategory === "All"
     ? teamMembers.filter((member) => featuredTeamNames.includes(member.name))
     : teamMembers.filter((member) => member.category === teamCategory);
