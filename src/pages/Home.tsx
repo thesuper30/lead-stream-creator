@@ -12,6 +12,8 @@ import {
   GraduationCap,
   HeartPulse,
   Hotel,
+  MapPin,
+  MessageCircle,
   Megaphone,
   Palette,
   Search,
@@ -28,6 +30,7 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
+import seoTeamImage from "@/assets/home-seo-team.jpg";
 import aiSeoImage from "@/assets/services/ai-seo-card.jpg";
 import socialImage from "@/assets/services/social-media-card.jpg";
 import webImage from "@/assets/services/web-design-card.jpg";
@@ -119,6 +122,14 @@ const heroUsps = [
   { icon: Bot, label: "AI-powered execution" },
   { icon: Eye, label: "Transparent reporting" },
   { icon: TrendingUp, label: "Focused on your ROI" },
+];
+
+const seoTeamSkills = [
+  { icon: Search, title: "SEO", text: "Search Rankings" },
+  { icon: MessageCircle, title: "AEO", text: "Answer Engines" },
+  { icon: Bot, title: "AIO", text: "AI Overviews" },
+  { icon: MapPin, title: "GEO", text: "Local & Maps" },
+  { icon: BarChart3, title: "More", text: "Across Platforms" },
 ];
 
 const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) => (
@@ -260,16 +271,37 @@ const Home = () => {
       </section>
 
       <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto grid items-center gap-10 px-4 lg:grid-cols-2 lg:gap-16">
-          <div className="relative overflow-hidden rounded-lg">
-            <img src={strategyImage} alt="Growth team studying live marketing performance" className="aspect-[4/3] w-full object-cover" width={1408} height={1008} loading="lazy" />
+        <div className="container mx-auto grid items-center gap-10 px-4 lg:grid-cols-[1.08fr_1fr] lg:gap-16">
+          <div className="relative overflow-hidden rounded-2xl">
+            <img src={seoTeamImage} alt="The Super30 SEO team collaborating around a laptop" className="aspect-[4/3] w-full object-cover" width={1408} height={1056} loading="lazy" />
           </div>
+
           <div>
-            <SectionIntro eyebrow="About The Super 30" title="A growth partner built for what comes next." copy="Strategy, search, media, creative, and technology work together here. One connected team keeps every decision focused on the business outcome." />
-            <div className="mt-8 grid grid-cols-2 gap-6 border-y border-border py-7 sm:grid-cols-4">
-              {[["300%+", "Growth"], ["50+", "Audits"], ["$2M+", "Revenue"], ["4.9/5", "Rating"]].map(([value, label]) => <div key={label}><p className="text-2xl font-semibold text-foreground">{value}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>)}
+            <p className="mb-4 text-sm font-semibold uppercase text-brand">— Our Super30 Team</p>
+            <h2 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">Our <span className="text-brand">SEO Champs</span></h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
+
+            <div className="mt-9 grid grid-cols-3 border-b border-border pb-8 sm:grid-cols-5">
+              {seoTeamSkills.map((skill, index) => (
+                <div key={skill.title} className={`px-2 text-center sm:px-3 ${index > 0 ? "border-l border-border" : ""}`}>
+                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-light text-brand">
+                    <skill.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-3 text-sm font-semibold text-foreground sm:text-base">{skill.title}</h3>
+                  <p className="mt-1 text-[11px] leading-tight text-muted-foreground sm:text-xs">{skill.text}</p>
+                </div>
+              ))}
             </div>
-            <Button asChild className="mt-8 rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/internet-marketing-agency">Our Story <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+
+            <div className="mt-7">
+              <div className="flex items-center gap-3">
+                <TrendingUp className="h-8 w-8 text-brand" />
+                <p className="text-xl font-semibold text-foreground sm:text-2xl"><span className="text-3xl sm:text-4xl">10,000+</span> <span className="text-base font-normal text-muted-foreground sm:text-lg">Keywords Ranked for Our Clients</span></p>
+              </div>
+              <p className="mt-3 text-base text-muted-foreground">Real strategies. Real rankings. Real business growth.</p>
+            </div>
+
+            <Button asChild size="lg" className="mt-8 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark"><Link to="/about">Meet Our Team <ArrowRight className="ml-3 h-5 w-5" /></Link></Button>
           </div>
         </div>
       </section>
