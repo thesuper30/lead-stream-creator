@@ -307,7 +307,7 @@ const Home = () => {
           </div>
 
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase text-brand">— Our Super30 Team</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand">— Our Super30 Team</p>
             <h2 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
 
