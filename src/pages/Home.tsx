@@ -5,6 +5,8 @@ import {
   ArrowRight,
   BarChart3,
   Bot,
+  BriefcaseBusiness,
+  Building2,
   Check,
   CirclePlay,
   Code2,
@@ -12,6 +14,8 @@ import {
   GraduationCap,
   HeartPulse,
   Hotel,
+  Rocket,
+  Scale,
   MapPin,
   MessageCircle,
   Megaphone,
@@ -20,6 +24,7 @@ import {
   ShoppingBag,
   Sparkles,
   Star,
+  Stethoscope,
   Target,
   TrendingUp,
   Users,
@@ -68,12 +73,15 @@ const services = [
 ];
 
 const industries = [
-  { icon: ShoppingBag, label: "Ecommerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven marketing for stores, marketplaces, and D2C brands focused on profitable growth." },
-  { icon: Sparkles, label: "SaaS & Technology", href: "/industries/technology", text: "Full-funnel growth systems that turn complex products into clear demand and qualified leads." },
-  { icon: HeartPulse, label: "Lifestyle", href: "/industries/lifestyle", text: "Brand, social, and performance campaigns for wellness, beauty, and modern retail businesses." },
-  { icon: BarChart3, label: "Real Estate", href: "/industries/real-estate", text: "Search, paid media, and conversion journeys that help developers attract serious enquiries." },
-  { icon: GraduationCap, label: "Education", href: "/digital-marketing-for-coaching-institutes", text: "Digital acquisition for institutes, coaching brands, and ed-tech businesses ready to scale." },
-  { icon: Hotel, label: "Hospitality", href: "/industries/hospitality", text: "Integrated visibility and booking campaigns for hotels, resorts, restaurants, and venues." },
+  { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
+  { icon: ShoppingBag, label: "E-commerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven ecommerce marketing combining SEO, paid ads, and social media to boost conversions and ROAS." },
+  { icon: BriefcaseBusiness, label: "Professional Services", href: "/industries/b2b", text: "Integrated digital marketing strategies that build authority, drive inbound leads, and grow your practice." },
+  { icon: GraduationCap, label: "EdTech", href: "/digital-marketing-for-coaching-institutes", text: "Multi-channel digital marketing for EdTech — SEO, paid campaigns, and social media to reach learners at scale." },
+  { icon: Stethoscope, label: "Healthcare", href: "/industries/lifestyle", text: "Trust-focused digital marketing for healthcare — from patient acquisition to authoritative content." },
+  { icon: Rocket, label: "Tech Startups", href: "/industries/b2b", text: "Growth marketing for startups — rapid experimentation across SEO, ads, social, and content to find product-market fit." },
+  { icon: BarChart3, label: "Real Estate", href: "/industries/b2b", text: "SEO, Google Ads, social media, and landing pages that help real estate businesses generate quality leads." },
+  { icon: Scale, label: "Legal Services", href: "/industries/b2b", text: "Targeted digital marketing for law firms — from local SEO to paid ads that attract high-intent clients." },
+  { icon: Hotel, label: "Hospitality & Travel", href: "/industries/hospitality", text: "Social media, SEO, and paid campaigns that help hotels, resorts, and travel businesses drive bookings." },
 ];
 
 const differenceRows = [
