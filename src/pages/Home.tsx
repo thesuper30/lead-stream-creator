@@ -212,7 +212,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="container relative z-10 mx-auto -mt-1 px-4 pb-7 sm:pb-9 lg:mt-0">
+        <div className="container relative z-10 mx-auto -mt-1 px-4 pb-7 sm:px-6 sm:pb-9 lg:px-8 lg:mt-0">
           <div className="lg:flex lg:min-h-[590px] lg:w-[50%] lg:flex-col lg:justify-center lg:pr-6 lg:py-12">
           <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-brand/20 bg-brand-light px-3 py-1.5 text-[10px] font-semibold uppercase text-brand sm:text-xs">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" /> AI-powered digital marketing agency
@@ -244,7 +244,7 @@ const Home = () => {
       </section>
 
       <section className="border-b border-border bg-background pt-14 pb-8 md:pt-20 md:pb-10">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
             <div className="flex items-center gap-1">
               {[1,2,3,4,5].map((i) => (
