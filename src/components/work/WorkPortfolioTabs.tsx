@@ -412,7 +412,7 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
   const [activeTab, setActiveTab] = React.useState("logo");
   const activeCaption = tabs.find((t) => t.id === activeTab)?.caption ?? "";
   const visibleTabs = homePreview ? tabs.filter((tab) => tab.id !== "product-photoshoot") : tabs;
-  const previewLimit = homePreview ? 4 : undefined;
+  const previewLimit = homePreview ? 8 : undefined;
 
   return (
     <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} bg-background`}>
