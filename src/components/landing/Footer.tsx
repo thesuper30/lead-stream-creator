@@ -16,6 +16,9 @@ const company = [
   { name: "About / Team 30", href: "/internet-marketing-agency" },
   { name: "Our Work", href: "/our-work" },
   { name: "Contact Us", href: "/contact-us" },
+];
+
+const resources = [
   { name: "Blog", href: "/blog" },
 ];
 
@@ -118,7 +121,7 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
 
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
           {/* Column 1: Company Branding */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center mb-4 group">
@@ -187,7 +190,25 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 4: Resources */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h3>
+            <ul className="space-y-3">
+              {resources.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="group flex items-center text-gray-400 hover:text-[hsl(var(--brand-orange))] transition-colors duration-300 text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <span>{item.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 5: Contact */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-4">

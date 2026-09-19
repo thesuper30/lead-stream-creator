@@ -473,16 +473,10 @@ const Home = () => {
             })}
           </div>
 
-          <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-border bg-background px-5 py-4 sm:flex-row sm:items-center sm:rounded-xl">
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">{visibleTeam.findIndex((member) => member.name === activeMember) + 1}</span>
-              <p className="text-sm text-muted-foreground"><span className="font-semibold text-foreground">{visibleTeam.find((member) => member.name === activeMember)?.name}</span> — {visibleTeam.find((member) => member.name === activeMember)?.expertise}</p>
-            </div>
-            {teamCategory === "All" ? (
-              <Link to="/about" className="group inline-flex shrink-0 items-center text-xs font-semibold uppercase tracking-wider text-brand">Explore the full team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
-            ) : (
-              <span className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Selected specialist</span>
-            )}
+          <div className="mt-8 flex justify-center">
+            <Button asChild size="lg" className="rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark">
+              <Link to="/contact-us">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>

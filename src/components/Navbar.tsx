@@ -43,6 +43,8 @@ const menuItems: NavMenuItem[] = [
       { label: "Social Media Posts", href: "/social-media-design-agency-bangalore" },
       { label: "Logo", href: "/logo-design-company-bangalore" },
       { label: "Brand Kit", href: "/branding-agency-bangalore" },
+      { label: "Video Production", href: "/video-production-agency-bangalore" },
+      { label: "Photography", href: "/photography-services-bangalore" },
     ],
   },
   {
@@ -64,14 +66,6 @@ const menuItems: NavMenuItem[] = [
       { label: "Customer Engagement Programs", href: "/customer-engagement-agency-bangalore" },
       { label: "SMS Gateway", href: "/sms-gateway-service-bangalore" },
       { label: "Rich Communication Services", href: "/rcs-messaging-provider-bangalore" },
-    ],
-  },
-  {
-    label: "Production",
-    href: "/corporate-video-maker-bangalore",
-    items: [
-      { label: "Video Production", href: "/video-production-agency-bangalore" },
-      { label: "Photography", href: "/photography-services-bangalore" },
     ],
   },
   {
@@ -168,13 +162,6 @@ const menuItems: NavMenuItem[] = [
           { label: "Spa & Wellness Resorts", href: "/industries/hospitality" },
         ],
       },
-    ],
-  },
-  {
-    label: "Resources",
-    href: "/blog",
-    items: [
-      { label: "Blog", href: "/blog" },
     ],
   },
   { label: "Our Work", href: "/our-work" },
