@@ -96,6 +96,17 @@ const teamMembers = [
 
 const teamCategories = ["All", "Strategy", "Performance", "Creative"];
 
+const teamPastels = [
+  { card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
+  { card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
+  { card: "bg-[#FFF3C4]", blob: "bg-[#FDE68A]" },
+  { card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
+  { card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
+  { card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
+  { card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
+  { card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
+];
+
 const clientLogos = [
   { src: magicbricksLogo, name: "Magicbricks", industry: "Real Estate" },
   { src: bhrighuLogo, name: "Bhrighu Academy", industry: "Education" },
