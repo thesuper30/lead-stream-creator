@@ -115,56 +115,39 @@ const Home = () => (
     <Navbar />
     <main className="min-h-screen bg-background pt-16 md:pt-20">
       <section className="overflow-hidden border-b border-border bg-background">
-        <div className="container mx-auto px-4 py-6 sm:py-8 lg:py-10">
-          <div className="relative min-h-[660px] overflow-hidden rounded-lg border border-border bg-background lg:min-h-[600px]">
-            <div className="absolute inset-y-0 right-0 hidden w-[56%] lg:block">
-              <img src={heroImage} alt="Digital marketing team collaborating in a bright office" className="h-full w-full object-cover" width={1600} height={1104} fetchPriority="high" />
-              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent" />
-              <div className="absolute right-8 top-12 text-2xl font-medium leading-tight text-foreground xl:right-14 xl:text-3xl">
-                <p>Ideas</p><p>Strategy</p><p>Execution</p><p>Growth</p>
-                <span className="mt-4 block h-1 w-14 rounded-full bg-brand" />
-              </div>
-              <div className="absolute bottom-6 right-6 w-[245px] rounded-lg border border-border bg-background/95 p-5 shadow-xl backdrop-blur-sm xl:bottom-8 xl:right-8">
-                <div className="flex items-center gap-4">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-light text-brand"><BarChart3 className="h-6 w-6" /></span>
-                  <div><p className="text-2xl font-semibold text-foreground">300%+</p><p className="mt-1 text-xs leading-snug text-muted-foreground">Average traffic growth</p></div>
-                </div>
-              </div>
+        <div className="container mx-auto grid min-h-[690px] items-center gap-10 px-4 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 lg:py-16">
+          <div className="relative z-10">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand-light px-4 py-2 text-xs font-semibold uppercase text-brand">
+              <span className="h-2 w-2 rounded-full bg-brand" /> AI-powered digital marketing agency
+            </p>
+            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
+              Real marketing for real <span className="text-brand">business growth.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              We combine AI, data, and human creativity to help ambitious brands earn more attention, qualified leads, and revenue.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg" className="rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">
+                <Link to="/contact-us">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full px-7">
+                <Link to="/our-work"><CirclePlay className="mr-2 h-4 w-4 text-brand" />Explore Our Work</Link>
+              </Button>
             </div>
-
-            <div className="relative z-10 flex min-h-[660px] flex-col justify-center px-6 py-12 sm:px-10 lg:min-h-[600px] lg:w-[58%] lg:px-12 xl:px-16">
-              <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-brand-light px-3 py-1.5 text-[11px] font-semibold uppercase text-brand">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand" /> AI-powered digital marketing agency
-              </p>
-              <h1 className="max-w-2xl text-4xl font-semibold leading-[1.03] text-foreground sm:text-5xl lg:text-6xl">
-                Real marketing<br />for real<br /><span className="text-brand">business growth.</span>
-              </h1>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                We combine AI, data, and human creativity to help brands get more traffic, more leads, and more revenue.
-              </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">
-                  <Link to="/contact-us">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full bg-background/80 px-7">
-                  <Link to="/our-work"><CirclePlay className="mr-2 h-4 w-4 text-brand" />Watch Our Story</Link>
-                </Button>
-              </div>
-              <div className="mt-10 grid max-w-xl grid-cols-2 gap-x-5 gap-y-4 sm:grid-cols-4">
-                {[
-                  { icon: BarChart3, label: "Data-driven strategies" },
-                  { icon: Bot, label: "AI-powered execution" },
-                  { icon: Check, label: "Transparent reporting" },
-                  { icon: Target, label: "Focused on your ROI" },
-                ].map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex items-center gap-2.5 text-[11px] font-medium leading-tight text-foreground">
-                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-brand-light text-brand"><Icon className="h-4 w-4" /></span>
-                    {label}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 overflow-hidden rounded-lg lg:hidden">
-                <img src={heroImage} alt="Digital marketing team working together" className="aspect-[4/3] w-full object-cover" width={1600} height={1104} />
+            <div className="mt-10 grid max-w-xl grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-6 sm:grid-cols-4">
+              {["Data-led strategy", "AI SEO", "Clear reporting", "Revenue focus"].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-xs font-medium text-foreground">
+                  <Check className="h-4 w-4 shrink-0 text-brand" />{item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative min-h-[420px] overflow-hidden rounded-lg lg:min-h-[590px]">
+            <img src={heroImage} alt="Digital marketing team collaborating in a bright office" className="absolute inset-0 h-full w-full object-cover" width={1600} height={1104} fetchPriority="high" />
+            <div className="absolute bottom-5 right-5 max-w-[230px] rounded-lg border border-border bg-background/95 p-4 shadow-xl backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-lg bg-brand-light text-brand"><BarChart3 className="h-5 w-5" /></span>
+                <div><p className="text-2xl font-semibold text-foreground">300%+</p><p className="text-xs text-muted-foreground">Average traffic growth</p></div>
               </div>
             </div>
           </div>
