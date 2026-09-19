@@ -105,7 +105,7 @@ export interface ServicePageConfig {
 // ── Shared eyebrow ──
 const SectionEyebrow = ({ children }: { children?: React.ReactNode }) =>
   children ? (
-    <span className="text-brand text-xs font-bold uppercase tracking-[0.25em] mb-3 block">{children}</span>
+    <span className="mb-3 block text-sm font-semibold uppercase tracking-wider text-brand">— {children}</span>
   ) : null;
 
 // ── Problem Section ──
