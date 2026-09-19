@@ -242,7 +242,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="border-b border-border bg-background pt-14 pb-8 md:pt-20 md:pb-10">
+      <section className="bg-background pt-14 pb-8 md:pt-20 md:pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
             <div className="flex items-center gap-1">
@@ -280,7 +280,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mt-6 md:mt-8 pt-4 md:pt-5 border-t border-border">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mt-6 md:mt-8 pt-4 md:pt-5">
             <div className="text-center">
               <p className="text-2xl font-bold text-foreground">300%+</p>
               <p className="text-xs text-muted-foreground">Avg. Traffic Growth</p>
