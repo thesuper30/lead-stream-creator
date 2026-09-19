@@ -273,7 +273,7 @@ const Home = () => {
           <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Tap a row to compare</p>
           <div className="mt-3 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
             <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
-              <p className="pb-4 text-sm font-semibold text-foreground">What Matters</p>
+              <div className="min-h-[48px] pb-4" aria-hidden="true" />
               {differenceRows.map((row, i) => (
                 <button
                   key={row.matter}
