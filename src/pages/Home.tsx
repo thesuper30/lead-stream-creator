@@ -51,20 +51,14 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import amitTeam from "@/assets/team/amit.png";
-import lalitTeam from "@/assets/team/lalit.png";
-import mayankTeam from "@/assets/team/mayank.png";
-import vigneshTeam from "@/assets/team/vignesh.png";
-import sujeetTeam from "@/assets/team/sujeet.png";
-import swanandTeam from "@/assets/team/swanand.png";
-import sathyaTeam from "@/assets/team/sathya.png";
-import monishaTeam from "@/assets/team/monisha.png";
-import kailashTeam from "@/assets/team/kailash.png";
-import deepakTeam from "@/assets/team/deepak.png";
-import madhuTeam from "@/assets/team/madhu.png";
-import anushTeam from "@/assets/team/anush.png";
-import abhishekTeam from "@/assets/team/abhishek.png";
-import azarudheenTeam from "@/assets/team/azarudheen.jpg";
+import amitTeamAsset from "@/assets/team/Amit_Singh.png.asset.json";
+import mayankTeamAsset from "@/assets/team/Mayank_1.png.asset.json";
+import praveenTeamAsset from "@/assets/team/Praveen_1.png.asset.json";
+import harshavardhanTeamAsset from "@/assets/team/Harshavardhan.png.asset.json";
+import chandrashekarTeamAsset from "@/assets/team/Chandrashekar.png.asset.json";
+import anandTeamAsset from "@/assets/team/Anand_3.png.asset.json";
+import likhithTeamAsset from "@/assets/team/Likith_1.png.asset.json";
+import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
@@ -90,23 +84,17 @@ const industries = [
 ];
 
 const teamMembers = [
-  { name: "Amit", expertise: "Growth Strategy & Business Development", category: "Strategy", image: amitTeam },
-  { name: "Lalit", expertise: "SEO Architecture & Technical Audits", category: "Search", image: lalitTeam },
-  { name: "Mayank", expertise: "Digital Strategy & Analytics", category: "Strategy", image: mayankTeam },
-  { name: "Vignesh", expertise: "Ex-Google, 12+ years in SEO", category: "Search", image: vigneshTeam },
-  { name: "Sujeet", expertise: "AI/ML SEO Specialist", category: "Search", image: sujeetTeam },
-  { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", category: "Performance", image: swanandTeam },
-  { name: "Sathya", expertise: "Content Strategy & SEO Expert", category: "Creative", image: sathyaTeam },
-  { name: "Monisha", expertise: "Full-stack Developer, SEO Engineer", category: "Technology", image: monishaTeam },
-  { name: "Kailash", expertise: "IIT Delhi, Analytics Expert", category: "Strategy", image: kailashTeam },
-  { name: "Deepak", expertise: "10+ years in SEO & PPC", category: "Performance", image: deepakTeam },
-  { name: "Madhu", expertise: "E-commerce SEO Expert", category: "Search", image: madhuTeam },
-  { name: "Anush", expertise: "Google Ads Certified, ROI Expert", category: "Performance", image: anushTeam },
-  { name: "Abhishek", expertise: "React & Node.js Expert", category: "Technology", image: abhishekTeam },
-  { name: "Azarudheen", expertise: "UI/UX & Creative Design", category: "Creative", image: azarudheenTeam },
+  { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeamAsset.url },
+  { name: "Mayank", expertise: "Vice President - Business", category: "Strategy", image: mayankTeamAsset.url },
+  { name: "Gagan", expertise: "VP - Digital Marketing", category: "Strategy", image: gaganTeam },
+  { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeamAsset.url },
+  { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeamAsset.url },
+  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrashekarTeamAsset.url },
+  { name: "Anand Kumar", expertise: "Performance Marketing Manager", category: "Performance", image: anandTeamAsset.url },
+  { name: "Likhith P", expertise: "Video Editor", category: "Creative", image: likhithTeamAsset.url },
 ];
 
-const teamCategories = ["All", "Strategy", "Search", "Performance", "Technology", "Creative"];
+const teamCategories = ["All", "Strategy", "Performance", "Creative"];
 
 const clientLogos = [
   { src: magicbricksLogo, name: "Magicbricks", industry: "Real Estate" },
@@ -171,10 +159,7 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
 const Home = () => {
   const [teamCategory, setTeamCategory] = useState("All");
   const [activeMember, setActiveMember] = useState(teamMembers[0].name);
-  const featuredTeamNames = ["Amit", "Lalit", "Vignesh", "Swanand", "Monisha", "Azarudheen", "Mayank", "Sujeet"];
-  const visibleTeam = teamCategory === "All"
-    ? teamMembers.filter((member) => featuredTeamNames.includes(member.name))
-    : teamMembers.filter((member) => member.category === teamCategory);
+  const visibleTeam = teamCategory === "All" ? teamMembers : teamMembers.filter((member) => member.category === teamCategory);
   return (
   <>
     <Helmet>
@@ -474,7 +459,7 @@ const Home = () => {
                   aria-pressed={isActive}
                   aria-label={`View ${member.name}, ${member.expertise}`}
                 >
-                  <img src={member.image} alt={`${member.name} at The Super 30`} className={`h-full w-full object-cover transition duration-700 motion-reduce:transition-none ${isActive ? "scale-105 saturate-100" : "saturate-[.8] group-hover:scale-105 group-hover:saturate-100"}`} loading="lazy" />
+                  <img src={member.image} alt={`${member.name} at The Super 30`} width={800} height={1000} className={`h-full w-full object-cover transition duration-700 motion-reduce:transition-none ${isActive ? "scale-105 saturate-100" : "saturate-[.8] group-hover:scale-105 group-hover:saturate-100"}`} loading="lazy" />
                   <div className={`absolute inset-0 bg-gradient-to-t from-foreground via-foreground/5 to-transparent transition-opacity duration-500 ${isActive ? "opacity-90" : "opacity-75 group-hover:opacity-90"}`} />
                   <span className={`absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-semibold backdrop-blur-md transition-all duration-300 sm:left-5 sm:top-5 ${isActive ? "rotate-0 border-brand bg-brand text-primary-foreground" : "-rotate-12 border-primary-foreground/30 bg-foreground/20 text-primary-foreground group-hover:rotate-0 group-hover:border-brand group-hover:bg-brand"}`}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={`absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wide backdrop-blur-md transition-all duration-300 ${isActive ? "bg-brand text-primary-foreground" : "translate-y-1 bg-background/85 text-foreground opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.category}</span>
