@@ -212,7 +212,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative z-10 -mt-1 px-5 pb-7 sm:px-8 sm:pb-9 lg:mt-0 lg:flex lg:min-h-[590px] lg:w-[50%] lg:flex-col lg:justify-center lg:pl-16 lg:pr-6 lg:py-12 xl:pl-24">
+        <div className="container relative z-10 mx-auto -mt-1 px-4 pb-7 sm:pb-9 lg:mt-0">
+          <div className="lg:flex lg:min-h-[590px] lg:w-[50%] lg:flex-col lg:justify-center lg:pr-6 lg:py-12">
           <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-brand/20 bg-brand-light px-3 py-1.5 text-[10px] font-semibold uppercase text-brand sm:text-xs">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" /> AI-powered digital marketing agency
           </p>
