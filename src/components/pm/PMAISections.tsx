@@ -54,9 +54,7 @@ export const PMAISections = () => {
           
           <div className="grid lg:grid-cols-2 gap-4 md:gap-8 items-center relative">
             <div>
-              <span className="inline-block px-4 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium mb-3 border border-orange-500/30">
-                AI Powered Analytics
-              </span>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— AI Powered Analytics</p>
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">
                 AI Audience and Intent Mapping
               </h3>
