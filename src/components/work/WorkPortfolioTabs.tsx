@@ -232,7 +232,7 @@ const HoverVideo = ({ src, poster }: { src: string; poster?: string }) => {
 
   return (
     <Card
-      className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
+      className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
       onMouseEnter={() => { setIsHovered(true); videoRef.current?.play(); }}
       onMouseLeave={() => { setIsHovered(false); if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
     >
