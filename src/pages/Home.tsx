@@ -200,11 +200,11 @@ const Home = () => {
         <div className="relative h-[330px] overflow-hidden sm:h-[390px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[66%]">
           <img src={heroImage} alt="Digital marketing team collaborating in a bright office" className="absolute inset-0 h-full w-full object-cover object-center" width={1600} height={1104} fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/25 lg:to-transparent" />
-          <div className="absolute right-5 top-5 hidden text-left lg:block xl:right-9 xl:top-8">
+          <div className="absolute right-5 top-5 hidden text-left lg:block lg:right-[max(2rem,calc((100vw-1400px)/2+2rem))] lg:top-8">
             <p className="text-xl font-semibold leading-[1.35] text-foreground xl:text-2xl">Ideas<br />Strategy<br />Execution<br />Growth</p>
             <span className="mt-3 block h-1 w-12 bg-brand" />
           </div>
-          <div className="absolute bottom-5 right-5 rounded-lg border border-border bg-background/95 p-4 shadow-xl backdrop-blur-md sm:bottom-7 sm:right-7 lg:bottom-10 lg:right-10">
+          <div className="absolute bottom-5 right-5 rounded-lg border border-border bg-background/95 p-4 shadow-xl backdrop-blur-md sm:bottom-7 sm:right-7 lg:bottom-10 lg:right-[max(2rem,calc((100vw-1400px)/2+2rem))]">
             <div className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-md bg-brand-light text-brand"><BarChart3 className="h-6 w-6" /></span>
               <div><p className="text-2xl font-semibold text-foreground">300%+</p><p className="max-w-[125px] text-[11px] leading-snug text-muted-foreground">Average traffic growth</p></div>
