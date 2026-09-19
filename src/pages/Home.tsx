@@ -241,7 +241,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="border-b border-border bg-background py-8 md:py-10">
+      <section className="border-b border-border bg-background pt-14 pb-8 md:pt-20 md:pb-10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 md:mb-6">
             <div className="flex items-center gap-1">
