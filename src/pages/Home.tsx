@@ -17,6 +17,7 @@ import {
   Search,
   ShoppingBag,
   Sparkles,
+  Star,
   Target,
   TrendingUp,
   Users,
