@@ -1,9 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Palette, PenTool, Image, Search, TrendingUp, Video, Camera, ExternalLink, Eye, Heart, MessageCircle, Volume2, VolumeX, ArrowLeft, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import bookMyScansReport from "@/assets/seo-reports/bookmyscans-report.png";
 import suranaReport from "@/assets/seo-reports/surana-report.png";
 import harvestReport from "@/assets/seo-reports/harvest-report.png";
@@ -142,9 +143,9 @@ const logoImages = [
   { src: logo11, alt: "Logo design portfolio project 11" },
 ];
 
-const LogoGrid = () => (
+const LogoGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-    {logoImages.map((logo) => (
+    {logoImages.slice(0, limit).map((logo) => (
       <Card key={logo.alt} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
@@ -162,9 +163,9 @@ const LogoGrid = () => (
 );
 const brandImages = [brand14, brand15, brand16, brand17, brand18, brand19, brand20, brand21, brand1, brand2, brand3, brand4, brand5, brand6, brand7, brand8, brand9, brand10, brand11, brand12, brand13];
 
-const BrandIdentityGrid = () => (
+const BrandIdentityGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-    {brandImages.map((img, i) => (
+    {brandImages.slice(0, limit).map((img, i) => (
       <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
@@ -186,9 +187,9 @@ const socialCreativeImages = [
   creative5, creative6, creative7, creative8,
 ];
 
-const SocialCreativesGrid = () => (
+const SocialCreativesGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-    {socialCreativeImages.map((img, i) => (
+    {socialCreativeImages.slice(0, limit).map((img, i) => (
       <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
@@ -266,9 +267,9 @@ const HoverVideo = ({ src, poster }: { src: string; poster?: string }) => {
   );
 };
 
-const UGCGrid = () => (
+const UGCGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-    {ugcVideos.map((video, i) => (
+    {ugcVideos.slice(0, limit).map((video, i) => (
       <HoverVideo key={i} src={video.src} poster={video.poster} />
     ))}
   </div>
@@ -319,7 +320,7 @@ const PhotoshootGrid = () => (
   </div>
 );
 
-const BentoClientGrid = ({ clients }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[] }) => {
+const BentoClientGrid = ({ clients, limit }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[]; limit?: number }) => {
   const navigate = useNavigate();
   const [reportOpen, setReportOpen] = React.useState(false);
   const [reportImg, setReportImg] = React.useState<string | null>(null);
@@ -342,7 +343,7 @@ const BentoClientGrid = ({ clients }: { clients: { name: string; industry: strin
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-        {clients.map((client, i) => {
+        {clients.slice(0, limit).map((client, i) => {
           const isLarge = false;
           return (
             <div
@@ -415,12 +416,14 @@ const BentoClientGrid = ({ clients }: { clients: { name: string; industry: strin
   );
 };
 
-export const WorkPortfolioTabs = () => {
+export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boolean }) => {
   const [activeTab, setActiveTab] = React.useState("logo");
   const activeCaption = tabs.find((t) => t.id === activeTab)?.caption ?? "";
+  const visibleTabs = homePreview ? tabs.filter((tab) => tab.id !== "product-photoshoot") : tabs;
+  const previewLimit = homePreview ? 4 : undefined;
 
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} bg-background`}>
       <div className="container mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
@@ -433,7 +436,7 @@ export const WorkPortfolioTabs = () => {
 
         <Tabs defaultValue="logo" value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 border-b border-border/50 rounded-none mb-8">
-            {tabs.map((tab) => (
+            {visibleTabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
@@ -451,32 +454,43 @@ export const WorkPortfolioTabs = () => {
           </p>
 
           <TabsContent value="logo">
-            <LogoGrid />
+            <LogoGrid limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="brand-identity">
-            <BrandIdentityGrid />
+            <BrandIdentityGrid limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="social-creatives">
-            <SocialCreativesGrid />
+            <SocialCreativesGrid limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="seo">
-            <BentoClientGrid clients={seoClients} />
+            <BentoClientGrid clients={seoClients} limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="lead-generation">
-            <BentoClientGrid clients={leadGenClients} />
+            <BentoClientGrid clients={leadGenClients} limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="ugc-content">
-            <UGCGrid />
+            <UGCGrid limit={previewLimit} />
           </TabsContent>
 
           <TabsContent value="product-photoshoot">
             <PhotoshootGrid />
           </TabsContent>
+
+          {homePreview && (
+            <div className="mt-9 flex justify-center">
+              <Button asChild size="lg" className="rounded-full px-7">
+                <Link to={`/our-work?category=${activeTab}`}>
+                  See More {visibleTabs.find((tab) => tab.id === activeTab)?.label} Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          )}
         </Tabs>
       </div>
     </section>
