@@ -20,6 +20,7 @@ import {
   Target,
   TrendingUp,
   Users,
+  X,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -224,13 +225,32 @@ const Home = () => (
         </div>
       </section>
 
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <SectionIntro eyebrow="The Super 30 Difference" title="Not another vendor. A focused growth partner." />
-          <div className="mt-10 grid overflow-hidden rounded-lg border border-border lg:grid-cols-[0.8fr_1fr_1fr]">
-            <div className="bg-muted/30 p-6"><p className="text-xs font-semibold uppercase text-muted-foreground">What matters</p>{["Strategy & execution", "AI and automation", "Reporting", "Business outcomes", "Expert ownership"].map((item) => <p key={item} className="border-b border-border py-4 text-sm font-medium last:border-0">{item}</p>)}</div>
-            <div className="border-y border-border bg-brand-light p-6 lg:border-x lg:border-y-0"><p className="text-lg font-semibold text-foreground">The Super 30</p>{["One connected growth plan", "Applied where it improves the work", "Clear and transparent", "Revenue-led priorities", "Senior specialist involvement"].map((item) => <p key={item} className="flex items-center gap-2 border-b border-brand/10 py-4 text-sm last:border-0"><Check className="h-4 w-4 shrink-0 text-brand" />{item}</p>)}</div>
-            <div className="bg-background p-6"><p className="text-lg font-semibold text-muted-foreground">Fragmented approach</p>{["Disconnected channel activity", "Tools without a clear purpose", "Delayed or unclear updates", "Vanity-metric reporting", "Limited strategic ownership"].map((item) => <p key={item} className="border-b border-border py-4 text-sm text-muted-foreground last:border-0">{item}</p>)}</div>
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-brand">The Super 30 Difference</p>
+              <h2 className="mt-3 max-w-xl text-3xl font-semibold leading-tight text-foreground md:text-4xl">Not Just Another Agency.<br />A True Growth Partner.</h2>
+            </div>
+            <Link to="/about" className="inline-flex items-center text-sm font-semibold text-brand">See Why We’re Different <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          </div>
+          <div className="mt-10 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
+            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+              <p className="pb-4 text-sm font-semibold text-foreground">What Matters</p>
+              {["Strategy & Execution", "Use of AI & Automation", "Reporting & Transparency", "Focus on Business Outcomes", "Dedicated Expert Team", "Flexibility & Personalization"].map((item) => <p key={item} className="border-t border-border py-4 text-sm font-medium text-foreground">{item}</p>)}
+            </div>
+            <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
+              <p className="pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
+              {["End-to-end, ROI focused", "Integrated across all services", "Real-time, transparent reporting", "Revenue & long-term growth", "Senior specialists, hands-on", "Tailored to your business goals"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-brand/10 py-4 text-sm font-medium text-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{item}</p>)}
+            </div>
+            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+              <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
+              {["Only execution or limited strategy", "Minimal or no AI adoption", "Basic, delayed reports", "Focus on vanity metrics", "Junior resources, high turnover", "One-size-fits-all approach"].map((item) => <p key={item} className="flex items-center gap-3 border-t border-border py-4 text-sm text-muted-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>{item}</p>)}
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col items-center gap-3 text-center">
+            <Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Experience the Difference <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            <p className="text-xs text-muted-foreground">Start with a free growth audit — no commitments, just clarity.</p>
           </div>
         </div>
       </section>
