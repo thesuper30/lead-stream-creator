@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
+import { WorkPortfolioTabs } from "@/components/work/WorkPortfolioTabs";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
@@ -41,9 +42,6 @@ import aiSeoImage from "@/assets/services/ai-seo-card.jpg";
 import socialImage from "@/assets/services/social-media-card.jpg";
 import webImage from "@/assets/services/web-design-card.jpg";
 import emailImage from "@/assets/services/email-marketing-card.jpg";
-import suranaCase from "@/assets/case-studies/surana-educational.png";
-import magicbricksCase from "@/assets/case-studies/magicbricks.png";
-import mamaearthCase from "@/assets/case-studies/mamaearth.png";
 import auditImage from "@/assets/process/step-audit.jpg";
 import strategyStepImage from "@/assets/process/step-strategy.jpg";
 import launchImage from "@/assets/process/step-launch.jpg";
@@ -91,12 +89,6 @@ const differenceRows = [
   { matter: "Focus on Business Outcomes", super30: "Revenue & long-term growth", others: "Focus on vanity metrics" },
   { matter: "Dedicated Expert Team", super30: "Senior specialists, hands-on", others: "Junior resources, high turnover" },
   { matter: "Flexibility & Personalization", super30: "Tailored to your business goals", others: "One-size-fits-all approach" },
-];
-
-const caseStudies = [
-  { title: "Surana Educational Institutions", service: "AI SEO & Content", image: suranaCase },
-  { title: "Magicbricks", service: "Integrated Digital Growth", image: magicbricksCase },
-  { title: "Mamaearth", service: "Ecommerce Marketing", image: mamaearthCase },
 ];
 
 const process = [
@@ -410,14 +402,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-muted/30 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"><SectionIntro eyebrow="Featured Work" title="Real brands. Connected growth stories." /><Link to="/our-work" className="inline-flex items-center text-sm font-semibold text-brand">See all work <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
-          <div className="grid gap-4 lg:grid-cols-3">
-            {caseStudies.map((item) => <Link to="/our-work" key={item.title} className="group relative min-h-[350px] overflow-hidden rounded-lg"><img src={item.image} alt={`${item.title} case study`} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /><div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/20 to-transparent" /><div className="absolute inset-x-0 bottom-0 p-6"><span className="rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground">{item.service}</span><h3 className="mt-3 text-2xl font-semibold text-primary-foreground">{item.title}</h3><span className="mt-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background text-foreground"><ArrowRight className="h-4 w-4" /></span></div></Link>)}
-          </div>
-        </div>
-      </section>
+      <WorkPortfolioTabs homePreview />
 
       <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4">

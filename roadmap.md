@@ -1,8 +1,5 @@
-# Roadmap
-- [x] Implement the reference-style individual blog layout globally
-- [x] Expand the blog hub with editorial discovery and topic sections
-- [x] Redesign the blog opening as a magazine masthead
-- [x] Rewrite coaching institute landing page: remove outcome section + metrics, reposition around services
+# Homepage featured work
 
-- [x] Finish and visually verify the AI SEO page redesign
-- [x] Rebuild and visually verify the homepage against the supplied reference
+- [x] Replace the homepage featured section with Our Work tabs
+- [x] Exclude Product Photography and show four projects per tab
+- [x] Add a See More action for each tab and verify the layout
