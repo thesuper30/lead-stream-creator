@@ -419,7 +419,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-wider text-brand">The people behind the work</p>
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand">— The people behind the work</p>
               <h2 className="mt-3 text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">Meet Our <span className="text-brand">Super 30</span></h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Strategists, search specialists, media experts, developers, and designers — one focused team built around your growth.</p>
             </div>
