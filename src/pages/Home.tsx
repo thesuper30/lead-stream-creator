@@ -490,7 +490,7 @@ const Home = () => {
       <section className="bg-background py-10 md:py-16">
         <div className="container mx-auto px-4">
           <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-10 md:px-12 md:py-14 lg:flex lg:items-center lg:justify-between lg:gap-12">
-            <div className="max-w-2xl"><p className="text-xs font-semibold uppercase text-brand">Let’s grow together</p><h2 className="mt-4 text-3xl font-semibold text-primary-foreground md:text-4xl">Ready to turn your growth goals into a clearer plan?</h2><p className="mt-4 text-base text-primary-foreground/70">Book a free consultation and talk through the opportunities that matter most to your business.</p></div>
+            <div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-wider text-brand">— Let’s grow together</p><h2 className="mt-4 text-3xl font-semibold text-primary-foreground md:text-4xl">Ready to turn your growth goals into a clearer plan?</h2><p className="mt-4 text-base text-primary-foreground/70">Book a free consultation and talk through the opportunities that matter most to your business.</p></div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:shrink-0"><Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Book a Free Consultation <ArrowRight className="ml-2 h-4 w-4" /></Link></Button><Button asChild size="lg" variant="outline-white" className="rounded-full"><a href="tel:+918904150555"><Users className="mr-2 h-4 w-4" />Talk to Our Team</a></Button></div>
           </div>
         </div>
