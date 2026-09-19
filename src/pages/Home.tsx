@@ -270,27 +270,47 @@ const Home = () => {
             </div>
             <Link to="/about" className="inline-flex items-center text-sm font-semibold text-brand">See Why We’re Different <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </div>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
-            <div className="grid grid-cols-2 border-b border-border bg-muted/50 px-6 py-4 text-sm font-semibold md:px-8">
-              <div className="flex items-center gap-2 text-foreground">super<span className="text-brand">30</span></div>
-              <div className="text-muted-foreground">Other Agencies</div>
+          <p className="mt-6 text-xs font-medium uppercase tracking-wider text-muted-foreground">Tap a row to compare</p>
+          <div className="mt-3 grid gap-4 lg:grid-cols-[0.9fr_1.1fr_1fr]">
+            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+              <p className="pb-4 text-sm font-semibold text-foreground">What Matters</p>
+              {differenceRows.map((row, i) => (
+                <button
+                  key={row.matter}
+                  type="button"
+                  onClick={() => setActiveRow(i)}
+                  onMouseEnter={() => setActiveRow(i)}
+                  className={`flex w-full items-center justify-between gap-2 border-t border-border py-4 text-left text-sm font-medium transition-all duration-300 ${activeRow === i ? "text-brand" : "text-foreground hover:text-brand/70"}`}
+                >
+                  {row.matter}
+                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full bg-brand transition-all duration-300 ${activeRow === i ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} />
+                </button>
+              ))}
             </div>
-            {differenceRows.map((row, i) => (
-              <div
-                key={row.matter}
-                className={`grid grid-cols-2 items-stretch border-b border-border last:border-b-0 transition-colors duration-300 ${activeRow === i ? "bg-brand-light/40" : "bg-background hover:bg-muted/30"}`}
-                onMouseEnter={() => setActiveRow(i)}
-              >
-                <div className={`flex items-center gap-3 px-6 py-5 text-sm font-medium text-foreground transition-all duration-300 md:px-8 ${activeRow === i ? "translate-x-1" : ""}`}>
+            <div className="relative rounded-2xl bg-brand-light p-6 shadow-md ring-1 ring-brand/20">
+              <p className="pb-4 text-center text-2xl font-semibold tracking-tight text-foreground">super<span className="text-brand">30</span></p>
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-brand/10 px-2 py-4 text-sm font-medium rounded-lg transition-all duration-300 ${activeRow === i ? "translate-x-1 bg-background/70 text-foreground shadow-sm" : "text-foreground/70"}`}
+                >
                   <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand transition-transform duration-300 ${activeRow === i ? "scale-110" : ""}`}><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>
                   {row.super30}
-                </div>
-                <div className={`flex items-center gap-3 border-l border-border px-6 py-5 text-sm text-muted-foreground transition-all duration-300 md:px-8 ${activeRow === i ? "text-foreground" : ""}`}>
+                </p>
+              ))}
+            </div>
+            <div className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+              <p className="pb-4 text-center text-sm font-semibold text-muted-foreground">Other Agencies</p>
+              {differenceRows.map((row, i) => (
+                <p
+                  key={row.matter}
+                  className={`flex items-center gap-3 border-t border-border py-4 text-sm transition-all duration-300 ${activeRow === i ? "text-foreground" : "text-muted-foreground"}`}
+                >
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted"><X className="h-3.5 w-3.5 text-muted-foreground" /></span>
                   {row.others}
-                </div>
-              </div>
-            ))}
+                </p>
+              ))}
+            </div>
           </div>
           <div className="mt-10 flex flex-col items-center gap-3 text-center">
             <Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Experience the Difference <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
