@@ -146,7 +146,7 @@ const logoImages = [
 const LogoGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     {logoImages.slice(0, limit).map((logo) => (
-      <Card key={logo.alt} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={logo.alt} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
@@ -166,7 +166,7 @@ const brandImages = [brand14, brand15, brand16, brand17, brand18, brand19, brand
 const BrandIdentityGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     {brandImages.slice(0, limit).map((img, i) => (
-      <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={i} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
@@ -190,7 +190,7 @@ const socialCreativeImages = [
 const SocialCreativesGrid = ({ limit }: { limit?: number }) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     {socialCreativeImages.slice(0, limit).map((img, i) => (
-      <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={i} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
@@ -232,7 +232,7 @@ const HoverVideo = ({ src, poster }: { src: string; poster?: string }) => {
 
   return (
     <Card
-      className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
+      className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
       onMouseEnter={() => { setIsHovered(true); videoRef.current?.play(); }}
       onMouseLeave={() => { setIsHovered(false); if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } }}
     >
@@ -294,7 +294,7 @@ const photoshootProjects = [
 const PhotoshootGrid = () => (
   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
     {photoshootProjects.map((p, i) => (
-      <Card key={i} className="bg-background border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
+      <Card key={i} className="bg-card/90 border-border/50 overflow-hidden hover:shadow-lg transition-shadow group">
         <CardContent className="p-0">
           <div className="aspect-square overflow-hidden">
             <img
@@ -345,7 +345,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
         {clients.slice(0, limit).map((client) => (
           <div
             key={client.name}
-            className="group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
+            className={`group relative overflow-hidden rounded-2xl border-2 border-border/50 hover:shadow-2xl transition-all duration-500 ${homePreview ? "bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-primary/5" : "bg-card/90 hover:border-brand/60 hover:shadow-brand/5"}`}
           >
             <div className="flex flex-col">
               {/* Logo area */}
@@ -415,8 +415,11 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
   const previewLimit = homePreview ? 8 : undefined;
 
   return (
-    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} bg-background`}>
-      <div className="container mx-auto px-3 md:px-4">
+    <section className={`${homePreview ? "py-16 md:py-24 bg-background" : "py-16 md:py-20 dark relative overflow-hidden bg-background"}`}>
+      {!homePreview && (
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:52px_52px]" />
+      )}
+      <div className="container relative mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span>
