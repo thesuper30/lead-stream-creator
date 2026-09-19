@@ -320,7 +320,7 @@ const PhotoshootGrid = () => (
   </div>
 );
 
-const BentoClientGrid = ({ clients, limit }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[]; limit?: number }) => {
+const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[]; limit?: number; homePreview?: boolean }) => {
   const navigate = useNavigate();
   const [reportOpen, setReportOpen] = React.useState(false);
   const [reportImg, setReportImg] = React.useState<string | null>(null);
@@ -339,69 +339,61 @@ const BentoClientGrid = ({ clients, limit }: { clients: { name: string; industry
     }
   };
 
-  // First card spans 2 cols for bento feel
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-        {clients.slice(0, limit).map((client, i) => {
-          const isLarge = false;
-          return (
-            <div
-              key={client.name}
-              className={`group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 ${
-                isLarge ? "md:col-span-2 md:flex-row" : ""
-              }`}
-            >
-              <div className={`flex flex-col ${isLarge ? "md:flex-row" : ""}`}>
-                {/* Logo area */}
-                <div
-                  className={`flex items-center justify-center overflow-hidden transition-colors duration-500 ${
-                    isLarge ? "md:w-1/2 h-52 md:h-auto" : "h-44"
-                  }`}
-                  style={{ backgroundColor: client.bgColor || undefined }}
-                >
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
-                  />
+      <div className={`grid grid-cols-1 sm:grid-cols-2 ${homePreview ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-4 max-w-7xl mx-auto`}>
+        {clients.slice(0, limit).map((client) => (
+          <div
+            key={client.name}
+            className="group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
+          >
+            <div className="flex flex-col">
+              {/* Logo area */}
+              <div
+                className={`flex items-center justify-center overflow-hidden transition-colors duration-500 ${homePreview ? "h-32" : "h-44"}`}
+                style={{ backgroundColor: client.bgColor || undefined }}
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ${homePreview ? "p-4" : "p-6"}`}
+                />
+              </div>
+
+              {/* Info */}
+              <div className={`flex flex-col justify-center space-y-3 ${homePreview ? "p-4" : "p-6"}`}>
+                <div>
+                  <span className="inline-block text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-1.5">
+                    {client.industry}
+                  </span>
+                  <h3 className={`font-bold text-foreground ${homePreview ? "text-base leading-snug" : "text-xl"}`}>
+                    {client.name}
+                  </h3>
                 </div>
 
-                {/* Info */}
-                <div className={`flex flex-col justify-center p-6 ${isLarge ? "md:w-1/2 md:p-10" : ""} space-y-4`}>
-                  <div>
-                    <span className="inline-block text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2.5 py-0.5 rounded-full mb-2">
-                      {client.industry}
-                    </span>
-                    <h3 className={`font-bold text-foreground ${isLarge ? "text-2xl md:text-3xl" : "text-xl"}`}>
-                      {client.name}
-                    </h3>
+                {/* Metrics */}
+                {client.metrics && (
+                  <div className="grid grid-cols-3 gap-2">
+                    {client.metrics.map((m, mi) => (
+                      <div key={mi} className={`bg-muted/50 rounded-xl text-center border border-border/20 ${homePreview ? "p-2" : "p-3"}`}>
+                        <div className={`font-bold text-primary ${homePreview ? "text-sm" : "text-lg"}`}>{m.value}</div>
+                        <div className="text-[10px] text-muted-foreground mt-0.5 font-medium leading-tight">{m.label}</div>
+                      </div>
+                    ))}
                   </div>
+                )}
 
-                  {/* Metrics */}
-                  {client.metrics && (
-                    <div className={`grid gap-2 ${isLarge ? "grid-cols-3" : "grid-cols-3"}`}>
-                      {client.metrics.map((m, mi) => (
-                        <div key={mi} className="bg-muted/50 rounded-xl p-3 text-center border border-border/20">
-                          <div className={`font-bold text-primary ${isLarge ? "text-xl" : "text-lg"}`}>{m.value}</div>
-                          <div className="text-[10px] text-muted-foreground mt-0.5 font-medium">{m.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  <button
-                    onClick={() => handleViewReport(client)}
-                    className="inline-flex items-center gap-2 self-start bg-brand hover:bg-brand/90 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-sm"
-                  >
-                    View Full Report
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </button>
-                </div>
+                <button
+                  onClick={() => handleViewReport(client)}
+                  className={`inline-flex items-center gap-2 self-start bg-brand hover:bg-brand/90 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ${homePreview ? "px-3 py-2 text-xs" : "px-5 py-2.5 text-sm"}`}
+                >
+                  View Full Report
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </button>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
       {/* Report Screenshot Modal */}
@@ -466,11 +458,11 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
           </TabsContent>
 
           <TabsContent value="seo">
-            <BentoClientGrid clients={seoClients} limit={previewLimit} />
+            <BentoClientGrid clients={seoClients} limit={previewLimit} homePreview={homePreview} />
           </TabsContent>
 
           <TabsContent value="lead-generation">
-            <BentoClientGrid clients={leadGenClients} limit={previewLimit} />
+            <BentoClientGrid clients={leadGenClients} limit={previewLimit} homePreview={homePreview} />
           </TabsContent>
 
           <TabsContent value="ugc-content">
