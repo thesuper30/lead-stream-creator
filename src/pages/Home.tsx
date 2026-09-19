@@ -183,7 +183,10 @@ const SectionIntro = ({ eyebrow, title, copy }: { eyebrow: string; title: string
 const Home = () => {
   const [teamCategory, setTeamCategory] = useState("All");
   const [activeMember, setActiveMember] = useState(teamMembers[0].name);
-  const visibleTeam = teamCategory === "All" ? teamMembers : teamMembers.filter((member) => member.category === teamCategory);
+  const featuredTeamNames = ["Amit", "Lalit", "Vignesh", "Swanand", "Monisha", "Azarudheen"];
+  const visibleTeam = teamCategory === "All"
+    ? teamMembers.filter((member) => featuredTeamNames.includes(member.name))
+    : teamMembers.filter((member) => member.category === teamCategory);
   return (
   <>
     <Helmet>
@@ -459,27 +462,37 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="mt-6 grid auto-rows-[250px] grid-cols-2 gap-3 sm:auto-rows-[290px] lg:grid-cols-4 lg:gap-4">
+          <div className="mt-6 grid auto-rows-[238px] grid-cols-2 gap-3 sm:auto-rows-[280px] lg:grid-cols-12 lg:grid-rows-2 lg:gap-4">
             {visibleTeam.map((member, index) => {
               const isActive = activeMember === member.name;
-              const isFeatured = teamCategory === "All" && (index === 0 || index === 7);
+              const allLayout = teamCategory === "All";
+              const desktopSpan = allLayout
+                ? index === 0
+                  ? "lg:col-span-6 lg:row-span-2"
+                  : index === 1
+                    ? "lg:col-span-3 lg:row-span-2"
+                    : "lg:col-span-3 lg:row-span-1"
+                : visibleTeam.length <= 3
+                  ? "lg:col-span-4 lg:row-span-2"
+                  : "lg:col-span-3 lg:row-span-2";
               return (
                 <button
                   key={member.name}
                   type="button"
                   onClick={() => setActiveMember(member.name)}
                   onMouseEnter={() => setActiveMember(member.name)}
-                  className={`group relative overflow-hidden rounded-lg border text-left outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:rounded-xl ${isFeatured ? "sm:col-span-2 sm:row-span-2" : ""} ${isActive ? "border-brand shadow-xl" : "border-border shadow-sm hover:-translate-y-1 hover:border-brand/50 hover:shadow-lg"}`}
+                  className={`group relative overflow-hidden rounded-lg border bg-foreground text-left outline-none transition-all duration-500 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:rounded-xl ${desktopSpan} ${allLayout && index === 0 ? "col-span-2 row-span-2" : ""} ${isActive ? "border-brand shadow-xl" : "border-border/70 shadow-sm hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl"}`}
                   aria-pressed={isActive}
                   aria-label={`View ${member.name}, ${member.expertise}`}
                 >
-                  <img src={member.image} alt={`${member.name} at The Super 30`} className={`h-full w-full object-cover transition duration-700 motion-reduce:transition-none ${isActive ? "scale-105" : "group-hover:scale-105"}`} loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/5 to-transparent" />
+                  <img src={member.image} alt={`${member.name} at The Super 30`} className={`h-full w-full object-cover transition duration-700 motion-reduce:transition-none ${isActive ? "scale-105 saturate-100" : "saturate-[.8] group-hover:scale-105 group-hover:saturate-100"}`} loading="lazy" />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-foreground via-foreground/5 to-transparent transition-opacity duration-500 ${isActive ? "opacity-90" : "opacity-75 group-hover:opacity-90"}`} />
+                  <span className={`absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-semibold backdrop-blur-md transition-all duration-300 sm:left-5 sm:top-5 ${isActive ? "rotate-0 border-brand bg-brand text-primary-foreground" : "-rotate-12 border-primary-foreground/30 bg-foreground/20 text-primary-foreground group-hover:rotate-0 group-hover:border-brand group-hover:bg-brand"}`}>{String(index + 1).padStart(2, "0")}</span>
                   <span className={`absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wide backdrop-blur-md transition-all duration-300 ${isActive ? "bg-brand text-primary-foreground" : "translate-y-1 bg-background/85 text-foreground opacity-0 group-hover:translate-y-0 group-hover:opacity-100"}`}>{member.category}</span>
                   <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
                     <span className={`mb-3 block h-0.5 bg-brand transition-all duration-500 ${isActive ? "w-10" : "w-0 group-hover:w-10"}`} />
-                    <h3 className={`font-semibold text-primary-foreground ${isFeatured ? "text-xl sm:text-3xl" : "text-base sm:text-xl"}`}>{member.name}</h3>
-                    <p className={`mt-1 max-w-sm leading-snug text-primary-foreground/80 transition-all duration-300 ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"} ${isFeatured ? "text-sm sm:text-base" : "text-xs sm:text-sm"}`}>{member.expertise}</p>
+                    <h3 className={`font-semibold text-primary-foreground ${allLayout && index === 0 ? "text-2xl sm:text-4xl" : "text-base sm:text-xl"}`}>{member.name}</h3>
+                    <p className={`mt-1 max-w-sm leading-snug text-primary-foreground/80 transition-all duration-300 ${isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"} ${allLayout && index === 0 ? "text-sm sm:text-base" : "text-xs sm:text-sm"}`}>{member.expertise}</p>
                   </div>
                 </button>
               );
@@ -487,8 +500,15 @@ const Home = () => {
           </div>
 
           <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-lg border border-border bg-background px-5 py-4 sm:flex-row sm:items-center sm:rounded-xl">
-            <p className="text-sm text-muted-foreground"><span className="font-semibold text-foreground">{visibleTeam.find((member) => member.name === activeMember)?.name}</span> — {visibleTeam.find((member) => member.name === activeMember)?.expertise}</p>
-            <span className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Selected specialist</span>
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-light text-sm font-semibold text-brand">{visibleTeam.findIndex((member) => member.name === activeMember) + 1}</span>
+              <p className="text-sm text-muted-foreground"><span className="font-semibold text-foreground">{visibleTeam.find((member) => member.name === activeMember)?.name}</span> — {visibleTeam.find((member) => member.name === activeMember)?.expertise}</p>
+            </div>
+            {teamCategory === "All" ? (
+              <Link to="/about" className="group inline-flex shrink-0 items-center text-xs font-semibold uppercase tracking-wider text-brand">Explore the full team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
+            ) : (
+              <span className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Selected specialist</span>
+            )}
           </div>
         </div>
       </section>
