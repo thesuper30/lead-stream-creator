@@ -128,6 +128,70 @@ const clientLogos = [
   { src: lancesoftLogo, name: "Lancesoft", industry: "Healthcare" },
 ];
 
+const seoWorkStats = [
+  {
+    name: "Book My Scans",
+    industry: "Healthcare",
+    logo: bookMyScansCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+320%" },
+      { label: "Keywords Ranked", value: "1,200+" },
+      { label: "Domain Authority", value: "+18" },
+    ],
+  },
+  {
+    name: "Surana Educational Institutions",
+    industry: "Education",
+    logo: suranaCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+195%" },
+      { label: "Keywords Ranked", value: "850+" },
+      { label: "Lead Growth", value: "+140%" },
+    ],
+  },
+  {
+    name: "Harvest International School",
+    industry: "Education",
+    logo: harvestCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+30%" },
+      { label: "Keywords Ranked", value: "420+" },
+      { label: "Visibility", value: "+65%" },
+    ],
+  },
+  {
+    name: "Magicbricks",
+    industry: "Real Estate",
+    logo: magicbricksCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+180%" },
+      { label: "Keywords Ranked", value: "2,400+" },
+      { label: "Domain Authority", value: "+22" },
+    ],
+  },
+  {
+    name: "Mamaearth",
+    industry: "D2C / E-commerce",
+    logo: mamaearthCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+210%" },
+      { label: "Keywords Ranked", value: "1,800+" },
+      { label: "Conversions", value: "+75%" },
+    ],
+  },
+  {
+    name: "upGrad",
+    industry: "Education",
+    logo: upgradCaseLogo,
+    metrics: [
+      { label: "Organic Traffic", value: "+160%" },
+      { label: "Keywords Ranked", value: "3,200+" },
+      { label: "Visibility", value: "+85%" },
+    ],
+  },
+];
+
+
 const heroUsps = [
   { icon: BarChart3, label: "Data-driven strategies" },
   { icon: Bot, label: "AI-powered execution" },
