@@ -496,7 +496,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-primary-foreground">{client.name}</h3>
                 <p className="mt-1 text-sm text-primary-foreground/60">{client.description}</p>
-                <div className="mt-6 grid grid-cols-3 gap-3">
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
                   {client.metrics.map((metric) => (
                     <div key={metric.label} className="rounded-xl border border-border/10 bg-background/5 p-3">
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
