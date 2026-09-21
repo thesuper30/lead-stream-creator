@@ -501,13 +501,13 @@ const Home = () => {
                   {client.metrics.map((metric) => (
                     <div key={metric.label} className="flex flex-col justify-between rounded-xl border border-border/10 bg-background/5 p-3">
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
-                      <div className="mt-2">
-                        <span className="text-[11px] text-primary-foreground/50">{metric.before}</span>
-                        <div className="mt-1 flex items-center gap-1">
-                          <ArrowDown className="h-3 w-3 text-brand/70" />
-                          <span className="text-base font-bold text-brand sm:text-lg">{metric.after}</span>
+                        <div className="mt-2">
+                          <span className="text-[11px] text-primary-foreground/50">{metric.before}</span>
+                          <div className="mt-1 flex items-center gap-1">
+                            <ArrowUp className="h-3 w-3 text-brand/70" />
+                            <span className="text-base font-bold text-brand sm:text-lg">{metric.after}</span>
+                          </div>
                         </div>
-                      </div>
                     </div>
                   ))}
                 </div>
