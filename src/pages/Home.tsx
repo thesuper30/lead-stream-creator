@@ -126,7 +126,6 @@ const seoWorkStats = [
   {
     name: "Book My Scans",
     industry: "Healthcare",
-    logo: bookMyScansCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+320%" },
       { label: "Keywords Ranked", value: "1,200+" },
@@ -136,7 +135,6 @@ const seoWorkStats = [
   {
     name: "Surana Educational Institutions",
     industry: "Education",
-    logo: suranaCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+195%" },
       { label: "Keywords Ranked", value: "850+" },
@@ -146,7 +144,6 @@ const seoWorkStats = [
   {
     name: "Harvest International School",
     industry: "Education",
-    logo: harvestCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+30%" },
       { label: "Keywords Ranked", value: "420+" },
@@ -156,7 +153,6 @@ const seoWorkStats = [
   {
     name: "Magicbricks",
     industry: "Real Estate",
-    logo: magicbricksCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+180%" },
       { label: "Keywords Ranked", value: "2,400+" },
@@ -166,7 +162,6 @@ const seoWorkStats = [
   {
     name: "Mamaearth",
     industry: "D2C / E-commerce",
-    logo: mamaearthCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+210%" },
       { label: "Keywords Ranked", value: "1,800+" },
@@ -176,7 +171,6 @@ const seoWorkStats = [
   {
     name: "upGrad",
     industry: "Education",
-    logo: upgradCaseLogo,
     metrics: [
       { label: "Organic Traffic", value: "+160%" },
       { label: "Keywords Ranked", value: "3,200+" },
