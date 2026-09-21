@@ -499,12 +499,14 @@ const Home = () => {
                 <p className="mt-1 text-sm text-primary-foreground/60">{client.description}</p>
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
                   {client.metrics.map((metric) => (
-                    <div key={metric.label} className="rounded-xl border border-border/10 bg-background/5 p-3">
-                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
-                      <div className="flex items-center justify-between gap-1">
+                    <div key={metric.label} className="flex flex-col justify-between rounded-xl border border-border/10 bg-background/5 p-3">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
+                      <div className="mt-2">
                         <span className="text-[11px] text-primary-foreground/50">{metric.before}</span>
-                        <ArrowRight className="h-3 w-3 shrink-0 text-primary-foreground/30" />
-                        <span className="text-sm font-bold text-brand sm:text-base">{metric.after}</span>
+                        <div className="mt-1 flex items-center gap-1">
+                          <ArrowDown className="h-3 w-3 text-brand/70" />
+                          <span className="text-base font-bold text-brand sm:text-lg">{metric.after}</span>
+                        </div>
                       </div>
                     </div>
                   ))}
