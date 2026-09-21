@@ -60,12 +60,6 @@ import chandrasekharTeam from "@/assets/team/chandrashekar.png";
 import anandTeam from "@/assets/team/anand-3.png";
 import likhithTeam from "@/assets/team/likith-1.png";
 import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
-import bookMyScansCaseLogo from "@/assets/case-studies/book-my-scans.png";
-import suranaCaseLogo from "@/assets/case-studies/surana-educational.png";
-import harvestCaseLogo from "@/assets/case-studies/harvest-international.png";
-import magicbricksCaseLogo from "@/assets/case-studies/magicbricks.png";
-import mamaearthCaseLogo from "@/assets/case-studies/mamaearth.png";
-import upgradCaseLogo from "@/assets/case-studies/upgrad.png";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
