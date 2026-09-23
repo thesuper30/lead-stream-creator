@@ -1,0 +1,254 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  BarChart3,
+  Check,
+  ChevronRight,
+  FileText,
+  Globe2,
+  Link2,
+  MapPin,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  TrendingUp,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { EnquiryPopup } from "@/components/EnquiryPopup";
+import { getFaqs } from "@/data/faqs";
+import heroImage from "@/assets/seo-reference-hero.jpg";
+import evolvingImage from "@/assets/seo-search-evolving.jpg";
+import partnerImage from "@/assets/seo-growth-partner.jpg";
+import bookMyScansReport from "@/assets/seo-reports/bookmyscans-report.png";
+import suranaReport from "@/assets/seo-reports/surana-report.png";
+import bookMyScansLogo from "@/assets/case-studies/book-my-scans.png";
+import suranaLogo from "@/assets/case-studies/surana-educational.png";
+import harvestLogo from "@/assets/case-studies/harvest-international.png";
+import mamaearthLogo from "@/assets/case-studies/mamaearth.png";
+import magicbricksLogo from "@/assets/case-studies/magicbricks.png";
+import upgradLogo from "@/assets/case-studies/upgrad.png";
+
+const services = [
+  { icon: Search, title: "Technical SEO", text: "A fast, crawlable and search-friendly website." },
+  { icon: FileText, title: "Content Strategy", text: "High-quality content that ranks and converts." },
+  { icon: Link2, title: "Authority Building", text: "Earn relevant links, citations and brand mentions." },
+  { icon: MapPin, title: "Local SEO", text: "Be visible when nearby customers are ready to act." },
+  { icon: Sparkles, title: "AEO & GEO", text: "Get your brand cited in AI-generated answers." },
+];
+
+const process = [
+  ["01", "Discover", "Understand your business"],
+  ["02", "Audit", "Technical and competitor analysis"],
+  ["03", "Strategy", "Build a custom SEO roadmap"],
+  ["04", "Implement", "On-page, content and technical fixes"],
+  ["05", "Grow", "Build authority and expand reach"],
+  ["06", "Measure", "Track performance and ROI"],
+];
+
+const clientLogos = [
+  { name: "Book My Scans", src: bookMyScansLogo },
+  { name: "Surana Educational Institutions", src: suranaLogo },
+  { name: "Harvest International School", src: harvestLogo },
+  { name: "Mamaearth", src: mamaearthLogo },
+  { name: "Magicbricks", src: magicbricksLogo },
+  { name: "upGrad", src: upgradLogo },
+];
+
+const results = [
+  {
+    name: "Book My Scans",
+    type: "Healthcare platform",
+    image: bookMyScansReport,
+    slug: "book-my-scans",
+    metrics: [["+320%", "Organic traffic"], ["1,200+", "Keywords"], ["+18", "Authority"]],
+  },
+  {
+    name: "Surana Educational Institutions",
+    type: "Education group",
+    image: suranaReport,
+    slug: "surana-educational",
+    metrics: [["+195%", "Organic traffic"], ["850+", "Keywords"], ["+140%", "Lead growth"]],
+  },
+];
+
+const proof = [
+  { name: "Book My Scans", logo: bookMyScansLogo, result: "+320%", label: "Organic traffic growth", copy: "Healthcare search visibility scaled across high-intent service queries." },
+  { name: "Surana", logo: suranaLogo, result: "+195%", label: "Organic traffic growth", copy: "A focused education search strategy built to attract more qualified enquiries." },
+  { name: "Harvest", logo: harvestLogo, result: "420+", label: "Keywords ranked", copy: "Stronger local visibility across the searches that matter to parents." },
+];
+
+export const AiSeoReferencePage = () => {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+  const faqs = getFaqs("ai-seo").slice(0, 6);
+
+  const openAudit = () => setShowEnquiry(true);
+
+  return (
+    <>
+      <section className="relative isolate min-h-[720px] overflow-hidden bg-foreground lg:min-h-[760px]">
+        <img src={heroImage} alt="Search performance workspace" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[68%_center]" fetchPriority="high" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/5" />
+        <div className="container relative mx-auto flex min-h-[720px] items-center px-4 py-20 sm:px-6 lg:min-h-[760px] lg:px-8">
+          <div className="max-w-2xl pt-8">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-wider text-brand">— SEO · AEO · GEO · AI Search</p>
+            <h1 className="text-4xl font-semibold leading-[1.04] text-primary-foreground sm:text-5xl lg:text-7xl">
+              Be Found<br />Where It Matters.<br />
+              <span className="text-brand">Turn Searches<br />into Real Growth.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/70 sm:text-lg">
+              We help businesses grow with SEO, AI search optimization and high-quality content that drives traffic, leads and revenue.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button onClick={openAudit} size="lg" className="h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">
+                Get My Free SEO Audit <ArrowRight />
+              </Button>
+              <Button asChild variant="outline" size="lg" className="h-12 rounded-full border-primary-foreground/35 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Link to="/our-work">View Case Studies</Link>
+              </Button>
+            </div>
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-xs text-primary-foreground/70">
+              {["No obligation", "Expert analysis", "Actionable insights"].map((item) => (
+                <span key={item} className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand"><Check className="h-3 w-3 text-primary-foreground" /></span>{item}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background py-9">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="mb-7 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Trusted by ambitious businesses</p>
+          <div className="grid grid-cols-3 items-center gap-7 md:grid-cols-6">
+            {clientLogos.map((client) => <img key={client.name} src={client.src} alt={client.name} loading="lazy" className="mx-auto h-9 w-full max-w-32 object-contain grayscale" />)}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div className="max-w-xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— The new search reality</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Search is evolving.<br />Are you visible?</h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">Your customers search on Google, AI tools and local platforms. We help your brand show up everywhere they are looking.</p>
+            <Button onClick={openAudit} size="lg" className="mt-7 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button>
+          </div>
+          <img src={evolvingImage} alt="People discovering businesses through search" width={1100} height={900} loading="lazy" className="w-full rounded-md object-cover" />
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-muted/30 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our services</p>
+              <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Everything you need for higher rankings and real business growth.</h2>
+            </div>
+            <Link to="/digital-marketing-agency-bangalore" className="inline-flex items-center gap-2 text-sm font-semibold text-brand">View all services <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+            {services.map((service) => (
+              <article key={service.title} className="group min-h-60 bg-background p-6 transition-colors hover:bg-brand-light/40">
+                <span className="mb-12 flex h-10 w-10 items-center justify-center rounded-md bg-brand-light text-brand"><service.icon className="h-5 w-5" /></span>
+                <h3 className="text-lg font-semibold text-foreground">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
+                <ChevronRight className="mt-5 h-4 w-4 text-foreground transition-transform group-hover:translate-x-1" />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background">
+        <div className="grid lg:grid-cols-2">
+          <div className="min-h-[520px] overflow-hidden bg-muted">
+            <img src={bookMyScansReport} alt="SEO growth report" width={1255} height={360} loading="lazy" className="h-full w-full object-cover object-left" />
+          </div>
+          <div className="flex items-center px-5 py-14 sm:px-10 lg:px-16">
+            <div className="w-full max-w-2xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Results that matter</p>
+              <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Real businesses.<br />Real growth.</h2>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                {results.map((result) => (
+                  <Link key={result.name} to={`/report/${result.slug}`} className="group overflow-hidden rounded-md border border-border bg-background">
+                    <div className="aspect-[16/7] overflow-hidden bg-muted"><img src={result.image} alt={`${result.name} SEO report`} loading="lazy" className="h-full w-full object-cover object-left-top transition-transform duration-500 group-hover:scale-[1.02]" /></div>
+                    <div className="p-5">
+                      <p className="text-xs font-medium text-muted-foreground">{result.type}</p>
+                      <h3 className="mt-1 text-base font-semibold text-foreground">{result.name}</h3>
+                      <div className="mt-4 grid grid-cols-3 gap-2 border-y border-border py-4">
+                        {result.metrics.map(([value, label]) => <div key={label}><p className="text-lg font-semibold text-foreground">{value}</p><p className="mt-1 text-[10px] leading-tight text-muted-foreground">{label}</p></div>)}
+                      </div>
+                      <span className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-brand">Read case study <ArrowRight className="h-3 w-3" /></span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 grid gap-6 md:grid-cols-2 md:items-end">
+            <div><p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our process</p><h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">A simple, proven<br />path to growth.</h2></div>
+            <p className="max-w-md text-muted-foreground md:justify-self-end">From audit to scale, we follow a structured process designed for long-term search growth.</p>
+          </div>
+          <div className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-5">
+            <div className="absolute left-0 right-0 top-3 hidden h-px bg-border lg:block" />
+            {process.map(([number, title, copy]) => <div key={number} className="relative"><span className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[10px] font-semibold text-primary-foreground">{number}</span><h3 className="mt-5 font-semibold text-foreground">{title}</h3><p className="mt-2 text-xs leading-relaxed text-muted-foreground">{copy}</p></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="overflow-hidden bg-foreground">
+        <div className="grid min-h-[520px] lg:grid-cols-2">
+          <div className="flex items-center px-5 py-16 sm:px-10 lg:px-[max(2.5rem,calc((100vw-1400px)/2+2rem))]">
+            <div className="max-w-xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why choose The Super 30</p>
+              <h2 className="text-3xl font-semibold leading-tight text-primary-foreground md:text-5xl">More than an SEO agency — your growth partner.</h2>
+              <p className="mt-5 leading-relaxed text-primary-foreground/65">A team of specialists combining search expertise, AI visibility and accountable execution around your business goals.</p>
+              <Button onClick={openAudit} size="lg" className="mt-7 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button>
+              <div className="mt-8 flex flex-wrap gap-5 text-xs text-primary-foreground/70">
+                {["Data-driven strategy", "Transparent reporting", "Business-first approach"].map((item) => <span key={item} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-brand" />{item}</span>)}
+              </div>
+            </div>
+          </div>
+          <img src={partnerImage} alt="The Super 30 SEO team collaborating" width={1200} height={800} loading="lazy" className="h-full min-h-[420px] w-full object-cover object-center" />
+        </div>
+      </section>
+
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Proven SEO performance</p>
+          <h2 className="max-w-xl text-3xl font-semibold leading-tight text-foreground md:text-5xl">Trusted through measurable growth.</h2>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-3">
+            {proof.map((item) => <article key={item.name} className="bg-background p-7"><div className="flex items-center gap-3"><img src={item.logo} alt={item.name} loading="lazy" className="h-10 w-10 rounded-md object-contain" /><p className="font-semibold text-foreground">{item.name}</p></div><p className="mt-8 text-4xl font-semibold text-brand">{item.result}</p><p className="mt-1 text-sm font-medium text-foreground">{item.label}</p><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.copy}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-muted/30 py-16 md:py-24">
+        <div className="container mx-auto grid gap-10 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
+          <div><p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Frequently asked questions</p><h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Your questions,<br />answered.</h2></div>
+          <Accordion type="single" collapsible className="border-t border-border">
+            {faqs.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">{faq.question}</AccordionTrigger><AccordionContent className="max-w-2xl leading-relaxed text-muted-foreground">{faq.answer}</AccordionContent></AccordionItem>)}
+          </Accordion>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-foreground py-16 md:py-20">
+        <div className="absolute inset-0 opacity-25"><img src={heroImage} alt="" loading="lazy" className="h-full w-full object-cover object-bottom" /></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/95 to-foreground/70" />
+        <div className="container relative mx-auto grid gap-8 px-4 sm:px-6 md:grid-cols-2 md:items-end lg:px-8">
+          <div><p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Ready to grow?</p><h2 className="text-3xl font-semibold leading-tight text-primary-foreground md:text-5xl">Let’s build your<br />search growth strategy.</h2></div>
+          <div className="md:justify-self-end"><p className="max-w-lg text-sm leading-relaxed text-primary-foreground/65">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row"><Button onClick={openAudit} size="lg" className="h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button><Button asChild variant="outline" size="lg" className="h-12 rounded-full border-primary-foreground/35 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><Link to="/booking">Book a Strategy Call</Link></Button></div></div>
+        </div>
+      </section>
+
+      <EnquiryPopup open={showEnquiry} onOpenChange={setShowEnquiry} />
+    </>
+  );
+};
