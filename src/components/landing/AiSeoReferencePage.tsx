@@ -255,7 +255,7 @@ export const AiSeoReferencePage = () => {
           <div className="relative min-h-[500px] overflow-hidden bg-foreground">
             <img src={featuredSearchImage} alt="AI search optimization workspace" width={1600} height={912} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
-            <div className="relative flex min-h-[500px] items-center px-6 py-14 sm:px-10 lg:px-14">
+            <div className="container relative mx-auto flex min-h-[500px] items-center px-4 py-14 sm:px-6 lg:px-8">
               <div className="max-w-xl">
                 <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand">— Featured service</p>
                 <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl md:text-5xl">AI Search &amp;<br /><span className="text-brand">Intent Mapping</span></h2>
@@ -270,8 +270,9 @@ export const AiSeoReferencePage = () => {
             </div>
           </div>
 
-          <div className="grid overflow-hidden border-y border-border bg-background lg:grid-cols-[0.72fr_1.28fr]">
-            <div className="border-b border-border p-7 sm:p-10 lg:border-b-0 lg:border-r">
+          <div className="border-y border-border bg-background">
+            <div className="container mx-auto grid px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
+            <div className="border-b border-border py-8 sm:py-10 lg:border-b-0 lg:border-r lg:pr-10">
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-brand">— AI visibility</p>
               <h3 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">AI Prompt &amp;<br />Generative Search Optimization</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Optimize your content to appear in AI-generated answers and become a trusted source that language models can understand and cite.</p>
@@ -286,6 +287,7 @@ export const AiSeoReferencePage = () => {
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
                 </article>
               ))}
+            </div>
             </div>
           </div>
       </section>
