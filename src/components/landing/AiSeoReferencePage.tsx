@@ -10,12 +10,11 @@ import {
   Search,
   ShieldCheck,
   Sparkles,
+  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
-import { LeadCaptureForm } from "@/components/landing/LeadCaptureForm";
-import { useLeadSubmit } from "@/hooks/useLeadSubmit";
 import { getFaqs } from "@/data/faqs";
 import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
@@ -28,6 +27,17 @@ import harvestLogo from "@/assets/case-studies/harvest-international.png";
 import mamaearthLogo from "@/assets/case-studies/mamaearth.png";
 import magicbricksLogo from "@/assets/case-studies/magicbricks.png";
 import upgradLogo from "@/assets/case-studies/upgrad.png";
+import magicbricksClientLogo from "@/assets/clients/magicbricks.png";
+import mamaearthClientLogo from "@/assets/clients/mamaearth.png";
+import upgradClientLogo from "@/assets/clients/upgrad.png";
+import tata1mgLogo from "@/assets/clients/tata1mg.png";
+import shriramLogo from "@/assets/clients/shriram-properties.png";
+import jainLogo from "@/assets/clients/jain-university.png";
+import harvestClientLogo from "@/assets/clients/harvest-international.png";
+import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
+import smrLogo from "@/assets/clients/smr-university.png";
+import atriaLogo from "@/assets/clients/atria-institute.png";
+import lancesoftLogo from "@/assets/clients/lancesoft.png";
 
 const services = [
   { icon: Search, title: "Technical SEO", text: "A fast, crawlable and search-friendly website." },
@@ -47,12 +57,17 @@ const process = [
 ];
 
 const clientLogos = [
-  { name: "Book My Scans", src: bookMyScansLogo },
-  { name: "Surana Educational Institutions", src: suranaLogo },
-  { name: "Harvest International School", src: harvestLogo },
-  { name: "Mamaearth", src: mamaearthLogo },
-  { name: "Magicbricks", src: magicbricksLogo },
-  { name: "upGrad", src: upgradLogo },
+  { src: magicbricksClientLogo, name: "Magicbricks" },
+  { src: bhrighuLogo, name: "Bhrighu Academy" },
+  { src: mamaearthClientLogo, name: "Mamaearth" },
+  { src: jainLogo, name: "Jain University" },
+  { src: upgradClientLogo, name: "upGrad" },
+  { src: harvestClientLogo, name: "Harvest International School" },
+  { src: tata1mgLogo, name: "Tata 1mg" },
+  { src: smrLogo, name: "SMR University" },
+  { src: shriramLogo, name: "Shriram Properties" },
+  { src: atriaLogo, name: "Atria Institute of Technology" },
+  { src: lancesoftLogo, name: "Lancesoft" },
 ];
 
 const results = [
@@ -81,11 +96,6 @@ const proof = [
 export const AiSeoReferencePage = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
   const faqs = getFaqs("ai-seo").slice(0, 6);
-  const { loading, handleFormSubmit } = useLeadSubmit({
-    source: "ai_seo_audit",
-    formId: "ai-seo-hero-form",
-    formName: "Free AI SEO Consultation",
-  });
 
   const openAudit = () => setShowEnquiry(true);
 
@@ -94,7 +104,7 @@ export const AiSeoReferencePage = () => {
       <section className="relative isolate min-h-[720px] overflow-hidden bg-foreground lg:min-h-[760px]">
         <img src={heroImage} alt="Search performance workspace" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[68%_center]" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/5" />
-        <div className="container relative mx-auto grid min-h-[720px] items-center gap-12 px-4 py-16 sm:px-6 lg:min-h-[760px] lg:grid-cols-[1.1fr_0.72fr] lg:px-8">
+        <div className="container relative mx-auto flex min-h-[720px] items-center px-4 py-16 sm:px-6 lg:min-h-[760px] lg:px-8">
           <div className="max-w-2xl pt-8">
             <p className="mb-5 text-sm font-semibold uppercase tracking-wider text-brand">— SEO · AEO · GEO · AI Search</p>
             <h1 className="text-4xl font-semibold leading-[1.04] text-primary-foreground sm:text-5xl lg:text-7xl">
@@ -118,26 +128,33 @@ export const AiSeoReferencePage = () => {
               ))}
             </div>
           </div>
-          <div className="w-full max-w-md justify-self-end rounded-xl bg-background p-2 shadow-2xl shadow-foreground/30">
-            <LeadCaptureForm
-              onSubmit={handleFormSubmit}
-              loading={loading}
-              formTitle="Get Your Free SEO Audit"
-              formDescription="See what is limiting your visibility and where your strongest growth opportunities are."
-              formBadgeText="100% Free"
-              formButtonText="Get My Free SEO Audit"
-              formId="ai-seo-hero-form"
-              formName="Free AI SEO Consultation"
-            />
-          </div>
         </div>
       </section>
 
-      <section className="border-b border-border bg-background py-9">
+      <section className="overflow-hidden border-b border-border bg-background py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="mb-7 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Trusted by ambitious businesses</p>
-          <div className="grid grid-cols-3 items-center gap-7 md:grid-cols-6">
-            {clientLogos.map((client) => <img key={client.name} src={client.src} alt={client.name} loading="lazy" className="mx-auto h-9 w-full max-w-32 object-contain grayscale" />)}
+          <div className="mb-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3 md:mb-6">
+            <div className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((item) => <Star key={item} className="h-4 w-4 fill-brand text-brand" />)}
+            </div>
+            <p className="text-sm font-medium text-foreground">Trusted by <span className="font-bold text-brand">50+ leading companies</span> across industries</p>
+          </div>
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee gap-5" style={{ width: "max-content" }}>
+              {[...clientLogos, ...clientLogos].map((client, index) => (
+                <div key={`${client.name}-${index}`} className="flex shrink-0 items-center justify-center rounded-xl border border-border bg-muted/40 px-5 py-3">
+                  <img src={client.src} alt={client.name} className="h-14 w-auto object-contain" loading="lazy" decoding="async" width="96" height="64" />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-6 pt-4 md:mt-8 md:gap-8 md:pt-5">
+            {[["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.8/5", "Client Rating"]].map(([value, label], index) => (
+              <div key={label} className="contents">
+                {index > 0 && <div className="hidden h-8 w-px bg-border sm:block" />}
+                <div className="text-center"><p className="text-2xl font-bold text-foreground">{value}</p><p className="text-xs text-muted-foreground">{label}</p></div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
