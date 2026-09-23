@@ -192,6 +192,23 @@ export const AiSeoReferencePage = () => {
         </div>
       </section>
 
+      <section className="overflow-hidden bg-foreground">
+        <div className="grid min-h-[520px] lg:grid-cols-2">
+          <div className="flex items-center px-5 py-16 sm:px-10 lg:px-[max(2.5rem,calc((100vw-1400px)/2+2rem))]">
+            <div className="max-w-xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why choose The Super 30</p>
+              <h2 className="text-3xl font-semibold leading-tight text-primary-foreground md:text-5xl">More than an SEO agency — your growth partner.</h2>
+              <p className="mt-5 leading-relaxed text-primary-foreground/65">A team of specialists combining search expertise, AI visibility and accountable execution around your business goals.</p>
+              <Button onClick={openAudit} size="lg" className="mt-7 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button>
+              <div className="mt-8 flex flex-wrap gap-5 text-xs text-primary-foreground/70">
+                {["Data-driven strategy", "Transparent reporting", "Business-first approach"].map((item) => <span key={item} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-brand" />{item}</span>)}
+              </div>
+            </div>
+          </div>
+          <img src={partnerImage} alt="The Super 30 SEO team collaborating" width={1200} height={800} loading="lazy" className="h-full min-h-[420px] w-full object-cover object-center" />
+        </div>
+      </section>
+
       <section className="bg-background">
         <div className="grid lg:grid-cols-2">
           <div className="min-h-[520px] overflow-hidden bg-muted">
@@ -234,26 +251,8 @@ export const AiSeoReferencePage = () => {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-foreground">
-        <div className="grid min-h-[520px] lg:grid-cols-2">
-          <div className="flex items-center px-5 py-16 sm:px-10 lg:px-[max(2.5rem,calc((100vw-1400px)/2+2rem))]">
-            <div className="max-w-xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Why choose The Super 30</p>
-              <h2 className="text-3xl font-semibold leading-tight text-primary-foreground md:text-5xl">More than an SEO agency — your growth partner.</h2>
-              <p className="mt-5 leading-relaxed text-primary-foreground/65">A team of specialists combining search expertise, AI visibility and accountable execution around your business goals.</p>
-              <Button onClick={openAudit} size="lg" className="mt-7 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button>
-              <div className="mt-8 flex flex-wrap gap-5 text-xs text-primary-foreground/70">
-                {["Data-driven strategy", "Transparent reporting", "Business-first approach"].map((item) => <span key={item} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-brand" />{item}</span>)}
-              </div>
-            </div>
-          </div>
-          <img src={partnerImage} alt="The Super 30 SEO team collaborating" width={1200} height={800} loading="lazy" className="h-full min-h-[420px] w-full object-cover object-center" />
-        </div>
-      </section>
-
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative min-h-[500px] overflow-hidden rounded-md bg-foreground">
+      <section className="bg-background">
+          <div className="relative min-h-[500px] overflow-hidden bg-foreground">
             <img src={featuredSearchImage} alt="AI search optimization workspace" width={1600} height={912} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
             <div className="relative flex min-h-[500px] items-center px-6 py-14 sm:px-10 lg:px-14">
@@ -271,7 +270,7 @@ export const AiSeoReferencePage = () => {
             </div>
           </div>
 
-          <div className="grid overflow-hidden rounded-b-md border border-t-0 border-border bg-background lg:grid-cols-[0.72fr_1.28fr]">
+          <div className="grid overflow-hidden border-y border-border bg-background lg:grid-cols-[0.72fr_1.28fr]">
             <div className="border-b border-border p-7 sm:p-10 lg:border-b-0 lg:border-r">
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-brand">— AI visibility</p>
               <h3 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">AI Prompt &amp;<br />Generative Search Optimization</h3>
@@ -289,7 +288,6 @@ export const AiSeoReferencePage = () => {
               ))}
             </div>
           </div>
-        </div>
       </section>
 
       <section className="border-t border-border bg-muted/30 py-16 md:py-24">
