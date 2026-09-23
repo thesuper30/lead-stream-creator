@@ -15,3 +15,4 @@
 - [x] Rebuild the SEO page around the supplied visual reference
 - [x] Preserve the SEO metadata, enquiry flow, real client logos, and real case-study results
 - [x] Verify the full desktop and mobile layouts
+- [x] Remove the banner form and use the homepage trust section on a light background
