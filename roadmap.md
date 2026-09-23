@@ -14,4 +14,4 @@
 
 - [x] Rebuild the SEO page around the supplied visual reference
 - [x] Preserve the SEO metadata, enquiry flow, real client logos, and real case-study results
-- [ ] Verify the full desktop and mobile layouts
+- [x] Verify the full desktop and mobile layouts
