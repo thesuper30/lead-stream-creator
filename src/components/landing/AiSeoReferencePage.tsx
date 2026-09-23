@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
+  BarChart3,
+  BrainCircuit,
   Check,
   ChevronRight,
   FileText,
@@ -20,14 +22,9 @@ import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
 import partnerImage from "@/assets/seo-growth-partner.jpg";
 import realGrowthImage from "@/assets/seo-real-growth-workspace.jpg";
+import featuredSearchImage from "@/assets/seo-featured-ai-search.jpg";
 import bookMyScansReport from "@/assets/seo-reports/bookmyscans-report.png";
 import suranaReport from "@/assets/seo-reports/surana-report.png";
-import bookMyScansLogo from "@/assets/case-studies/book-my-scans.png";
-import suranaLogo from "@/assets/case-studies/surana-educational.png";
-import harvestLogo from "@/assets/case-studies/harvest-international.png";
-import mamaearthLogo from "@/assets/case-studies/mamaearth.png";
-import magicbricksLogo from "@/assets/case-studies/magicbricks.png";
-import upgradLogo from "@/assets/case-studies/upgrad.png";
 import magicbricksClientLogo from "@/assets/clients/magicbricks.png";
 import mamaearthClientLogo from "@/assets/clients/mamaearth.png";
 import upgradClientLogo from "@/assets/clients/upgrad.png";
@@ -88,10 +85,11 @@ const results = [
   },
 ];
 
-const proof = [
-  { name: "Book My Scans", logo: bookMyScansLogo, result: "+320%", label: "Organic traffic growth", copy: "Healthcare search visibility scaled across high-intent service queries." },
-  { name: "Surana", logo: suranaLogo, result: "+195%", label: "Organic traffic growth", copy: "A focused education search strategy built to attract more qualified enquiries." },
-  { name: "Harvest", logo: harvestLogo, result: "420+", label: "Keywords ranked", copy: "Stronger local visibility across the searches that matter to parents." },
+const aiSearchSteps = [
+  { icon: FileText, number: "01", title: "Optimize for AI", text: "Structure content for AI discovery" },
+  { icon: BrainCircuit, number: "02", title: "Build Trust Signals", text: "Strengthen topical authority" },
+  { icon: Link2, number: "03", title: "Earn Citations", text: "Become a trusted source" },
+  { icon: BarChart3, number: "04", title: "Monitor Visibility", text: "Track search and AI presence" },
 ];
 
 export const AiSeoReferencePage = () => {
@@ -255,10 +253,41 @@ export const AiSeoReferencePage = () => {
 
       <section className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Proven SEO performance</p>
-          <h2 className="max-w-xl text-3xl font-semibold leading-tight text-foreground md:text-5xl">Trusted through measurable growth.</h2>
-          <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-3">
-            {proof.map((item) => <article key={item.name} className="bg-background p-7"><div className="flex items-center gap-3"><img src={item.logo} alt={item.name} loading="lazy" className="h-10 w-10 rounded-md object-contain" /><p className="font-semibold text-foreground">{item.name}</p></div><p className="mt-8 text-4xl font-semibold text-brand">{item.result}</p><p className="mt-1 text-sm font-medium text-foreground">{item.label}</p><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.copy}</p></article>)}
+          <div className="relative min-h-[500px] overflow-hidden rounded-md bg-foreground">
+            <img src={featuredSearchImage} alt="AI search optimization workspace" width={1600} height={912} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
+            <div className="relative flex min-h-[500px] items-center px-6 py-14 sm:px-10 lg:px-14">
+              <div className="max-w-xl">
+                <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand">— Featured service</p>
+                <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl md:text-5xl">AI Search &amp;<br /><span className="text-brand">Intent Mapping</span></h2>
+                <p className="mt-5 max-w-lg leading-relaxed text-primary-foreground/70">Understand how AI systems interpret search queries and map your content to user intent. We help your brand appear in conversations, not just traditional search results.</p>
+                <ul className="mt-7 space-y-3 text-sm text-primary-foreground/80">
+                  {["AI query analysis and intent classification", "Semantic search optimization", "User journey mapping for AI platforms"].map((item) => (
+                    <li key={item} className="flex items-center gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand/15"><Check className="h-4 w-4 text-brand" /></span>{item}</li>
+                  ))}
+                </ul>
+                <Button onClick={openAudit} size="lg" className="mt-8 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Map My AI Visibility <ArrowRight /></Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid overflow-hidden rounded-b-md border border-t-0 border-border bg-background lg:grid-cols-[0.72fr_1.28fr]">
+            <div className="border-b border-border p-7 sm:p-10 lg:border-b-0 lg:border-r">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-brand">— AI visibility</p>
+              <h3 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl">AI Prompt &amp;<br />Generative Search Optimization</h3>
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Optimize your content to appear in AI-generated answers and become a trusted source that language models can understand and cite.</p>
+              <Button onClick={openAudit} variant="outline" className="mt-6 rounded-full border-brand text-brand hover:bg-brand hover:text-primary-foreground">Get AI-Ready <ArrowRight /></Button>
+            </div>
+            <div className="grid gap-px bg-border sm:grid-cols-2 xl:grid-cols-4">
+              {aiSearchSteps.map((step) => (
+                <article key={step.number} className="bg-background p-6 sm:p-7">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-light text-brand"><step.icon className="h-5 w-5" /></span>
+                  <p className="mt-7 text-xs font-semibold text-brand">{step.number}</p>
+                  <h4 className="mt-2 font-semibold text-foreground">{step.title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
