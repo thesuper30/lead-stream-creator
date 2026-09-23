@@ -19,6 +19,7 @@ import { getFaqs } from "@/data/faqs";
 import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
 import partnerImage from "@/assets/seo-growth-partner.jpg";
+import realGrowthImage from "@/assets/seo-real-growth-workspace.jpg";
 import bookMyScansReport from "@/assets/seo-reports/bookmyscans-report.png";
 import suranaReport from "@/assets/seo-reports/surana-report.png";
 import bookMyScansLogo from "@/assets/case-studies/book-my-scans.png";
@@ -196,7 +197,7 @@ export const AiSeoReferencePage = () => {
       <section className="bg-background">
         <div className="grid lg:grid-cols-2">
           <div className="min-h-[520px] overflow-hidden bg-muted">
-            <img src={bookMyScansReport} alt="SEO growth report" width={1255} height={360} loading="lazy" className="h-full w-full object-cover object-left" />
+            <img src={realGrowthImage} alt="Organic search growth shown in a modern workspace" width={1200} height={1008} loading="lazy" className="h-full w-full object-cover object-center" />
           </div>
           <div className="flex items-center px-5 py-14 sm:px-10 lg:px-16">
             <div className="w-full max-w-2xl">
