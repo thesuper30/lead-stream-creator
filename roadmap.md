@@ -16,3 +16,4 @@
 - [x] Preserve the SEO metadata, enquiry flow, real client logos, and real case-study results
 - [x] Verify the full desktop and mobile layouts
 - [x] Remove the banner form and use the homepage trust section on a light background
+- [x] Align the full-width Featured Service content with the other page sections responsively
