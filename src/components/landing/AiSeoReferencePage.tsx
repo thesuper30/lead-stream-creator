@@ -14,6 +14,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
+import { LeadCaptureForm } from "@/components/landing/LeadCaptureForm";
+import { useLeadSubmit } from "@/hooks/useLeadSubmit";
 import { getFaqs } from "@/data/faqs";
 import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
@@ -79,6 +81,11 @@ const proof = [
 export const AiSeoReferencePage = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
   const faqs = getFaqs("ai-seo").slice(0, 6);
+  const { loading, handleFormSubmit } = useLeadSubmit({
+    source: "ai_seo_audit",
+    formId: "ai-seo-hero-form",
+    formName: "Free AI SEO Consultation",
+  });
 
   const openAudit = () => setShowEnquiry(true);
 
@@ -87,7 +94,7 @@ export const AiSeoReferencePage = () => {
       <section className="relative isolate min-h-[720px] overflow-hidden bg-foreground lg:min-h-[760px]">
         <img src={heroImage} alt="Search performance workspace" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[68%_center]" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/5" />
-        <div className="container relative mx-auto flex min-h-[720px] items-center px-4 py-20 sm:px-6 lg:min-h-[760px] lg:px-8">
+        <div className="container relative mx-auto grid min-h-[720px] items-center gap-12 px-4 py-16 sm:px-6 lg:min-h-[760px] lg:grid-cols-[1.1fr_0.72fr] lg:px-8">
           <div className="max-w-2xl pt-8">
             <p className="mb-5 text-sm font-semibold uppercase tracking-wider text-brand">— SEO · AEO · GEO · AI Search</p>
             <h1 className="text-4xl font-semibold leading-[1.04] text-primary-foreground sm:text-5xl lg:text-7xl">
@@ -110,6 +117,18 @@ export const AiSeoReferencePage = () => {
                 <span key={item} className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand"><Check className="h-3 w-3 text-primary-foreground" /></span>{item}</span>
               ))}
             </div>
+          </div>
+          <div className="w-full max-w-md justify-self-end rounded-xl bg-background p-2 shadow-2xl shadow-foreground/30">
+            <LeadCaptureForm
+              onSubmit={handleFormSubmit}
+              loading={loading}
+              formTitle="Get Your Free SEO Audit"
+              formDescription="See what is limiting your visibility and where your strongest growth opportunities are."
+              formBadgeText="100% Free"
+              formButtonText="Get My Free SEO Audit"
+              formId="ai-seo-hero-form"
+              formName="Free AI SEO Consultation"
+            />
           </div>
         </div>
       </section>
