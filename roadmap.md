@@ -9,3 +9,9 @@
 - [x] Move Resources from the main menu to the footer
 - [x] Move Video Production and Photography into the Design menu
 - [x] Replace the team selection strip with one Get Started CTA
+
+# SEO page reference redesign
+
+- [x] Rebuild the SEO page around the supplied visual reference
+- [x] Preserve the SEO metadata, enquiry flow, real client logos, and real case-study results
+- [ ] Verify the full desktop and mobile layouts

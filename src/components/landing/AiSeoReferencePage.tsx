@@ -2,18 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  BarChart3,
   Check,
   ChevronRight,
   FileText,
-  Globe2,
   Link2,
   MapPin,
   Search,
   ShieldCheck,
   Sparkles,
-  Target,
-  TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
