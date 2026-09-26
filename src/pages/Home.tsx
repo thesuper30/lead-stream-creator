@@ -1,4 +1,6 @@
 import { lazy, Suspense, useState } from "react";
+import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {

@@ -120,7 +120,7 @@ const aiSearchSteps = [
 
 export const AiSeoReferencePage = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
-  const faqs = getFaqs("ai-seo").slice(0, 6);
+
 
   const openAudit = () => setShowEnquiry(true);
 
