@@ -17,3 +17,5 @@
 - [x] Verify the full desktop and mobile layouts
 - [x] Remove the banner form and use the homepage trust section on a light background
 - [x] Align the full-width Featured Service content with the other page sections responsively
+
+- [x] SEO page: replaced FAQ section at bottom with the homepage SEO Achievements section (shared component)
