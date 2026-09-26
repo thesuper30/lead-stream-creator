@@ -24,9 +24,9 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
-import { getFaqs } from "@/data/faqs";
+import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
+
 import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
 import partnerImage from "@/assets/seo-growth-partner.jpg";

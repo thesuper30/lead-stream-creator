@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import {
   ArrowDown,
   ArrowRight,
-  ArrowUp,
   BarChart3,
+
   Bot,
   BriefcaseBusiness,
   Building2,
