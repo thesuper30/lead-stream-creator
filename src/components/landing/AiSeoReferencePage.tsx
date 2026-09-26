@@ -7,17 +7,18 @@ import {
   BriefcaseBusiness,
   Building2,
   Check,
-  ChevronRight,
   FileText,
   GraduationCap,
   Hotel,
   Link2,
   MapPin,
+  PenLine,
   Rocket,
   Scale,
   Search,
   ShieldCheck,
   ShoppingBag,
+  Smartphone,
   Sparkles,
   Star,
   Stethoscope,
@@ -58,11 +59,16 @@ const industries = [
 ];
 
 const services = [
-  { icon: Search, title: "Technical SEO", text: "A fast, crawlable and search-friendly website." },
-  { icon: FileText, title: "Content Strategy", text: "High-quality content that ranks and converts." },
-  { icon: Link2, title: "Authority Building", text: "Earn relevant links, citations and brand mentions." },
-  { icon: MapPin, title: "Local SEO", text: "Be visible when nearby customers are ready to act." },
-  { icon: Sparkles, title: "AEO & GEO", text: "Get your brand cited in AI-generated answers." },
+  { icon: Search, title: "Technical SEO", text: "We fix crawlability, site speed, indexing and Core Web Vitals so search engines can access every important page. A clean technical foundation ensures nothing holds your rankings back." },
+  { icon: FileText, title: "On-Page SEO", text: "From title tags and meta descriptions to heading structure, internal links and schema markup — every page is optimised around the keywords your buyers actually search for." },
+  { icon: PenLine, title: "Content Strategy", text: "We plan and produce high-quality content that answers real search intent. Blogs, service pages and landing pages designed to rank, build trust and convert readers into enquiries." },
+  { icon: Link2, title: "Authority Building", text: "Earn relevant backlinks, citations and brand mentions from trusted websites in your niche. Authority is what separates pages that rank on page one from pages nobody sees." },
+  { icon: MapPin, title: "Local SEO", text: "Google Business Profile optimisation, local citations and location pages that put you in front of nearby customers exactly when they are ready to call, visit or book." },
+  { icon: Sparkles, title: "AEO — Answer Engine Optimization", text: "Structure your content so AI assistants like ChatGPT, Perplexity and Google's AI Overviews quote your brand directly in their answers, not your competitors'." },
+  { icon: BrainCircuit, title: "GEO — Generative Engine Optimization", text: "We strengthen your entity signals, reviews and topical authority so generative engines recognise your business as a credible source and recommend it across AI search." },
+  { icon: Smartphone, title: "ASO — App Store Optimization", text: "Keyword-optimised app titles, descriptions and visuals that improve your visibility in the App Store and Play Store, driving more organic installs without extra ad spend." },
+  { icon: ShoppingBag, title: "E-commerce SEO", text: "Product and category page optimisation, faceted navigation handling and content that turns organic search into a consistent, low-cost sales channel for your store." },
+  { icon: BarChart3, title: "SEO Analytics & Reporting", text: "Transparent dashboards and monthly reports that connect rankings to traffic, leads and revenue — so you always know exactly what your SEO investment is returning." },
 ];
 
 const process = [
