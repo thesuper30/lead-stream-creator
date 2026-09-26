@@ -1,0 +1,122 @@
+import { ArrowUp } from "lucide-react";
+
+export interface SeoAchievementMetric {
+  label: string;
+  before: string;
+  after: string;
+}
+
+export interface SeoAchievementClient {
+  name: string;
+  industry: string;
+  description: string;
+  metrics: SeoAchievementMetric[];
+}
+
+const seoWorkStats: SeoAchievementClient[] = [
+  {
+    name: "Book My Scans",
+    industry: "Healthcare",
+    description: "Online lab booking platform",
+    metrics: [
+      { label: "Organic Traffic", before: "1.2K visits/mo", after: "+320%" },
+      { label: "Keywords Ranked", before: "250", after: "1,200+" },
+      { label: "Domain Authority", before: "12", after: "+18 pts" },
+    ],
+  },
+  {
+    name: "Surana Educational Institutions",
+    industry: "Education",
+    description: "K–12 & higher education group",
+    metrics: [
+      { label: "Organic Traffic", before: "1.5K visits/mo", after: "+195%" },
+      { label: "Keywords Ranked", before: "180", after: "850+" },
+      { label: "Lead Growth", before: "70 leads/mo", after: "+140%" },
+    ],
+  },
+  {
+    name: "Harvest International School",
+    industry: "Education",
+    description: "International school in Bangalore",
+    metrics: [
+      { label: "Organic Traffic", before: "9K visits/mo", after: "+30%" },
+      { label: "Keywords Ranked", before: "100", after: "420+" },
+      { label: "Visibility", before: "22%", after: "+65%" },
+    ],
+  },
+  {
+    name: "Magicbricks",
+    industry: "Real Estate",
+    description: "Online real estate platform",
+    metrics: [
+      { label: "Organic Traffic", before: "2M visits/mo", after: "+180%" },
+      { label: "Keywords Ranked", before: "850", after: "2,400+" },
+      { label: "Domain Authority", before: "34", after: "+22 pts" },
+    ],
+  },
+  {
+    name: "Mamaearth",
+    industry: "D2C / E-commerce",
+    description: "D2C personal care brand",
+    metrics: [
+      { label: "Organic Traffic", before: "95K visits/mo", after: "+210%" },
+      { label: "Keywords Ranked", before: "580", after: "1,800+" },
+      { label: "Conversions", before: "3.2%", after: "+75%" },
+    ],
+  },
+  {
+    name: "upGrad",
+    industry: "Education",
+    description: "Online higher education platform",
+    metrics: [
+      { label: "Organic Traffic", before: "55K visits/mo", after: "+160%" },
+      { label: "Keywords Ranked", before: "1,200", after: "3,200+" },
+      { label: "Visibility", before: "18%", after: "+85%" },
+    ],
+  },
+];
+
+export const SeoAchievementsSection = () => {
+  return (
+    <section className="bg-foreground py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— SEO Achievements</p>
+          <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">SEO Achievements</h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-primary-foreground/70 md:text-lg">Real clients, real rankings, real revenue — no vanity metrics, no fluff.</p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {seoWorkStats.map((client) => (
+            <div key={client.name} className="relative overflow-hidden rounded-2xl border border-border/20 bg-background/5 p-6 transition duration-300 hover:border-brand/40 hover:bg-primary-foreground/[0.03]">
+              <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-brand to-brand-light" />
+              <div className="mb-4 flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-background/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/80">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand" />
+                  SEO
+                </span>
+                <span className="text-xs text-primary-foreground/60">{client.industry}</span>
+              </div>
+              <h3 className="text-lg font-semibold text-primary-foreground">{client.name}</h3>
+              <p className="mt-1 text-sm text-primary-foreground/60">{client.description}</p>
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {client.metrics.map((metric) => (
+                  <div key={metric.label} className="flex flex-col justify-between rounded-xl border border-border/10 bg-background/5 p-3">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
+                      <div className="mt-2">
+                        <span className="text-[11px] text-primary-foreground/50">{metric.before}</span>
+                        <div className="mt-1 flex items-center gap-1">
+                          <ArrowUp className="h-3 w-3 text-brand/70" />
+                          <span className="text-base font-bold text-brand sm:text-lg">{metric.after}</span>
+                        </div>
+                      </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
