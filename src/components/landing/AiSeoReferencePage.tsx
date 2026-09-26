@@ -7,17 +7,18 @@ import {
   BriefcaseBusiness,
   Building2,
   Check,
-  ChevronRight,
   FileText,
   GraduationCap,
   Hotel,
   Link2,
   MapPin,
+  PenLine,
   Rocket,
   Scale,
   Search,
   ShieldCheck,
   ShoppingBag,
+  Smartphone,
   Sparkles,
   Star,
   Stethoscope,
@@ -58,11 +59,16 @@ const industries = [
 ];
 
 const services = [
-  { icon: Search, title: "Technical SEO", text: "A fast, crawlable and search-friendly website." },
-  { icon: FileText, title: "Content Strategy", text: "High-quality content that ranks and converts." },
-  { icon: Link2, title: "Authority Building", text: "Earn relevant links, citations and brand mentions." },
-  { icon: MapPin, title: "Local SEO", text: "Be visible when nearby customers are ready to act." },
-  { icon: Sparkles, title: "AEO & GEO", text: "Get your brand cited in AI-generated answers." },
+  { icon: Search, title: "Technical SEO", text: "We fix crawlability, site speed, indexing and Core Web Vitals so search engines can access every important page. A clean technical foundation ensures nothing holds your rankings back." },
+  { icon: FileText, title: "On-Page SEO", text: "From title tags and meta descriptions to heading structure, internal links and schema markup — every page is optimised around the keywords your buyers actually search for." },
+  { icon: PenLine, title: "Content Strategy", text: "We plan and produce high-quality content that answers real search intent. Blogs, service pages and landing pages designed to rank, build trust and convert readers into enquiries." },
+  { icon: Link2, title: "Authority Building", text: "Earn relevant backlinks, citations and brand mentions from trusted websites in your niche. Authority is what separates pages that rank on page one from pages nobody sees." },
+  { icon: MapPin, title: "Local SEO", text: "Google Business Profile optimisation, local citations and location pages that put you in front of nearby customers exactly when they are ready to call, visit or book." },
+  { icon: Sparkles, title: "AEO — Answer Engine Optimization", text: "Structure your content so AI assistants like ChatGPT, Perplexity and Google's AI Overviews quote your brand directly in their answers, not your competitors'." },
+  { icon: BrainCircuit, title: "GEO — Generative Engine Optimization", text: "We strengthen your entity signals, reviews and topical authority so generative engines recognise your business as a credible source and recommend it across AI search." },
+  { icon: Smartphone, title: "ASO — App Store Optimization", text: "Keyword-optimised app titles, descriptions and visuals that improve your visibility in the App Store and Play Store, driving more organic installs without extra ad spend." },
+  { icon: ShoppingBag, title: "E-commerce SEO", text: "Product and category page optimisation, faceted navigation handling and content that turns organic search into a consistent, low-cost sales channel for your store." },
+  { icon: BarChart3, title: "SEO Analytics & Reporting", text: "Transparent dashboards and monthly reports that connect rankings to traffic, leads and revenue — so you always know exactly what your SEO investment is returning." },
 ];
 
 const process = [
@@ -228,22 +234,23 @@ export const AiSeoReferencePage = () => {
 
       <section className="border-y border-border bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our services</p>
-              <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Everything you need for higher rankings and real business growth.</h2>
-            </div>
-            <Link to="/digital-marketing-agency-bangalore" className="inline-flex items-center gap-2 text-sm font-semibold text-brand">View all services <ArrowRight className="h-4 w-4" /></Link>
+          <div className="mb-10 max-w-2xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our services</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Everything you need for higher rankings and real business growth.</h2>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <article key={service.title} className="group min-h-60 bg-background p-6 transition-colors hover:bg-brand-light/40">
-                <span className="mb-12 flex h-10 w-10 items-center justify-center rounded-md bg-brand-light text-brand"><service.icon className="h-5 w-5" /></span>
+              <article key={service.title} className="rounded-md border border-border bg-background p-6 transition-colors hover:bg-brand-light/40">
+                <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-md bg-brand-light text-brand"><service.icon className="h-5 w-5" /></span>
                 <h3 className="text-lg font-semibold text-foreground">{service.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
-                <ChevronRight className="mt-5 h-4 w-4 text-foreground transition-transform group-hover:translate-x-1" />
               </article>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button onClick={openAudit} size="lg" className="h-12 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark">
+              Let's Start Ranking <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
