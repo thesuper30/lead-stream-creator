@@ -234,22 +234,23 @@ export const AiSeoReferencePage = () => {
 
       <section className="border-y border-border bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our services</p>
-              <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Everything you need for higher rankings and real business growth.</h2>
-            </div>
-            <Link to="/digital-marketing-agency-bangalore" className="inline-flex items-center gap-2 text-sm font-semibold text-brand">View all services <ArrowRight className="h-4 w-4" /></Link>
+          <div className="mb-10 max-w-2xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Our services</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Everything you need for higher rankings and real business growth.</h2>
           </div>
-          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <article key={service.title} className="group min-h-60 bg-background p-6 transition-colors hover:bg-brand-light/40">
-                <span className="mb-12 flex h-10 w-10 items-center justify-center rounded-md bg-brand-light text-brand"><service.icon className="h-5 w-5" /></span>
+              <article key={service.title} className="rounded-md border border-border bg-background p-6 transition-colors hover:bg-brand-light/40">
+                <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-md bg-brand-light text-brand"><service.icon className="h-5 w-5" /></span>
                 <h3 className="text-lg font-semibold text-foreground">{service.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
-                <ChevronRight className="mt-5 h-4 w-4 text-foreground transition-transform group-hover:translate-x-1" />
               </article>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button onClick={openAudit} size="lg" className="h-12 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark">
+              Let's Start Ranking <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
