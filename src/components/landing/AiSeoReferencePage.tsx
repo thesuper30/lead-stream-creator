@@ -4,15 +4,23 @@ import {
   ArrowRight,
   BarChart3,
   BrainCircuit,
+  BriefcaseBusiness,
+  Building2,
   Check,
   ChevronRight,
   FileText,
+  GraduationCap,
+  Hotel,
   Link2,
   MapPin,
+  Rocket,
+  Scale,
   Search,
   ShieldCheck,
+  ShoppingBag,
   Sparkles,
   Star,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -36,6 +44,18 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
+
+const industries = [
+  { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
+  { icon: ShoppingBag, label: "E-commerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven ecommerce marketing combining SEO, paid ads, and social media to boost conversions and ROAS." },
+  { icon: BriefcaseBusiness, label: "Professional Services", href: "/industries/b2b", text: "Integrated digital marketing strategies that build authority, drive inbound leads, and grow your practice." },
+  { icon: GraduationCap, label: "EdTech", href: "/digital-marketing-for-coaching-institutes", text: "Multi-channel digital marketing for EdTech — SEO, paid campaigns, and social media to reach learners at scale." },
+  { icon: Stethoscope, label: "Healthcare", href: "/industries/lifestyle", text: "Trust-focused digital marketing for healthcare — from patient acquisition to authoritative content." },
+  { icon: Rocket, label: "Tech Startups", href: "/industries/b2b", text: "Growth marketing for startups — rapid experimentation across SEO, ads, social, and content to find product-market fit." },
+  { icon: BarChart3, label: "Real Estate", href: "/industries/b2b", text: "SEO, Google Ads, social media, and landing pages that help real estate businesses generate quality leads." },
+  { icon: Scale, label: "Legal Services", href: "/industries/b2b", text: "Targeted digital marketing for law firms — from local SEO to paid ads that attract high-intent clients." },
+  { icon: Hotel, label: "Hospitality & Travel", href: "/industries/hospitality", text: "Social media, SEO, and paid campaigns that help hotels, resorts, and travel businesses drive bookings." },
+];
 
 const services = [
   { icon: Search, title: "Technical SEO", text: "A fast, crawlable and search-friendly website." },
@@ -167,6 +187,42 @@ export const AiSeoReferencePage = () => {
             <Button onClick={openAudit} size="lg" className="mt-7 h-12 rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark">Get My Free SEO Audit <ArrowRight /></Button>
           </div>
           <img src={evolvingImage} alt="People discovering businesses through search" width={1100} height={900} loading="lazy" className="w-full rounded-md object-cover" />
+        </div>
+      </section>
+
+      <section className="dark relative overflow-hidden bg-background py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.45)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.45)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="container relative mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Industries We Serve</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses ready to grow.</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry, index) => (
+              <Link key={industry.label} to={industry.href} className="group flex min-h-[172px] gap-5 rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand/60 hover:bg-card">
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-brand transition duration-300 group-hover:bg-brand group-hover:text-primary-foreground ${index === 0 ? "bg-brand" : "bg-brand/15"}`}>
+                  <industry.icon className={`h-5 w-5 ${index === 0 ? "text-primary-foreground" : ""}`} />
+                </span>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className={`text-lg font-semibold transition-colors ${index === 0 ? "text-brand" : "text-foreground group-hover:text-brand"}`}>{industry.label}</h3>
+                    <ArrowRight className="h-4 w-4 text-brand opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100" />
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{industry.text}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-9 text-center">
+            <p className="text-sm text-muted-foreground">Don&apos;t see your industry? We work with all growth-focused businesses.</p>
+            <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" className="rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get a Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-transparent px-7 text-foreground hover:bg-muted"><Link to="/industries">Explore All Industries <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            </div>
+          </div>
         </div>
       </section>
 
