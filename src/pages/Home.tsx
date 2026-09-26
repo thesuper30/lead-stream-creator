@@ -125,68 +125,6 @@ const clientLogos = [
   { src: lancesoftLogo, name: "Lancesoft", industry: "Healthcare" },
 ];
 
-const seoWorkStats = [
-  {
-    name: "Book My Scans",
-    industry: "Healthcare",
-    description: "Online lab booking platform",
-    metrics: [
-      { label: "Organic Traffic", before: "1.2K visits/mo", after: "+320%" },
-      { label: "Keywords Ranked", before: "250", after: "1,200+" },
-      { label: "Domain Authority", before: "12", after: "+18 pts" },
-    ],
-  },
-  {
-    name: "Surana Educational Institutions",
-    industry: "Education",
-    description: "K–12 & higher education group",
-    metrics: [
-      { label: "Organic Traffic", before: "1.5K visits/mo", after: "+195%" },
-      { label: "Keywords Ranked", before: "180", after: "850+" },
-      { label: "Lead Growth", before: "70 leads/mo", after: "+140%" },
-    ],
-  },
-  {
-    name: "Harvest International School",
-    industry: "Education",
-    description: "International school in Bangalore",
-    metrics: [
-      { label: "Organic Traffic", before: "9K visits/mo", after: "+30%" },
-      { label: "Keywords Ranked", before: "100", after: "420+" },
-      { label: "Visibility", before: "22%", after: "+65%" },
-    ],
-  },
-  {
-    name: "Magicbricks",
-    industry: "Real Estate",
-    description: "Online real estate platform",
-    metrics: [
-      { label: "Organic Traffic", before: "2M visits/mo", after: "+180%" },
-      { label: "Keywords Ranked", before: "850", after: "2,400+" },
-      { label: "Domain Authority", before: "34", after: "+22 pts" },
-    ],
-  },
-  {
-    name: "Mamaearth",
-    industry: "D2C / E-commerce",
-    description: "D2C personal care brand",
-    metrics: [
-      { label: "Organic Traffic", before: "95K visits/mo", after: "+210%" },
-      { label: "Keywords Ranked", before: "580", after: "1,800+" },
-      { label: "Conversions", before: "3.2%", after: "+75%" },
-    ],
-  },
-  {
-    name: "upGrad",
-    industry: "Education",
-    description: "Online higher education platform",
-    metrics: [
-      { label: "Organic Traffic", before: "55K visits/mo", after: "+160%" },
-      { label: "Keywords Ranked", before: "1,200", after: "3,200+" },
-      { label: "Visibility", before: "18%", after: "+85%" },
-    ],
-  },
-];
 
 
 const heroUsps = [
