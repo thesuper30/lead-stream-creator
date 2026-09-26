@@ -355,14 +355,8 @@ export const AiSeoReferencePage = () => {
           </div>
       </section>
 
-      <section className="border-t border-border bg-muted/30 py-16 md:py-24">
-        <div className="container mx-auto grid gap-10 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:px-8">
-          <div><p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Frequently asked questions</p><h2 className="text-3xl font-semibold leading-tight text-foreground md:text-5xl">Your questions,<br />answered.</h2></div>
-          <Accordion type="single" collapsible className="border-t border-border">
-            {faqs.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">{faq.question}</AccordionTrigger><AccordionContent className="max-w-2xl leading-relaxed text-muted-foreground">{faq.answer}</AccordionContent></AccordionItem>)}
-          </Accordion>
-        </div>
-      </section>
+      <SeoAchievementsSection />
+
 
       <section className="relative overflow-hidden bg-foreground py-16 md:py-20">
         <div className="absolute inset-0 opacity-25"><img src={heroImage} alt="" loading="lazy" className="h-full w-full object-cover object-bottom" /></div>
