@@ -190,6 +190,42 @@ export const AiSeoReferencePage = () => {
         </div>
       </section>
 
+      <section className="dark relative overflow-hidden bg-background py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.45)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.45)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="container relative mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Industries We Serve</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses ready to grow.</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry, index) => (
+              <Link key={industry.label} to={industry.href} className="group flex min-h-[172px] gap-5 rounded-2xl border border-border bg-card/90 p-6 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-brand/60 hover:bg-card">
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-brand transition duration-300 group-hover:bg-brand group-hover:text-primary-foreground ${index === 0 ? "bg-brand" : "bg-brand/15"}`}>
+                  <industry.icon className={`h-5 w-5 ${index === 0 ? "text-primary-foreground" : ""}`} />
+                </span>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className={`text-lg font-semibold transition-colors ${index === 0 ? "text-brand" : "text-foreground group-hover:text-brand"}`}>{industry.label}</h3>
+                    <ArrowRight className="h-4 w-4 text-brand opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100" />
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{industry.text}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-9 text-center">
+            <p className="text-sm text-muted-foreground">Don&apos;t see your industry? We work with all growth-focused businesses.</p>
+            <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" className="rounded-full bg-brand px-7 text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get a Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-transparent px-7 text-foreground hover:bg-muted"><Link to="/industries">Explore All Industries <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-border bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
