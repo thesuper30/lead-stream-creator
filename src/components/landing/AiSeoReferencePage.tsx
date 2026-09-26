@@ -4,15 +4,23 @@ import {
   ArrowRight,
   BarChart3,
   BrainCircuit,
+  BriefcaseBusiness,
+  Building2,
   Check,
   ChevronRight,
   FileText,
+  GraduationCap,
+  Hotel,
   Link2,
   MapPin,
+  Rocket,
+  Scale,
   Search,
   ShieldCheck,
+  ShoppingBag,
   Sparkles,
   Star,
+  Stethoscope,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
