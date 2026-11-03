@@ -242,23 +242,54 @@ const Home2 = () => (
       </section>
 
       {/* WHY US */}
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "linear-gradient(hsl(var(--primary-foreground) / 0.04) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground) / 0.04) 1px, transparent 1px)", backgroundSize: "18px 18px" }} />
+        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 40%, hsl(var(--brand) / 0.12), transparent 70%)" }} />
+        <div className="container relative mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div className="relative">
+            <div className="grid grid-cols-[1fr_1.15fr] items-start gap-4">
+              <img src={seoTeamImage} alt="The Super30 team at work" className="mt-20 h-[300px] w-full rounded-3xl object-cover sm:h-[380px]" loading="lazy" />
+              <div className="flex flex-col gap-4">
+                <img src={strategyImage} alt="Strategy session" className="h-[300px] w-full rounded-3xl object-cover sm:h-[400px]" loading="lazy" />
+                <div className="rounded-2xl border-r-4 border-brand bg-background p-5 shadow-xl sm:p-6">
+                  <h3 className="text-lg font-semibold text-foreground">Comprehensive</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">End-to-end growth services across every sector.</p>
+                </div>
+              </div>
+            </div>
+            <Link to="/contact-us" aria-label="Contact us" className="absolute left-[42%] top-6 grid h-28 w-28 -translate-x-1/2 place-items-center rounded-full border-4 border-foreground bg-brand text-primary-foreground sm:h-36 sm:w-36">
+              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_14s_linear_infinite]"><defs><path id="wc" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" /></defs><text className="fill-current text-[9px] font-semibold tracking-[1.5px]"><textPath href="#wc">Contact Us * Contact Us * Contact Us *</textPath></text></svg>
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-background text-brand"><ArrowRight className="h-5 w-5" /></span>
+            </Link>
+          </div>
           <div>
-            <Eyebrow>Why Us</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Why We Are Your AI Growth Partner</h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">We combine human creativity with AI-led insight to anticipate market shifts, sharpen decisions, and help brands grow profitably.</p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {whyUs.map((w) => (
-                <div key={w.title} className="rounded-2xl border border-border p-5"><w.icon className="h-7 w-7 text-brand" /><h3 className="mt-4 font-semibold text-foreground">{w.title}</h3><p className="mt-1 text-sm text-muted-foreground">{w.text}</p></div>
+            <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Why Us</p>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Why We Are Your <span className="text-brand">AI Growth Partner</span></h2>
+            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/75">We combine human creativity with AI-led insight to anticipate market shifts, sharpen decisions, and help brands grow profitably.</p>
+            <div className="mt-8 grid gap-6 rounded-2xl bg-primary-foreground/10 p-6 sm:grid-cols-2 sm:p-7">
+              {whyUs.slice(0, 2).map((w) => (
+                <div key={w.title} className="flex gap-4">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-brand/40 bg-brand/15 text-brand"><w.icon className="h-5 w-5" /></span>
+                  <div><h3 className="font-semibold text-primary-foreground">{w.title}</h3><p className="mt-1 text-sm leading-relaxed text-primary-foreground/70">{w.text}</p></div>
+                </div>
               ))}
             </div>
-            <a href="tel:+918904150555" className="mt-8 inline-flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-5 w-5" /></span><span><span className="block text-sm text-muted-foreground">Talk to an expert</span><span className="text-lg font-semibold text-foreground">+91 89041 50555</span></span></a>
+            <div className="mt-7 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
+              {["AI-powered keyword & market insights", "SEO and website optimization", "Search-focused content strategy", "Continuous performance monitoring"].map((point) => (
+                <p key={point} className="flex items-center gap-2.5 text-sm font-medium text-primary-foreground"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-foreground" />{point}</p>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-primary-foreground/15 pt-8">
+              <PillCta to="/about">Learn More</PillCta>
+              <a href="tel:+918904150555" className="inline-flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-5 w-5" /></span><span><span className="block text-sm font-semibold text-primary-foreground">Talk to an SEO Expert</span><span className="text-sm text-primary-foreground/70">+91 89041 50555</span></span></a>
+            </div>
           </div>
-          <div className="relative">
-            <img src={heroImage} alt="Team at work" className="aspect-[4/5] w-full rounded-3xl object-cover" loading="lazy" />
-            <div className="absolute bottom-6 left-6 rounded-2xl bg-background p-5 shadow-lg"><p className="text-3xl font-semibold text-foreground">$2M+</p><p className="text-sm text-muted-foreground">Revenue generated</p></div>
-          </div>
+        </div>
+        <div className="container relative mx-auto mt-12 px-4 sm:px-6 lg:px-8">
+          <p className="flex flex-wrap items-center justify-center gap-3 text-center text-primary-foreground">
+            <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-foreground object-cover" loading="lazy" />)}</span>
+            Smarter strategies, better rankings — <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Get Your SEO Growth Plan.</Link>
+          </p>
         </div>
       </section>
 
