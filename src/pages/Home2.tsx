@@ -9,10 +9,6 @@ import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSect
 import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
 import seoTeamImage from "@/assets/home-seo-team.jpg";
-import aiSeoImage from "@/assets/services/ai-seo-card.jpg";
-import socialImage from "@/assets/services/social-media-card.jpg";
-import webImage from "@/assets/services/web-design-card.jpg";
-import emailImage from "@/assets/services/email-marketing-card.jpg";
 import magicbricksLogo from "@/assets/clients/magicbricks.png";
 import mamaearthLogo from "@/assets/clients/mamaearth.png";
 import upgradLogo from "@/assets/clients/upgrad.png";
@@ -37,12 +33,12 @@ const heroFeatures = [
 ];
 
 const services = [
-  { title: "AI SEO", href: "/seo-company-bangalore", image: aiSeoImage, points: ["Technical SEO & content clusters", "AEO, AIO & GEO visibility", "Authority building"] },
-  { title: "Lead Generation", href: "/lead-generation-agency-bangalore", image: strategyImage, points: ["Targeted paid campaigns", "Conversion-focused landing pages", "Funnel optimization"] },
-  { title: "Social Media", href: "/social-media-marketing-agency-bangalore", image: socialImage, points: ["Platform strategy & calendars", "Community management", "Performance paid social"] },
-  { title: "Design & Creative", href: "/graphic-design-agency-bangalore", image: emailImage, points: ["Brand-aligned design systems", "Scroll-stopping creatives", "Conversion visual assets"] },
-  { title: "AI & Automation", href: "/digital-marketing-agency-bangalore", image: strategyImage, points: ["Workflow automation", "Predictive analytics", "Integrated marketing ops"] },
-  { title: "Web Design & CRO", href: "/web-design-company-bangalore", image: webImage, points: ["UX design", "Conversion rate optimization", "Performance-focused builds"] },
+  { title: "AI SEO", href: "/seo-company-bangalore", icon: Search, points: ["Technical SEO & content clusters", "AEO, AIO & GEO visibility", "Authority building"] },
+  { title: "Lead Generation", href: "/lead-generation-agency-bangalore", icon: Target, points: ["Targeted paid campaigns", "Conversion-focused landing pages", "Funnel optimization"] },
+  { title: "Social Media", href: "/social-media-marketing-agency-bangalore", icon: Users, points: ["Platform strategy & calendars", "Community management", "Performance paid social"] },
+  { title: "Design & Creative", href: "/graphic-design-agency-bangalore", icon: Eye, points: ["Brand-aligned design systems", "Scroll-stopping creatives", "Conversion visual assets"] },
+  { title: "AI & Automation", href: "/digital-marketing-agency-bangalore", icon: Bot, points: ["Workflow automation", "Predictive analytics", "Integrated marketing ops"] },
+  { title: "Web Design & CRO", href: "/web-design-company-bangalore", icon: TrendingUp, points: ["UX design", "Conversion rate optimization", "Performance-focused builds"] },
 ];
 
 const steps = [
@@ -148,23 +144,35 @@ const Home2 = () => (
       </section>
 
       {/* SERVICES */}
-      <section className="bg-brand/5 py-16 md:py-24">
+      <section className="bg-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-2xl"><Eyebrow>Our Services</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">End-to-end digital marketing solutions.</h2></div>
-            <PillCta to="/digital-marketing-agency-bangalore">View All Services</PillCta>
+          <div className="mb-14 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Services</p>
+              <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">End-to-end digital marketing solutions.</h2>
+            </div>
+            <div className="lg:justify-self-end">
+              <p className="max-w-md text-base leading-relaxed text-primary-foreground/75">AI-powered SEO, lead generation, creative, and automation — everything your brand needs to grow traffic, leads, and revenue in one team.</p>
+              <div className="mt-6"><PillCta to="/digital-marketing-agency-bangalore">View All Services</PillCta></div>
+            </div>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <Link key={s.title} to={s.href} className="group flex flex-col rounded-3xl border border-border bg-background p-7 transition hover:-translate-y-1 hover:border-brand/40">
-                <div className="flex items-center justify-between"><span className="text-sm font-semibold text-brand">0{i + 1}</span><span className="grid h-10 w-10 place-items-center rounded-full bg-brand-light text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span></div>
-                <h3 className="mt-6 text-2xl font-semibold text-foreground">{s.title}</h3>
-                <ul className="mt-4 space-y-2">{s.points.map((p) => <li key={p} className="flex items-center gap-2 text-sm text-muted-foreground"><CheckCircle2 className="h-4 w-4 text-brand" />{p}</li>)}</ul>
-                <img src={s.image} alt="" className="mt-6 aspect-[16/9] w-full rounded-2xl object-cover" loading="lazy" />
+            {services.map((s) => (
+              <Link key={s.title} to={s.href} className="group flex flex-col rounded-3xl border border-primary-foreground/10 bg-primary-foreground/5 p-8 transition hover:border-brand/40">
+                <s.icon className="h-12 w-12 text-brand" strokeWidth={1.2} />
+                <h3 className="mt-7 text-2xl font-semibold leading-snug text-primary-foreground">{s.title}</h3>
+                <div className="mt-7 border-t border-primary-foreground/15 pt-6">
+                  <ul className="space-y-3">{s.points.map((p) => <li key={p} className="flex items-center gap-3 text-sm text-primary-foreground/85"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>)}</ul>
+                </div>
+                <div className="mt-auto border-t border-primary-foreground/15 pt-5" style={{ marginTop: "auto" }}>
+                  <div className="border-t-0 pt-0"></div>
+                </div>
+                <div className="pt-2">
+                  <span className="inline-flex items-center gap-2 font-semibold text-primary-foreground">Learn More <span className="grid h-6 w-6 place-items-center rounded-full bg-brand text-primary-foreground transition group-hover:rotate-45"><ArrowUpRight className="h-3.5 w-3.5" /></span></span>
+                </div>
               </Link>
             ))}
           </div>
-          <p className="mt-10 text-center text-muted-foreground">Let's turn your goals into measurable growth – <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Book a Free Consultation.</Link></p>
         </div>
       </section>
 
