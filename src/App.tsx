@@ -27,6 +27,7 @@ const ScrollToTopButton = lazy(() =>
 
 // Lazy load all pages for code splitting
 const Home = lazy(() => import("./pages/Home"));
+const Home2 = lazy(() => import("./pages/Home2"));
 const AiSeo = lazy(() => import("./pages/AiSeo"));
 const PerformanceMarketing = lazy(() => import("./pages/PerformanceMarketing"));
 const About = lazy(() => import("./pages/About"));
@@ -153,6 +154,7 @@ const App = () => (
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<Home />} />
+                <Route path="/homepage2" element={<Home2 />} />
                 <Route path="/internet-marketing-agency" element={<About />} />
                 <Route path="/our-work" element={<Work />} />
 
