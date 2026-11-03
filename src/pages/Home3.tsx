@@ -148,11 +148,7 @@ const Home3 = () => (
       </section>
 
       {/* SERVICES */}
-      <section className="relative overflow-hidden border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
-        {/* Very small light grid mesh background */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '8px 8px' }} />
-        {/* Center-outward light gradient */}
-        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% 45%, rgba(255,255,255,0.10), rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.015) 70%, transparent 100%)' }} />
+      <section className="relative border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
@@ -246,9 +242,7 @@ const Home3 = () => (
       </section>
 
       {/* WHY US */}
-      <section className="relative overflow-hidden border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
-        <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "linear-gradient(hsl(var(--primary-foreground) / 0.04) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground) / 0.04) 1px, transparent 1px)", backgroundSize: "18px 18px" }} />
-        <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 40%, hsl(var(--brand) / 0.12), transparent 70%)" }} />
+      <section className="relative border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
         <div className="container relative mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div className="relative">
             <div className="grid grid-cols-[1fr_1.15fr] items-start gap-4">
