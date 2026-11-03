@@ -294,19 +294,36 @@ const Home2 = () => (
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-foreground py-16 md:py-24">
+      <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center"><Eyebrow>How It Works</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">A simple, proven path to growth.</h2></div>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
-              <div key={s.title} className="rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-7">
-                <span className="grid h-14 w-14 place-items-center rounded-full bg-brand text-lg font-semibold text-primary-foreground">0{i + 1}</span>
-                <h3 className="mt-6 text-xl font-semibold text-primary-foreground">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">{s.text}</p>
-                <p className="mt-6 border-t border-primary-foreground/15 pt-4 text-xs font-semibold uppercase tracking-wider text-brand">Step 0{i + 1}</p>
-              </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> How It Works</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">AI-Powered for Sustainable<br className="hidden sm:block" /> Business Growth</h2>
+          </div>
+          <div className="relative mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="absolute left-0 right-0 top-[92px] hidden border-t border-dashed border-foreground/20 lg:block" />
+            {steps.map((s, i) => {
+              const icons = [Search, Target, Zap, TrendingUp];
+              const Icon = icons[i];
+              return (
+                <div key={s.title} className="relative text-center">
+                  <Icon className="mx-auto h-12 w-12 text-foreground" strokeWidth={1.2} />
+                  <p className="relative z-10 mx-auto mt-6 w-fit rounded-full border border-border bg-background px-5 py-1.5 text-sm font-medium text-foreground">Step 0{i + 1}</p>
+                  <h3 className="mt-6 text-xl font-semibold text-foreground">{s.title}</h3>
+                  <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-3">
+            {["Intelligent SEO", "Keyword Research", "Content Optimization", "SEO Analytics"].map((tag) => (
+              <span key={tag} className="flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2 text-sm font-medium text-foreground"><span className="h-1.5 w-1.5 rounded-full bg-brand" />{tag}</span>
             ))}
           </div>
+          <p className="mt-8 flex flex-wrap items-center justify-center gap-3 text-center text-foreground">
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-4 w-4" /></span>
+            Ready to grow your business with AI-powered marketing — <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Contact Us Now.</Link>
+          </p>
         </div>
       </section>
 
