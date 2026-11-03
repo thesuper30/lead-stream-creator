@@ -37,19 +37,19 @@ const blogs = [
   }
 ];
 
-export const BlogSection = forwardRef<HTMLElement>((_, ref) => {
+export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark = false }, ref) => {
   return (
-    <section ref={ref} className="py-8 md:py-14 lg:py-20 bg-background relative overflow-hidden">
+    <section ref={ref} className={`py-8 md:py-14 lg:py-20 relative overflow-hidden ${dark ? "bg-transparent" : "bg-background"}`}>
       {/* Subtle background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
-      
+      {!dark && <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />}
+
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl lg:max-w-4xl mx-auto mb-5 md:mb-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— Blog</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
             Latest Insights
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className={`text-lg ${dark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
             Stay ahead with the latest trends in AI-based digital marketing, performance strategies, and business growth.
           </p>
         </div>
@@ -57,8 +57,8 @@ export const BlogSection = forwardRef<HTMLElement>((_, ref) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 mb-5 md:mb-10">
           {blogs.map((blog) => (
             <Link key={blog.id} to={`/blog/${blog.slug}`} className="block">
-              <Card 
-                className="bg-background/80 backdrop-blur-sm border-border/50 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-pointer h-full"
+              <Card
+                className={`overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-pointer h-full ${dark ? "bg-primary-foreground/5 border-primary-foreground/15" : "bg-background/80 backdrop-blur-sm border-border/50"}`}
               >
                 <div className="relative overflow-hidden">
                   <img 
@@ -75,7 +75,7 @@ export const BlogSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                 </div>
                 <CardContent className="p-4 md:p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                  <div className={`flex items-center gap-4 text-sm mb-3 ${dark ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {blog.date}
@@ -85,10 +85,10 @@ export const BlogSection = forwardRef<HTMLElement>((_, ref) => {
                       {blog.readTime}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className={`text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
                     {blog.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
+                  <p className={`text-sm line-clamp-3 mb-4 ${dark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                     {blog.excerpt}
                   </p>
                   <div className="flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">

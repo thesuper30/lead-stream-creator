@@ -320,7 +320,7 @@ const PhotoshootGrid = () => (
   </div>
 );
 
-const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[]; limit?: number; homePreview?: boolean }) => {
+const BentoClientGrid = ({ clients, limit, homePreview = false, dark = false }: { clients: { name: string; industry: string; logo: string; slug: string; bgColor?: string; reportImage?: string; metrics?: { label: string; value: string }[] }[]; limit?: number; homePreview?: boolean; dark?: boolean }) => {
   const navigate = useNavigate();
   const [reportOpen, setReportOpen] = React.useState(false);
   const [reportImg, setReportImg] = React.useState<string | null>(null);
@@ -345,7 +345,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
         {clients.slice(0, limit).map((client) => (
           <div
             key={client.name}
-            className="group relative overflow-hidden rounded-2xl border-2 border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
+            className={`group relative overflow-hidden rounded-2xl border-2 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 ${dark ? "border-primary-foreground/15 bg-primary-foreground/5" : "border-border/50 bg-gradient-to-br from-muted/40 via-background to-muted/20"}`}
           >
             <div className="flex flex-col">
               {/* Logo area */}
@@ -366,7 +366,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
                   <span className="inline-block text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-1.5">
                     {client.industry}
                   </span>
-                  <h3 className={`font-bold text-foreground ${homePreview ? "text-base leading-snug" : "text-xl"}`}>
+                  <h3 className={`font-bold ${dark ? "text-primary-foreground" : "text-foreground"} ${homePreview ? "text-base leading-snug" : "text-xl"}`}>
                     {client.name}
                   </h3>
                 </div>
@@ -375,9 +375,9 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
                 {client.metrics && (
                   <div className="grid grid-cols-3 gap-2">
                     {client.metrics.map((m, mi) => (
-                      <div key={mi} className={`bg-muted/50 rounded-xl text-center border border-border/20 ${homePreview ? "p-2" : "p-3"}`}>
+                      <div key={mi} className={`rounded-xl text-center border ${dark ? "bg-primary-foreground/10 border-primary-foreground/15" : "bg-muted/50 border-border/20"} ${homePreview ? "p-2" : "p-3"}`}>
                         <div className={`font-bold text-primary ${homePreview ? "text-sm" : "text-lg"}`}>{m.value}</div>
-                        <div className="text-[10px] text-muted-foreground mt-0.5 font-medium leading-tight">{m.label}</div>
+                        <div className={`text-[10px] mt-0.5 font-medium leading-tight ${dark ? "text-primary-foreground/60" : "text-muted-foreground"}`}>{m.label}</div>
                       </div>
                     ))}
                   </div>
@@ -408,31 +408,31 @@ const BentoClientGrid = ({ clients, limit, homePreview = false }: { clients: { n
   );
 };
 
-export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boolean }) => {
+export const WorkPortfolioTabs = ({ homePreview = false, dark = false }: { homePreview?: boolean; dark?: boolean }) => {
   const [activeTab, setActiveTab] = React.useState("logo");
   const activeCaption = tabs.find((t) => t.id === activeTab)?.caption ?? "";
   const visibleTabs = homePreview ? tabs.filter((tab) => tab.id !== "product-photoshoot") : tabs;
   const previewLimit = homePreview ? 8 : undefined;
 
   return (
-    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} bg-background`}>
+    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} ${dark ? "bg-transparent" : "bg-background"}`}>
       <div className="container mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
+          <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-3 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
             Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className={`max-w-2xl mx-auto ${dark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
             Explore our portfolio across multiple services and discover how we can boost visibility, engagement, and growth for businesses with strategic digital initiatives.
           </p>
         </div>
 
         <Tabs defaultValue="logo" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 border-b border-border/50 rounded-none mb-8">
+          <TabsList className={`w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 border-b rounded-none mb-8 ${dark ? "border-primary-foreground/20" : "border-border/50"}`}>
             {visibleTabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="flex items-center gap-1.5 text-xs md:text-sm px-4 py-2.5 rounded-t-lg border-b-2 border-transparent data-[state=active]:border-[hsl(18,100%,48%)] data-[state=active]:bg-[hsl(18,100%,48%)] data-[state=active]:text-white data-[state=active]:shadow-none text-muted-foreground hover:text-foreground transition-all bg-transparent"
+                className={`flex items-center gap-1.5 text-xs md:text-sm px-4 py-2.5 rounded-t-lg border-b-2 border-transparent data-[state=active]:border-[hsl(18,100%,48%)] data-[state=active]:bg-[hsl(18,100%,48%)] data-[state=active]:text-white data-[state=active]:shadow-none transition-all bg-transparent ${dark ? "text-primary-foreground/60 hover:text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
               >
                 <tab.icon className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">{tab.label}</span>
@@ -441,7 +441,7 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
             ))}
           </TabsList>
 
-          <p className="text-center text-sm md:text-base text-muted-foreground italic mb-8 transition-all duration-300">
+          <p className={`text-center text-sm md:text-base italic mb-8 transition-all duration-300 ${dark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
             {activeCaption}
           </p>
 
@@ -458,11 +458,11 @@ export const WorkPortfolioTabs = ({ homePreview = false }: { homePreview?: boole
           </TabsContent>
 
           <TabsContent value="seo">
-            <BentoClientGrid clients={seoClients} limit={previewLimit} homePreview={homePreview} />
+            <BentoClientGrid clients={seoClients} limit={previewLimit} homePreview={homePreview} dark={dark} />
           </TabsContent>
 
           <TabsContent value="lead-generation">
-            <BentoClientGrid clients={leadGenClients} limit={previewLimit} homePreview={homePreview} />
+            <BentoClientGrid clients={leadGenClients} limit={previewLimit} homePreview={homePreview} dark={dark} />
           </TabsContent>
 
           <TabsContent value="ugc-content">

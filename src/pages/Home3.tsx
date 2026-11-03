@@ -74,7 +74,11 @@ const Home3 = () => (
       <meta name="robots" content="noindex, nofollow" />
     </Helmet>
     <Navbar />
-    <main className="min-h-screen bg-foreground pt-16 md:pt-20">
+    <main className="relative min-h-screen bg-foreground pt-16 md:pt-20">
+      {/* Page-wide grid mesh + soft brand gradient */}
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '8px 8px' }} />
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0" style={{ background: 'radial-gradient(60% 40% at 50% 0%, hsl(var(--brand) / 0.10), transparent 70%), radial-gradient(50% 35% at 50% 100%, hsl(var(--brand) / 0.08), transparent 70%)' }} />
+      <div className="relative z-10">
       {/* HERO */}
       <section className="relative overflow-hidden bg-foreground">
         <img src={heroImage} alt="Digital marketing team collaborating" className="absolute inset-0 h-full w-full object-cover" width={1600} height={1104} fetchPriority="high" />
@@ -328,7 +332,7 @@ const Home3 = () => (
       </section>
 
       <SeoAchievementsSection />
-      <WorkPortfolioTabs homePreview />
+      <WorkPortfolioTabs homePreview dark />
 
       {/* TEAM */}
       <section className="border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
@@ -370,8 +374,9 @@ const Home3 = () => (
         </div>
       </section>
 
-      <Suspense fallback={null}><BlogSection /></Suspense>
+      <Suspense fallback={null}><BlogSection dark /></Suspense>
       <Footer />
+      </div>
     </main>
   </>
 );
