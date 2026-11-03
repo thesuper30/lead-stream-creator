@@ -164,10 +164,7 @@ const Home2 = () => (
                 <div className="mt-7 border-t border-primary-foreground/15 pt-6">
                   <ul className="space-y-3">{s.points.map((p) => <li key={p} className="flex items-center gap-3 text-sm text-primary-foreground/85"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>)}</ul>
                 </div>
-                <div className="mt-auto border-t border-primary-foreground/15 pt-5" style={{ marginTop: "auto" }}>
-                  <div className="border-t-0 pt-0"></div>
-                </div>
-                <div className="pt-2">
+                <div className="mt-auto border-t border-primary-foreground/15 pt-5">
                   <span className="inline-flex items-center gap-2 font-semibold text-primary-foreground">Learn More <span className="grid h-6 w-6 place-items-center rounded-full bg-brand text-primary-foreground transition group-hover:rotate-45"><ArrowUpRight className="h-3.5 w-3.5" /></span></span>
                 </div>
               </Link>
