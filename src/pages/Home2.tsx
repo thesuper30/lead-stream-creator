@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, BarChart3, Bot, CheckCircle2, Eye, Phone, Search, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, Bot, CheckCircle2, Eye, Linkedin, Phone, Search, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { WorkPortfolioTabs } from "@/components/work/WorkPortfolioTabs";
@@ -331,15 +331,24 @@ const Home2 = () => (
       <WorkPortfolioTabs homePreview />
 
       {/* TEAM */}
-      <section className="bg-brand/5 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
+        {/* Fine grid mesh + center-outward gradient, matching the other dark sections */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '8px 8px' }} />
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% 45%, rgba(255,255,255,0.10), rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.015) 70%, transparent 100%)' }} />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
+            <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
             <PillCta to="/about">Meet the whole team</PillCta>
           </div>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Gagan", r: "VP - Digital Marketing", i: gaganTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (
-              <div key={m.n} className="overflow-hidden rounded-3xl bg-background"><img src={m.i} alt={m.n} width={800} height={1000} className="aspect-[4/5] w-full object-cover object-top" loading="lazy" /><div className="p-4"><h3 className="font-semibold text-foreground">{m.n}</h3><p className="text-sm text-muted-foreground">{m.r}</p></div></div>
+              <div key={m.n} className="overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5">
+                <img src={m.i} alt={m.n} width={800} height={1000} className="aspect-[4/5] w-full object-cover object-top" loading="lazy" />
+                <div className="flex items-center justify-between gap-3 p-4">
+                  <div><h3 className="font-semibold text-primary-foreground">{m.n}</h3><p className="text-sm text-primary-foreground/60">{m.r}</p></div>
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground"><Linkedin className="h-4 w-4" /></span>
+                </div>
+              </div>
             ))}
           </div>
         </div>
