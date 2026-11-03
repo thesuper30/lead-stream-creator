@@ -532,3 +532,10 @@ All colors MUST be HSL.
     will-change: transform;
   }
 }
+
+@layer utilities {
+  /* Solid card surface for dark sections, derived from the foreground token */
+  .bg-foreground-card {
+    background-color: color-mix(in oklab, hsl(var(--foreground)) 88%, white);
+  }
+}
