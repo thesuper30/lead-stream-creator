@@ -177,6 +177,70 @@ const Home2 = () => (
         </div>
       </section>
 
+      {/* CORE PRINCIPLES */}
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <Eyebrow>Our core value</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind Smarter AI Solutions</h2>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {/* Alignment */}
+            <div className="flex flex-col rounded-3xl border border-border bg-background p-7">
+              <div className="relative h-44">
+                <img src={strategyImage} alt="Strategia condivisa con il cliente" className="absolute left-0 top-4 h-36 w-3/5 rounded-2xl object-cover" loading="lazy" />
+                <img src={seoTeamImage} alt="Il team Super 30 al lavoro" className="absolute right-0 top-0 h-40 w-1/2 rounded-2xl border-4 border-background object-cover" loading="lazy" />
+              </div>
+              <h3 className="mt-7 text-2xl font-semibold text-foreground">Alignment</h3>
+              <p className="mt-3 leading-relaxed text-muted-foreground">We Bring People And AI Technology Together To Create Smarter Marketing Solutions.</p>
+              <div className="mt-6 border-t border-border pt-6">
+                <ul className="space-y-3">
+                  {["Connect Teams With AI Solutions", "Building Business Partnerships"].map((p) => (
+                    <li key={p} className="flex items-center gap-3 text-sm text-muted-foreground"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {/* Transformation */}
+            <div className="relative flex flex-col overflow-hidden rounded-3xl bg-foreground p-7 text-primary-foreground">
+              <svg aria-hidden viewBox="0 0 400 400" className="pointer-events-none absolute -right-10 -top-16 h-80 w-80 text-primary-foreground/[0.06]" fill="none" stroke="currentColor" strokeWidth="28" strokeLinecap="round">
+                <path d="M20 300 C 120 340, 140 180, 90 120 S 260 40, 300 150 S 220 330, 360 320" />
+              </svg>
+              <div className="relative">
+                <div className="inline-flex items-center gap-3 rounded-full bg-primary-foreground/10 p-1.5 pr-5">
+                  <img src={amitTeam} alt="Amit Singh" className="h-10 w-10 rounded-full object-cover" loading="lazy" />
+                  <span><span className="block text-sm font-semibold leading-tight">Amit Singh</span><span className="block text-xs text-primary-foreground/70">Co-Founder</span></span>
+                </div>
+              </div>
+              <div className="relative mt-auto pt-40">
+                <h3 className="text-2xl font-semibold">Transformation</h3>
+                <p className="mt-3 leading-relaxed text-primary-foreground/80">We Transform Ideas And AI Technology Into Solutions That Drive Growth.</p>
+                <div className="mt-6 grid grid-cols-2 gap-6 border-t border-primary-foreground/20 pt-6">
+                  <div><p className="text-3xl font-semibold">300%+</p><p className="mt-1 text-sm text-primary-foreground/75">Growth Generated</p></div>
+                  <div className="border-l border-primary-foreground/20 pl-6"><p className="text-3xl font-semibold">50+</p><p className="mt-1 text-sm text-primary-foreground/75">Audits Delivered</p></div>
+                </div>
+              </div>
+            </div>
+            {/* Commitment */}
+            <div className="flex flex-col gap-6">
+              <img src={heroImage} alt="Il team al lavoro" className="h-64 w-full rounded-3xl object-cover lg:flex-1" loading="lazy" />
+              <div className="rounded-3xl border border-border bg-background p-7">
+                <p className="text-lg font-semibold uppercase leading-snug tracking-wide text-foreground">
+                  Our commitment to building smarter
+                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-7 w-7 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><Users className="h-3.5 w-3.5" /></span></span>
+                  AI solutions for modern businesses
+                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[gaganTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-center">
+            <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-9 w-9 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><ArrowRight className="h-4 w-4" /></span></span>
+            <span className="text-foreground">Driven by strong principles — <Link to="/about" className="font-semibold text-brand underline underline-offset-4">Discover What Defines Our Success!</Link></span>
+          </div>
+        </div>
+      </section>
+
       {/* WHY US */}
       <section className="bg-background py-16 md:py-24">
         <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
