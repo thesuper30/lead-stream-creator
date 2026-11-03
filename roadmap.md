@@ -20,4 +20,4 @@
 
 - [x] SEO page: replaced FAQ section at bottom with the homepage SEO Achievements section (shared component)
 - [x] Restyle SEO Achievements cards like Our Services cards
-- [ ] Remove the underline below the category tabs in Real Projects section (image-53)
+- [x] Remove the underline below the category tabs in Real Projects section (image-53)
