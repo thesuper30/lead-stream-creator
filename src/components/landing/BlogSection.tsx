@@ -39,7 +39,7 @@ const blogs = [
 
 export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark = false }, ref) => {
   return (
-    <section ref={ref} className={`py-8 md:py-14 lg:py-20 relative overflow-hidden ${dark ? "bg-transparent" : "bg-background"}`}>
+    <section ref={ref} className={`py-8 md:py-14 lg:py-20 relative overflow-hidden ${dark ? "bg-foreground" : "bg-background"}`}>
       {/* Subtle background */}
       {!dark && <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />}
 

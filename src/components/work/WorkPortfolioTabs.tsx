@@ -415,7 +415,7 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false }: { homeP
   const previewLimit = homePreview ? 8 : undefined;
 
   return (
-    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} ${dark ? "bg-transparent" : "bg-background"}`}>
+    <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} ${dark ? "bg-foreground" : "bg-background"}`}>
       <div className="container mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-3 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
