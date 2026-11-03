@@ -19,3 +19,5 @@
 - [x] Align the full-width Featured Service content with the other page sections responsively
 
 - [x] SEO page: replaced FAQ section at bottom with the homepage SEO Achievements section (shared component)
+- [x] Restyle SEO Achievements cards like Our Services cards
+- [x] Remove the underline below the category tabs in Real Projects section (image-53)

@@ -88,21 +88,21 @@ export const SeoAchievementsSection = () => {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {seoWorkStats.map((client) => (
-            <div key={client.name} className="relative overflow-hidden rounded-2xl border border-border/20 bg-background/5 p-6 transition duration-300 hover:border-brand/40 hover:bg-primary-foreground/[0.03]">
-              <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-brand to-brand-light" />
-              <div className="mb-4 flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-border/30 bg-background/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/80">
+            <div key={client.name} className="flex flex-col rounded-3xl border border-primary-foreground/10 bg-foreground-card p-8 transition hover:border-brand/40">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/80">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand" />
                   SEO
                 </span>
                 <span className="text-xs text-primary-foreground/60">{client.industry}</span>
               </div>
-              <h3 className="text-lg font-semibold text-primary-foreground">{client.name}</h3>
-              <p className="mt-1 text-sm text-primary-foreground/60">{client.description}</p>
-              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-                {client.metrics.map((metric) => (
-                  <div key={metric.label} className="flex flex-col justify-between rounded-xl border border-border/10 bg-background/5 p-3">
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
+              <h3 className="mt-7 text-2xl font-semibold leading-snug text-primary-foreground">{client.name}</h3>
+              <p className="mt-2 text-sm text-primary-foreground/60">{client.description}</p>
+              <div className="mt-7 border-t border-primary-foreground/15 pt-6">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                  {client.metrics.map((metric) => (
+                    <div key={metric.label} className="flex flex-col justify-between rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-3">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-primary-foreground/50">{metric.label}</p>
                       <div className="mt-2">
                         <span className="text-[11px] text-primary-foreground/50">{metric.before}</span>
                         <div className="mt-1 flex items-center gap-1">
@@ -110,8 +110,9 @@ export const SeoAchievementsSection = () => {
                           <span className="text-base font-bold text-brand sm:text-lg">{metric.after}</span>
                         </div>
                       </div>
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
