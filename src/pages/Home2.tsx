@@ -121,7 +121,7 @@ const Home2 = () => (
           </div>
           <div>
             <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Super30 Team</p>
-            <h2 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
             <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
               <div className="flex items-center gap-4"><Target className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Data-Driven Strategies</h3></div>
@@ -153,7 +153,7 @@ const Home2 = () => (
           <div className="mb-14 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
               <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Services</p>
-              <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">End-to-end digital marketing solutions.</h2>
+              <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">End-to-end <span className="text-brand">digital marketing</span> solutions.</h2>
             </div>
             <div className="lg:justify-self-end">
               <p className="max-w-md text-base leading-relaxed text-primary-foreground/75">AI-powered SEO, lead generation, creative, and automation — everything your brand needs to grow traffic, leads, and revenue in one team.</p>
@@ -182,7 +182,7 @@ const Home2 = () => (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <Eyebrow>Our core value</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind Smarter AI Solutions</h2>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind <span className="text-brand">Smarter AI Solutions</span></h2>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Alignment */}
@@ -298,7 +298,7 @@ const Home2 = () => (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> How It Works</p>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">AI-Powered for Sustainable<br className="hidden sm:block" /> Business Growth</h2>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">AI-Powered for Sustainable<br className="hidden sm:block" /> <span className="text-brand">Business Growth</span></h2>
           </div>
           <div className="relative mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="absolute left-0 right-0 top-[92px] hidden border-t border-dashed border-foreground/20 lg:block" />
@@ -334,7 +334,7 @@ const Home2 = () => (
       <section className="bg-brand/5 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold text-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
+            <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
             <PillCta to="/about">Meet the whole team</PillCta>
           </div>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -352,7 +352,7 @@ const Home2 = () => (
             <div className="flex gap-1">{[1, 2, 3, 4, 5].map((i) => <Star key={i} className="h-5 w-5 fill-brand text-brand" />)}</div>
             <p className="mt-3 text-sm text-muted-foreground">4.8/5 Client Rating</p>
             <Eyebrow>Our Clients</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl">Trusted by 50+ leading companies across industries</h2>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Trusted by <span className="text-brand">50+ leading companies</span> across industries</h2>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-5">
             {logos.map((l, i) => <div key={i} className="grid h-24 place-items-center rounded-2xl border border-border bg-background p-4"><img src={l} alt="Client logo" className="max-h-12 w-auto object-contain" loading="lazy" /></div>)}
@@ -364,7 +364,7 @@ const Home2 = () => (
       <section className="bg-background pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-6 rounded-3xl bg-foreground px-8 py-12 md:flex-row md:items-center md:px-12">
-            <div><Eyebrow>Let's grow together</Eyebrow><h2 className="text-3xl font-semibold text-primary-foreground md:text-4xl">Ready to turn your growth goals into a clearer plan?</h2></div>
+            <div><Eyebrow>Let's grow together</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Ready to turn your growth goals into a <span className="text-brand">clearer plan?</span></h2></div>
             <PillCta to="/contact-us">Book a Free Consultation</PillCta>
           </div>
         </div>
