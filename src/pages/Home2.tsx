@@ -145,8 +145,8 @@ const Home2 = () => (
 
       {/* SERVICES */}
       <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
-        {/* Small grid mesh background */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
+        {/* Very small grid mesh background */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '14px 14px' }} />
         {/* Center-outward light gradient */}
         <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% 45%, rgba(255,255,255,0.10), rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.015) 70%, transparent 100%)' }} />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,8 +161,8 @@ const Home2 = () => (
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <Link key={s.title} to={s.href} className={`group flex flex-col rounded-3xl border border-primary-foreground/10 p-8 transition hover:border-brand/40 ${i % 2 === 1 ? 'bg-primary-foreground/10' : 'bg-primary-foreground/5'}`}>
+            {services.map((s) => (
+              <Link key={s.title} to={s.href} className="group flex flex-col rounded-3xl border border-primary-foreground/10 bg-foreground-card p-8 transition hover:border-brand/40">
                 <s.icon className="h-12 w-12 text-brand" strokeWidth={1.2} />
                 <h3 className="mt-7 text-2xl font-semibold leading-snug text-primary-foreground">{s.title}</h3>
                 <div className="mt-7 border-t border-primary-foreground/15 pt-6">
