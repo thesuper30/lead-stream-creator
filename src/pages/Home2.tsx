@@ -110,27 +110,38 @@ const Home2 = () => (
       </section>
 
       {/* ABOUT */}
-      <section className="bg-background py-16 md:py-24">
-        <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-          <div className="relative">
-            <img src={seoTeamImage} alt="The Super30 SEO team" className="aspect-[4/5] w-4/5 rounded-3xl object-cover" width={1408} height={1056} loading="lazy" />
-            <img src={strategyImage} alt="Strategy session" className="absolute bottom-0 right-0 aspect-square w-1/2 rounded-3xl border-8 border-background object-cover" loading="lazy" />
-            <div className="absolute right-6 top-8 grid h-32 w-32 place-items-center rounded-full bg-brand text-primary-foreground">
-              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_14s_linear_infinite]"><defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs><text className="fill-current text-[10px] font-semibold uppercase tracking-[3px]"><textPath href="#c">More About Us * More About Us * </textPath></text></svg>
-              <ArrowUpRight className="h-7 w-7" />
+      <section className="bg-muted/40 py-16 md:py-24">
+        <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
+          <div className="relative grid grid-cols-[1.3fr_1fr] gap-4">
+            <img src={seoTeamImage} alt="The Super30 SEO team" className="mt-16 h-[420px] w-full rounded-3xl object-cover sm:h-[560px]" width={1408} height={1056} loading="lazy" />
+            <div className="flex flex-col gap-4">
+              <img src={heroImage} alt="Team collaborating" className="h-[220px] w-full rounded-3xl object-cover sm:h-[300px]" loading="lazy" />
+              <img src={strategyImage} alt="Strategy session" className="h-[220px] w-full rounded-3xl object-cover sm:h-[320px]" loading="lazy" />
             </div>
+            <Link to="/about" aria-label="More about us" className="absolute left-[56%] top-1/2 grid h-32 w-32 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-background bg-brand text-primary-foreground sm:h-40 sm:w-40">
+              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_14s_linear_infinite]"><defs><path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" /></defs><text className="fill-current text-[9px] font-semibold tracking-[1.5px]"><textPath href="#c">More About Us * More About Us * More About Us *</textPath></text></svg>
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-background text-brand"><ArrowRight className="h-5 w-5" /></span>
+            </Link>
           </div>
           <div>
-            <Eyebrow>Our Super30 Team</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
-            <div className="mt-8 grid gap-6 border-y border-border py-8 sm:grid-cols-2">
-              <div className="flex gap-4"><span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-light text-brand"><Target className="h-5 w-5" /></span><div><h3 className="font-semibold text-foreground">Data-driven strategies</h3><p className="mt-1 text-sm text-muted-foreground">Clear signals guide every move.</p></div></div>
-              <div className="flex gap-4"><span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-light text-brand"><Eye className="h-5 w-5" /></span><div><h3 className="font-semibold text-foreground">Transparent reporting</h3><p className="mt-1 text-sm text-muted-foreground">Know exactly what's working.</p></div></div>
+            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Super30 Team</p>
+            <h2 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
+            <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
+              <div className="flex items-center gap-4"><Target className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Data-Driven Strategies</h3></div>
+              <div className="flex items-center gap-4"><Eye className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Transparent Reporting</h3></div>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <PillCta to="/about">Meet Our Team</PillCta>
-              <div className="flex items-center gap-3"><TrendingUp className="h-8 w-8 text-brand" /><p className="text-sm text-muted-foreground"><span className="block text-2xl font-semibold text-foreground">10,000+</span>Keywords ranked for clients</p></div>
+            <div className="mt-8 grid items-center gap-6 sm:grid-cols-[1.4fr_1fr]">
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">AI-Powered Execution</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">Smarter, faster campaigns with AI tools, automation, and a team focused on your ROI.</p>
+                <div className="mt-7"><PillCta to="/about">Meet Our Team</PillCta></div>
+              </div>
+              <div className="rounded-3xl bg-background p-7">
+                <TrendingUp className="h-10 w-10 text-brand" strokeWidth={1.4} />
+                <p className="mt-8 text-3xl font-semibold text-foreground">10,000+</p>
+                <p className="mt-1 font-medium text-foreground">Keywords Ranked for Clients</p>
+              </div>
             </div>
           </div>
         </div>
