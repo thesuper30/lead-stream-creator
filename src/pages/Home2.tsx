@@ -144,8 +144,12 @@ const Home2 = () => (
       </section>
 
       {/* SERVICES */}
-      <section className="bg-foreground py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
+        {/* Grid mesh background */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '56px 56px' }} />
+        {/* Light gradient wash */}
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(60% 50% at 15% 0%, rgba(249,115,22,0.14), transparent 70%), radial-gradient(50% 45% at 85% 100%, rgba(249,115,22,0.10), transparent 70%), linear-gradient(180deg, rgba(255,255,255,0.04), transparent 40%)' }} />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
               <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Services</p>
