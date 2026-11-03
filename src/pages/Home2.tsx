@@ -327,8 +327,8 @@ const Home2 = () => (
         </div>
       </section>
 
-      <WorkPortfolioTabs homePreview />
       <SeoAchievementsSection />
+      <WorkPortfolioTabs homePreview />
 
       {/* TEAM */}
       <section className="bg-brand/5 py-16 md:py-24">
