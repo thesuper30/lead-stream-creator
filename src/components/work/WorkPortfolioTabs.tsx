@@ -427,7 +427,7 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false }: { homeP
         </div>
 
         <Tabs defaultValue="logo" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className={`w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 border-b rounded-none mb-8 ${dark ? "border-primary-foreground/20" : "border-border/50"}`}>
+          <TabsList className="w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 rounded-none mb-8">
             {visibleTabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
