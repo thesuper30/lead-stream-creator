@@ -334,7 +334,7 @@ const Home2 = () => (
       <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
         {/* Fine grid mesh + center-outward gradient, matching the other dark sections */}
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, rgb(255 255 255) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255) 1px, transparent 1px)', backgroundSize: '8px 8px' }} />
-        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(70% 60% at 50% 45%, rgba(255,255,255,0.10), rgba(255,255,255,0.04) 45%, rgba(255,255,255,0.015) 70%, transparent 100%)' }} />
+        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
