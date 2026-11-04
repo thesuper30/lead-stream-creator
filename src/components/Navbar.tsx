@@ -243,7 +243,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                           ? "text-[hsl(var(--brand-orange))] bg-muted/50"
                           : location.pathname === item.href
                             ? "text-[hsl(var(--brand-orange))]"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                            : "text-foreground hover:text-foreground hover:bg-muted/50"
                       }`}
                     >
                       {item.label}
@@ -254,7 +254,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                       className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         openDesktop === item.label
                           ? "text-[hsl(var(--brand-orange))] bg-muted/50"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                          : "text-foreground hover:text-foreground hover:bg-muted/50"
                       }`}
                     >
                       {item.label}
@@ -267,7 +267,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                     className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 block ${
                       location.pathname === item.href
                         ? "text-[hsl(var(--brand-orange))]"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        : "text-foreground hover:text-foreground hover:bg-muted/50"
                     }`}
                   >
                     {item.label}
