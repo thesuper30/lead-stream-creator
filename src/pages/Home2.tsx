@@ -372,11 +372,18 @@ const Home2 = () => (
       </section>
 
       {/* CTA */}
-      <section className="bg-background pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl bg-foreground px-8 py-12 md:flex-row md:items-center md:px-12">
-            <div><Eyebrow>Let's grow together</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Ready to turn your growth goals into a <span className="text-brand">clearer plan?</span></h2></div>
-            <PillCta to="/contact-us">Book a Free Consultation</PillCta>
+      <section className="px-3 py-12 sm:px-5">
+        <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-16 text-center md:py-24">
+          <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,hsl(var(--primary-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary-foreground))_1px,transparent_1px)] bg-[size:46px_46px] [mask-image:radial-gradient(ellipse_at_center,transparent_35%,black_85%)]" />
+          <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
+          <div className="relative mx-auto max-w-3xl">
+            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Ready to grow?</p>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">search growth strategy.</span></h2>
+            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p>
+            <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
+              <PillCta to="/contact-us">Get My Free SEO Audit</PillCta>
+              <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
+            </div>
           </div>
         </div>
       </section>
