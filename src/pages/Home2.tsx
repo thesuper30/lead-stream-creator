@@ -329,7 +329,7 @@ const Home2 = () => (
         </div>
       </section>
 
-      <SeoAchievementsSection />
+      <SeoAchievementsSection glow />
       <WorkPortfolioTabs homePreview />
 
       {/* TEAM */}
