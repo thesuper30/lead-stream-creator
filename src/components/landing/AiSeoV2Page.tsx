@@ -197,7 +197,7 @@ export const AiSeoV2Page = () => {
               <div key={row} className="flex w-max gap-5 hover:[animation-play-state:paused]" style={{ animation: `marquee ${row === 0 ? 40 : 48}s linear infinite${row === 1 ? " reverse" : ""}` }}>
                 {[...list, ...list].map((c, i) => (
                   <div key={`${c.name}-${i}`} className="group flex h-20 w-44 shrink-0 items-center justify-center rounded-2xl border border-border bg-background px-5 transition duration-300 hover:-translate-y-1 hover:border-brand/60">
-                    <img src={c.src} alt={c.name} className="max-h-12 w-auto object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" loading="lazy" width="120" height="48" />
+                    <img src={c.src} alt={c.name} className="max-h-12 w-auto object-contain transition duration-300 group-hover:scale-110" loading="lazy" width="120" height="48" />
                   </div>
                 ))}
               </div>
