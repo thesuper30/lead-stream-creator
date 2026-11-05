@@ -76,10 +76,13 @@ const seoWorkStats: SeoAchievementClient[] = [
   },
 ];
 
-export const SeoAchievementsSection = () => {
+export const SeoAchievementsSection = ({ glow = false }: { glow?: boolean }) => {
   return (
-    <section className="bg-foreground py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
+      {glow && (
+        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/35 blur-[140px]" />
+      )}
+      <div className="container relative mx-auto px-4">
         <div className="max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand">— SEO Achievements</p>
           <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">SEO Achievements</h2>
