@@ -81,7 +81,7 @@ const Home2 = () => (
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/75 to-foreground/40" />
         <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-foreground to-transparent" />
         {/* Warm orange glow, same as the other dark sections */}
-        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/3 h-[860px] w-[860px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/40 blur-[130px]" />
+        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/3 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-end gap-10 pb-12 pt-28 lg:grid-cols-[1.6fr_1fr] lg:pt-48">
             <div>
