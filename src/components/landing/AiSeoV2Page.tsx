@@ -308,7 +308,7 @@ export const AiSeoV2Page = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Pill onClick={() => setEnquiryOpen(true)}>Let's Start Ranking</Pill>
+            <Pill onClick={() => setShowEnquiry(true)}>Let's Start Ranking</Pill>
           </div>
         </div>
       </section>
