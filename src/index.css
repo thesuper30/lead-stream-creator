@@ -539,3 +539,7 @@ All colors MUST be HSL.
     background-color: color-mix(in oklab, hsl(var(--foreground)) 88%, white);
   }
 }
+
+@layer utilities {
+  .bg-cream { background-color: hsl(38 100% 95.5%); } /* #FFF7E8 */
+}
