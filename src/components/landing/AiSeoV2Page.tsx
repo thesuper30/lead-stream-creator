@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowUpRight, BarChart3, BrainCircuit, BriefcaseBusiness, Building2, Check, FileText,
   GraduationCap, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
-  Sparkles, Star, Stethoscope, Target, TrendingUp,
+  Sparkles, Star, Stethoscope, Target, TrendingUp, Quote,
 } from "lucide-react";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
 import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
@@ -62,6 +62,12 @@ const growthFramework = [
   { icon: BrainCircuit, title: "Optimize & Execute", description: "Implement technical, content, AI and authority-building strategies." },
   { icon: BarChart3, title: "Track & Analyze", description: "Measure rankings, organic traffic, visibility and conversions." },
   { icon: TrendingUp, title: "Scale & Accelerate", description: "Identify new opportunities and continuously improve performance." },
+];
+
+const textTestimonials = [
+  { role: "CEO", quote: "The Super 30 transformed our entire digital presence — from SEO to paid ads to social media. Our qualified leads increased by 340% in just 6 months." },
+  { role: "Founder", quote: "Finally a digital marketing agency that delivers across all channels. Our organic traffic doubled while our ad ROAS hit 5x within the first quarter." },
+  { role: "CMO", quote: "Their integrated approach to SEO, ads, and social media gave us a unified growth strategy. We went from scattered campaigns to predictable revenue." },
 ];
 
 const clientLogos = [
@@ -446,6 +452,28 @@ export const AiSeoV2Page = () => {
       </section>
 
       <SeoAchievementsSection />
+
+      {/* TEXT TESTIMONIALS */}
+      <section aria-labelledby="seo-testimonials-heading" className="bg-muted/40 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <Eyebrow>Testimonials</Eyebrow>
+            <h2 id="seo-testimonials-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">What our <span className="text-brand">clients say.</span></h2>
+          </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {textTestimonials.map((testimonial) => (
+              <figure key={testimonial.role} className="flex min-w-0 flex-col rounded-lg border border-border bg-background p-7 md:p-8">
+                <Quote aria-hidden="true" className="mb-6 h-9 w-9 text-brand" strokeWidth={1.5} />
+                <blockquote className="flex-1 text-lg leading-relaxed text-foreground">“{testimonial.quote}”</blockquote>
+                <figcaption className="mt-8 flex items-center gap-3 border-t border-border pt-5">
+                  <span aria-hidden="true" className="h-2 w-2 rounded-full bg-brand" />
+                  <span className="text-sm font-semibold text-foreground">{testimonial.role}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="px-3 py-12 sm:px-5">
