@@ -26,12 +26,12 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import organicSearchImage from "@/assets/platform-organic-search.jpg";
-import aiSearchImage from "@/assets/platform-ai-search.jpg";
-import conversationalAiImage from "@/assets/platform-conversational-ai.jpg";
-import videoSearchImage from "@/assets/platform-video-search.jpg";
-import localSearchImage from "@/assets/platform-local-search.jpg";
-import appMarketplacesImage from "@/assets/platform-app-marketplaces.jpg";
+import organicSearchImage from "@/assets/search-platform-organic-search-photo.jpg.asset.json";
+import aiSearchImage from "@/assets/search-platform-ai-search-photo.jpg.asset.json";
+import conversationalAiImage from "@/assets/search-platform-conversational-ai-photo.jpg.asset.json";
+import videoSearchImage from "@/assets/search-platform-video-search-photo.jpg.asset.json";
+import localSearchImage from "@/assets/search-platform-local-search-photo.jpg.asset.json";
+import appMarketplacesImage from "@/assets/search-platform-app-marketplaces-photo.jpg.asset.json";
 
 const industries = [
   { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
@@ -312,7 +312,7 @@ export const AiSeoV2Page = () => {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {searchPlatforms.map((platform) => (
               <article key={platform.title} className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card">
-                <img src={platform.image} alt={`${platform.title} discovery illustration`} width={512} height={512} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+                <img src={platform.image.url} alt={`${platform.title} discovery photograph`} width={1000} height={625} loading="lazy" className="aspect-[16/10] w-full object-cover" />
                 <div className="flex-1 border-t border-border p-6 sm:p-7">
                   <div className="mb-4 h-1 w-8 rounded-full bg-brand" />
                   <h3 className="text-xl font-semibold leading-snug text-foreground">{platform.title}</h3>
