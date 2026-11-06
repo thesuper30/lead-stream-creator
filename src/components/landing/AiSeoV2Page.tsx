@@ -182,9 +182,6 @@ export const AiSeoV2Page = () => {
               <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
               <Link to="/our-work" className="text-sm font-semibold text-primary-foreground underline-offset-4 hover:underline">View Case Studies</Link>
             </div>
-            <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/70">
-              {["No obligation", "Expert analysis", "Actionable insights"].map((item) => <span key={item} className="flex items-center gap-2"><Check className="h-3.5 w-3.5 text-brand" />{item}</span>)}
-            </div>
 
             <p className="mt-20 text-sm text-primary-foreground/80">Trusted by <b className="text-primary-foreground">50+</b> Brands That Value Real Results</p>
             <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-y-8 md:grid-cols-4">
