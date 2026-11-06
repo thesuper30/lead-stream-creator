@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   BarChart3, Bot, BrainCircuit, Calendar, Camera, Clapperboard, Code2, DollarSign, Eye, FileText, Filter,
-  Globe, Heart, Layers, LayoutTemplate, Linkedin, Mail, Megaphone, MessageCircle, MessageSquare, MousePointerClick,
+  Globe, Heart, Layers, Link2, LayoutTemplate, Linkedin, Mail, Megaphone, MessageCircle, MessageSquare, MousePointerClick,
   Newspaper, Palette, PenLine, PenTool, Rocket, Search, Send, Shield, ShoppingCart, Smartphone, Sparkles, Target,
   TrendingUp, Users, Video, Wrench, Zap,
 } from "lucide-react";
@@ -308,7 +308,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
       { icon: Clapperboard, title: "Script Writing", text: "Video scripts for reels, YouTube, advertisements, and explainers designed to capture audience attention quickly." },
       { icon: Newspaper, title: "Articles & Thought Leadership", text: "In-depth articles that position your leadership as experts and build trust with your audience." },
       { icon: Megaphone, title: "PR & Press Releases", text: "Newsworthy press releases and media outreach that earn coverage and strengthen brand credibility." },
-      { icon: Link2Icon, title: "Guest Posting", text: "Authority driven backlink placements from trusted publishing platforms that strengthen rankings and domain credibility." },
+      { icon: Link2, title: "Guest Posting", text: "Authority driven backlink placements from trusted publishing platforms that strengthen rankings and domain credibility." },
       { icon: Layers, title: "Content Strategy", text: "Topic clusters, pillar content, and editorial planning aligned with audience intent and business objectives." },
       { icon: Search, title: "Keyword Research & Audits", text: "Search intent driven keyword analysis and content reviews that find opportunities and strengthen weak pages." },
     ],
