@@ -340,21 +340,6 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* WHY CHOOSE US — PLATFORM VISIBILITY */}
-      <section className="bg-background px-3 py-12 sm:px-5">
-        <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-14 text-center md:py-20">
-          <Mesh />
-          <div className="relative mx-auto max-w-3xl">
-            <Eyebrow light>Start growing</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Ready for higher rankings and <span className="text-brand">real business growth?</span></h2>
-            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a free audit of your rankings, traffic and AI search visibility, with a clear plan to grow qualified leads.</p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
-              <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
-              <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section aria-labelledby="platform-why-us-heading" className="relative isolate overflow-hidden bg-foreground py-16 md:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_45%_65%,hsl(var(--brand)/0.24),transparent_70%)]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
