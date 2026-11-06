@@ -24,6 +24,13 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
+import showcaseHarvest from "@/assets/seo-company2-logos/harvest-international.png.asset.json";
+import showcaseInteriors from "@/assets/seo-company2-logos/interiors-and-more.png.asset.json";
+import showcaseAcademy from "@/assets/seo-company2-logos/digital-academy-360.png.asset.json";
+import showcaseIcs from "@/assets/seo-company2-logos/ics.png.asset.json";
+import showcaseJain from "@/assets/seo-company2-logos/jain-university.png.asset.json";
+import showcaseAtria from "@/assets/seo-company2-logos/atria-institute.png.asset.json";
+import showcaseSmr from "@/assets/seo-company2-logos/smr-university.png.asset.json";
 
 
 const industries = [
@@ -75,6 +82,16 @@ const clientLogos = [
 ];
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
+
+const showcaseLogos = [
+  { src: showcaseHarvest.url, name: "Harvest International School" },
+  { src: showcaseInteriors.url, name: "Interiors & More" },
+  { src: showcaseAcademy.url, name: "Digital Academy 360" },
+  { src: showcaseIcs.url, name: "ICS" },
+  { src: showcaseJain.url, name: "Jain University" },
+  { src: showcaseAtria.url, name: "Atria Institute of Technology" },
+  { src: showcaseSmr.url, name: "SMR University" },
+];
 
 const ecosystem = [
   { icon: Search, title: "Search Engine Optimization", desc: "Get discovered across traditional search engines.", items: [
@@ -195,9 +212,9 @@ export const AiSeoV2Page = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-12">
-              {clientLogos.map((client, index) => (
-                <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center bg-background px-6 sm:h-32 ${index < 8 ? "sm:col-span-3" : "sm:col-span-4"} ${index === clientLogos.length - 1 ? "col-span-2" : ""}`}>
-                  <img src={client.src} alt={client.name} className="max-h-16 w-full max-w-36 object-contain" loading="lazy" width="144" height="64" />
+              {showcaseLogos.map((client, index) => (
+                <div key={client.name} className={`flex h-32 min-w-0 items-center justify-center bg-background p-4 sm:h-40 sm:p-5 ${index < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${index === showcaseLogos.length - 1 ? "col-span-2" : ""}`}>
+                  <img src={client.src} alt={client.name} className="h-full w-full object-contain" loading="lazy" />
                 </div>
               ))}
             </div>
