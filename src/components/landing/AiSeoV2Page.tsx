@@ -324,6 +324,58 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
+      {/* WHY CHOOSE US — PLATFORM VISIBILITY */}
+      <section aria-labelledby="platform-why-us-heading" className="relative isolate overflow-hidden bg-foreground py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_45%_65%,hsl(var(--brand)/0.24),transparent_70%)]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-12">
+            <div>
+              <Eyebrow light>Why choose us</Eyebrow>
+              <h2 id="platform-why-us-heading" className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Your Trusted Partner for <span className="text-brand">Digital Growth</span></h2>
+            </div>
+            <p className="text-base leading-relaxed text-primary-foreground/70 lg:text-lg">We go beyond basic SEO with strategies tailored to your business, audience and search opportunities. Our specialists combine AI-first thinking with hands-on execution to build visibility that supports sustainable business growth.</p>
+          </div>
+          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
+            <div className="grid min-w-0 grid-cols-2 items-stretch gap-4 sm:gap-6">
+              <img src={partnerImage} alt="SEO specialists collaborating on a growth strategy" width={600} height={1000} loading="lazy" className="h-full min-h-[360px] w-full rounded-lg object-cover sm:min-h-[530px]" />
+              <div className="flex min-w-0 flex-col gap-6">
+                <div className="py-6 text-center sm:py-8">
+                  <p className="text-4xl font-semibold text-brand sm:text-5xl lg:text-6xl">10,000</p>
+                  <p className="mt-3 text-sm text-primary-foreground/70 sm:text-base">Keywords Ranked</p>
+                </div>
+                <img src={realGrowthImage} alt="A professional search marketing workspace" width={600} height={800} loading="lazy" className="min-h-[230px] w-full flex-1 rounded-lg object-cover" />
+              </div>
+            </div>
+            <div className="flex min-w-0 flex-col justify-between">
+              <div className="divide-y divide-primary-foreground/15">
+                {[
+                  { title: "250+ Projects", description: "Experience across diverse businesses, industries and search challenges.", image: evolvingImage },
+                  { title: "10,000 Keywords Ranked", description: "Building organic visibility around the searches that matter to your audience.", image: heroImage },
+                  { title: "AI-First Approach", description: "Connecting traditional SEO with AI search, answers and digital discovery.", image: featuredSearchImage },
+                  { title: "30 Highly Specialised Experts", description: "Dedicated expertise across technical SEO, content, analytics and growth strategy.", image: partnerImage },
+                  { title: "Business Growth Focused", description: "Prioritising relevant traffic, qualified enquiries and meaningful business outcomes.", image: realGrowthImage },
+                ].map((point) => (
+                  <div key={point.title} className="flex items-start gap-4 py-5 first:pt-0">
+                    <img src={point.image} alt="" width={56} height={56} loading="lazy" className="h-14 w-14 shrink-0 rounded-full border border-primary-foreground/20 object-cover" />
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold leading-snug text-primary-foreground">{point.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-primary-foreground/65">{point.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-7 flex flex-wrap items-center gap-6">
+                <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
+                <div>
+                  <div className="flex items-center gap-1 text-brand">{[1, 2, 3, 4, 5].map((star) => <Star key={star} className="h-3.5 w-3.5 fill-brand" />)}<span className="ml-2 text-sm font-semibold text-primary-foreground">4.9/5</span></div>
+                  <p className="mt-2 text-xs text-primary-foreground/70">Trusted by 50+ leading companies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
