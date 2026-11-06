@@ -229,14 +229,14 @@ export const AiSeoV2Page = () => {
             </div>
           </div>
           <div className="pt-8 lg:pt-0">
-            <Eyebrow>The new search reality</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Search is evolving. <span className="text-brand">Are you visible?</span></h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">Your customers search on Google, AI tools and local platforms. We help your brand show up everywhere they are looking.</p>
+            <Eyebrow>Your SEO growth partner</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Best SEO Agency <span className="text-brand">for Your Business Growth.</span></h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">At The Super 30, we combine technical expertise, high-quality content and AI SEO to help your business rank higher, attract the right customers and turn organic search into qualified leads.</p>
             <div className="mt-8 grid gap-6 border-y border-border py-6 sm:grid-cols-2">
               {[["50+", "AI Audits Delivered"], ["300%+", "Avg. Traffic Growth"]].map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
             </div>
             <ul className="mt-6 space-y-3">
-              {["Technical SEO Optimization", "On-Page SEO Optimization", "AI Search & Answer Engine Visibility"].map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}
+              {["SEO Strategies Built Around Your Business", "Expert Execution Across Content & Technical SEO", "AI SEO Visibility with Transparent Reporting"].map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}
             </ul>
             <div className="mt-8"><Pill onClick={openAudit}>Get My Free SEO Audit</Pill></div>
           </div>
