@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight, BarChart3, BrainCircuit, BriefcaseBusiness, Building2, Check, FileText,
-  GraduationCap, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
+  GraduationCap, Linkedin, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
   Sparkles, Star, Stethoscope, Target, TrendingUp, Quote,
 } from "lucide-react";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
@@ -516,7 +516,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SEO EXPERTS TEAM */}
-      <section aria-labelledby="seo-experts-heading" className="bg-brand/5 py-16 md:py-24">
+      <section aria-labelledby="seo-experts-heading" className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
@@ -526,16 +526,20 @@ export const AiSeoV2Page = () => {
             </div>
             <Pill to="/about">Meet the whole team</Pill>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {seoExperts.map((m) => (
-              <div key={m.name} className={`group relative aspect-[4/5] overflow-hidden rounded-xl border border-border/70 shadow-sm transition duration-500 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl ${m.card}`}>
-                <span aria-hidden="true" className={`pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-60 blur-2xl ${m.blob}`} />
-                <img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="relative h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.02]" />
-                <div className="absolute inset-x-0 bottom-0 bg-background/95 px-3 py-2 backdrop-blur-sm sm:px-4 sm:py-3">
-                  <h3 className="text-sm font-semibold text-foreground sm:text-base">{m.name}</h3>
-                  <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground sm:text-xs">{m.role}</p>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {seoExperts.slice(0, 4).map((m) => (
+              <article key={m.name} className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
+                <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}>
+                  <img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" />
                 </div>
-              </div>
+                <div className="flex items-center justify-between gap-3 px-5 py-4">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-foreground">{m.name}</h3>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p>
+                  </div>
+                  <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </article>
             ))}
           </div>
         </div>
