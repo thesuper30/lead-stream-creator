@@ -539,3 +539,8 @@ All colors MUST be HSL.
     background-color: color-mix(in oklab, hsl(var(--foreground)) 88%, white);
   }
 }
+
+@layer utilities {
+  /* Warm peach page tone (#FFE0B8) used on SEO Company 2 light sections */
+  .bg-peach { background-color: hsl(34 100% 86%); }
+}
