@@ -31,6 +31,7 @@ const Home2 = lazy(() => import("./pages/Home2"));
 const Home3 = lazy(() => import("./pages/Home3"));
 const AiSeo = lazy(() => import("./pages/AiSeo"));
 const AiSeo2 = lazy(() => import("./pages/AiSeo2"));
+const ServiceV2 = lazy(() => import("./pages/ServiceV2"));
 const PerformanceMarketing = lazy(() => import("./pages/PerformanceMarketing"));
 const About = lazy(() => import("./pages/About"));
 const Work = lazy(() => import("./pages/Work"));
@@ -185,6 +186,13 @@ const App = () => (
                 <Route path="/digital-marketing-agency-bangalore" element={<DigitalMarketing />} />
                 <Route path="/seo-company-bangalore" element={<AiSeo />} />
                 <Route path="/seo-company-bangalore2" element={<AiSeo2 />} />
+                <Route path="/lead-generation-agency-bangalore2" element={<ServiceV2 />} />
+                <Route path="/social-media-marketing-agency-bangalore2" element={<ServiceV2 />} />
+                <Route path="/google-ads-agency-bangalore2" element={<ServiceV2 />} />
+                <Route path="/design-agency-bangalore2" element={<ServiceV2 />} />
+                <Route path="/content-marketing-agency-bangalore2" element={<ServiceV2 />} />
+                <Route path="/website-design-company-bangalore2" element={<ServiceV2 />} />
+                <Route path="/sms-marketing-agency-bangalore2" element={<ServiceV2 />} />
                 <Route path="/lead-generation-agency-bangalore" element={<PerformanceMarketing />} />
                 <Route path="/google-ads-agency-bangalore" element={<GoogleAds />} />
                 <Route path="/social-media-optimization-services-bangalore" element={<SocialMediaOptimisation />} />
