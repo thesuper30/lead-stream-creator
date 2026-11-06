@@ -326,7 +326,7 @@ export const AiSeoV2Page = () => {
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {growthDeliverables.map((item, index) => (
-              <article key={item.title} className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition hover:border-brand/60 sm:p-7">
+              <article key={item.title} className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-sand p-6 transition hover:border-brand/60 sm:p-7">
                 <span className="pointer-events-none absolute right-5 top-5 text-4xl font-bold text-foreground/5 transition group-hover:text-brand/15">{String(index + 1).padStart(2, "0")}</span>
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
                   <item.icon className="h-6 w-6" />
@@ -418,7 +418,7 @@ export const AiSeoV2Page = () => {
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {services.map((s) => (
-              <article key={s.title} className="group flex flex-col rounded-3xl border border-border bg-background p-6 transition duration-300 hover:-translate-y-1 hover:border-brand">
+              <article key={s.title} className="group flex flex-col rounded-3xl border border-border bg-sand p-6 transition duration-300 hover:-translate-y-1 hover:border-brand">
                 <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><s.icon className="h-6 w-6" /></span>
                 <h3 className="mt-6 text-lg font-semibold leading-snug text-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>

@@ -541,5 +541,5 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .bg-cream { background-color: hsl(21 71% 94.5%); } /* #FBEEE7 */
+  .bg-sand { background-color: hsl(41 41% 93%); } /* #F4F0E7 */
 }
