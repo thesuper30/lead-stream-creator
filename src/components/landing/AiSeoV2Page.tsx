@@ -26,6 +26,12 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
+import organicSearchImage from "@/assets/platform-organic-search.jpg";
+import aiSearchImage from "@/assets/platform-ai-search.jpg";
+import conversationalAiImage from "@/assets/platform-conversational-ai.jpg";
+import videoSearchImage from "@/assets/platform-video-search.jpg";
+import localSearchImage from "@/assets/platform-local-search.jpg";
+import appMarketplacesImage from "@/assets/platform-app-marketplaces.jpg";
 
 const industries = [
   { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
@@ -106,6 +112,15 @@ const ecosystem = [
 ];
 
 const supportingCapabilities = ["Technical SEO", "On-Page SEO", "Off-Page SEO", "Image SEO", "Programmatic SEO", "Content Optimization", "Link Building", "SEO Analytics"];
+
+const searchPlatforms = [
+  { title: "Google & Bing", description: "Capture relevant organic search traffic.", image: organicSearchImage },
+  { title: "AI Search Experiences", description: "Improve visibility in AI-generated results.", image: aiSearchImage },
+  { title: "Conversational AI", description: "Strengthen brand discoverability in AI-powered answers.", image: conversationalAiImage },
+  { title: "YouTube & Video Platforms", description: "Improve video discovery and engagement.", image: videoSearchImage },
+  { title: "Maps & Local Search", description: "Help nearby customers discover your business.", image: localSearchImage },
+  { title: "App Stores & Marketplaces", description: "Increase app and product discoverability.", image: appMarketplacesImage },
+];
 
 const Eyebrow = ({ children, light }: { children: ReactNode; light?: boolean }) => (
   <p className={`mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider ${light ? "text-primary-foreground" : "text-foreground"}`}>
@@ -283,6 +298,28 @@ export const AiSeoV2Page = () => {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEARCH PLATFORMS */}
+      <section aria-labelledby="search-platforms-heading" className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 id="search-platforms-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Your Brand. <span className="text-brand">Every Search Platform.</span></h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Be visible wherever your customers search, ask questions, watch, explore and discover.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {searchPlatforms.map((platform) => (
+              <article key={platform.title} className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card">
+                <img src={platform.image} alt={`${platform.title} discovery illustration`} width={512} height={512} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+                <div className="flex-1 border-t border-border p-6 sm:p-7">
+                  <div className="mb-4 h-1 w-8 rounded-full bg-brand" />
+                  <h3 className="text-xl font-semibold leading-snug text-foreground">{platform.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-muted-foreground">{platform.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
