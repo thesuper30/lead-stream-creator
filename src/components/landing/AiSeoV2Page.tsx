@@ -33,6 +33,26 @@ import showcaseAtria from "@/assets/seo-company2-logos/atria-institute.png.asset
 import showcaseSmr from "@/assets/seo-company2-logos/smr-university.png.asset.json";
 
 
+import amitTeam from "@/assets/team/amit-singh.png";
+import mayankTeam from "@/assets/team/mayank-1.png";
+import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
+import praveenTeam from "@/assets/team/praveen-1.png";
+import harshavardhanTeam from "@/assets/team/harshavardhan.png";
+import chandrasekharTeam from "@/assets/team/chandrashekar.png";
+import anandTeam from "@/assets/team/anand-3.png";
+import likhithTeam from "@/assets/team/likith-1.png";
+
+const seoExperts = [
+  { name: "Amit Singh", role: "Co-Founder", image: amitTeam, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
+  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
+  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam, card: "bg-[#FFF3C4]", blob: "bg-[#FDE68A]" },
+  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
+  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
+  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
+  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam, card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
+  { name: "Likhith P", role: "Video Editor", image: likhithTeam, card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
+];
+
 const industries = [
   { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
   { icon: ShoppingBag, label: "E-commerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven ecommerce marketing combining SEO, paid ads, and social media to boost conversions and ROAS." },
@@ -495,18 +515,28 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-3 py-12 sm:px-5">
-        <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-16 text-center md:py-24">
-          <Mesh />
-          <div className="relative mx-auto max-w-3xl">
-            <Eyebrow light>Ready to grow?</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">search growth strategy.</span></h2>
-            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
-              <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
-              <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
+      {/* SEO EXPERTS TEAM */}
+      <section aria-labelledby="seo-experts-heading" className="bg-brand/5 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <Eyebrow>Our SEO experts</Eyebrow>
+              <h2 id="seo-experts-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet the <span className="text-brand">SEO Experts</span> Behind Your Growth</h2>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Search strategists, content specialists, performance marketers and creatives — one focused team working to rank your brand everywhere people search.</p>
             </div>
+            <Pill to="/about">Meet the whole team</Pill>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {seoExperts.map((m) => (
+              <div key={m.name} className={`group relative aspect-[4/5] overflow-hidden rounded-xl border border-border/70 shadow-sm transition duration-500 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl ${m.card}`}>
+                <span aria-hidden="true" className={`pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-60 blur-2xl ${m.blob}`} />
+                <img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="relative h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.02]" />
+                <div className="absolute inset-x-0 bottom-0 bg-background/95 px-3 py-2 backdrop-blur-sm sm:px-4 sm:py-3">
+                  <h3 className="text-sm font-semibold text-foreground sm:text-base">{m.name}</h3>
+                  <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground sm:text-xs">{m.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
