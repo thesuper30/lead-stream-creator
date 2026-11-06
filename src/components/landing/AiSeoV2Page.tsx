@@ -67,6 +67,14 @@ const process = [
   ["06", "Measure", "Track performance and ROI"],
 ];
 
+const growthFramework = [
+  { icon: Search, title: "Audit & Discover", description: "Analyze website health, competitors and search opportunities." },
+  { icon: Target, title: "Strategize & Plan", description: "Build a customized roadmap aligned with your objectives." },
+  { icon: BrainCircuit, title: "Optimize & Execute", description: "Implement technical, content, AI and authority-building strategies." },
+  { icon: BarChart3, title: "Track & Analyze", description: "Measure rankings, organic traffic, visibility and conversions." },
+  { icon: TrendingUp, title: "Scale & Accelerate", description: "Identify new opportunities and continuously improve performance." },
+];
+
 const clientLogos = [
   { src: magicbricksClientLogo, name: "Magicbricks" }, { src: bhrighuLogo, name: "Bhrighu Academy" },
   { src: mamaearthClientLogo, name: "Mamaearth" }, { src: jainLogo, name: "Jain University" },
@@ -415,6 +423,40 @@ export const AiSeoV2Page = () => {
               ))}
             </div>
             <p className="mt-10 text-center text-sm text-primary-foreground/70">Don&apos;t see your industry? <Link to="/industries" className="font-semibold text-primary-foreground underline underline-offset-4 hover:text-brand">Explore All Industries.</Link></p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO GROWTH FRAMEWORK */}
+      <section aria-labelledby="seo-growth-framework-heading" className="overflow-hidden bg-muted/40 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="max-w-3xl">
+              <Eyebrow>Our SEO Growth Framework</Eyebrow>
+              <h2 id="seo-growth-framework-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">From Search Visibility<br className="hidden sm:block" /> to <span className="text-brand">Business Growth.</span></h2>
+            </div>
+            <div aria-hidden="true" className="hidden h-20 w-20 items-center justify-center rounded-full border border-brand/20 bg-background text-brand lg:flex">
+              <TrendingUp className="h-9 w-9" strokeWidth={1.5} />
+            </div>
+          </div>
+
+          <ol className="relative mt-12 grid gap-0 lg:mt-16 lg:grid-cols-5">
+            {growthFramework.map((step, index) => (
+              <li key={step.title} className="relative min-w-0 pb-10 pl-20 last:pb-0 lg:pb-0 lg:pl-0 lg:pr-6">
+                <div aria-hidden="true" className={`absolute bottom-0 left-7 top-0 w-px bg-border lg:left-0 lg:right-0 lg:top-7 lg:h-px lg:w-auto ${index === growthFramework.length - 1 ? "hidden" : ""}`} />
+                <span className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-brand/20 bg-background text-sm font-semibold text-brand lg:relative">0{index + 1}</span>
+                <div className={`relative lg:mt-9 ${index % 2 === 1 ? "lg:pt-10" : ""}`}>
+                  <span aria-hidden="true" className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg border border-border bg-background text-brand">
+                    <step.icon className="h-6 w-6" strokeWidth={1.5} />
+                  </span>
+                  <h3 className="text-xl font-semibold leading-snug text-foreground">{step.title}</h3>
+                  <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div aria-hidden="true" className="mt-12 flex h-1.5 overflow-hidden rounded-full bg-border/60 lg:mt-16">
+            <span className="w-1/5 bg-brand/20" /><span className="w-1/5 bg-brand/40" /><span className="w-1/5 bg-brand/60" /><span className="w-1/5 bg-brand/80" /><span className="w-1/5 bg-brand" />
           </div>
         </div>
       </section>
