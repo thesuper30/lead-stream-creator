@@ -188,27 +188,25 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* LOGOS */}
-      <section className="py-14 md:py-20">
+      <section aria-labelledby="seo-client-brands-heading" className="bg-background py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center">
-            <span className="hidden h-px w-16 bg-gradient-to-r from-transparent to-brand sm:block" />
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">Trusted by <span className="text-brand">50+</span> growing brands across India</p>
-            <span className="hidden h-px w-16 bg-gradient-to-l from-transparent to-brand sm:block" />
-          </div>
-        </div>
-        <div className="relative space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-          {[0, 1].map((row) => {
-            const list = row === 0 ? clientLogos : [...clientLogos].reverse();
-            return (
-              <div key={row} className="flex w-max gap-5 hover:[animation-play-state:paused]" style={{ animation: `marquee ${row === 0 ? 40 : 48}s linear infinite${row === 1 ? " reverse" : ""}` }}>
-                {[...list, ...list].map((c, i) => (
-                  <div key={`${c.name}-${i}`} className="group flex h-20 w-44 shrink-0 items-center justify-center rounded-2xl border border-border bg-background px-5 transition duration-300 hover:-translate-y-1 hover:border-brand/60">
-                    <img src={c.src} alt={c.name} className="max-h-12 w-auto object-contain transition duration-300 group-hover:scale-110" loading="lazy" width="120" height="48" />
-                  </div>
-                ))}
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_2fr] lg:items-center lg:gap-16">
+            <div>
+              <Eyebrow>In good company</Eyebrow>
+              <h2 id="seo-client-brands-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl">Brands you know.<br /><span className="text-brand">A team they trust.</span></h2>
+              <div className="mt-7 flex items-center gap-4 border-t border-border pt-6">
+                <span className="text-4xl font-semibold text-brand">50+</span>
+                <p className="max-w-36 text-sm leading-relaxed text-muted-foreground">Growing brands<br />across India</p>
               </div>
-            );
-          })}
+            </div>
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-12">
+              {clientLogos.map((client, index) => (
+                <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center bg-background px-6 sm:h-32 ${index < 8 ? "sm:col-span-3" : "sm:col-span-4"} ${index === clientLogos.length - 1 ? "col-span-2" : ""}`}>
+                  <img src={client.src} alt={client.name} className="max-h-16 w-full max-w-36 object-contain" loading="lazy" width="144" height="64" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
