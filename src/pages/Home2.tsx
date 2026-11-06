@@ -167,10 +167,10 @@ const Home2 = () => (
               <Link key={s.title} to={s.href} className="group flex flex-col rounded-3xl border border-primary-foreground/10 bg-foreground-card p-8 transition hover:border-brand/40">
                 <s.icon className="h-12 w-12 text-brand" strokeWidth={1.2} />
                 <h3 className="mt-7 text-2xl font-semibold leading-snug text-primary-foreground">{s.title}</h3>
-                <div className="mt-7 border-t border-primary-foreground/15 pt-6">
+                <div className="mt-7 border-t border-primary-foreground/15 pb-7 pt-6">
                   <ul className="space-y-3">{s.points.map((p) => <li key={p} className="flex items-center gap-3 text-sm text-primary-foreground/85"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>)}</ul>
                 </div>
-                <div className="mt-auto border-t border-primary-foreground/15 pt-5">
+                <div className="mt-auto border-t border-primary-foreground/15 pt-6">
                   <span className="inline-flex items-center gap-2 font-semibold text-primary-foreground">Learn More <span className="grid h-6 w-6 place-items-center rounded-full bg-brand text-primary-foreground transition group-hover:rotate-45"><ArrowUpRight className="h-3.5 w-3.5" /></span></span>
                 </div>
               </Link>
