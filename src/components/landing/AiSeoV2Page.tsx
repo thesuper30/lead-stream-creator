@@ -156,6 +156,23 @@ const Rating = ({ light }: { light?: boolean }) => (
   </div>
 );
 
+const SearchGrowthCta = ({ onAudit }: { onAudit: () => void }) => (
+  <section aria-label="Search growth consultation" className="px-3 py-12 sm:px-5">
+    <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-16 text-center md:py-24">
+      <Mesh />
+      <div className="relative mx-auto max-w-3xl">
+        <Eyebrow light>Ready to grow?</Eyebrow>
+        <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">search growth strategy.</span></h2>
+        <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p>
+        <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
+          <Pill onClick={onAudit}>Get My Free SEO Audit</Pill>
+          <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export const AiSeoV2Page = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
   const openAudit = () => setShowEnquiry(true);
@@ -200,6 +217,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* LOGOS */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section aria-labelledby="seo-client-brands-heading" className="bg-background py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -218,6 +236,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* ABOUT */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section className="py-16 md:py-24">
         <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="relative">
@@ -244,6 +263,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* ECOSYSTEM */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section className="relative overflow-hidden bg-foreground py-20 md:py-28">
         <div className="pointer-events-none absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,hsl(var(--primary-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary-foreground))_1px,transparent_1px)] bg-[size:10px_10px]" />
         <div className="pointer-events-none absolute left-1/2 top-1/3 h-[820px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/30 blur-[160px]" />
@@ -299,6 +319,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* GROWTH DELIVERABLES */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,6 +347,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* WHY CHOOSE US — PLATFORM VISIBILITY */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section aria-labelledby="platform-why-us-heading" className="relative isolate overflow-hidden bg-foreground py-16 md:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_45%_65%,hsl(var(--brand)/0.24),transparent_70%)]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,6 +400,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SERVICES */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -402,6 +425,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* INDUSTRIES (dark) */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section className="px-3 sm:px-5">
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground py-16 md:py-24">
           <Mesh />
@@ -428,6 +452,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SEO GROWTH FRAMEWORK */}
+      <SearchGrowthCta onAudit={openAudit} />
       <section aria-labelledby="seo-growth-framework-heading" className="bg-background py-16 md:py-24">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-end lg:gap-16">
@@ -459,7 +484,9 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
+      <SearchGrowthCta onAudit={openAudit} />
       <SeoAchievementsSection />
+      <SearchGrowthCta onAudit={openAudit} />
 
       {/* TEXT TESTIMONIALS */}
       <section aria-labelledby="seo-testimonials-heading" className="bg-muted/40 py-16 md:py-24">
@@ -484,20 +511,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* CTA */}
-      <section className="px-3 py-12 sm:px-5">
-        <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-16 text-center md:py-24">
-          <Mesh />
-          <div className="relative mx-auto max-w-3xl">
-            <Eyebrow light>Ready to grow?</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">search growth strategy.</span></h2>
-            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
-              <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
-              <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SearchGrowthCta onAudit={openAudit} />
 
       <EnquiryPopup open={showEnquiry} onOpenChange={setShowEnquiry} />
     </div>
