@@ -200,24 +200,34 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* LOGOS */}
-      <section aria-labelledby="seo-client-brands-heading" className="bg-background py-14 md:py-20">
+      <section aria-labelledby="seo-client-brands-heading" className="bg-brand/5 py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_2fr] lg:items-center lg:gap-16">
-            <div>
-              <Eyebrow>In good company</Eyebrow>
-              <h2 id="seo-client-brands-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl">Brands you know.<br /><span className="text-brand">A team they trust.</span></h2>
-              <div className="mt-7 flex items-center gap-4 border-t border-border pt-6">
-                <span className="text-4xl font-semibold text-brand">50+</span>
-                <p className="max-w-36 text-sm leading-relaxed text-muted-foreground">Growing brands<br />across India</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <Eyebrow>In good company</Eyebrow>
+            <h2 id="seo-client-brands-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Brands you know.<br /><span className="text-brand">A team they trust.</span></h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">Trusted by growing brands across India.</p>
+          </div>
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 sm:mt-12 sm:grid-cols-12">
+            {showcaseLogos.map((client, index) => (
+              <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${index < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${index % 2 === 1 ? "border-l border-foreground/10" : ""} ${index === 2 || index === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 5 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 4 ? "sm:border-l-0" : ""} ${index === showcaseLogos.length - 1 ? "col-span-2" : ""}`}>
+                <img src={client.src} alt={client.name} className="max-h-16 w-full max-w-[140px] object-contain sm:max-h-[72px] sm:max-w-[160px]" loading="lazy" />
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-12">
-              {showcaseLogos.map((client, index) => (
-                <div key={client.name} className={`flex h-32 min-w-0 items-center justify-center bg-background p-4 sm:h-40 sm:p-5 ${index < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${index === showcaseLogos.length - 1 ? "col-span-2" : ""}`}>
-                  <img src={client.src} alt={client.name} className="h-full w-full object-contain" loading="lazy" />
+            ))}
+          </div>
+          <div className="mx-auto mt-8 grid max-w-5xl border-y border-foreground/10 sm:grid-cols-3">
+            {[
+              { icon: TrendingUp, value: "300%+", label: "Growth" },
+              { icon: Search, value: "50+", label: "AI Audits Delivered" },
+              { icon: BarChart3, value: "$2M+", label: "Client Revenue Generated" },
+            ].map(({ icon: Icon, value, label }, index) => (
+              <div key={label} className={`flex items-center justify-center gap-4 px-5 py-7 md:gap-5 md:py-9 ${index > 0 ? "border-t border-foreground/10 sm:border-l sm:border-t-0" : ""}`}>
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><Icon className="h-5 w-5" strokeWidth={1.5} /></span>
+                <div>
+                  <p className="text-3xl font-semibold leading-tight text-foreground md:text-4xl">{value}</p>
+                  <p className="mt-2 text-xs font-semibold uppercase leading-relaxed text-muted-foreground">{label}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
