@@ -24,12 +24,7 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import organicSearchImage from "@/assets/search-platform-organic-search-photo.jpg.asset.json";
-import aiSearchImage from "@/assets/search-platform-ai-search-photo.jpg.asset.json";
-import conversationalAiImage from "@/assets/search-platform-conversational-ai-photo.jpg.asset.json";
-import videoSearchImage from "@/assets/search-platform-video-search-photo.jpg.asset.json";
-import localSearchImage from "@/assets/search-platform-local-search-photo.jpg.asset.json";
-import appMarketplacesImage from "@/assets/search-platform-app-marketplaces-photo.jpg.asset.json";
+
 
 const industries = [
   { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
@@ -104,13 +99,13 @@ const ecosystem = [
 
 const supportingCapabilities = ["Technical SEO", "On-Page SEO", "Off-Page SEO", "Image SEO", "Programmatic SEO", "Content Optimization", "Link Building", "SEO Analytics"];
 
-const searchPlatforms = [
-  { title: "Google & Bing", description: "Capture relevant organic search traffic.", image: organicSearchImage },
-  { title: "AI Search Experiences", description: "Improve visibility in AI-generated results.", image: aiSearchImage },
-  { title: "Conversational AI", description: "Strengthen brand discoverability in AI-powered answers.", image: conversationalAiImage },
-  { title: "YouTube & Video Platforms", description: "Improve video discovery and engagement.", image: videoSearchImage },
-  { title: "Maps & Local Search", description: "Help nearby customers discover your business.", image: localSearchImage },
-  { title: "App Stores & Marketplaces", description: "Increase app and product discoverability.", image: appMarketplacesImage },
+const growthDeliverables = [
+  { icon: Search, title: "Keyword Rankings That Matter", description: "We research and rank the keywords your customers actually search for — not vanity terms — so every position gained translates into qualified visitors." },
+  { icon: TrendingUp, title: "Consistent Organic Traffic Growth", description: "Compounding month-on-month traffic growth through technical fixes, content and authority building — measured in real sessions, not promises." },
+  { icon: BrainCircuit, title: "Visibility in AI Search", description: "Your brand surfaced in AI Overviews, ChatGPT and answer engines — so you stay discoverable as search behaviour shifts beyond blue links." },
+  { icon: MapPin, title: "Local & Maps Domination", description: "Own the local pack and Google Maps for your service areas, turning nearby searches into calls, visits and enquiries." },
+  { icon: FileText, title: "Content That Converts", description: "Search-optimised content built around buyer intent — pages that rank, answer questions and move visitors toward enquiry." },
+  { icon: BarChart3, title: "Transparent Growth Reporting", description: "Clear monthly reporting on rankings, traffic, leads and revenue impact — you always know exactly what your SEO is delivering." },
 ];
 
 const Eyebrow = ({ children, light }: { children: ReactNode; light?: boolean }) => (
