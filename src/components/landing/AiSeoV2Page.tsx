@@ -1,9 +1,9 @@
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, ArrowUpRight, BarChart3, BrainCircuit, BriefcaseBusiness, Building2, Check, FileText,
+  ArrowUpRight, BarChart3, BrainCircuit, BriefcaseBusiness, Building2, Check, FileText,
   GraduationCap, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
-  Sparkles, Star, Stethoscope, Target, TrendingUp, ShieldCheck,
+  Sparkles, Star, Stethoscope, Target, TrendingUp,
 } from "lucide-react";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
 import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
@@ -13,8 +13,6 @@ import evolvingImage from "@/assets/seo-search-evolving.jpg";
 import partnerImage from "@/assets/seo-growth-partner.jpg";
 import realGrowthImage from "@/assets/seo-real-growth-workspace.jpg";
 import featuredSearchImage from "@/assets/seo-featured-ai-search.jpg";
-import bookMyScansReport from "@/assets/seo-reports/bookmyscans-report.png";
-import suranaReport from "@/assets/seo-reports/surana-report.png";
 import magicbricksClientLogo from "@/assets/clients/magicbricks.png";
 import mamaearthClientLogo from "@/assets/clients/mamaearth.png";
 import upgradClientLogo from "@/assets/clients/upgrad.png";
@@ -58,15 +56,6 @@ const services = [
   { icon: BarChart3, title: "SEO Analytics & Reporting", text: "Transparent dashboards and monthly reports that connect rankings to traffic, leads and revenue — so you always know exactly what your SEO investment is returning." },
 ];
 
-const process = [
-  ["01", "Discover", "Understand your business"],
-  ["02", "Audit", "Technical and competitor analysis"],
-  ["03", "Strategy", "Build a custom SEO roadmap"],
-  ["04", "Implement", "On-page, content and technical fixes"],
-  ["05", "Grow", "Build authority and expand reach"],
-  ["06", "Measure", "Track performance and ROI"],
-];
-
 const growthFramework = [
   { icon: Search, title: "Audit & Discover", description: "Analyze website health, competitors and search opportunities." },
   { icon: Target, title: "Strategize & Plan", description: "Build a customized roadmap aligned with your objectives." },
@@ -82,11 +71,6 @@ const clientLogos = [
   { src: tata1mgLogo, name: "Tata 1mg" }, { src: smrLogo, name: "SMR University" },
   { src: shriramLogo, name: "Shriram Properties" }, { src: atriaLogo, name: "Atria Institute of Technology" },
   { src: lancesoftLogo, name: "Lancesoft" },
-];
-
-const results = [
-  { name: "Book My Scans", type: "Healthcare platform", image: bookMyScansReport, slug: "book-my-scans", metrics: [["+320%", "Organic traffic"], ["1,200+", "Keywords"], ["+18", "Authority"]] },
-  { name: "Surana Educational Institutions", type: "Education group", image: suranaReport, slug: "surana-educational", metrics: [["+195%", "Organic traffic"], ["850+", "Keywords"], ["+140%", "Lead growth"]] },
 ];
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
@@ -457,90 +441,6 @@ export const AiSeoV2Page = () => {
           </ol>
           <div aria-hidden="true" className="mt-12 flex h-1.5 overflow-hidden rounded-full bg-border/60 lg:mt-16">
             <span className="w-1/5 bg-brand/20" /><span className="w-1/5 bg-brand/40" /><span className="w-1/5 bg-brand/60" /><span className="w-1/5 bg-brand/80" /><span className="w-1/5 bg-brand" />
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
-            <div><Eyebrow>Results that matter</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Real businesses. <span className="text-brand">Real growth.</span></h2></div>
-            <p className="text-muted-foreground lg:max-w-lg lg:justify-self-end">Explore SEO projects where we turned search visibility into measurable traffic, keyword and lead growth.</p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="overflow-hidden rounded-3xl"><img src={realGrowthImage} alt="Organic search growth shown in a modern workspace" loading="lazy" className="h-full min-h-[320px] w-full object-cover" /></div>
-            {results.map((r) => (
-              <Link key={r.slug} to={`/report/${r.slug}`} className="group overflow-hidden rounded-3xl border border-border bg-background">
-                <div className="aspect-[16/10] overflow-hidden bg-muted"><img src={r.image} alt={`${r.name} SEO report`} loading="lazy" className="h-full w-full object-cover object-left-top transition duration-500 group-hover:scale-105" /></div>
-                <div className="p-6">
-                  <p className="text-xs text-muted-foreground">{r.type}</p>
-                  <h3 className="mt-1 text-lg font-semibold text-foreground">{r.name}</h3>
-                  <div className="mt-4 grid grid-cols-3 gap-2 border-y border-border py-4">
-                    {r.metrics.map(([v, l]) => <div key={l}><p className="text-lg font-semibold text-brand">{v}</p><p className="text-[11px] text-muted-foreground">{l}</p></div>)}
-                  </div>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:text-brand">Read case study <ArrowRight className="h-4 w-4" /></span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-muted-foreground"><span className="mr-2 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-primary-foreground">Free</span>See more client results. <Link to="/our-work" className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Explore Our Work.</Link></p>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE */}
-      <section className="bg-muted/40 py-16 md:py-24">
-        <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <Eyebrow>Why choose The Super 30</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">More than an SEO agency — <span className="text-brand">your growth partner.</span></h2>
-            <p className="mt-5 text-muted-foreground">A team of specialists combining search expertise, AI visibility and accountable execution around your business goals.</p>
-            <div className="mt-8 space-y-4">
-              {[
-                { icon: Target, t: "Data-driven strategy", d: "Every decision is backed by search data, competitor research and your business goals." },
-                { icon: BarChart3, t: "Transparent reporting", d: "Clear dashboards that connect rankings to traffic, leads and revenue." },
-                { icon: ShieldCheck, t: "Business-first approach", d: "We focus on measurable outcomes like enquiries and sales — not just rankings." },
-              ].map((x) => (
-                <div key={x.t} className="flex gap-4 rounded-2xl border border-border bg-background p-5">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand text-primary-foreground"><x.icon className="h-5 w-5" /></span>
-                  <div><h3 className="font-semibold text-foreground">{x.t}</h3><p className="mt-1 text-sm text-muted-foreground">{x.d}</p></div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-6"><Pill onClick={openAudit}>Get My Free SEO Audit</Pill><Rating /></div>
-          </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="space-y-5">
-              <img src={partnerImage} alt="The Super 30 SEO team collaborating" loading="lazy" className="aspect-[4/5] w-full rounded-3xl object-cover" />
-            </div>
-            <div className="space-y-5 pt-12">
-              <div className="rounded-3xl bg-foreground p-6 text-primary-foreground">
-                <TrendingUp className="h-6 w-6 text-brand" />
-                <p className="mt-4 text-4xl font-semibold">300%+</p>
-                <p className="text-sm text-primary-foreground/70">Average Traffic Growth</p>
-              </div>
-              <img src={heroImage} alt="Search performance workspace" loading="lazy" className="aspect-square w-full rounded-3xl object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow>Our process</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">A simple, proven <span className="text-brand">path to growth.</span></h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">From audit to scale, we follow a structured process designed for long-term search growth.</p>
-          </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {process.map(([n, t, c]) => (
-              <div key={n} className="group rounded-3xl border border-border bg-background p-7 transition hover:border-brand">
-                <span className="inline-flex rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">Step {n}</span>
-                <h3 className="mt-6 text-xl font-semibold text-foreground">{t}</h3>
-                <p className="mt-2 text-muted-foreground">{c}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
