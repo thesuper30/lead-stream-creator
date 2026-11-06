@@ -81,13 +81,6 @@ const results = [
   { name: "Surana Educational Institutions", type: "Education group", image: suranaReport, slug: "surana-educational", metrics: [["+195%", "Organic traffic"], ["850+", "Keywords"], ["+140%", "Lead growth"]] },
 ];
 
-const aiSearchSteps = [
-  { icon: FileText, number: "01", title: "Optimize for AI", text: "Structure content for AI discovery" },
-  { icon: BrainCircuit, number: "02", title: "Build Trust Signals", text: "Strengthen topical authority" },
-  { icon: Link2, number: "03", title: "Earn Citations", text: "Become a trusted source" },
-  { icon: BarChart3, number: "04", title: "Monitor Visibility", text: "Track search and AI presence" },
-];
-
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
 const ecosystem = [
@@ -397,42 +390,6 @@ export const AiSeoV2Page = () => {
             Let's make your website rank higher together.{" "}
             <button type="button" onClick={openAudit} className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Let's Start Ranking.</button>
           </p>
-        </div>
-      </section>
-
-      {/* IMPACT / FEATURED SERVICE */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
-            <div><Eyebrow>Featured service</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">AI Search &amp; <span className="text-brand">Intent Mapping</span></h2></div>
-            <p className="text-muted-foreground lg:max-w-lg lg:justify-self-end">Understand how AI systems interpret search queries and map your content to user intent. We help your brand appear in conversations, not just traditional search results.</p>
-          </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
-            <div className="relative overflow-hidden rounded-3xl bg-foreground p-8 md:p-10">
-              <Mesh />
-              <div className="relative">
-                <h3 className="text-2xl font-semibold text-primary-foreground md:text-3xl">AI Prompt &amp; Generative Search Optimization</h3>
-                <p className="mt-4 max-w-lg text-primary-foreground/70">Optimize your content to appear in AI-generated answers and become a trusted source that language models can understand and cite.</p>
-                <ul className="mt-6 space-y-3 text-sm text-primary-foreground/85">
-                  {["AI query analysis and intent classification", "Semantic search optimization", "User journey mapping for AI platforms"].map((x) => <li key={x} className="flex items-center gap-3"><Check className="h-4 w-4 text-brand" />{x}</li>)}
-                </ul>
-                <img src={featuredSearchImage} alt="AI search optimization workspace" loading="lazy" width={1600} height={912} className="mt-8 aspect-[16/8] w-full rounded-2xl object-cover" />
-              </div>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {aiSearchSteps.map((s) => (
-                <article key={s.number} className="rounded-3xl border border-border bg-muted/40 p-6">
-                  <div className="flex items-center justify-between"><span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand text-primary-foreground"><s.icon className="h-5 w-5" /></span><span className="text-3xl font-semibold text-brand/30">{s.number}</span></div>
-                  <h4 className="mt-6 text-lg font-semibold text-foreground">{s.title}</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
-                </article>
-              ))}
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-brand p-6 sm:col-span-2">
-                <p className="text-lg font-semibold text-primary-foreground">Get your brand cited by AI search.</p>
-                <Pill onClick={openAudit} light>Get AI-Ready</Pill>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
