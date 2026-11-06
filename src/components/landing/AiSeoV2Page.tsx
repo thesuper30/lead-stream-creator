@@ -24,12 +24,7 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import organicSearchImage from "@/assets/search-platform-organic-search-photo.jpg.asset.json";
-import aiSearchImage from "@/assets/search-platform-ai-search-photo.jpg.asset.json";
-import conversationalAiImage from "@/assets/search-platform-conversational-ai-photo.jpg.asset.json";
-import videoSearchImage from "@/assets/search-platform-video-search-photo.jpg.asset.json";
-import localSearchImage from "@/assets/search-platform-local-search-photo.jpg.asset.json";
-import appMarketplacesImage from "@/assets/search-platform-app-marketplaces-photo.jpg.asset.json";
+
 
 const industries = [
   { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
@@ -104,13 +99,13 @@ const ecosystem = [
 
 const supportingCapabilities = ["Technical SEO", "On-Page SEO", "Off-Page SEO", "Image SEO", "Programmatic SEO", "Content Optimization", "Link Building", "SEO Analytics"];
 
-const searchPlatforms = [
-  { title: "Google & Bing", description: "Capture relevant organic search traffic.", image: organicSearchImage },
-  { title: "AI Search Experiences", description: "Improve visibility in AI-generated results.", image: aiSearchImage },
-  { title: "Conversational AI", description: "Strengthen brand discoverability in AI-powered answers.", image: conversationalAiImage },
-  { title: "YouTube & Video Platforms", description: "Improve video discovery and engagement.", image: videoSearchImage },
-  { title: "Maps & Local Search", description: "Help nearby customers discover your business.", image: localSearchImage },
-  { title: "App Stores & Marketplaces", description: "Increase app and product discoverability.", image: appMarketplacesImage },
+const growthDeliverables = [
+  { icon: Search, title: "Keyword Rankings That Matter", description: "We research and rank the keywords your customers actually search for — not vanity terms — so every position gained translates into qualified visitors." },
+  { icon: TrendingUp, title: "Consistent Organic Traffic Growth", description: "Compounding month-on-month traffic growth through technical fixes, content and authority building — measured in real sessions, not promises." },
+  { icon: BrainCircuit, title: "Visibility in AI Search", description: "Your brand surfaced in AI Overviews, ChatGPT and answer engines — so you stay discoverable as search behaviour shifts beyond blue links." },
+  { icon: MapPin, title: "Local & Maps Domination", description: "Own the local pack and Google Maps for your service areas, turning nearby searches into calls, visits and enquiries." },
+  { icon: FileText, title: "Content That Converts", description: "Search-optimised content built around buyer intent — pages that rank, answer questions and move visitors toward enquiry." },
+  { icon: BarChart3, title: "Transparent Growth Reporting", description: "Clear monthly reporting on rankings, traffic, leads and revenue impact — you always know exactly what your SEO is delivering." },
 ];
 
 const Eyebrow = ({ children, light }: { children: ReactNode; light?: boolean }) => (
@@ -291,24 +286,29 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
-      {/* SEARCH PLATFORMS */}
-      <section aria-labelledby="search-platforms-heading" className="bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* GROWTH DELIVERABLES */}
+      <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 id="search-platforms-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Your Brand. <span className="text-brand">Every Search Platform.</span></h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Be visible wherever your customers search, ask questions, watch, explore and discover.</p>
+            <Eyebrow>What you get</Eyebrow>
+            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for <span className="text-brand">higher rankings</span> and real business growth.</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Not just reports and audits — the actual outcomes your business sees when SEO is done right, end to end.</p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {searchPlatforms.map((platform) => (
-              <article key={platform.title} className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card">
-                <img src={platform.image.url} alt={`${platform.title} discovery photograph`} width={1000} height={625} loading="lazy" className="aspect-[16/10] w-full object-cover" />
-                <div className="flex-1 border-t border-border p-6 sm:p-7">
-                  <div className="mb-4 h-1 w-8 rounded-full bg-brand" />
-                  <h3 className="text-xl font-semibold leading-snug text-foreground">{platform.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-muted-foreground">{platform.description}</p>
+            {growthDeliverables.map((item, index) => (
+              <article key={item.title} className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition hover:border-brand/60 sm:p-7">
+                <span className="pointer-events-none absolute right-5 top-5 text-4xl font-bold text-foreground/5 transition group-hover:text-brand/15">{String(index + 1).padStart(2, "0")}</span>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
+                  <item.icon className="h-6 w-6" />
                 </div>
+                <h3 className="text-xl font-semibold leading-snug text-foreground">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{item.description}</p>
               </article>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Pill onClick={() => setShowEnquiry(true)}>Let's Start Ranking</Pill>
           </div>
         </div>
       </section>
