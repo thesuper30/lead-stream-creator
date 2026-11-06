@@ -412,7 +412,7 @@ export const AiSeoV2Page = () => {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>What you get</Eyebrow>
-            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for <span className="text-brand">higher rankings</span> and real business growth.</h2>
+            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">SEO Results That <span className="text-brand">Move Your Business Forward.</span></h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Not just reports and audits — the actual outcomes your business sees when SEO is done right, end to end.</p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
