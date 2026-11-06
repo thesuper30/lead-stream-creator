@@ -315,30 +315,27 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
-      {/* GROWTH DELIVERABLES */}
-      <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
-        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SERVICES */}
+      <section className="bg-muted/40 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow>What you get</Eyebrow>
-            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for <span className="text-brand">higher rankings</span> and real business growth.</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Not just reports and audits — the actual outcomes your business sees when SEO is done right, end to end.</p>
+            <Eyebrow>Our services</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for higher rankings and <span className="text-brand">real business growth.</span></h2>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {growthDeliverables.map((item, index) => (
-              <article key={item.title} className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-sand p-6 transition hover:border-brand/60 sm:p-7">
-                <span className="pointer-events-none absolute right-5 top-5 text-4xl font-bold text-foreground/5 transition group-hover:text-brand/15">{String(index + 1).padStart(2, "0")}</span>
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
-                  <item.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-semibold leading-snug text-foreground">{item.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{item.description}</p>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {services.map((s) => (
+              <article key={s.title} className="group flex flex-col rounded-3xl border border-border bg-sand p-6 transition duration-300 hover:-translate-y-1 hover:border-brand">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><s.icon className="h-6 w-6" /></span>
+                <h3 className="mt-6 text-lg font-semibold leading-snug text-foreground">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
               </article>
             ))}
           </div>
-          <div className="mt-12 text-center">
-            <Pill onClick={() => setShowEnquiry(true)}>Let's Start Ranking</Pill>
-          </div>
+          <p className="mt-10 text-center text-muted-foreground">
+            <span className="mr-2 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-primary-foreground">Free</span>
+            Let's make your website rank higher together.{" "}
+            <button type="button" onClick={openAudit} className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Let's Start Ranking.</button>
+          </p>
         </div>
       </section>
 
@@ -409,27 +406,30 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="bg-muted/40 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* GROWTH DELIVERABLES */}
+      <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <Eyebrow>Our services</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for higher rankings and <span className="text-brand">real business growth.</span></h2>
+            <Eyebrow>What you get</Eyebrow>
+            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for <span className="text-brand">higher rankings</span> and real business growth.</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Not just reports and audits — the actual outcomes your business sees when SEO is done right, end to end.</p>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {services.map((s) => (
-              <article key={s.title} className="group flex flex-col rounded-3xl border border-border bg-sand p-6 transition duration-300 hover:-translate-y-1 hover:border-brand">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><s.icon className="h-6 w-6" /></span>
-                <h3 className="mt-6 text-lg font-semibold leading-snug text-foreground">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {growthDeliverables.map((item, index) => (
+              <article key={item.title} className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-sand p-6 transition hover:border-brand/60 sm:p-7">
+                <span className="pointer-events-none absolute right-5 top-5 text-4xl font-bold text-foreground/5 transition group-hover:text-brand/15">{String(index + 1).padStart(2, "0")}</span>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
+                  <item.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-semibold leading-snug text-foreground">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{item.description}</p>
               </article>
             ))}
           </div>
-          <p className="mt-10 text-center text-muted-foreground">
-            <span className="mr-2 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-primary-foreground">Free</span>
-            Let's make your website rank higher together.{" "}
-            <button type="button" onClick={openAudit} className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Let's Start Ranking.</button>
-          </p>
+          <div className="mt-12 text-center">
+            <Pill onClick={() => setShowEnquiry(true)}>Let's Start Ranking</Pill>
+          </div>
         </div>
       </section>
 
