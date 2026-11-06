@@ -416,8 +416,9 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SEO GROWTH FRAMEWORK */}
-      <section aria-labelledby="seo-growth-framework-heading" className="overflow-hidden bg-muted/40 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section aria-labelledby="seo-growth-framework-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.09),transparent_60%)]" />
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-3xl">
               <Eyebrow>Our SEO Growth Framework</Eyebrow>
@@ -428,17 +429,20 @@ export const AiSeoV2Page = () => {
             </div>
           </div>
 
-          <ol className="relative mt-12 grid gap-0 lg:mt-16 lg:grid-cols-5">
+          <ol className="relative mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-5">
+            <div aria-hidden="true" className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-brand/10 via-brand/40 to-brand/10 lg:block" />
             {growthFramework.map((step, index) => (
-              <li key={step.title} className="relative min-w-0 pb-10 pl-20 last:pb-0 lg:pb-0 lg:pl-0 lg:pr-6">
-                <div aria-hidden="true" className={`absolute bottom-0 left-7 top-0 w-px bg-border lg:left-0 lg:right-0 lg:top-7 lg:h-px lg:w-auto ${index === growthFramework.length - 1 ? "hidden" : ""}`} />
-                <span className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center rounded-full border border-brand/20 bg-background text-sm font-semibold text-brand lg:relative">0{index + 1}</span>
-                <div className={`relative lg:mt-9 ${index % 2 === 1 ? "lg:pt-10" : ""}`}>
-                  <span aria-hidden="true" className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg border border-border bg-background text-brand">
-                    <step.icon className="h-6 w-6" strokeWidth={1.5} />
-                  </span>
-                  <h3 className="text-xl font-semibold leading-snug text-foreground">{step.title}</h3>
-                  <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+              <li key={step.title} className="group relative min-w-0">
+                <div className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_20px_40px_-20px_hsl(var(--brand)/0.35)]">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-base font-bold text-primary-foreground shadow-[0_8px_20px_-6px_hsl(var(--brand)/0.6)] ring-4 ring-background">0{index + 1}</span>
+                    <span aria-hidden="true" className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground">
+                      <step.icon className="h-5 w-5" strokeWidth={1.5} />
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold leading-snug text-foreground">{step.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                  <span aria-hidden="true" className="mt-5 block h-1 w-10 rounded-full bg-brand/30 transition-all duration-300 group-hover:w-full group-hover:bg-brand" />
                 </div>
               </li>
             ))}
