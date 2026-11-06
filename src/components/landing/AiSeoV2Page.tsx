@@ -161,7 +161,7 @@ export const AiSeoV2Page = () => {
   const openAudit = () => setShowEnquiry(true);
 
   return (
-    <div className="bg-cream">
+    <div className="bg-background">
       {/* HERO */}
       <section className="px-3 pt-3 sm:px-5">
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground">
@@ -197,7 +197,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* LOGOS */}
-      <section aria-labelledby="seo-client-brands-heading" className="bg-cream py-14 md:py-20">
+      <section aria-labelledby="seo-client-brands-heading" className="bg-background py-14 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>In good company</Eyebrow>
@@ -296,7 +296,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* GROWTH DELIVERABLES */}
-      <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-cream py-16 md:py-24">
+      <section aria-labelledby="growth-deliverables-heading" className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -323,7 +323,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* WHY CHOOSE US — PLATFORM VISIBILITY */}
-      <section className="bg-cream px-3 py-12 sm:px-5">
+      <section className="bg-background px-3 py-12 sm:px-5">
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground px-6 py-14 text-center md:py-20">
           <Mesh />
           <div className="relative mx-auto max-w-3xl">
@@ -390,7 +390,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>Our services</Eyebrow>
@@ -440,7 +440,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SEO GROWTH FRAMEWORK */}
-      <section aria-labelledby="seo-growth-framework-heading" className="bg-cream py-16 md:py-24">
+      <section aria-labelledby="seo-growth-framework-heading" className="bg-background py-16 md:py-24">
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-end lg:gap-16">
             <div>
@@ -474,7 +474,7 @@ export const AiSeoV2Page = () => {
       <SeoAchievementsSection />
 
       {/* TEXT TESTIMONIALS */}
-      <section aria-labelledby="seo-testimonials-heading" className="bg-cream py-16 md:py-24">
+      <section aria-labelledby="seo-testimonials-heading" className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>Testimonials</Eyebrow>
