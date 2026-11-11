@@ -30,6 +30,7 @@ function SectionLabel({ number, children }: { number: string; children: React.Re
 
 export default function EcommerceSeoCaseStudy() {
   const [selectedMonth, setSelectedMonth] = useState(5);
+  const [activeFix, setActiveFix] = useState(0);
   const selected = trafficGrowth[selectedMonth] ?? trafficGrowth[5];
 
   return (
@@ -85,34 +86,29 @@ export default function EcommerceSeoCaseStudy() {
           <div className={shell}>
             <SectionLabel number="02">The problem & the solution</SectionLabel>
             <h2 className={`${title} mb-12`}>What Was Holding the Brand Back.<br /><span className="text-brand">What We Did About It.</span></h2>
-            <div className="case-pair-board">
-              <div className="case-pair-header">
-                <div className="case-pair-tag case-pair-tag-problem"><TriangleAlert className="h-4 w-4" strokeWidth={2} /> The problem</div>
-                <span aria-hidden="true" />
-                <div className="case-pair-tag case-pair-tag-solution"><Lightbulb className="h-4 w-4" strokeWidth={2} /> The solution</div>
+            <div className="case-fix">
+              <div className="case-fix-tabs" role="tablist" aria-label="Problems and solutions">
+                {clientProblems.map((problem, index) => (
+                  <button key={problem.title} type="button" role="tab" aria-selected={activeFix === index} onClick={() => setActiveFix(index)} className={`case-fix-tab ${activeFix === index ? "is-active" : ""}`}>
+                    <span className="case-fix-tab-num">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="case-fix-tab-label">{problem.title}</span>
+                  </button>
+                ))}
               </div>
-              <ol className="space-y-4 md:space-y-5">
-                {clientProblems.map((problem, index) => {
-                  const solution = solutionsProvided[index];
-                  return (
-                    <li key={problem.title} className="case-pair-row">
-                      <div className="case-pair-card case-pair-problem">
-                        <span className="case-pair-index">{String(index + 1).padStart(2, "0")}</span>
-                        <p className="mb-1.5 text-base font-medium md:text-lg">{problem.title}</p>
-                        <p className="text-sm leading-relaxed text-study-ink/60">{problem.detail}</p>
-                      </div>
-                      <div className="case-pair-arrow" aria-hidden="true"><ArrowRight className="h-5 w-5" strokeWidth={2} /></div>
-                      {solution && (
-                        <div className="case-pair-card case-pair-solution">
-                          <span className="case-pair-check"><Check className="h-4 w-4" strokeWidth={2.5} /></span>
-                          <p className="mb-1.5 text-base font-medium md:text-lg">{solution.title}</p>
-                          <p className="text-sm leading-relaxed text-study-paper/65">{solution.detail}</p>
-                        </div>
-                      )}
-                    </li>
-                  );
-                })}
-              </ol>
+              <div key={activeFix} className="case-fix-stage" role="tabpanel">
+                <div className="case-fix-side case-fix-before">
+                  <span className="case-fix-kicker"><TriangleAlert className="h-3.5 w-3.5" strokeWidth={2} /> Before</span>
+                  <p className="case-fix-title">{clientProblems[activeFix].title}</p>
+                  <p className="case-fix-text text-study-ink/60">{clientProblems[activeFix].detail}</p>
+                </div>
+                <div className="case-fix-pivot" aria-hidden="true"><ArrowRight className="h-4 w-4" strokeWidth={2.5} /></div>
+                <div className="case-fix-side case-fix-after">
+                  <span className="case-fix-kicker"><Lightbulb className="h-3.5 w-3.5" strokeWidth={2} /> What we did</span>
+                  <p className="case-fix-title">{solutionsProvided[activeFix]?.title}</p>
+                  <p className="case-fix-text text-study-paper/65">{solutionsProvided[activeFix]?.detail}</p>
+                  <span className="case-fix-ghost" aria-hidden="true">{String(activeFix + 1).padStart(2, "0")}</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
