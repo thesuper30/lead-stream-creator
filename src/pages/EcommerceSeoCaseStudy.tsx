@@ -85,15 +85,34 @@ export default function EcommerceSeoCaseStudy() {
           <div className={shell}>
             <SectionLabel number="02">The problem & the solution</SectionLabel>
             <h2 className={`${title} mb-12`}>What Was Holding the Brand Back.<br /><span className="text-brand">What We Did About It.</span></h2>
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-              <div className="case-panel case-panel-problem">
-                <div className="case-panel-head"><span className="case-panel-chip"><TriangleAlert className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-xs uppercase text-study-ink/50">Where the brand started</p><h3 className="text-xl font-medium">The problem</h3></div></div>
-                <ul className="space-y-6">{clientProblems.map((item, index) => <li key={item.title} className="flex gap-4"><span className="case-panel-num">{index + 1}</span><div><p className="mb-1 font-medium">{item.title}</p><p className="text-sm leading-relaxed text-study-ink/60">{item.detail}</p></div></li>)}</ul>
+            <div className="case-pair-board">
+              <div className="case-pair-header">
+                <div className="case-pair-tag case-pair-tag-problem"><TriangleAlert className="h-4 w-4" strokeWidth={2} /> The problem</div>
+                <span aria-hidden="true" />
+                <div className="case-pair-tag case-pair-tag-solution"><Lightbulb className="h-4 w-4" strokeWidth={2} /> The solution</div>
               </div>
-              <div className="case-panel case-panel-solution">
-                <div className="case-panel-head"><span className="case-panel-chip"><Lightbulb className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-xs uppercase text-study-paper/50">What we put in place</p><h3 className="text-xl font-medium">The solution</h3></div></div>
-                <ul className="space-y-6">{solutionsProvided.map(item => <li key={item.title} className="flex gap-4"><span className="case-panel-num"><Check className="h-4 w-4" strokeWidth={2.5} /></span><div><p className="mb-1 font-medium">{item.title}</p><p className="text-sm leading-relaxed text-study-paper/60">{item.detail}</p></div></li>)}</ul>
-              </div>
+              <ol className="space-y-4 md:space-y-5">
+                {clientProblems.map((problem, index) => {
+                  const solution = solutionsProvided[index];
+                  return (
+                    <li key={problem.title} className="case-pair-row">
+                      <div className="case-pair-card case-pair-problem">
+                        <span className="case-pair-index">{String(index + 1).padStart(2, "0")}</span>
+                        <p className="mb-1.5 text-base font-medium md:text-lg">{problem.title}</p>
+                        <p className="text-sm leading-relaxed text-study-ink/60">{problem.detail}</p>
+                      </div>
+                      <div className="case-pair-arrow" aria-hidden="true"><ArrowRight className="h-5 w-5" strokeWidth={2} /></div>
+                      {solution && (
+                        <div className="case-pair-card case-pair-solution">
+                          <span className="case-pair-check"><Check className="h-4 w-4" strokeWidth={2.5} /></span>
+                          <p className="mb-1.5 text-base font-medium md:text-lg">{solution.title}</p>
+                          <p className="text-sm leading-relaxed text-study-paper/65">{solution.detail}</p>
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ol>
             </div>
           </div>
         </section>
