@@ -51,6 +51,15 @@ All colors MUST be HSL.
     --editorial-accent: 14 91% 54%;
     --editorial-tint: 122 39% 94%;
 
+    /* Local editorial case-study palette */
+    --case-ink: 0 0% 8%;
+    --case-paper: 0 0% 100%;
+    --case-muted: 0 0% 95%;
+    --case-line: 0 0% 86%;
+    --case-success: 155 50% 31%;
+    --case-success-soft: 150 30% 94%;
+    --case-hero-shade: linear-gradient(90deg, hsl(0 0% 4% / .82), hsl(0 0% 4% / .5) 50%, hsl(0 0% 4% / .08));
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;

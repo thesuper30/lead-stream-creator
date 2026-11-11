@@ -17,6 +17,14 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
+        study: {
+          ink: "hsl(var(--case-ink))",
+          paper: "hsl(var(--case-paper))",
+          muted: "hsl(var(--case-muted))",
+          line: "hsl(var(--case-line))",
+          success: "hsl(var(--case-success))",
+          "success-soft": "hsl(var(--case-success-soft))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -85,6 +93,7 @@ export default {
         semibold: '500',
         bold: '500',
       },
+      backgroundImage: { "study-hero": "var(--case-hero-shade)" },
       boxShadow: {},
       keyframes: {
         "accordion-down": {
