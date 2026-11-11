@@ -21,3 +21,9 @@
 - [x] SEO page: replaced FAQ section at bottom with the homepage SEO Achievements section (shared component)
 - [x] Restyle SEO Achievements cards like Our Services cards
 - [x] Remove the underline below the category tabs in Real Projects section (image-53)
+
+# E-commerce SEO case study
+
+- [x] Create the case study page with all supplied campaign data and strategies
+- [x] Add furniture imagery, keyword comparison, and interactive traffic chart
+- [x] Verify data, navigation, and desktop/mobile layouts
