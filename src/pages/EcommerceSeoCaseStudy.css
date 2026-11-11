@@ -18,6 +18,8 @@
   background-image: var(--case-banner-glow);
 }
 .ecommerce-case-study .case-hero .case-hero-content { padding-top: 64px; padding-bottom: 64px; }
+.ecommerce-case-study .case-hero-brand { display: flex; justify-content: center; margin-bottom: 28px; }
+.ecommerce-case-study .case-hero-brand > img { background: hsl(var(--case-paper)); border-radius: 14px; padding: 9px 16px; }
 .ecommerce-case-study .case-hero h1 { max-width: 1000px; margin: auto; line-height: 1.35; }
 .ecommerce-case-study .case-hero h1 span {
   display: inline;
