@@ -65,6 +65,10 @@ export default function EcommerceSeoCaseStudy() {
               <div><SectionLabel number="01">Campaign performance snapshot</SectionLabel><h2 className={title}>Six months of work.<br /><span className="text-brand">A measurable difference.</span></h2></div>
               <p className="max-w-xs text-sm leading-relaxed text-study-ink/60">From search visibility to purchase intent. The campaign, at a glance.</p>
             </div>
+            <div className="case-brand-intro mb-8 flex flex-col items-start gap-6 border p-7 sm:flex-row sm:items-center sm:gap-10 sm:p-8">
+              <img src={mamaearthLogo} alt="Mamaearth" width={240} height={44} className="h-9 w-auto shrink-0 sm:h-11" />
+              <p className="text-sm leading-relaxed text-study-ink/70 sm:text-[15px]">Mamaearth is an Indian personal-care brand built on toxin-free, naturally derived formulas for skin, hair and baby care. Founded in 2016, it grew from a single online store into a multi-category consumer brand sold across its own website, marketplaces and modern retail. Today it competes in one of India's most crowded, high-intent search categories.</p>
+            </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {campaignSnapshot.map((metric, index) => <article key={metric.label} className={`min-w-0 rounded-lg border p-6 ${index === 0 ? "border-brand bg-brand text-study-paper" : "border-study-line bg-study-muted text-study-ink"}`}>
                 <div className="mb-8 flex items-center justify-between gap-2"><h3 className="text-sm">{metric.label}</h3><ArrowUpRight className="h-5 w-5" /></div>

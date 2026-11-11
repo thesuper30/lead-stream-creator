@@ -38,6 +38,16 @@
 .ecommerce-case-study nav { border-bottom-color: hsl(var(--case-line) / .55); }
 .ecommerce-case-study #performance h2,
 .ecommerce-case-study #strategy h2 { max-width: 800px; }
+.ecommerce-case-study #performance .case-brand-intro {
+  border-radius: 24px;
+  background: hsl(var(--case-sand));
+  border-color: hsl(var(--case-line) / .8);
+}
+.ecommerce-case-study #performance .case-brand-intro > img { mix-blend-mode: normal; }
+@media (max-width: 639px) {
+  .ecommerce-case-study #performance .case-brand-intro { padding: 22px; gap: 18px; }
+  .ecommerce-case-study #performance .case-brand-intro > img { height: 34px; }
+}
 .ecommerce-case-study #performance article { border-radius: 24px; padding: 28px; }
 .ecommerce-case-study #performance article:not(:first-child) { background: hsl(var(--case-sand)); border-color: hsl(var(--case-sand)); }
 .ecommerce-case-study #rankings,
