@@ -154,6 +154,6 @@
   .ecommerce-case-study #challenge .case-fix-stage { grid-template-columns: 1fr 1.15fr; }
   .ecommerce-case-study #challenge .case-fix-side { padding: 40px 48px; min-height: 240px; }
   .ecommerce-case-study #challenge .case-fix-after { clip-path: polygon(48px 0, 100% 0, 100% 100%, 0 100%); margin-left: -48px; padding-left: 88px; }
-  .ecommerce-case-study #challenge .case-fix-pivot { left: calc(1 / 2.15 * 100% - 2px); transform: translate(-50%, -50%); }
+  .ecommerce-case-study #challenge .case-fix-pivot { left: calc(46.5% - 24px); transform: translate(-50%, -50%); }
   .ecommerce-case-study #challenge .case-fix-title { font-size: 24px; }
 }
