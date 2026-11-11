@@ -50,6 +50,32 @@
 }
 .ecommerce-case-study #performance article { border-radius: 24px; padding: 28px; }
 .ecommerce-case-study #performance article:not(:first-child) { background: hsl(var(--case-sand)); border-color: hsl(var(--case-sand)); }
+.ecommerce-case-study #challenge .case-panel { border-radius: 28px; padding: 32px; }
+.ecommerce-case-study #challenge .case-panel-problem { background: hsl(var(--case-sand)); border: 1px solid hsl(var(--case-line) / .8); }
+.ecommerce-case-study #challenge .case-panel-solution {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: hsl(var(--case-ink));
+  background-image: var(--case-dark-glow);
+  color: hsl(var(--case-paper));
+}
+.ecommerce-case-study #challenge .case-panel-solution::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .035;
+  background-image: linear-gradient(to right, hsl(var(--case-paper)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--case-paper)) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+.ecommerce-case-study #challenge .case-panel-head { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.ecommerce-case-study #challenge .case-panel-chip { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 15px; flex-shrink: 0; }
+.ecommerce-case-study #challenge .case-panel-problem .case-panel-chip { background: hsl(var(--case-ink) / .07); color: hsl(var(--case-ink)); }
+.ecommerce-case-study #challenge .case-panel-solution .case-panel-chip { background: hsl(var(--brand) / .18); color: hsl(var(--brand)); }
+.ecommerce-case-study #challenge .case-panel-num { display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 12px; font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+.ecommerce-case-study #challenge .case-panel-problem .case-panel-num { background: hsl(var(--case-ink) / .08); color: hsl(var(--case-ink) / .7); }
+.ecommerce-case-study #challenge .case-panel-solution .case-panel-num { background: hsl(var(--brand) / .2); color: hsl(var(--brand)); }
 .ecommerce-case-study #rankings,
 .ecommerce-case-study #impact { position: relative; isolation: isolate; overflow: hidden; background-image: var(--case-dark-glow); }
 .ecommerce-case-study #rankings::before,

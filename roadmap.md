@@ -30,4 +30,4 @@
 - [x] Confirm the three banner labels shown in the screenshot are removed
 - [x] Add warm orange glow to the case study's dark sections and verify
 - [x] Add the Mamaearth logo and a short company intro above the snapshot cards
-- [ ] Add a "Problem the client was facing and the solutions we provided" section before keyword rankings
+- [x] Add a "Problem the client was facing and the solutions we provided" section before keyword rankings

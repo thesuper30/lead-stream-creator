@@ -42,3 +42,19 @@ export const seoStrategies = [
   { title: "Off-Page SEO & Link Building", summary: "Strengthened domain authority through relevant, quality-focused link acquisition.", items: ["Acquired 45 relevant referring domains", "Executed industry-relevant digital PR", "Built contextual backlinks", "Recovered lost backlinks", "Improved brand mentions and citations"] },
   { title: "Conversion Rate Optimization", summary: "Converted more organic visitors into product enquiries and purchases.", items: ["Improved category page navigation", "Optimized product page CTAs", "Enhanced mobile shopping experience", "Improved product trust signals", "Optimized checkout journey"] },
 ];
+
+export const clientProblems = [
+  { title: "Paid ads were carrying the business", detail: "Only 8,000 organic visits a month meant most sales were bought rather than earned." },
+  { title: "Commercial searches were invisible", detail: "Just 50 keywords ranked on page one, and \"buy sofa online\" sat at position 42." },
+  { title: "The catalogue was hard to crawl", detail: "450 indexed pages, thin category copy and duplicate product URLs diluted relevance." },
+  { title: "Authority trailed bigger retailers", detail: "85 referring domains left the store outranked by established furniture brands." },
+  { title: "Visitors were not converting", detail: "Organic revenue stood at ₹12L a month because product pages did not guide buyers to checkout." },
+];
+
+export const solutionsProvided = [
+  { title: "Fixed the technical foundation", detail: "120+ technical errors, Core Web Vitals, redirect chains and canonical issues resolved." },
+  { title: "Mapped intent to the right pages", detail: "250+ high-intent commercial keywords assigned to specific category and product pages." },
+  { title: "Rebuilt on-page and content", detail: "80+ product and category pages rewritten, plus 35 blogs, 12 buying guides and 8 new category pages." },
+  { title: "Built authority the right way", detail: "45 relevant referring domains acquired through digital PR, contextual links and recovered backlinks." },
+  { title: "Turned traffic into revenue", detail: "Navigation, product CTAs, trust signals and the checkout journey optimised for conversion." },
+];
