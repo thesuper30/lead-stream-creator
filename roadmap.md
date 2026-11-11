@@ -24,6 +24,6 @@
 
 # E-commerce SEO case study
 
-- [ ] Create the case study page with all supplied campaign data and strategies
-- [ ] Add furniture imagery, keyword comparison, and interactive traffic chart
-- [ ] Verify data, navigation, and desktop/mobile layouts
+- [x] Create the case study page with all supplied campaign data and strategies
+- [x] Add furniture imagery, keyword comparison, and interactive traffic chart
+- [x] Verify data, navigation, and desktop/mobile layouts
