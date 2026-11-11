@@ -58,6 +58,8 @@ All colors MUST be HSL.
     --case-line: 0 0% 86%;
     --case-success: 155 50% 31%;
     --case-success-soft: 150 30% 94%;
+    --case-dark-glow: radial-gradient(ellipse at 50% 45%, hsl(var(--brand) / .25), hsl(var(--brand) / .08) 45%, transparent 75%);
+    --case-banner-glow: radial-gradient(ellipse at 50% 70%, hsl(var(--brand) / .22), transparent 72%);
     --case-hero-shade: linear-gradient(90deg, hsl(0 0% 4% / .82), hsl(0 0% 4% / .5) 50%, hsl(0 0% 4% / .08));
 
     --sidebar-background: 0 0% 98%;

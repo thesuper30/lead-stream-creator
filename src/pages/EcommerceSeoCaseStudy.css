@@ -9,6 +9,14 @@
   text-align: center;
 }
 .ecommerce-case-study .case-hero > img { opacity: .35; }
+.ecommerce-case-study .case-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--case-banner-glow);
+}
 .ecommerce-case-study .case-hero .case-hero-content { padding-top: 64px; padding-bottom: 64px; }
 .ecommerce-case-study .case-hero h1 { max-width: 1000px; margin: auto; line-height: 1.35; }
 .ecommerce-case-study .case-hero h1 span {
@@ -31,7 +39,7 @@
 .ecommerce-case-study #performance article { border-radius: 24px; padding: 28px; }
 .ecommerce-case-study #performance article:not(:first-child) { background: hsl(var(--case-sand)); border-color: hsl(var(--case-sand)); }
 .ecommerce-case-study #rankings,
-.ecommerce-case-study #impact { position: relative; isolation: isolate; overflow: hidden; }
+.ecommerce-case-study #impact { position: relative; isolation: isolate; overflow: hidden; background-image: var(--case-dark-glow); }
 .ecommerce-case-study #rankings::before,
 .ecommerce-case-study #impact::before {
   content: "";
