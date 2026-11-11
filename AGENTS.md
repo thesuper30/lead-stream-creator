@@ -4,3 +4,4 @@
 - Keep the SEO Company 2 growth framework local to its page with data-driven steps, so changes do not affect other SEO pages.
 - Service "v2" pages share one data-driven template (ServiceV2Page + serviceV2Pages config), so new copies only need a config entry and route.
 - Keep case-study campaign data separate from the page and test supplied figures, so visual redesigns cannot silently alter results.
+- Scope case-study visual overrides to its page stylesheet, so reference-inspired changes leave service pages unchanged.

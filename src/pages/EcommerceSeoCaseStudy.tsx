@@ -8,6 +8,7 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import { campaignSnapshot, keywordRankings, trafficGrowth, searchVisibility, seoStrategies } from "@/data/ecommerceCaseStudy";
+import "./EcommerceSeoCaseStudy.css";
 
 const sections = [
   { id: "performance", label: "Overview" },
@@ -18,7 +19,7 @@ const sections = [
   { id: "impact", label: "Business impact" },
 ];
 const strategyIcons = [Code2, Search, FileText, Layers, Link2, ShoppingBag];
-const shell = "mx-auto max-w-7xl px-5 sm:px-8 lg:px-12";
+const shell = "container mx-auto px-5 sm:px-6 lg:px-8";
 const title = "text-3xl md:text-4xl lg:text-5xl leading-tight font-medium";
 
 function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
@@ -40,19 +41,18 @@ export default function EcommerceSeoCaseStudy() {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar forceWhiteBg />
-      <main className="bg-study-paper pt-16 text-study-ink md:pt-20">
-        <header className="relative isolate flex min-h-[580px] items-center overflow-hidden md:min-h-[650px]">
+      <main className="ecommerce-case-study bg-study-paper pt-16 text-study-ink md:pt-20">
+        <header className="case-hero relative isolate flex items-center overflow-hidden bg-study-ink">
           <img src={furnitureImage} alt="Modern furniture and home furnishing interior" width={1920} height={1024} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_center]" />
-          <div className="absolute inset-0 -z-10 bg-study-hero" />
-          <div className={`${shell} w-full py-14 text-study-paper`}>
-            <Button asChild variant="unstyled" className="mb-10 h-auto p-0 text-study-paper/80"><Link to="/our-work"><ArrowLeft /> All our work</Link></Button>
+          <div className={`case-hero-content ${shell} w-full text-study-paper`}>
+            <Button asChild variant="unstyled" className="mb-7 h-auto p-0 text-study-paper/80"><Link to="/our-work"><ArrowLeft /> All our work</Link></Button>
             <p className="mb-5 text-xs uppercase text-study-paper/80">— SEO Case Study 01</p>
-            <div className="mb-6 flex flex-wrap items-center gap-3 text-xs font-medium uppercase">
+            <div className="case-hero-tags mb-6 flex flex-wrap items-center gap-3 text-xs font-medium uppercase">
               <span className="border border-study-paper/40 px-3 py-2">E-commerce</span><span>India</span><span className="text-study-paper/50">/</span><span>6-month campaign</span>
             </div>
             <h1 className="max-w-3xl text-4xl font-medium leading-[1.12] md:text-5xl lg:text-6xl">How We Turned an E-commerce Brand Into a <span className="text-brand">Search Market Leader.</span></h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-study-paper/85">We transformed a low-visibility online furniture store into a high-performing organic acquisition channel through technical SEO, category optimization, content marketing and authority building.</p>
-            <Button asChild variant="unstyled" className="mt-8 rounded-full bg-brand px-6 py-6 text-study-paper"><a href="#performance">Explore the results <ArrowRight /></a></Button>
+            <Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><a href="#performance">Explore the results <span><ArrowUpRight /></span></a></Button>
           </div>
         </header>
 
@@ -85,7 +85,7 @@ export default function EcommerceSeoCaseStudy() {
               <div><SectionLabel number="02">Keyword ranking transformation</SectionLabel><h2 className={title}>Which Keywords Did<br />We <span className="text-brand">Actually Rank?</span></h2></div>
               <div className="border-l-2 border-brand pl-5"><p className="text-5xl font-medium">8<span className="text-brand">/8</span></p><p className="mt-2 text-sm text-study-paper/65">Featured keywords on page one</p></div>
             </div>
-            <div className="overflow-hidden rounded-lg border border-study-paper/20">
+            <div className="case-ranking-table overflow-hidden rounded-lg border border-study-paper/20">
               <table className="w-full text-left text-sm">
                 <thead className="bg-study-paper/5 text-xs text-study-paper/60"><tr><th className="px-4 py-5 sm:px-6">Target keyword</th><th className="px-2 py-5 text-center sm:px-6">Before SEO</th><th className="px-2 py-5 text-center sm:px-6">After 6 months</th><th className="hidden px-6 py-5 text-right md:table-cell">Positions gained</th></tr></thead>
                 <tbody>{keywordRankings.map(row => <tr key={row.keyword} className="border-t border-study-paper/10"><th scope="row" className="px-4 py-5 font-normal sm:px-6">{row.keyword}</th><td className="px-2 py-5 text-center text-study-paper/45 sm:px-6">{row.before}</td><td className="px-2 py-5 text-center sm:px-6"><span className="inline-flex min-w-12 items-center justify-center gap-1 rounded bg-brand/15 px-2 py-1 text-lg font-medium text-brand">#{row.after}</span></td><td className="hidden px-6 py-5 text-right md:table-cell"><span className="inline-flex items-center gap-2 text-study-paper/80"><ArrowUpRight className="h-4 w-4 text-brand" />{row.before - row.after}</span></td></tr>)}</tbody>
@@ -117,7 +117,7 @@ export default function EcommerceSeoCaseStudy() {
             <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className={title}>Six Months. One Consistent<br /><span className="text-brand">Growth Trajectory.</span></h2><div className="flex items-center gap-2 text-sm text-study-success"><TrendingUp className="h-5 w-5" />3.85X organic traffic growth</div></div>
             <div className="grid gap-10 lg:grid-cols-[220px_1fr]">
               <div className="border-l-2 border-brand pl-6"><p className="text-xs uppercase text-study-ink/55">Month {selectedMonth + 1}</p><p className="mt-3 text-5xl font-medium text-brand">{selected?.visitors.toLocaleString("en-IN")}</p><p className="mt-3 text-sm text-study-ink/60">Organic visitors / month</p><div className="mt-6 border-t border-study-line pt-5 text-sm leading-relaxed text-study-ink/60">8,000 at the start.<br />30,800 by month six.</div></div>
-              <div className="min-w-0">
+              <div className="case-chart min-w-0">
                 <div className="h-[280px] sm:h-[340px]" role="img" aria-label="Monthly organic traffic grew from 8,000 to 30,800 over six months">
                   <ResponsiveContainer width="100%" height="100%"><AreaChart data={trafficGrowth} margin={{ top: 20, right: 15, left: -20, bottom: 0 }}>
                     <CartesianGrid stroke="hsl(var(--case-line))" vertical={false} strokeDasharray="3 5" />
@@ -143,10 +143,10 @@ export default function EcommerceSeoCaseStudy() {
         <section id="impact" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
           <div className={shell}>
             <SectionLabel number="06">Business impact</SectionLabel><h2 className={`${title} max-w-4xl`}>Rankings Were Just the Beginning.<br /><span className="text-brand">Revenue Was the Goal.</span></h2>
-            <div className="my-12 grid gap-8 border-y border-study-paper/20 py-10 sm:grid-cols-3">{[{ value: "3.85X", label: "organic traffic growth" }, { value: "2.65X", label: "organic conversion volume" }, { value: "+190%", label: "organic-attributed revenue" }].map(metric => <div key={metric.label}><ArrowUpRight className="mb-3 h-6 w-6 text-brand" /><p className="text-5xl font-medium">{metric.value}</p><p className="mt-3 text-sm text-study-paper/60">{metric.label}</p></div>)}</div>
+            <div className="case-impact-numbers my-12 grid gap-8 border-y border-study-paper/20 py-10 sm:grid-cols-3">{[{ value: "3.85X", label: "organic traffic growth" }, { value: "2.65X", label: "organic conversion volume" }, { value: "+190%", label: "organic-attributed revenue" }].map(metric => <div key={metric.label}><ArrowUpRight className="mb-3 h-6 w-6 text-brand" /><p className="text-5xl font-medium">{metric.value}</p><p className="mt-3 text-sm text-study-paper/60">{metric.label}</p></div>)}</div>
             <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
               <ul className="space-y-5 text-sm text-study-paper/75"><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Reduced reliance on paid acquisition.</li><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Stronger visibility across commercial product searches.</li></ul>
-              <div><p className="mb-4 text-xs uppercase text-brand">The final takeaway</p><p className="text-2xl leading-relaxed">We didn't just improve keyword positions. We built a sustainable organic acquisition channel that contributed directly to business growth.</p><Button asChild variant="unstyled" className="mt-8 rounded-full bg-brand px-6 py-6 text-study-paper"><Link to="/audit">Build your growth story <ArrowUpRight /></Link></Button></div>
+              <div><p className="mb-4 text-xs uppercase text-brand">The final takeaway</p><p className="text-2xl leading-relaxed">We didn't just improve keyword positions. We built a sustainable organic acquisition channel that contributed directly to business growth.</p><Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><Link to="/audit">Build your growth story <span><ArrowUpRight /></span></Link></Button></div>
             </div>
           </div>
         </section>
