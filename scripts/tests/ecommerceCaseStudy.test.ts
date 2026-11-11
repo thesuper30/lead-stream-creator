@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { campaignSnapshot, keywordRankings, trafficGrowth, searchVisibility } from "./ecommerceCaseStudy";
+import { campaignSnapshot, keywordRankings, trafficGrowth, searchVisibility } from "../../src/data/ecommerceCaseStudy";
 
 describe("Supplied six-month e-commerce campaign results", () => {
   test("preserves monthly organic traffic", () => {
