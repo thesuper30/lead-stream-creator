@@ -46,7 +46,7 @@ export default function EcommerceSeoCaseStudy() {
         <header className="case-hero relative isolate flex items-center overflow-hidden bg-study-ink">
           <img src={furnitureImage} alt="Modern furniture and home furnishing interior" width={1920} height={1024} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_center]" />
           <div className={`case-hero-content ${shell} w-full text-study-paper`}>
-            <div className="case-hero-brand"><img src={mamaearthLogo} alt="Mamaearth" width={280} height={144} className="h-9 w-auto" /></div>
+            <div className="case-hero-brand"><img src={mamaearthLogo} alt="Mamaearth" width={280} height={144} className="h-12 w-auto" /></div>
             <h1 className="max-w-3xl text-4xl font-medium leading-[1.12] md:text-5xl lg:text-6xl">How We Turned an E-commerce Brand Into a <span className="text-brand">Search Market Leader.</span></h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-study-paper/85">We transformed a low-visibility online furniture store into a high-performing organic acquisition channel through technical SEO, category optimization, content marketing and authority building.</p>
             <Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><a href="#performance">Explore the results <span><ArrowUpRight /></span></a></Button>
