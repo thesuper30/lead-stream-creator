@@ -28,4 +28,4 @@
 - [x] Add furniture imagery, keyword comparison, and interactive traffic chart
 - [x] Verify data, navigation, and desktop/mobile layouts
 - [x] Confirm the three banner labels shown in the screenshot are removed
-- [ ] Add warm orange glow to the case study's dark sections and verify
+- [x] Add warm orange glow to the case study's dark sections and verify
