@@ -77,8 +77,12 @@
 .ecommerce-case-study #challenge .case-panel-problem .case-panel-num { background: hsl(var(--case-ink) / .08); color: hsl(var(--case-ink) / .7); }
 .ecommerce-case-study #challenge .case-panel-solution .case-panel-num { background: hsl(var(--brand) / .2); color: hsl(var(--brand)); }
 .ecommerce-case-study #rankings,
+.ecommerce-case-study #visibility,
+.ecommerce-case-study #team,
 .ecommerce-case-study #impact { position: relative; isolation: isolate; overflow: hidden; background-image: var(--case-dark-glow); }
 .ecommerce-case-study #rankings::before,
+.ecommerce-case-study #visibility::before,
+.ecommerce-case-study #team::before,
 .ecommerce-case-study #impact::before {
   content: "";
   position: absolute;
@@ -114,7 +118,6 @@
 .ecommerce-case-study #traffic { background: hsl(var(--case-paper)); }
 .ecommerce-case-study .case-shot { box-shadow: 0 18px 45px -28px hsl(var(--case-ink) / .35); transition: transform .35s ease, box-shadow .35s ease; }
 .ecommerce-case-study .case-shot:hover { transform: translateY(-4px); box-shadow: 0 28px 60px -30px hsl(var(--brand) / .45); }
-.ecommerce-case-study #visibility { background: hsl(var(--case-muted) / .5); }
 .ecommerce-case-study #visibility table { border-collapse: separate; border-spacing: 0; }
 .ecommerce-case-study #visibility td:last-child { color: hsl(var(--brand)); }
 .ecommerce-case-study #impact { margin: 0 20px 32px; border-radius: 32px; }
