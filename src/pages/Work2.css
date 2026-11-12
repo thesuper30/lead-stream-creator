@@ -38,16 +38,19 @@
 .work2-testimonials .container > div:first-child > span > span { display: none; }
 .work2-testimonials .container > div:first-child > span::before { content: '—'; }
 .work2-testimonials .container > div:last-child { margin-bottom: 0; }
+.work2-testimonials .container > div, .work2-final .transition-all { opacity: 1; transform: none; }
 .work2-testimonials .container > div:last-child > div { background: hsl(var(--work-soft)); border: 0; border-radius: 24px; box-shadow: none; }
 .work2-testimonials .border-t { border-color: hsl(var(--border)); }
 .work2-testimonials .border-t .font-bold { color: hsl(var(--work-paper)); }
 .work2-testimonials button { border-color: hsl(var(--border)); background: hsl(var(--work-paper)); color: hsl(var(--work-ink)); }
 .work2-insights .grid > a > div { border-radius: 20px; background: hsl(var(--work-surface)); box-shadow: none; }
+.work2-insights .text-primary { color: hsl(var(--brand)); }
 .work2-insights .text-center > button { border-radius: 999px; border-color: hsl(var(--work-paper) / .3); color: hsl(var(--work-paper)); background: transparent; }
 .work2-final > section { padding: 4rem 0; background: hsl(var(--work-paper)); }
 .work2-final .container > div { background: hsl(var(--work-ink)); background-image: var(--work-glow), var(--work-mesh); background-size: auto, 12px 12px, 12px 12px; border-radius: 24px; }
 .work2-final .container > div > .absolute { display: none; }
 .work2-final h2 span { background: none; color: hsl(var(--brand)); -webkit-text-fill-color: currentColor; }
+.work2-final .container > div > .relative > div > p:last-child { color: hsl(var(--work-paper) / .65); }
 @media (max-width: 767px) {
   .work2 .container { padding-left: 1.25rem; padding-right: 1.25rem; }
   .work2-hero h1 { font-size: 2.25rem; }
