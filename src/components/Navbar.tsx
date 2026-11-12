@@ -38,7 +38,7 @@ const menuItems: NavMenuItem[] = [
   { label: "Website Design", href: "/website-design-company-bangalore2" },
   { label: "SMS & WhatsApp", href: "/sms-marketing-agency-bangalore2" },
   {
-    label: "Solutions",
+    label: "Industry",
     mega: true,
     categories: [
       {
