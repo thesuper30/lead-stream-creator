@@ -1,5 +1,10 @@
 # Homepage featured work
 
+# Our Work 2
+
+- [ ] Create `/our-work2` with an alternate light/dark design while preserving all portfolio content
+- [ ] Verify portfolio tabs, report opening, and desktop/mobile layouts without changing `/our-work`
+
 - [x] Replace the homepage featured section with Our Work tabs
 - [x] Exclude Product Photography and show four projects per tab
 - [x] Add a See More action for each tab and verify the layout
