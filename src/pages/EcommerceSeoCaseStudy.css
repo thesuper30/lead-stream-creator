@@ -135,14 +135,8 @@
   .ecommerce-case-study #strategy article { padding: 24px; }
   .ecommerce-case-study #impact { margin: 0 12px 24px; border-radius: 24px; }
   .ecommerce-case-study #impact .case-impact-numbers > div + div { border-left: 0; border-top: 1px solid hsl(var(--case-paper) / .15); padding-top: 28px; }
-}.ecommerce-case-study #challenge .case-fix { display: grid; gap: 20px; }
-.ecommerce-case-study #challenge .case-fix-tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-.ecommerce-case-study #challenge .case-fix-tab { display: flex; align-items: center; gap: 10px; flex-shrink: 0; border-radius: 999px; border: 1px solid hsl(var(--case-line)); background: hsl(var(--case-paper)); padding: 6px 16px 6px 6px; font-size: 13px; color: hsl(var(--case-ink) / .7); transition: all .25s ease; }
-.ecommerce-case-study #challenge .case-fix-tab:hover { border-color: hsl(var(--brand) / .5); color: hsl(var(--case-ink)); }
-.ecommerce-case-study #challenge .case-fix-tab-num { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: hsl(var(--case-sand)); font-size: 11px; font-weight: 600; }
-.ecommerce-case-study #challenge .case-fix-tab.is-active { background: hsl(var(--case-ink)); border-color: hsl(var(--case-ink)); color: hsl(var(--case-paper)); }
-.ecommerce-case-study #challenge .case-fix-tab.is-active .case-fix-tab-num { background: hsl(var(--brand)); color: hsl(var(--case-paper)); }
-.ecommerce-case-study #challenge .case-fix-stage { position: relative; display: grid; border-radius: 28px; overflow: hidden; animation: case-fix-in .45s ease; }
+}.ecommerce-case-study #challenge .case-fix { display: grid; gap: 24px; }
+.ecommerce-case-study #challenge .case-fix-stage { position: relative; display: grid; border-radius: 28px; overflow: hidden; }
 .ecommerce-case-study #challenge .case-fix-side { position: relative; padding: 28px; min-height: 200px; display: flex; flex-direction: column; justify-content: center; }
 .ecommerce-case-study #challenge .case-fix-before { background: hsl(var(--case-sand)); color: hsl(var(--case-ink)); }
 .ecommerce-case-study #challenge .case-fix-after { isolation: isolate; overflow: hidden; background-color: hsl(var(--case-ink)); background-image: var(--case-dark-glow); color: hsl(var(--case-paper)); }
@@ -152,7 +146,6 @@
 .ecommerce-case-study #challenge .case-fix-text { font-size: 14px; line-height: 1.65; max-width: 42ch; }
 .ecommerce-case-study #challenge .case-fix-ghost { position: absolute; right: 18px; bottom: -28px; z-index: -1; font-size: 140px; font-weight: 600; line-height: 1; color: hsl(var(--brand) / .12); }
 .ecommerce-case-study #challenge .case-fix-pivot { position: absolute; left: 50%; top: 50%; z-index: 2; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: hsl(var(--brand)); color: hsl(var(--case-paper)); border: 5px solid hsl(var(--case-paper)); transform: translate(-50%, -50%) rotate(90deg); }
-@keyframes case-fix-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @media (min-width: 768px) {
   .ecommerce-case-study #challenge .case-fix-stage { grid-template-columns: 1fr 1.15fr; }
   .ecommerce-case-study #challenge .case-fix-side { padding: 40px 48px; min-height: 240px; }
