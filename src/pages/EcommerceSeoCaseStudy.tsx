@@ -19,12 +19,12 @@ import "./EcommerceSeoCaseStudy.css";
 
 const sections = [
   { id: "performance", label: "Overview" },
-  { id: "challenge", label: "Challenge & solution" },
   { id: "rankings", label: "Keyword rankings" },
-  { id: "strategy", label: "The strategy" },
-  { id: "traffic", label: "Traffic growth" },
-  { id: "visibility", label: "Search visibility" },
+  { id: "challenge", label: "Challenge & solution" },
   { id: "impact", label: "Business impact" },
+  { id: "strategy", label: "The strategy" },
+  { id: "visibility", label: "Search visibility" },
+  { id: "traffic", label: "Traffic growth" },
   { id: "team", label: "The team" },
 ];
 const projectTeam = [
@@ -99,9 +99,25 @@ export default function EcommerceSeoCaseStudy() {
           </div>
         </section>
 
+        <section id="rankings" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
+          <div className={shell}>
+            <div className="mb-10 grid gap-8 md:grid-cols-[1fr_260px] md:items-end">
+              <div><SectionLabel number="02">Keyword ranking transformation</SectionLabel><h2 className={title}>Which Keywords Did<br />We <span className="text-brand">Actually Rank?</span></h2></div>
+              <div className="border-l-2 border-brand pl-5"><p className="text-5xl font-medium">8<span className="text-brand">/8</span></p><p className="mt-2 text-sm text-study-paper/65">Featured keywords on page one</p></div>
+            </div>
+            <div className="case-ranking-table overflow-hidden rounded-lg border border-study-paper/20">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-study-paper/5 text-xs text-study-paper/60"><tr><th className="px-4 py-5 sm:px-6">Target keyword</th><th className="px-2 py-5 text-center sm:px-6">Before SEO</th><th className="px-2 py-5 text-center sm:px-6">After 6 months</th><th className="hidden px-6 py-5 text-right md:table-cell">Positions gained</th></tr></thead>
+                <tbody>{keywordRankings.map(row => <tr key={row.keyword} className="border-t border-study-paper/10"><th scope="row" className="px-4 py-5 font-normal sm:px-6">{row.keyword}</th><td className="px-2 py-5 text-center text-study-paper/45 sm:px-6">{row.before}</td><td className="px-2 py-5 text-center sm:px-6"><span className="inline-flex min-w-12 items-center justify-center gap-1 rounded bg-brand/15 px-2 py-1 text-lg font-medium text-brand">#{row.after}</span></td><td className="hidden px-6 py-5 text-right md:table-cell"><span className="inline-flex items-center gap-2 text-study-paper/80"><ArrowUpRight className="h-4 w-4 text-brand" />{row.before - row.after}</span></td></tr>)}</tbody>
+              </table>
+            </div>
+            <p className="mt-5 max-w-2xl text-xs leading-relaxed text-study-paper/50">Illustrative Google organic keyword positions. Ranking results vary by location, device and measurement date.</p>
+          </div>
+        </section>
+
         <section id="challenge" className="scroll-mt-40 py-16 md:py-24">
           <div className={shell}>
-            <SectionLabel number="02">The problem & the solution</SectionLabel>
+            <SectionLabel number="03">The problem & the solution</SectionLabel>
             <h2 className={`${title} mb-12`}>What Was Holding the Brand Back.<br /><span className="text-brand">What We Did About It.</span></h2>
             <div className="case-fix">
               <div className="case-fix-tabs" role="tablist" aria-label="Problems and solutions">
@@ -130,25 +146,20 @@ export default function EcommerceSeoCaseStudy() {
           </div>
         </section>
 
-        <section id="rankings" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
+        <section id="impact" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
           <div className={shell}>
-            <div className="mb-10 grid gap-8 md:grid-cols-[1fr_260px] md:items-end">
-              <div><SectionLabel number="03">Keyword ranking transformation</SectionLabel><h2 className={title}>Which Keywords Did<br />We <span className="text-brand">Actually Rank?</span></h2></div>
-              <div className="border-l-2 border-brand pl-5"><p className="text-5xl font-medium">8<span className="text-brand">/8</span></p><p className="mt-2 text-sm text-study-paper/65">Featured keywords on page one</p></div>
+            <SectionLabel number="04">Business impact</SectionLabel><h2 className={`${title} max-w-4xl`}>Rankings Were Just the Beginning.<br /><span className="text-brand">Revenue Was the Goal.</span></h2>
+            <div className="case-impact-numbers my-12 grid gap-8 border-y border-study-paper/20 py-10 sm:grid-cols-3">{[{ value: "3.85X", label: "organic traffic growth" }, { value: "2.65X", label: "organic conversion volume" }, { value: "+190%", label: "organic-attributed revenue" }].map(metric => <div key={metric.label}><ArrowUpRight className="mb-3 h-6 w-6 text-brand" /><p className="text-5xl font-medium">{metric.value}</p><p className="mt-3 text-sm text-study-paper/60">{metric.label}</p></div>)}</div>
+            <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
+              <ul className="space-y-5 text-sm text-study-paper/75"><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Reduced reliance on paid acquisition.</li><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Stronger visibility across commercial product searches.</li></ul>
+              <div><p className="mb-4 text-xs uppercase text-brand">The final takeaway</p><p className="text-2xl leading-relaxed">We didn't just improve keyword positions. We built a sustainable organic acquisition channel that contributed directly to business growth.</p><Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><Link to="/audit">Build your growth story <span><ArrowUpRight /></span></Link></Button></div>
             </div>
-            <div className="case-ranking-table overflow-hidden rounded-lg border border-study-paper/20">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-study-paper/5 text-xs text-study-paper/60"><tr><th className="px-4 py-5 sm:px-6">Target keyword</th><th className="px-2 py-5 text-center sm:px-6">Before SEO</th><th className="px-2 py-5 text-center sm:px-6">After 6 months</th><th className="hidden px-6 py-5 text-right md:table-cell">Positions gained</th></tr></thead>
-                <tbody>{keywordRankings.map(row => <tr key={row.keyword} className="border-t border-study-paper/10"><th scope="row" className="px-4 py-5 font-normal sm:px-6">{row.keyword}</th><td className="px-2 py-5 text-center text-study-paper/45 sm:px-6">{row.before}</td><td className="px-2 py-5 text-center sm:px-6"><span className="inline-flex min-w-12 items-center justify-center gap-1 rounded bg-brand/15 px-2 py-1 text-lg font-medium text-brand">#{row.after}</span></td><td className="hidden px-6 py-5 text-right md:table-cell"><span className="inline-flex items-center gap-2 text-study-paper/80"><ArrowUpRight className="h-4 w-4 text-brand" />{row.before - row.after}</span></td></tr>)}</tbody>
-              </table>
-            </div>
-            <p className="mt-5 max-w-2xl text-xs leading-relaxed text-study-paper/50">Illustrative Google organic keyword positions. Ranking results vary by location, device and measurement date.</p>
           </div>
         </section>
 
         <section id="strategy" className="scroll-mt-40 py-16 md:py-24">
           <div className={shell}>
-            <SectionLabel number="04">SEO strategies implemented</SectionLabel><h2 className={`${title} mb-12`}>The Strategy Behind<br /><span className="text-brand">Every Ranking.</span></h2>
+            <SectionLabel number="05">SEO strategies implemented</SectionLabel><h2 className={`${title} mb-12`}>The Strategy Behind<br /><span className="text-brand">Every Ranking.</span></h2>
             <div className="grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
               {seoStrategies.map((strategy, index) => {
                 const Icon = strategyIcons[index] ?? Search;
@@ -162,9 +173,16 @@ export default function EcommerceSeoCaseStudy() {
           </div>
         </section>
 
+        <section id="visibility" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
+          <div className={`${shell} grid gap-10 lg:grid-cols-2 lg:gap-20`}>
+            <div><SectionLabel number="06">Search visibility improvements</SectionLabel><h2 className={title}>From Page 5 to Page 1.<br /><span className="text-brand">From Invisible to Discoverable.</span></h2><div className="mt-10 flex items-center gap-4 border-l-2 border-brand pl-5"><Search className="h-8 w-8 text-brand" /><p className="max-w-xs text-sm leading-relaxed text-study-paper/60">A stronger search footprint across keywords, indexed pages, links and organic clicks.</p></div></div>
+            <div className="min-w-0"><table className="w-full text-left text-sm"><thead><tr className="border-b border-study-paper/20 text-xs uppercase text-study-paper/50"><th className="pb-5 font-normal">SEO metric</th><th className="px-2 pb-5 text-right font-normal">Before</th><th className="pb-5 text-right font-normal text-study-success">After</th></tr></thead><tbody>{searchVisibility.map(row => <tr key={row.label} className="border-b border-study-paper/15"><th scope="row" className="py-5 pr-3 font-normal">{row.label}</th><td className="px-2 py-5 text-right text-study-paper/50">{row.before}</td><td className="py-5 text-right text-xl font-medium text-study-success">{row.after}</td></tr>)}</tbody></table></div>
+          </div>
+        </section>
+
         <section id="traffic" className="scroll-mt-40 bg-study-muted py-16 md:py-24">
           <div className={shell}>
-            <SectionLabel number="05">Organic traffic growth — month by month</SectionLabel>
+            <SectionLabel number="07">Organic traffic growth — month by month</SectionLabel>
             <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className={title}>Six Months. One Consistent<br /><span className="text-brand">Growth Trajectory.</span></h2><div className="flex items-center gap-2 text-sm text-study-success"><TrendingUp className="h-5 w-5" />3.85X organic traffic growth</div></div>
             <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
               <div className="min-w-0">
@@ -215,33 +233,15 @@ export default function EcommerceSeoCaseStudy() {
           </div>
         </section>
 
-        <section id="visibility" className="scroll-mt-40 py-16 md:py-24">
-          <div className={`${shell} grid gap-10 lg:grid-cols-2 lg:gap-20`}>
-            <div><SectionLabel number="06">Search visibility improvements</SectionLabel><h2 className={title}>From Page 5 to Page 1.<br /><span className="text-brand">From Invisible to Discoverable.</span></h2><div className="mt-10 flex items-center gap-4 border-l-2 border-brand pl-5"><Search className="h-8 w-8 text-brand" /><p className="max-w-xs text-sm leading-relaxed text-study-ink/60">A stronger search footprint across keywords, indexed pages, links and organic clicks.</p></div></div>
-            <div className="min-w-0"><table className="w-full text-left text-sm"><thead><tr className="border-b border-study-line text-xs uppercase text-study-ink/50"><th className="pb-5 font-normal">SEO metric</th><th className="px-2 pb-5 text-right font-normal">Before</th><th className="pb-5 text-right font-normal text-study-success">After</th></tr></thead><tbody>{searchVisibility.map(row => <tr key={row.label} className="border-b border-study-line"><th scope="row" className="py-5 pr-3 font-normal">{row.label}</th><td className="px-2 py-5 text-right text-study-ink/50">{row.before}</td><td className="py-5 text-right text-xl font-medium text-study-success">{row.after}</td></tr>)}</tbody></table></div>
-          </div>
-        </section>
-
-        <section id="impact" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
-          <div className={shell}>
-            <SectionLabel number="07">Business impact</SectionLabel><h2 className={`${title} max-w-4xl`}>Rankings Were Just the Beginning.<br /><span className="text-brand">Revenue Was the Goal.</span></h2>
-            <div className="case-impact-numbers my-12 grid gap-8 border-y border-study-paper/20 py-10 sm:grid-cols-3">{[{ value: "3.85X", label: "organic traffic growth" }, { value: "2.65X", label: "organic conversion volume" }, { value: "+190%", label: "organic-attributed revenue" }].map(metric => <div key={metric.label}><ArrowUpRight className="mb-3 h-6 w-6 text-brand" /><p className="text-5xl font-medium">{metric.value}</p><p className="mt-3 text-sm text-study-paper/60">{metric.label}</p></div>)}</div>
-            <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
-              <ul className="space-y-5 text-sm text-study-paper/75"><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Reduced reliance on paid acquisition.</li><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Stronger visibility across commercial product searches.</li></ul>
-              <div><p className="mb-4 text-xs uppercase text-brand">The final takeaway</p><p className="text-2xl leading-relaxed">We didn't just improve keyword positions. We built a sustainable organic acquisition channel that contributed directly to business growth.</p><Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><Link to="/audit">Build your growth story <span><ArrowUpRight /></span></Link></Button></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="team" className="scroll-mt-40 py-16 md:py-24">
+        <section id="team" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
           <div className={shell}>
             <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div><SectionLabel number="08">The team behind the results</SectionLabel><h2 className={title}>The People Who<br /><span className="text-brand">Made It Happen.</span></h2></div>
-              <p className="max-w-xs text-sm leading-relaxed text-study-ink/60">A three-person core team drove this campaign from audit to revenue.</p>
+              <p className="max-w-xs text-sm leading-relaxed text-study-paper/60">A three-person core team drove this campaign from audit to revenue.</p>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projectTeam.map((member, index) => (
-                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper">
+                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper text-study-ink">
                   <div className="relative aspect-[4/5] overflow-hidden bg-study-muted">
                     <img src={member.image} alt={member.name} width={480} height={600} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                     <span className="absolute left-4 top-4 rounded-full bg-study-ink/80 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-study-paper backdrop-blur-sm">0{index + 1}</span>
