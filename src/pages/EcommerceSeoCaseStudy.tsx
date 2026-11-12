@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Check, Code2, Search, FileText, Layers, Link2, ShoppingBag, TrendingUp, TriangleAlert, Lightbulb, BarChart3, MousePointerClick, IndianRupee } from "lucide-react";
@@ -48,8 +47,6 @@ const trafficShots = [
 ];
 
 export default function EcommerceSeoCaseStudy() {
-  const [activeFix, setActiveFix] = useState(0);
-
   return (
     <>
       <Helmet>
