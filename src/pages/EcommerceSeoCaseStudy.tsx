@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, Check, Code2, Search, FileText, Layers, Link2, ShoppingBag, TrendingUp, TriangleAlert, Lightbulb, BarChart3, MousePointerClick, IndianRupee } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Code2, Search, FileText, Layers, Link2, ShoppingBag, TrendingUp, TriangleAlert, Lightbulb, BarChart3, MousePointerClick, IndianRupee, Star, Quote } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
 import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
 import organicClicksChart from "@/assets/case-study/organic-clicks-chart.jpg";
 import revenueGrowthChart from "@/assets/case-study/revenue-growth-chart.jpg";
-import { campaignSnapshot, clientProblems, solutionsProvided, keywordRankings, trafficGrowth, searchVisibility, seoStrategies } from "@/data/ecommerceCaseStudy";
+import { campaignSnapshot, clientProblems, solutionsProvided, keywordRankings, trafficGrowth, searchVisibility, seoStrategies, founderTestimonial } from "@/data/ecommerceCaseStudy";
 import "./EcommerceSeoCaseStudy.css";
 
 const sections = [
@@ -25,6 +25,7 @@ const sections = [
   { id: "visibility", label: "Search visibility" },
   { id: "traffic", label: "Traffic growth" },
   { id: "team", label: "The team" },
+  { id: "testimonial", label: "Testimonial" },
 ];
 const projectTeam = [
   { name: "Amit Singh", role: "Co-Founder · Campaign Strategy", focus: "Overall growth strategy, keyword mapping and revenue alignment across the six-month campaign.", image: amitTeam },
@@ -244,6 +245,33 @@ export default function EcommerceSeoCaseStudy() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonial" className="scroll-mt-40 bg-background py-16 md:py-24">
+          <div className={shell}>
+            <div className="case-testimonial relative overflow-hidden rounded-3xl border border-study-line bg-study-muted px-6 py-12 text-center md:px-16 md:py-16">
+              <span className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-study-paper">
+                <Quote className="h-6 w-6 fill-current" />
+              </span>
+              <SectionLabel number="09">Words from the founder</SectionLabel>
+              <blockquote className="mx-auto max-w-3xl text-xl font-medium leading-relaxed text-study-ink md:text-2xl">
+                "{founderTestimonial.quote}"
+              </blockquote>
+              <div className="mt-6 flex items-center justify-center gap-1" aria-label={`${founderTestimonial.rating} out of 5 stars`}>
+                {Array.from({ length: founderTestimonial.rating }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-brand text-brand" />
+                ))}
+              </div>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-study-line pt-8 sm:flex-row sm:gap-6">
+                <img src={mamaearthLogo} alt="Mamaearth logo" width={603} height={111} loading="lazy" className="h-8 w-auto md:h-10" />
+                <span className="hidden h-8 w-px bg-study-line sm:block" />
+                <div className="text-center sm:text-left">
+                  <p className="text-base font-medium text-study-ink">{founderTestimonial.name}</p>
+                  <p className="text-xs font-medium uppercase tracking-wide text-brand">{founderTestimonial.role}</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
