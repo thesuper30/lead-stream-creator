@@ -232,6 +232,30 @@ export default function EcommerceSeoCaseStudy() {
             </div>
           </div>
         </section>
+
+        <section id="team" className="scroll-mt-40 py-16 md:py-24">
+          <div className={shell}>
+            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div><SectionLabel number="08">The team behind the results</SectionLabel><h2 className={title}>The People Who<br /><span className="text-brand">Made It Happen.</span></h2></div>
+              <p className="max-w-xs text-sm leading-relaxed text-study-ink/60">A three-person core team drove this campaign from audit to revenue.</p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {projectTeam.map((member, index) => (
+                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-study-muted">
+                    <img src={member.image} alt={member.name} width={480} height={600} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <span className="absolute left-4 top-4 rounded-full bg-study-ink/80 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-study-paper backdrop-blur-sm">0{index + 1}</span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-medium">{member.name}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wide text-brand">{member.role}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-study-ink/60">{member.focus}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
