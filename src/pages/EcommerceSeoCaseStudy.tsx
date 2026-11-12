@@ -7,6 +7,9 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import mamaearthLogo from "@/assets/clients/mamaearth-transparent.png";
+import amitTeam from "@/assets/team/amit-singh.png";
+import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
+import praveenTeam from "@/assets/team/praveen-1.png";
 import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
 import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
 import organicClicksChart from "@/assets/case-study/organic-clicks-chart.jpg";
@@ -22,6 +25,12 @@ const sections = [
   { id: "traffic", label: "Traffic growth" },
   { id: "visibility", label: "Search visibility" },
   { id: "impact", label: "Business impact" },
+  { id: "team", label: "The team" },
+];
+const projectTeam = [
+  { name: "Amit Singh", role: "Co-Founder · Campaign Strategy", focus: "Overall growth strategy, keyword mapping and revenue alignment across the six-month campaign.", image: amitTeam },
+  { name: "Gagan", role: "VP - Digital Marketing · SEO Lead", focus: "Technical SEO, on-page optimization and search visibility across 220 page-one keywords.", image: gaganTeam },
+  { name: "Praveen", role: "Senior Creative Manager · Content", focus: "Category content, topical authority and conversion-focused creative for the store.", image: praveenTeam },
 ];
 const strategyIcons = [Code2, Search, FileText, Layers, Link2, ShoppingBag];
 const shell = "container mx-auto px-5 sm:px-6 lg:px-8";
