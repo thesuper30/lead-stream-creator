@@ -157,20 +157,29 @@ export default function EcommerceSeoCaseStudy() {
           <div className={shell}>
             <SectionLabel number="05">Organic traffic growth — month by month</SectionLabel>
             <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className={title}>Six Months. One Consistent<br /><span className="text-brand">Growth Trajectory.</span></h2><div className="flex items-center gap-2 text-sm text-study-success"><TrendingUp className="h-5 w-5" />3.85X organic traffic growth</div></div>
-            <div className="grid gap-10 lg:grid-cols-[220px_1fr]">
-              <div className="border-l-2 border-brand pl-6"><p className="text-xs uppercase text-study-ink/55">Month {selectedMonth + 1}</p><p className="mt-3 text-5xl font-medium text-brand">{selected?.visitors.toLocaleString("en-IN")}</p><p className="mt-3 text-sm text-study-ink/60">Organic visitors / month</p><div className="mt-6 border-t border-study-line pt-5 text-sm leading-relaxed text-study-ink/60">8,000 at the start.<br />30,800 by month six.</div></div>
-              <div className="case-chart min-w-0">
-                <div className="h-[280px] sm:h-[340px]" role="img" aria-label="Monthly organic traffic grew from 8,000 to 30,800 over six months">
-                  <ResponsiveContainer width="100%" height="100%"><AreaChart data={trafficGrowth} margin={{ top: 20, right: 15, left: -20, bottom: 0 }}>
-                    <CartesianGrid stroke="hsl(var(--case-line))" vertical={false} strokeDasharray="3 5" />
-                    <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{ fill: "hsl(var(--case-ink))", fontSize: 12 }} dy={8} />
-                    <YAxis axisLine={false} tickLine={false} tickFormatter={value => `${value / 1000}K`} tick={{ fill: "hsl(var(--case-ink))", fontSize: 11 }} />
-                    <Tooltip formatter={(value: number) => [value.toLocaleString("en-IN"), "Organic visitors"]} contentStyle={{ background: "hsl(var(--case-paper))", borderColor: "hsl(var(--case-line))", borderRadius: 8, color: "hsl(var(--case-ink))" }} />
-                    <Area type="monotone" dataKey="visitors" stroke="hsl(var(--brand))" strokeWidth={3} fill="hsl(var(--brand) / .08)" dot={{ r: 4, fill: "hsl(var(--brand))", stroke: "hsl(var(--case-paper))", strokeWidth: 2 }} activeDot={{ r: 6 }} isAnimationActive={false} />
-                  </AreaChart></ResponsiveContainer>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {trafficShots.map((shot, index) => {
+                const Icon = shot.icon;
+                return (
+                  <figure key={shot.label} className={`case-shot group min-w-0 overflow-hidden rounded-2xl border border-study-line bg-study-paper ${index === 0 ? "sm:col-span-2" : ""}`}>
+                    <div className="overflow-hidden border-b border-study-line">
+                      <img src={shot.src} alt={shot.alt} width={1280} height={800} loading="lazy" className="aspect-[8/5] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                    </div>
+                    <figcaption className="flex items-center justify-between gap-4 px-5 py-4 sm:px-6">
+                      <span className="flex items-center gap-3 text-sm font-medium"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><Icon className="h-4 w-4" /></span>{shot.label}</span>
+                      <span className="text-right text-xs text-study-ink/55 sm:text-sm">{shot.detail}</span>
+                    </figcaption>
+                  </figure>
+                );
+              })}
+            </div>
+            <div className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-6" aria-label="Monthly organic traffic">
+              {trafficGrowth.map((month, index) => (
+                <div key={month.month} className={`rounded-xl border px-3 py-4 text-center ${index === trafficGrowth.length - 1 ? "border-brand bg-brand text-study-paper" : "border-study-line bg-study-paper"}`}>
+                  <p className={`text-xs ${index === trafficGrowth.length - 1 ? "text-study-paper/70" : "text-study-ink/50"}`}>{month.month}</p>
+                  <p className={`mt-1 text-base font-medium sm:text-lg ${index === trafficGrowth.length - 1 ? "" : "text-study-ink"}`}>{month.label}</p>
                 </div>
-                <div className="mt-5 grid grid-cols-3 gap-2 sm:grid-cols-6" aria-label="Monthly traffic details">{trafficGrowth.map((month, index) => <Button key={month.month} variant="unstyled" aria-pressed={selectedMonth === index} aria-label={`Month ${index + 1}: ${month.visitors.toLocaleString("en-IN")} organic visitors`} onClick={() => setSelectedMonth(index)} className={`h-auto flex-col rounded-md border py-3 ${selectedMonth === index ? "border-brand bg-study-paper text-brand" : "border-study-line text-study-ink"}`}><span className="text-xs opacity-60">{month.month}</span><span className="text-base">{month.label}</span></Button>)}</div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
