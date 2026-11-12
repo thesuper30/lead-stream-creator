@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, Check, Code2, Search, FileText, Layers, Link2, ShoppingBag, TrendingUp, TriangleAlert, Lightbulb } from "lucide-react";
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { ArrowRight, ArrowUpRight, Check, Code2, Search, FileText, Layers, Link2, ShoppingBag, TrendingUp, TriangleAlert, Lightbulb, BarChart3, MousePointerClick, IndianRupee } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import mamaearthLogo from "@/assets/clients/mamaearth-transparent.png";
+import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
+import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
+import organicClicksChart from "@/assets/case-study/organic-clicks-chart.jpg";
+import revenueGrowthChart from "@/assets/case-study/revenue-growth-chart.jpg";
 import { campaignSnapshot, clientProblems, solutionsProvided, keywordRankings, trafficGrowth, searchVisibility, seoStrategies } from "@/data/ecommerceCaseStudy";
 import "./EcommerceSeoCaseStudy.css";
 
