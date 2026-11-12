@@ -58,3 +58,10 @@ export const solutionsProvided = [
   { title: "Built authority the right way", detail: "45 relevant referring domains acquired through digital PR, contextual links and recovered backlinks." },
   { title: "Turned traffic into revenue", detail: "Navigation, product CTAs, trust signals and the checkout journey optimised for conversion." },
 ];
+export const founderTestimonial = {
+  quote:
+    "We came to The Super 30 when almost all of our sales were being bought through ads. Six months later, organic search is our strongest channel — 30,800 visits a month, 220 keywords on page one and revenue from search up 190%. They didn't just rank us, they built a growth engine we own.",
+  name: "Ghazal Alagh",
+  role: "Co-Founder, Mamaearth",
+  rating: 5,
+};
