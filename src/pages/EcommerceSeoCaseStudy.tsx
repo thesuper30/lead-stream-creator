@@ -31,10 +31,15 @@ function SectionLabel({ number, children }: { number: string; children: React.Re
   return <p className="mb-5 text-xs font-medium uppercase text-brand">— {number} / {children}</p>;
 }
 
+const trafficShots = [
+  { src: trafficGrowthChart, alt: "Monthly organic traffic grew from 8,000 to 30,800 visitors over six months", icon: TrendingUp, label: "Organic traffic", detail: "8,000 → 30,800 visitors / month" },
+  { src: keywordRankingsDashboard, alt: "Keyword ranking dashboard showing 220 keywords on page one", icon: BarChart3, label: "Keyword rankings", detail: "50 → 220 keywords on page 1" },
+  { src: organicClicksChart, alt: "Search performance chart showing organic clicks rising from 5,200 to 19,600", icon: MousePointerClick, label: "Organic clicks", detail: "5,200 → 19,600 clicks / month" },
+  { src: revenueGrowthChart, alt: "Organic revenue analytics growing from ₹12L to ₹34.8L per month", icon: IndianRupee, label: "Organic revenue", detail: "₹12L → ₹34.8L / month" },
+];
+
 export default function EcommerceSeoCaseStudy() {
-  const [selectedMonth, setSelectedMonth] = useState(5);
   const [activeFix, setActiveFix] = useState(0);
-  const selected = trafficGrowth[selectedMonth] ?? trafficGrowth[5];
 
   return (
     <>
