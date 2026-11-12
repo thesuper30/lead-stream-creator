@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import super30FooterLogo from "@/assets/super30-footer-logo-white.png";
+import { industryCategories } from "@/data/industries";
 
 const services = [
   { name: "Digital Marketing", href: "/digital-marketing-agency-bangalore" },
@@ -266,6 +267,35 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
                         className="text-gray-400 hover:text-[hsl(var(--brand-orange))] transition-colors duration-300 text-sm"
                       >
                         {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </nav>
+
+        {/* Industries link map */}
+        <nav aria-label="Industries" className="pt-8 border-t border-white/10 mb-10">
+          <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6">Industries We Serve</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
+            {industryCategories.map((group) => (
+              <div key={group.label}>
+                <Link
+                  to={group.href}
+                  className="block text-xs font-semibold uppercase tracking-wider text-[hsl(var(--brand-orange))] mb-3 hover:underline"
+                >
+                  {group.label}
+                </Link>
+                <ul className="space-y-2">
+                  {group.items.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        to={link.href}
+                        className="text-gray-400 hover:text-[hsl(var(--brand-orange))] transition-colors duration-300 text-sm"
+                      >
+                        {link.label}
                       </Link>
                     </li>
                   ))}
