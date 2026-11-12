@@ -160,3 +160,6 @@
 
 .case-collage-item { box-shadow: 0 24px 48px -24px hsl(var(--foreground) / 0.35); transition: transform .4s ease, z-index 0s; }
 .case-collage-item:hover { transform: rotate(0deg) scale(1.06); z-index: 60; }
+
+.ecommerce-case-study .case-team-card { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+.ecommerce-case-study .case-team-card:hover { transform: translateY(-6px); border-color: hsl(var(--brand) / .5); box-shadow: 0 28px 56px -28px hsl(var(--foreground) / .3); }

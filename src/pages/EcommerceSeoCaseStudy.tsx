@@ -7,6 +7,9 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import mamaearthLogo from "@/assets/clients/mamaearth-transparent.png";
+import amitTeam from "@/assets/team/amit-singh.png";
+import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
+import praveenTeam from "@/assets/team/praveen-1.png";
 import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
 import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
 import organicClicksChart from "@/assets/case-study/organic-clicks-chart.jpg";
@@ -22,6 +25,12 @@ const sections = [
   { id: "traffic", label: "Traffic growth" },
   { id: "visibility", label: "Search visibility" },
   { id: "impact", label: "Business impact" },
+  { id: "team", label: "The team" },
+];
+const projectTeam = [
+  { name: "Amit Singh", role: "Co-Founder · Campaign Strategy", focus: "Overall growth strategy, keyword mapping and revenue alignment across the six-month campaign.", image: amitTeam },
+  { name: "Gagan", role: "VP - Digital Marketing · SEO Lead", focus: "Technical SEO, on-page optimization and search visibility across 220 page-one keywords.", image: gaganTeam },
+  { name: "Praveen", role: "Senior Creative Manager · Content", focus: "Category content, topical authority and conversion-focused creative for the store.", image: praveenTeam },
 ];
 const strategyIcons = [Code2, Search, FileText, Layers, Link2, ShoppingBag];
 const shell = "container mx-auto px-5 sm:px-6 lg:px-8";
@@ -220,6 +229,30 @@ export default function EcommerceSeoCaseStudy() {
             <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
               <ul className="space-y-5 text-sm text-study-paper/75"><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Reduced reliance on paid acquisition.</li><li className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-brand" />Stronger visibility across commercial product searches.</li></ul>
               <div><p className="mb-4 text-xs uppercase text-brand">The final takeaway</p><p className="text-2xl leading-relaxed">We didn't just improve keyword positions. We built a sustainable organic acquisition channel that contributed directly to business growth.</p><Button asChild variant="unstyled" className="case-pill mt-8 rounded-full bg-brand text-study-paper"><Link to="/audit">Build your growth story <span><ArrowUpRight /></span></Link></Button></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="team" className="scroll-mt-40 py-16 md:py-24">
+          <div className={shell}>
+            <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div><SectionLabel number="08">The team behind the results</SectionLabel><h2 className={title}>The People Who<br /><span className="text-brand">Made It Happen.</span></h2></div>
+              <p className="max-w-xs text-sm leading-relaxed text-study-ink/60">A three-person core team drove this campaign from audit to revenue.</p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {projectTeam.map((member, index) => (
+                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-study-muted">
+                    <img src={member.image} alt={member.name} width={480} height={600} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <span className="absolute left-4 top-4 rounded-full bg-study-ink/80 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-study-paper backdrop-blur-sm">0{index + 1}</span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-medium">{member.name}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wide text-brand">{member.role}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-study-ink/60">{member.focus}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
