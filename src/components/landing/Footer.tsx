@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import super30FooterLogo from "@/assets/super30-footer-logo-white.png";
+import { industryCategories } from "@/data/industries";
 
 const services = [
   { name: "Digital Marketing", href: "/digital-marketing-agency-bangalore" },
