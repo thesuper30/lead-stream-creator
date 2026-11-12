@@ -276,6 +276,35 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
           </div>
         </nav>
 
+        {/* Industries link map */}
+        <nav aria-label="Industries" className="pt-8 border-t border-white/10 mb-10">
+          <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6">Industries We Serve</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
+            {industryCategories.map((group) => (
+              <div key={group.label}>
+                <Link
+                  to={group.href}
+                  className="block text-xs font-semibold uppercase tracking-wider text-[hsl(var(--brand-orange))] mb-3 hover:underline"
+                >
+                  {group.label}
+                </Link>
+                <ul className="space-y-2">
+                  {group.items.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        to={link.href}
+                        className="text-gray-400 hover:text-[hsl(var(--brand-orange))] transition-colors duration-300 text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </nav>
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
