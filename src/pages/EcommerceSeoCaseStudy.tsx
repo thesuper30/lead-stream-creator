@@ -241,7 +241,7 @@ export default function EcommerceSeoCaseStudy() {
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projectTeam.map((member, index) => (
-                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper">
+                <article key={member.name} className="case-team-card group relative overflow-hidden rounded-3xl border border-study-line bg-study-paper text-study-ink">
                   <div className="relative aspect-[4/5] overflow-hidden bg-study-muted">
                     <img src={member.image} alt={member.name} width={480} height={600} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                     <span className="absolute left-4 top-4 rounded-full bg-study-ink/80 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-study-paper backdrop-blur-sm">0{index + 1}</span>
