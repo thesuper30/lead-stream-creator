@@ -1,3 +1,8 @@
+# Our Work 2
+
+- [x] Create `/our-work2` with an alternate light/dark design while preserving all portfolio content
+- [x] Verify portfolio tabs, report opening, and desktop/mobile layouts without changing `/our-work`
+
 # Homepage featured work
 
 - [x] Replace the homepage featured section with Our Work tabs

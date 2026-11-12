@@ -1,0 +1,66 @@
+.work2 { background: hsl(var(--work-paper)); color: hsl(var(--work-ink)); }
+.work2 h1, .work2 h2, .work2 h3 { letter-spacing: 0; }
+.work2-hero { position: relative; isolation: isolate; overflow: hidden; background: hsl(var(--work-ink)); color: hsl(var(--work-paper)); }
+.work2-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; z-index: -3; }
+.work2-hero::before { content: ''; position: absolute; inset: 0; background: var(--work-hero-shade); z-index: -2; }
+.work2-hero::after { content: ''; position: absolute; inset: 0; background: var(--work-glow); z-index: -1; pointer-events: none; }
+.work2-hero h1 { font-size: 3.5rem; line-height: 1.15; font-weight: 600; max-width: 950px; }
+.work2-hero-description { max-width: 700px; color: hsl(var(--work-paper) / .75); }
+.work2-eyebrow { color: hsl(var(--brand)); font-size: .875rem; font-weight: 600; margin-bottom: 1.25rem; }
+.work2-credentials { display: flex; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid hsl(var(--work-paper) / .18); padding-top: 1.5rem; margin-top: 3rem; font-size: .875rem; color: hsl(var(--work-paper) / .8); }
+.work2-credentials span { display: inline-flex; align-items: center; gap: .5rem; }
+.work2-outline { border-color: hsl(var(--work-paper) / .35); color: hsl(var(--work-paper)); background: transparent; }
+.work2-outline:hover { background: hsl(var(--work-paper) / .1); color: hsl(var(--work-paper)); }
+.work2 h2 { font-size: 3rem; line-height: 1.2; font-weight: 600; }
+.work2 .container { padding-left: 2rem; padding-right: 2rem; }
+.work2-brands > section { background: hsl(var(--work-paper)); padding: 3.5rem 0; }
+.work2-brands p, .work2-brands span { color: hsl(var(--work-ink)); }
+.work2-brands .animate-marquee > div { background: hsl(var(--work-paper)); border-color: hsl(var(--border)); border-radius: 12px; padding: 1rem 1.5rem; }
+.work2-brands img { width: 90px; height: 60px; object-fit: contain; border-radius: 0; }
+.work2-brands .border-t { border-color: hsl(var(--border)); margin-top: 2rem; padding-top: 2rem; }
+.work2-brands .border-t p:first-child { font-size: 2rem; }
+.work2-brands .border-t p:last-child { color: hsl(var(--muted-foreground)); }
+.work2-brands .border-t > .w-px { background: hsl(var(--border)); }
+.work2-portfolio > section, .work2-insights > section { background-color: hsl(var(--work-ink)); background-image: var(--work-glow), var(--work-mesh); background-size: auto, 12px 12px, 12px 12px; padding: 5rem 0; }
+.work2-portfolio h2 .text-brand-gradient { background: none; color: hsl(var(--brand)); -webkit-text-fill-color: currentColor; }
+.work2-portfolio [role="tablist"] { gap: .5rem; margin-top: 2rem; }
+.work2-portfolio [role="tab"] { border: 1px solid hsl(var(--work-paper) / .2); border-radius: 999px; padding: .75rem 1.2rem; color: hsl(var(--work-paper) / .8); }
+.work2-portfolio [role="tab"][data-state="active"] { background: hsl(var(--brand)); border-color: hsl(var(--brand)); color: hsl(var(--work-paper)); }
+.work2-portfolio [role="tabpanel"] .grid { gap: 1.5rem; }
+.work2-portfolio [role="tabpanel"] .grid > .rounded-lg { border-radius: 16px; border-color: hsl(var(--work-paper) / .12); }
+.work2-portfolio [role="tabpanel"] .grid > .rounded-2xl { border-radius: 20px; background: hsl(var(--work-surface)); }
+.work2-portfolio [role="tabpanel"] button { border-radius: 999px; }
+.work2-testimonials > section { background: hsl(var(--work-paper)); padding: 5rem 0; }
+.work2-testimonials > section > .absolute { display: none; }
+.work2-testimonials h2, .work2-testimonials blockquote, .work2-testimonials .font-bold { color: hsl(var(--work-ink)); }
+.work2-testimonials p, .work2-testimonials .text-gray-400 { color: hsl(var(--muted-foreground)); }
+.work2-testimonials .container > div:first-child > span { background: none; border: 0; padding: 0; color: hsl(var(--brand)); border-radius: 0; }
+.work2-testimonials .container > div:first-child > span > span { display: none; }
+.work2-testimonials .container > div:first-child > span::before { content: '—'; }
+.work2-testimonials .container > div:last-child { margin-bottom: 0; }
+.work2-testimonials .container > div, .work2-final .transition-all { opacity: 1; transform: none; }
+.work2-testimonials .container > div:last-child > div { background: hsl(var(--work-soft)); border: 0; border-radius: 24px; box-shadow: none; }
+.work2-testimonials .border-t { border-color: hsl(var(--border)); }
+.work2-testimonials .border-t .font-bold { color: hsl(var(--work-paper)); }
+.work2-testimonials button { border-color: hsl(var(--border)); background: hsl(var(--work-paper)); color: hsl(var(--work-ink)); }
+.work2-insights .grid > a > div { border-radius: 20px; background: hsl(var(--work-surface)); box-shadow: none; }
+.work2-insights .text-primary { color: hsl(var(--brand)); }
+.work2-insights .text-center > button { border-radius: 999px; border-color: hsl(var(--work-paper) / .3); color: hsl(var(--work-paper)); background: transparent; }
+.work2-final > section { padding: 4rem 0; background: hsl(var(--work-paper)); }
+.work2-final .container > div { background: hsl(var(--work-ink)); background-image: var(--work-glow), var(--work-mesh); background-size: auto, 12px 12px, 12px 12px; border-radius: 24px; }
+.work2-final .container > div > .absolute { display: none; }
+.work2-final h2 span { background: none; color: hsl(var(--brand)); -webkit-text-fill-color: currentColor; }
+.work2-final .container > div > .relative > div > p:last-child { color: hsl(var(--work-paper) / .65); }
+@media (max-width: 767px) {
+  .work2 .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .work2-hero h1 { font-size: 2.25rem; }
+  .work2 h2 { font-size: 2rem; }
+  .work2-credentials { gap: 1rem; margin-top: 2rem; }
+  .work2-portfolio > section, .work2-testimonials > section, .work2-insights > section { padding: 3.5rem 0; }
+  .work2-portfolio [role="tab"] { padding: .6rem .75rem; }
+  .work2-portfolio [role="tabpanel"] .grid { gap: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work2 *, .work2 *::before, .work2 *::after { animation: none !important; transition: none !important; }
+  .work2-brands .animate-marquee { width: 100% !important; flex-wrap: wrap; justify-content: center; }
+}
