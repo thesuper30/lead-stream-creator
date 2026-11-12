@@ -173,6 +173,13 @@ export default function EcommerceSeoCaseStudy() {
           </div>
         </section>
 
+        <section id="visibility" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
+          <div className={`${shell} grid gap-10 lg:grid-cols-2 lg:gap-20`}>
+            <div><SectionLabel number="06">Search visibility improvements</SectionLabel><h2 className={title}>From Page 5 to Page 1.<br /><span className="text-brand">From Invisible to Discoverable.</span></h2><div className="mt-10 flex items-center gap-4 border-l-2 border-brand pl-5"><Search className="h-8 w-8 text-brand" /><p className="max-w-xs text-sm leading-relaxed text-study-paper/60">A stronger search footprint across keywords, indexed pages, links and organic clicks.</p></div></div>
+            <div className="min-w-0"><table className="w-full text-left text-sm"><thead><tr className="border-b border-study-paper/20 text-xs uppercase text-study-paper/50"><th className="pb-5 font-normal">SEO metric</th><th className="px-2 pb-5 text-right font-normal">Before</th><th className="pb-5 text-right font-normal text-study-success">After</th></tr></thead><tbody>{searchVisibility.map(row => <tr key={row.label} className="border-b border-study-paper/15"><th scope="row" className="py-5 pr-3 font-normal">{row.label}</th><td className="px-2 py-5 text-right text-study-paper/50">{row.before}</td><td className="py-5 text-right text-xl font-medium text-study-success">{row.after}</td></tr>)}</tbody></table></div>
+          </div>
+        </section>
+
         <section id="traffic" className="scroll-mt-40 bg-study-muted py-16 md:py-24">
           <div className={shell}>
             <SectionLabel number="07">Organic traffic growth — month by month</SectionLabel>
@@ -223,13 +230,6 @@ export default function EcommerceSeoCaseStudy() {
                 <div className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand px-5 py-2 text-sm font-semibold text-study-paper">+285% traffic</div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="visibility" className="scroll-mt-40 bg-study-ink py-16 text-study-paper md:py-24">
-          <div className={`${shell} grid gap-10 lg:grid-cols-2 lg:gap-20`}>
-            <div><SectionLabel number="06">Search visibility improvements</SectionLabel><h2 className={title}>From Page 5 to Page 1.<br /><span className="text-brand">From Invisible to Discoverable.</span></h2><div className="mt-10 flex items-center gap-4 border-l-2 border-brand pl-5"><Search className="h-8 w-8 text-brand" /><p className="max-w-xs text-sm leading-relaxed text-study-paper/60">A stronger search footprint across keywords, indexed pages, links and organic clicks.</p></div></div>
-            <div className="min-w-0"><table className="w-full text-left text-sm"><thead><tr className="border-b border-study-paper/20 text-xs uppercase text-study-paper/50"><th className="pb-5 font-normal">SEO metric</th><th className="px-2 pb-5 text-right font-normal">Before</th><th className="pb-5 text-right font-normal text-study-success">After</th></tr></thead><tbody>{searchVisibility.map(row => <tr key={row.label} className="border-b border-study-paper/15"><th scope="row" className="py-5 pr-3 font-normal">{row.label}</th><td className="px-2 py-5 text-right text-study-paper/50">{row.before}</td><td className="py-5 text-right text-xl font-medium text-study-success">{row.after}</td></tr>)}</tbody></table></div>
           </div>
         </section>
 
