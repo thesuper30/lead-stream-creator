@@ -157,3 +157,6 @@
   .ecommerce-case-study #challenge .case-fix-pivot { left: calc(46.5% - 24px); transform: translate(-50%, -50%); }
   .ecommerce-case-study #challenge .case-fix-title { font-size: 24px; }
 }
+
+.case-collage-item { box-shadow: 0 24px 48px -24px hsl(var(--foreground) / 0.35); transition: transform .4s ease, z-index 0s; }
+.case-collage-item:hover { transform: rotate(0deg) scale(1.06); z-index: 60; }

@@ -157,29 +157,51 @@ export default function EcommerceSeoCaseStudy() {
           <div className={shell}>
             <SectionLabel number="05">Organic traffic growth — month by month</SectionLabel>
             <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className={title}>Six Months. One Consistent<br /><span className="text-brand">Growth Trajectory.</span></h2><div className="flex items-center gap-2 text-sm text-study-success"><TrendingUp className="h-5 w-5" />3.85X organic traffic growth</div></div>
-            <div className="grid gap-5 sm:grid-cols-2">
-              {trafficShots.map((shot, index) => {
-                const Icon = shot.icon;
-                return (
-                  <figure key={shot.label} className={`case-shot group min-w-0 overflow-hidden rounded-2xl border border-study-line bg-study-paper ${index === 0 ? "sm:col-span-2" : ""}`}>
-                    <div className="overflow-hidden border-b border-study-line">
-                      <img src={shot.src} alt={shot.alt} width={1280} height={800} loading="lazy" className="aspect-[8/5] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
-                    </div>
-                    <figcaption className="flex items-center justify-between gap-4 px-5 py-4 sm:px-6">
-                      <span className="flex items-center gap-3 text-sm font-medium"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><Icon className="h-4 w-4" /></span>{shot.label}</span>
-                      <span className="text-right text-xs text-study-ink/55 sm:text-sm">{shot.detail}</span>
-                    </figcaption>
-                  </figure>
-                );
-              })}
-            </div>
-            <div className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-6" aria-label="Monthly organic traffic">
-              {trafficGrowth.map((month, index) => (
-                <div key={month.month} className={`rounded-xl border px-3 py-4 text-center ${index === trafficGrowth.length - 1 ? "border-brand bg-brand text-study-paper" : "border-study-line bg-study-paper"}`}>
-                  <p className={`text-xs ${index === trafficGrowth.length - 1 ? "text-study-paper/70" : "text-study-ink/50"}`}>{month.month}</p>
-                  <p className={`mt-1 text-base font-medium sm:text-lg ${index === trafficGrowth.length - 1 ? "" : "text-study-ink"}`}>{month.label}</p>
+            <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+              <div className="min-w-0">
+                <ul className="divide-y divide-study-line border-y border-study-line">
+                  {trafficShots.map(shot => {
+                    const Icon = shot.icon;
+                    return (
+                      <li key={shot.label} className="flex items-center justify-between gap-4 py-4">
+                        <span className="flex items-center gap-3 text-sm font-medium text-study-ink"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><Icon className="h-4 w-4" /></span>{shot.label}</span>
+                        <span className="text-right text-xs text-study-ink/60 sm:text-sm">{shot.detail}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="mt-8" aria-label="Monthly organic traffic">
+                  <div className="flex h-28 items-end gap-2">
+                    {trafficGrowth.map((month, index) => {
+                      const max = trafficGrowth[trafficGrowth.length - 1].visitors;
+                      const last = index === trafficGrowth.length - 1;
+                      return (
+                        <div key={month.month} className="flex flex-1 flex-col items-center justify-end gap-1 h-full">
+                          <span className={`text-[10px] sm:text-xs ${last ? "font-semibold text-brand" : "text-study-ink/55"}`}>{month.label}</span>
+                          <div className={`w-full rounded-t-md ${last ? "bg-brand" : "bg-brand/25"}`} style={{ height: `${(month.visitors / max) * 75}%` }} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-2 flex gap-2">{trafficGrowth.map(m => <span key={m.month} className="flex-1 text-center text-[10px] text-study-ink/45">{m.month}</span>)}</div>
                 </div>
-              ))}
+              </div>
+              <div className="case-collage relative mx-auto aspect-[6/5] w-full max-w-[640px]">
+                {[
+                  "left-0 top-[8%] w-[72%] z-10 -rotate-2",
+                  "right-0 top-0 w-[52%] z-20 rotate-3",
+                  "left-[6%] bottom-0 w-[50%] z-30 rotate-[-4deg]",
+                  "right-[4%] bottom-[4%] w-[48%] z-40 rotate-2",
+                ].map((pos, index) => {
+                  const shot = trafficShots[index];
+                  return (
+                    <figure key={shot.label} className={`case-collage-item absolute overflow-hidden rounded-xl border border-study-line bg-study-paper p-1.5 ${pos}`}>
+                      <img src={shot.src} alt={shot.alt} width={1280} height={800} loading="lazy" className="aspect-[8/5] w-full rounded-lg object-cover object-top" />
+                    </figure>
+                  );
+                })}
+                <div className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand px-5 py-2 text-sm font-semibold text-study-paper">+285% traffic</div>
+              </div>
             </div>
           </div>
         </section>
