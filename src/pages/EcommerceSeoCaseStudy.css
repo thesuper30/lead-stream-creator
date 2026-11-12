@@ -159,3 +159,15 @@
 
 .ecommerce-case-study .case-team-card { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
 .ecommerce-case-study .case-team-card:hover { transform: translateY(-6px); border-color: hsl(var(--brand) / .5); box-shadow: 0 28px 56px -28px hsl(var(--foreground) / .3); }
+
+/* Founder testimonial — light theme */
+.case-testimonial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 50% at 50% 0%, hsl(var(--brand) / 0.08), transparent 70%);
+  pointer-events: none;
+}
+.case-testimonial > * {
+  position: relative;
+}
