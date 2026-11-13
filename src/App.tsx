@@ -158,7 +158,7 @@ const App = () => (
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 {/* Main Pages */}
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home2 />} />
 <Route path="/homepage2" element={<Home2 />} />
                 <Route path="/homepage3" element={<Home3 />} />
                 <Route path="/internet-marketing-agency" element={<About />} />
