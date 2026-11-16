@@ -101,7 +101,7 @@ const clientLogos = [
   { src: lancesoftLogo, name: "Lancesoft" },
 ];
 
-const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
+const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["INR 100Cr+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
 const showcaseLogos = [
   { src: showcaseHarvest.url, name: "Harvest International School" },
@@ -189,14 +189,14 @@ export const AiSeoV2Page = () => {
           <div className="container relative mx-auto px-4 pb-14 pt-20 text-center sm:px-6 md:pt-28 lg:px-8">
             <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-primary-foreground/10 bg-primary-foreground/5 py-1.5 pl-1.5 pr-4 text-sm text-primary-foreground/85">
               <span className="flex -space-x-2">{clientLogos.slice(0, 3).map((c) => <span key={c.name} className="flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-foreground bg-background"><img src={c.src} alt="" className="h-5 w-5 object-contain" /></span>)}</span>
-              SEO · AEO · GEO · AI Search
+              Technical SEO • Local SEO • AI Search • Authority
             </div>
             <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-6xl lg:text-7xl">
-              Be Found Where It Matters. Turn Searches into Real{" "}
-              <span className="inline-block -rotate-2 rounded-2xl bg-brand px-4 pb-1">Growth</span>
+              AI SEO Services In Bangalore That Turn Searches Into{" "}
+              <span className="inline-block -rotate-2 rounded-2xl bg-brand px-4 pb-1">Revenue</span>
             </h1>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-              We help businesses grow with SEO, AI search optimization and high-quality content that drives traffic, leads and revenue.
+              As a performance-driven SEO agency in Bangalore, we combine technical precision, authority content, and AI search optimization to grow qualified leads and sales.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Pill onClick={openAudit}>Get My Free SEO Audit</Pill>
@@ -240,20 +240,20 @@ export const AiSeoV2Page = () => {
           <div className="relative">
             <img src={evolvingImage} alt="People discovering businesses through search" width={1100} height={900} loading="lazy" className="aspect-[5/4] w-full rounded-3xl object-cover" />
             <div className="absolute -bottom-6 left-6 rounded-2xl bg-background p-5 shadow-lg sm:left-10">
-              <p className="text-3xl font-semibold text-foreground">$2M+</p>
+              <p className="text-3xl font-semibold text-foreground">₹16 Cr+</p>
               <p className="text-sm text-muted-foreground">Client Revenue Generated</p>
               <div className="mt-4 border-t border-border pt-4"><Rating /></div>
             </div>
           </div>
           <div className="pt-8 lg:pt-0">
-            <Eyebrow>Your SEO growth partner</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Best SEO Agency <span className="text-brand">for Your Business Growth.</span></h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">At The Super 30, we combine technical expertise, high-quality content and AI SEO to help your business rank higher, attract the right customers and turn organic search into qualified leads.</p>
+            <Eyebrow>Built for compounding growth</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The SEO Company in Bangalore <span className="text-brand">Focused On Revenue.</span></h2>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">We provide search engine optimization services in Bangalore designed to capture high-intent buyers, dominate local and national rankings, and convert organic traffic into sales.</p>
             <div className="mt-8 grid gap-6 border-y border-border py-6 sm:grid-cols-2">
               {[["50+", "AI Audits Delivered"], ["300%+", "Avg. Traffic Growth"]].map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
             </div>
             <ul className="mt-6 space-y-3">
-              {["SEO Strategies Built Around Your Business", "Expert Execution Across Content & Technical SEO", "AI SEO Visibility with Transparent Reporting"].map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}
+              {["Ranking For Searches That Drive Sales", "Technical Site Health And Authority Building", "Transparent Monthly Lead And ROI Tracking"].map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}
             </ul>
             <div className="mt-8"><Pill onClick={openAudit}>Get My Free SEO Audit</Pill></div>
           </div>

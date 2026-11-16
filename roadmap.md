@@ -41,3 +41,4 @@
 
 - [x] Apply supplied text without changing section designs or unsupplied content
 - [x] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
+- [x] SEO Company 2 content refresh (hero, sections 3–9)
