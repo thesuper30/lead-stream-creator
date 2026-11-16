@@ -24,13 +24,7 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import showcaseHarvest from "@/assets/seo-company2-logos/harvest-international.png.asset.json";
-import showcaseInteriors from "@/assets/seo-company2-logos/interiors-and-more.png.asset.json";
-import showcaseAcademy from "@/assets/seo-company2-logos/digital-academy-360.png.asset.json";
-import showcaseIcs from "@/assets/seo-company2-logos/ics.png.asset.json";
-import showcaseJain from "@/assets/seo-company2-logos/jain-university.png.asset.json";
-import showcaseAtria from "@/assets/seo-company2-logos/atria-institute.png.asset.json";
-import showcaseSmr from "@/assets/seo-company2-logos/smr-university.png.asset.json";
+import { pdfClientLogos } from "@/data/pdfClientLogos";
 
 
 import amitTeam from "@/assets/team/amit-singh.png";

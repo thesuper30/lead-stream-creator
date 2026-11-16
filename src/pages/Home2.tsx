@@ -9,16 +9,7 @@ import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSect
 import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
 import seoTeamImage from "@/assets/home-seo-team.jpg";
-import magicbricksLogo from "@/assets/clients/magicbricks.png";
-import mamaearthLogo from "@/assets/clients/mamaearth.png";
-import upgradLogo from "@/assets/clients/upgrad.png";
-import tata1mgLogo from "@/assets/clients/tata1mg.png";
-import shriramLogo from "@/assets/clients/shriram-properties.png";
-import jainLogo from "@/assets/clients/jain-university.png";
-import harvestLogo from "@/assets/clients/harvest-international.png";
-import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
-import smrLogo from "@/assets/clients/smr-university.png";
-import atriaLogo from "@/assets/clients/atria-institute.png";
+import { pdfClientLogos } from "@/data/pdfClientLogos";
 import amitTeam from "@/assets/team/amit-singh.png";
 import mayankTeam from "@/assets/team/mayank-1.png";
 import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
