@@ -54,36 +54,36 @@ const seoExperts = [
 ];
 
 const industries = [
-  { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Full-funnel digital marketing for SaaS — from SEO and content to paid campaigns that generate qualified pipeline." },
-  { icon: ShoppingBag, label: "E-commerce", href: "/ecommerce-marketing-agency-bangalore", text: "AI-driven ecommerce marketing combining SEO, paid ads, and social media to boost conversions and ROAS." },
-  { icon: BriefcaseBusiness, label: "Professional Services", href: "/industries/b2b", text: "Integrated digital marketing strategies that build authority, drive inbound leads, and grow your practice." },
-  { icon: GraduationCap, label: "EdTech", href: "/digital-marketing-for-coaching-institutes", text: "Multi-channel digital marketing for EdTech — SEO, paid campaigns, and social media to reach learners at scale." },
-  { icon: Stethoscope, label: "Healthcare", href: "/industries/lifestyle", text: "Trust-focused digital marketing for healthcare — from patient acquisition to authoritative content." },
-  { icon: Rocket, label: "Tech Startups", href: "/industries/b2b", text: "Growth marketing for startups — rapid experimentation across SEO, ads, social, and content to find product-market fit." },
-  { icon: BarChart3, label: "Real Estate", href: "/industries/b2b", text: "SEO, Google Ads, social media, and landing pages that help real estate businesses generate quality leads." },
-  { icon: Scale, label: "Legal Services", href: "/industries/b2b", text: "Targeted digital marketing for law firms — from local SEO to paid ads that attract high-intent clients." },
-  { icon: Hotel, label: "Hospitality & Travel", href: "/industries/hospitality", text: "Social media, SEO, and paid campaigns that help hotels, resorts, and travel businesses drive bookings." },
+  { icon: Building2, label: "B2B SaaS", href: "/industries/b2b", text: "Capture high-intent software searches that turn product comparisons into qualified demos." },
+  { icon: ShoppingBag, label: "E-commerce", href: "/ecommerce-marketing-agency-bangalore", text: "Scale category and product rankings to drive consistent, high-margin organic sales." },
+  { icon: BriefcaseBusiness, label: "Professional Services", href: "/industries/b2b", text: "Build search authority and capture decision-makers looking for trusted consulting partners." },
+  { icon: GraduationCap, label: "EdTech", href: "/digital-marketing-for-coaching-institutes", text: "Rank for high-volume course and career searches that convert into student enrolments." },
+  { icon: Stethoscope, label: "Healthcare", href: "/industries/lifestyle", text: "Win local clinic searches and medically accurate AI answers that bring patient bookings." },
+  { icon: Rocket, label: "Tech Startups", href: "/industries/b2b", text: "Build compounding organic visibility early so customer acquisition scales without rising ad costs." },
+  { icon: BarChart3, label: "Real Estate", href: "/industries/b2b", text: "Dominate location and project searches that bring qualified property buyers and site visits." },
+  { icon: Scale, label: "Legal Services", href: "/industries/b2b", text: "Capture high-intent local and practice-area searches from clients ready to retain counsel." },
+  { icon: Hotel, label: "Hospitality & Travel", href: "/industries/hospitality", text: "Rank for destination and stay searches to drive direct bookings without OTA commissions." },
 ];
 
 const services = [
-  { icon: Search, title: "Technical SEO", text: "We fix crawlability, site speed, indexing and Core Web Vitals so search engines can access every important page. A clean technical foundation ensures nothing holds your rankings back." },
-  { icon: FileText, title: "On-Page SEO", text: "From title tags and meta descriptions to heading structure, internal links and schema markup — every page is optimised around the keywords your buyers actually search for." },
-  { icon: PenLine, title: "Content Strategy", text: "We plan and produce high-quality content that answers real search intent. Blogs, service pages and landing pages designed to rank, build trust and convert readers into enquiries." },
-  { icon: Link2, title: "Authority Building", text: "Earn relevant backlinks, citations and brand mentions from trusted websites in your niche. Authority is what separates pages that rank on page one from pages nobody sees." },
-  { icon: MapPin, title: "Local SEO", text: "Google Business Profile optimisation, local citations and location pages that put you in front of nearby customers exactly when they are ready to call, visit or book." },
-  { icon: Sparkles, title: "AEO — Answer Engine Optimization", text: "Structure your content so AI assistants like ChatGPT, Perplexity and Google's AI Overviews quote your brand directly in their answers, not your competitors'." },
-  { icon: BrainCircuit, title: "GEO — Generative Engine Optimization", text: "We strengthen your entity signals, reviews and topical authority so generative engines recognise your business as a credible source and recommend it across AI search." },
-  { icon: Smartphone, title: "ASO — App Store Optimization", text: "Keyword-optimised app titles, descriptions and visuals that improve your visibility in the App Store and Play Store, driving more organic installs without extra ad spend." },
-  { icon: ShoppingBag, title: "E-commerce SEO", text: "Product and category page optimisation, faceted navigation handling and content that turns organic search into a consistent, low-cost sales channel for your store." },
-  { icon: BarChart3, title: "SEO Analytics & Reporting", text: "Transparent dashboards and monthly reports that connect rankings to traffic, leads and revenue — so you always know exactly what your SEO investment is returning." },
+  { icon: Search, title: "Technical SEO", text: "We fix crawlability, site speed, indexing, and Core Web Vitals so nothing holds your search rankings back." },
+  { icon: FileText, title: "On-Page SEO", text: "We optimize title tags, headings, internal links, and schema around the exact terms your buyers search." },
+  { icon: PenLine, title: "SEO Content Optimization", text: "We align service and landing pages with buyer intent so your site ranks higher and converts visitors." },
+  { icon: Link2, title: "Authority Building", text: "Earn relevant backlinks, citations, and brand mentions from trusted websites that push your pages onto page one." },
+  { icon: MapPin, title: "Local SEO", text: "Google Business Profile optimization and location pages that put you in front of nearby Bangalore buyers." },
+  { icon: Sparkles, title: "Answer Engine Optimization (AEO)", text: "Structure your pages so ChatGPT, Perplexity, and Google AI Overviews quote your brand directly in answers." },
+  { icon: BrainCircuit, title: "Generative Engine Optimization (GEO)", text: "Strengthen entity signals, reviews, and topical authority so AI search engines recommend your business to buyers." },
+  { icon: Smartphone, title: "App Store Optimization (ASO)", text: "Optimize app titles, descriptions, and visuals to boost App Store and Play Store rankings and organic installs." },
+  { icon: ShoppingBag, title: "E-commerce SEO", text: "Optimize product and category pages to turn organic search into a consistent, high-margin store sales channel." },
+  { icon: BarChart3, title: "SEO Analytics & Reporting", text: "Clear monthly dashboards connecting search rankings directly to qualified leads and revenue from your SEO spend." },
 ];
 
 const growthFramework = [
-  { icon: Search, title: "Audit & Discover", description: "Analyze website health, competitors and search opportunities." },
-  { icon: Target, title: "Strategize & Plan", description: "Build a customized roadmap aligned with your objectives." },
-  { icon: BrainCircuit, title: "Optimize & Execute", description: "Implement technical, content, AI and authority-building strategies." },
-  { icon: BarChart3, title: "Track & Analyze", description: "Measure rankings, organic traffic, visibility and conversions." },
-  { icon: TrendingUp, title: "Scale & Accelerate", description: "Identify new opportunities and continuously improve performance." },
+  { icon: Search, title: "Audit & Benchmark", description: "Uncover technical bottlenecks, competitor gaps, and high-intent search terms holding back revenue." },
+  { icon: Target, title: "Map Buyer Demand", description: "Prioritize commercial keywords and AI prompts most likely to bring ready-to-buy customers." },
+  { icon: BrainCircuit, title: "Fix, Build & Optimize", description: "Ship technical fixes, conversion-ready pages, and authority signals across Google and AI." },
+  { icon: BarChart3, title: "Track Leads & Revenue", description: "Measure page-one rankings, AI citations, qualified enquiries, and exact INR revenue generated." },
+  { icon: TrendingUp, title: "Scale Winning Pages", description: "Double down on top-converting search terms to compound monthly leads and sales." },
 ];
 
 const textTestimonials = [
@@ -114,35 +114,35 @@ const showcaseLogos = [
 ];
 
 const ecosystem = [
-  { icon: Search, title: "Search Engine Optimization", desc: "Get discovered across traditional search engines.", items: [
-    { code: "SEO", name: "Search Engine Optimization", desc: "Improve organic rankings, keyword visibility and website traffic." },
-    { code: "LSO", name: "Local Search Optimization", desc: "Get discovered in local search results and maps." },
-    { code: "E-SEO", name: "E-commerce SEO", desc: "Improve product rankings and shopping discovery." },
-    { code: "I-SEO", name: "International SEO", desc: "Reach audiences across countries and languages." },
+  { icon: Search, title: "Search Engine Optimization", desc: "Full-funnel execution from a dedicated search engine optimization company in Bangalore.", items: [
+    { code: "CORE", name: "Organic Search Rankings", desc: "Capture high-intent keywords that bring ready-to-buy visitors to your site." },
+    { code: "LOCAL", name: "Local & Maps SEO", desc: "Dominate Bangalore local pack results and capture nearby customer searches." },
+    { code: "STORE", name: "E-commerce SEO", desc: "Scale category and product page rankings to drive compounding online sales." },
+    { code: "GLOBAL", name: "International SEO", desc: "Expand organic visibility across global markets, regions, and multiple languages." },
   ] },
-  { icon: BrainCircuit, title: "AI & Answer Engine Optimization", desc: "Become the answer customers and AI platforms discover.", items: [
-    { code: "AEO", name: "Answer Engine Optimization", desc: "Improve visibility in direct answers and answer-driven search." },
-    { code: "GEO", name: "Generative Engine Optimization", desc: "Improve brand mentions and citations in AI-generated responses." },
-    { code: "VSO", name: "Voice Search Optimization", desc: "Optimize for conversational and voice-based queries." },
-    { code: "SEM-SEO", name: "Semantic Search Optimization", desc: "Build topical relevance, entity connections and search intent." },
+  { icon: BrainCircuit, title: "AI & Answer Engine Optimization", desc: "Make your brand the trusted answer recommended across AI platforms.", items: [
+    { code: "AEO", name: "Answer Engine Optimization", desc: "Win featured snippets and direct answers across zero-click search results." },
+    { code: "GEO", name: "Generative Engine Optimization", desc: "Earn brand citations and recommendations inside ChatGPT, Gemini, and Perplexity." },
+    { code: "VOICE", name: "Voice Search Optimization", desc: "Capture conversational, natural-language queries across mobile and smart assistants." },
+    { code: "ENTITY", name: "Semantic & Entity SEO", desc: "Build deep topical authority so search and AI engines trust your brand." },
   ] },
-  { icon: Sparkles, title: "Digital Discovery & Experience Optimization", desc: "Get discovered, engage audiences and convert across digital platforms.", items: [
-    { code: "SXO", name: "Search Experience Optimization", desc: "Turn search visitors into engaged customers." },
-    { code: "ASO", name: "App Store Optimization", desc: "Increase app visibility, rankings and downloads." },
-    { code: "VSEO", name: "Video Search Optimization", desc: "Improve video discovery and YouTube rankings." },
-    { code: "DSO", name: "Digital Discovery Optimization", desc: "Expand visibility across social search and online marketplaces." },
+  { icon: Sparkles, title: "Digital Discovery & Experience", desc: "Turn search visibility into engagement, trust, and measurable conversions.", items: [
+    { code: "SXO", name: "Search Experience Optimization", desc: "Align landing pages with search intent to convert visitors into leads." },
+    { code: "ASO", name: "App Store Optimization", desc: "Boost mobile app rankings, store visibility, and high-intent organic installs." },
+    { code: "VIDEO", name: "Video Search Optimization", desc: "Rank branded videos across YouTube and Google video carousels." },
+    { code: "SOCIAL", name: "Marketplace & Social Search", desc: "Expand product and brand discovery across social search and marketplaces." },
   ] },
 ];
 
 const supportingCapabilities = ["Technical SEO", "On-Page SEO", "Off-Page SEO", "Image SEO", "Programmatic SEO", "Content Optimization", "Link Building", "SEO Analytics"];
 
 const growthDeliverables = [
-  { icon: Search, title: "Keyword Rankings That Matter", description: "We research and rank the keywords your customers actually search for — not vanity terms — so every position gained translates into qualified visitors." },
-  { icon: TrendingUp, title: "Consistent Organic Traffic Growth", description: "Compounding month-on-month traffic growth through technical fixes, content and authority building — measured in real sessions, not promises." },
-  { icon: BrainCircuit, title: "Visibility in AI Search", description: "Your brand surfaced in AI Overviews, ChatGPT and answer engines — so you stay discoverable as search behaviour shifts beyond blue links." },
-  { icon: MapPin, title: "Local & Maps Domination", description: "Own the local pack and Google Maps for your service areas, turning nearby searches into calls, visits and enquiries." },
-  { icon: FileText, title: "Content That Converts", description: "Search-optimised content built around buyer intent — pages that rank, answer questions and move visitors toward enquiry." },
-  { icon: BarChart3, title: "Transparent Growth Reporting", description: "Clear monthly reporting on rankings, traffic, leads and revenue impact — you always know exactly what your SEO is delivering." },
+  { icon: Search, title: "Buyer-Intent Keyword Rankings", description: "Rank on page one for the exact commercial terms customers search before making a purchase." },
+  { icon: TrendingUp, title: "Steady Qualified Traffic", description: "Build month-on-month organic visitors through technical fixes and authority that compound over time." },
+  { icon: BrainCircuit, title: "Visibility In AI Answers", description: "Get your brand recommended inside ChatGPT, Perplexity, and Google AI Overviews when buyers compare options." },
+  { icon: MapPin, title: "Local & Maps Presence", description: "Capture top local pack and Google Maps spots that turn nearby searches into calls and visits." },
+  { icon: FileText, title: "Pages Built To Convert", description: "Service and landing pages structured around buyer questions to turn search visitors into leads." },
+  { icon: BarChart3, title: "Revenue-Linked Reporting", description: "Clear monthly dashboards showing keyword movement, qualified leads, and exact INR revenue generated." },
 ];
 
 const Eyebrow = ({ children, light }: { children: ReactNode; light?: boolean }) => (
@@ -268,8 +268,8 @@ export const AiSeoV2Page = () => {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow light>The Search Ecosystem</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">One Brand. Every Search. <span className="text-brand">Every Discovery Opportunity.</span></h2>
-            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/70">We go beyond traditional SEO to build your brand's visibility across search engines, AI platforms, apps, videos and digital experiences.</p>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">One Brand. Every Search. <span className="text-brand">Every Revenue Opportunity.</span></h2>
+            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/70">Our SEO services in Bangalore combine search precision and an AI SEO agency approach to capture buyers across Google, AI answers, and digital platforms.</p>
           </div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -320,7 +320,7 @@ export const AiSeoV2Page = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>Our services</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Everything you need for higher rankings and <span className="text-brand">real business growth.</span></h2>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Ten Search Disciplines Built To Turn Rankings Into <span className="text-brand">Qualified Leads.</span></h2>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {services.map((s) => (
@@ -333,8 +333,8 @@ export const AiSeoV2Page = () => {
           </div>
           <p className="mt-10 text-center text-muted-foreground">
             <span className="mr-2 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-primary-foreground">Free</span>
-            Let's make your website rank higher together.{" "}
-            <button type="button" onClick={openAudit} className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Let's Start Ranking.</button>
+            See what is holding your rankings back with an AI SEO company in Bangalore.{" "}
+            <button type="button" onClick={openAudit} className="font-semibold text-foreground underline underline-offset-4 hover:text-brand">Claim Your Site Audit.</button>
           </p>
         </div>
       </section>
@@ -346,17 +346,17 @@ export const AiSeoV2Page = () => {
           <div className="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <Eyebrow light>Why choose us</Eyebrow>
-              <h2 id="platform-why-us-heading" className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Your Trusted Partner for <span className="text-brand">Digital Growth</span></h2>
+              <h2 id="platform-why-us-heading" className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Search Strategy Tied <span className="text-brand">Directly To Sales.</span></h2>
             </div>
-            <p className="text-base leading-relaxed text-primary-foreground/70 lg:text-lg">We go beyond basic SEO with strategies tailored to your business, audience and search opportunities. Our specialists combine AI-first thinking with hands-on execution to build visibility that supports sustainable business growth.</p>
+            <p className="text-base leading-relaxed text-primary-foreground/70 lg:text-lg">We focus on the searches your customers make right before buying. Our team fixes technical site issues, builds page authority, and ranks your brand across Google and AI.</p>
           </div>
           <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
             <div className="grid min-w-0 grid-cols-2 items-stretch gap-4 sm:gap-6">
               <img src={partnerImage} alt="SEO specialists collaborating on a growth strategy" width={600} height={1000} loading="lazy" className="h-full min-h-[360px] w-full rounded-lg object-cover sm:min-h-[530px]" />
               <div className="flex min-w-0 flex-col gap-6">
                 <div className="py-6 text-center sm:py-8">
-                  <p className="text-4xl font-semibold text-brand sm:text-5xl lg:text-6xl">10,000</p>
-                  <p className="mt-3 text-sm text-primary-foreground/70 sm:text-base">Keywords Ranked</p>
+                  <p className="text-4xl font-semibold text-brand sm:text-5xl lg:text-6xl">10,000+</p>
+                  <p className="mt-3 text-sm text-primary-foreground/70 sm:text-base">Page-One Keywords Ranked</p>
                 </div>
                 <img src={realGrowthImage} alt="A professional search marketing workspace" width={600} height={800} loading="lazy" className="min-h-[230px] w-full flex-1 rounded-lg object-cover" />
               </div>
@@ -364,11 +364,11 @@ export const AiSeoV2Page = () => {
             <div className="flex min-w-0 flex-col justify-between">
               <div className="divide-y divide-primary-foreground/15">
                 {[
-                  { title: "250+ Projects", description: "Experience across diverse businesses, industries and search challenges.", image: evolvingImage },
-                  { title: "10,000 Keywords Ranked", description: "Building organic visibility around the searches that matter to your audience.", image: heroImage },
-                  { title: "AI-First Approach", description: "Connecting traditional SEO with AI search, answers and digital discovery.", image: featuredSearchImage },
-                  { title: "30 Highly Specialised Experts", description: "Dedicated expertise across technical SEO, content, analytics and growth strategy.", image: partnerImage },
-                  { title: "Business Growth Focused", description: "Prioritising relevant traffic, qualified enquiries and meaningful business outcomes.", image: realGrowthImage },
+                  { title: "250+ Projects Delivered", description: "Proven search execution across SaaS, e-commerce, healthcare, and high-growth Indian brands.", image: evolvingImage },
+                  { title: "92% Client Retention", description: "Brands stay because rankings compound into predictable monthly inbound enquiries.", image: heroImage },
+                  { title: "AI Search Ready", description: "Structured for citations across ChatGPT, Perplexity, and Google AI Overviews alongside traditional search.", image: featuredSearchImage },
+                  { title: "30 Dedicated SEO Builders", description: "Dedicated technical engineers, content strategists, and link builders working directly on your website.", image: partnerImage },
+                  { title: "Revenue-Tied Reporting", description: "Monthly dashboards tracking keyword movement, qualified leads, and exact INR revenue generated.", image: realGrowthImage },
                 ].map((point) => (
                   <div key={point.title} className="flex items-start gap-4 py-5 first:pt-0">
                     <img src={point.image} alt="" width={56} height={56} loading="lazy" className="h-14 w-14 shrink-0 rounded-full border border-primary-foreground/20 object-cover" />
@@ -397,8 +397,8 @@ export const AiSeoV2Page = () => {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <Eyebrow>What you get</Eyebrow>
-            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">SEO Results That <span className="text-brand">Move Your Business Forward.</span></h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">Not just reports and audits — the actual outcomes your business sees when SEO is done right, end to end.</p>
+            <h2 id="growth-deliverables-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Measurable Gains Across <span className="text-brand">Rankings, Leads, And Sales.</span></h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">No vanity reports or vague promises, just the commercial results your business sees each month.</p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {growthDeliverables.map((item, index) => (
@@ -425,8 +425,8 @@ export const AiSeoV2Page = () => {
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <Eyebrow light>Industries we serve</Eyebrow>
-              <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Built for ambitious businesses <span className="text-brand">ready to grow.</span></h2>
-              <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
+              <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Search Execution Tailored To <span className="text-brand">How Your Buyers Decide.</span></h2>
+              <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">Industry-specific SEO and AI search execution built around real buyer intent.</p>
             </div>
             <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
               {industries.map((ind) => (
@@ -449,10 +449,10 @@ export const AiSeoV2Page = () => {
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-end lg:gap-16">
             <div>
-              <Eyebrow>Our SEO Growth Framework</Eyebrow>
-              <h2 id="seo-growth-framework-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">From Search Visibility<br className="hidden sm:block" /> to <span className="text-brand">Business Growth.</span></h2>
+              <Eyebrow>How we work</Eyebrow>
+              <h2 id="seo-growth-framework-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Five Steps From Site Audit To <span className="text-brand">Inbound Sales.</span></h2>
             </div>
-            <p className="max-w-md border-l-2 border-brand pl-5 text-base leading-relaxed text-muted-foreground">A connected approach to discovering opportunities, building visibility and scaling what works for your business.</p>
+            <p className="max-w-md border-l-2 border-brand pl-5 text-base leading-relaxed text-muted-foreground">A repeatable five-step execution process built to capture high-intent searches across Google and AI.</p>
           </div>
 
           <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-5 lg:gap-0">
