@@ -40,4 +40,4 @@
 # Homepage2 content refresh
 
 - [x] Apply supplied text without changing section designs or unsupplied content
-- [ ] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
+- [x] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
