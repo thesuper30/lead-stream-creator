@@ -1,3 +1,4 @@
+import { pdfClientLogos } from "@/data/pdfClientLogos";
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -24,13 +25,6 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
-import showcaseHarvest from "@/assets/seo-company2-logos/harvest-international.png.asset.json";
-import showcaseInteriors from "@/assets/seo-company2-logos/interiors-and-more.png.asset.json";
-import showcaseAcademy from "@/assets/seo-company2-logos/digital-academy-360.png.asset.json";
-import showcaseIcs from "@/assets/seo-company2-logos/ics.png.asset.json";
-import showcaseJain from "@/assets/seo-company2-logos/jain-university.png.asset.json";
-import showcaseAtria from "@/assets/seo-company2-logos/atria-institute.png.asset.json";
-import showcaseSmr from "@/assets/seo-company2-logos/smr-university.png.asset.json";
 
 
 import amitTeam from "@/assets/team/amit-singh.png";
@@ -103,15 +97,7 @@ const clientLogos = [
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["INR 100Cr+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
-const showcaseLogos = [
-  { src: showcaseHarvest.url, name: "Harvest International School" },
-  { src: showcaseInteriors.url, name: "Interiors & More" },
-  { src: showcaseAcademy.url, name: "Digital Academy 360" },
-  { src: showcaseIcs.url, name: "ICS" },
-  { src: showcaseJain.url, name: "Jain University" },
-  { src: showcaseAtria.url, name: "Atria Institute of Technology" },
-  { src: showcaseSmr.url, name: "SMR University" },
-];
+const showcaseLogos = pdfClientLogos;
 
 const ecosystem = [
   { icon: Search, title: "Search Engine Optimization", desc: "Full-funnel execution from a dedicated search engine optimization company in Bangalore.", items: [
@@ -226,7 +212,7 @@ export const AiSeoV2Page = () => {
           </div>
           <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 sm:mt-12 sm:grid-cols-12">
             {showcaseLogos.map((client, index) => (
-              <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${index < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${index % 2 === 1 ? "border-l border-foreground/10" : ""} ${index === 2 || index === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 5 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 4 ? "sm:border-l-0" : ""} ${index === showcaseLogos.length - 1 ? "col-span-2" : ""}`}>
+              <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 sm:col-span-3 ${index % 2 === 1 ? "border-l border-foreground/10" : ""} ${index % 4 !== 0 ? "sm:border-l sm:border-foreground/10" : "sm:border-l-0"}`}>
                 <img src={client.src} alt={client.name} className="max-h-16 w-full max-w-[140px] object-contain sm:max-h-[72px] sm:max-w-[160px]" loading="lazy" />
               </div>
             ))}

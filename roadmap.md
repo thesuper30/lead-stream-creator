@@ -42,3 +42,8 @@
 - [x] Apply supplied text without changing section designs or unsupplied content
 - [x] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
 - [x] SEO Company 2 content refresh (hero, sections 3–9)
+
+# PDF logo replacement
+
+- [x] Extract and replace logos on Homepage2, SEO Company 2 and Lead Generation 2 only
+- [ ] Verify all eight logos render on desktop and mobile
