@@ -357,7 +357,7 @@ const Home2 = () => (
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Trusted by <span className="text-brand">50+ leading companies</span> across industries</h2>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-5">
-            {logos.map((l, i) => <div key={i} className="grid h-24 place-items-center rounded-2xl border border-border bg-background p-4"><img src={l} alt="Client logo" className="max-h-12 w-auto object-contain" loading="lazy" /></div>)}
+            {logos.map((l, i) => <div key={i} className="grid h-24 place-items-center rounded-2xl border border-border bg-background p-4"><img src={l.src} alt={l.name} className="max-h-12 w-auto object-contain" loading="lazy" /></div>)}
           </div>
         </div>
       </section>
