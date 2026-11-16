@@ -12,7 +12,10 @@ export type ServiceV2Config = {
   seo: { title: string; description: string; canonical: string };
   ctaLabel: string;
   hero: { tags: string; title: string; highlight: string; sub: string };
+  heroStats?: [string, string][];
   about: { eyebrow: string; title: string; highlight: string; text: string; bullets: string[]; imageAlt: string };
+  aboutCard?: { value: string; label: string };
+  aboutStats?: [string, string][];
   ecosystem: {
     eyebrow: string; title: string; highlight: string; text: string;
     pillars: { icon: LucideIcon; title: string; desc: string; items: { code: string; name: string; desc: string }[] }[];
@@ -20,8 +23,9 @@ export type ServiceV2Config = {
   };
   servicesTitle: string; servicesHighlight: string; servicesFooter: string;
   services: { icon: LucideIcon; title: string; text: string }[];
-  why: { highlight: string; text: string; statValue: string; statLabel: string; points: { title: string; description: string }[] };
+  why: { pre?: string; highlight: string; text: string; statValue: string; statLabel: string; points: { title: string; description: string }[] };
   deliverables: { title: string; highlight: string; text: string; items: Item[] };
+  industries?: { eyebrow?: string; title?: string; highlight: string; text: string; items?: { label?: string; text?: string }[] };
   framework: { eyebrow: string; title: string; highlight: string; text: string; steps: Item[] };
   team: { eyebrow: string; highlight: string; text: string };
 };
@@ -39,58 +43,78 @@ export const serviceV2Pages: ServiceV2Config[] = [
     path: "/lead-generation-agency-bangalore2",
     seo: { title: "Lead Generation Agency in Bangalore | B2B Leads That Convert", description: "Trusted lead generation company in Bangalore helping B2B businesses attract & convert high-value leads. Real pipeline growth & measurable results. Let's Talk!", canonical: "/lead-generation-agency-bangalore" },
     ctaLabel: "Get My Free Lead Gen Audit",
-    hero: { tags: "Lead Generation · Paid Ads · Funnels · CRM", title: "Lead Generation Agency in Bangalore. Turn Clicks into Qualified", highlight: "Leads", sub: "We help B2B and B2C businesses attract, capture and convert high-value leads with performance campaigns, landing pages and automation." },
-    about: { eyebrow: "Your lead generation partner", title: "The Best Lead Generation Agency", highlight: "for Predictable Pipeline Growth.", text: "At The Super 30, we combine paid media, conversion-focused landing pages and CRM automation to deliver a steady flow of qualified leads — not just form fills.", bullets: ["Campaigns Built Around Your Ideal Customer", "High-Converting Landing Pages & Funnels", "Lead Quality Tracking with Transparent Reporting"], imageAlt: "Sales team reviewing qualified leads" },
+    hero: { tags: "Lead Generation · Paid Ads · Funnels · CRM", title: "Lead Generation Agency in Bangalore. Turn Clicks into Qualified", highlight: "Leads", sub: "We deliver data-backed lead generation services in Bangalore that turn high-intent clicks into sales-qualified enquiries and revenue." },
+    heroStats: [["300%+", "Avg. Pipeline Lift"], ["50+", "Funnel Audits Delivered"], ["₹16 Cr+", "Client Revenue Generated"], ["4.9/5", "Client Rating"]],
+    about: { eyebrow: "Built for revenue", title: "Turn Ad Spend Into", highlight: "Sales-Ready Enquiries.", text: "As an AI lead generation agency in Bangalore and trusted B2B lead generation company in Bangalore, we connect targeted ads, conversion pages, and CRM routing into qualified enquiries.", bullets: ["Campaigns Built Around Ready-To-Buy Audiences", "High-Converting Landing Pages & Qualifying Funnels", "Lead Quality Scoring Tied To Closed Revenue"], imageAlt: "Sales team reviewing qualified leads" },
+    aboutCard: { value: "₹16 Cr+", label: "Client Revenue Generated" },
+    aboutStats: [["50+", "Funnel Audits Delivered"], ["300%+", "Avg. Enquiry Lift"]],
     ecosystem: {
-      eyebrow: "The Lead Engine", title: "One Funnel. Every Channel.", highlight: "Every Qualified Lead.", text: "We connect acquisition, conversion and nurturing into a single system that turns attention into revenue.",
+      eyebrow: "The Lead Engine", title: "One Funnel. Every Channel.", highlight: "Every Qualified Lead.", text: "A performance marketing agency in Bangalore connecting ad targeting, landing pages, and instant follow-up into one sales engine.",
       pillars: [
-        { icon: Target, title: "Acquisition", desc: "Reach buyers who are actively looking.", items: [
-          { code: "PPC", name: "Google Search Ads", desc: "Capture high-intent searches for your services." },
-          { code: "META", name: "Meta Lead Ads", desc: "Instant forms across Facebook and Instagram." },
-          { code: "LI", name: "LinkedIn Ads", desc: "Target decision-makers by role and company." },
-          { code: "SEO", name: "Organic Lead Flow", desc: "Compounding inbound enquiries from search." },
+        { icon: Target, title: "Acquisition", desc: "Reach buyers actively searching for your offer.", items: [
+          { code: "PPC", name: "Google Search Ads", desc: "Capture high-intent searches from buyers ready to enquire." },
+          { code: "META", name: "Meta Lead Ads", desc: "Targeted Facebook and Instagram forms built for volume and quality." },
+          { code: "LI", name: "LinkedIn Ads", desc: "Reach B2B decision-makers by job title, industry, and company size." },
+          { code: "SEO", name: "Organic Lead Flow", desc: "Compounding inbound enquiries from high-intent search rankings." },
         ] },
-        { icon: Filter, title: "Conversion", desc: "Turn visitors into enquiries.", items: [
-          { code: "LP", name: "Landing Pages", desc: "Fast, focused pages built to convert." },
-          { code: "CRO", name: "Conversion Optimization", desc: "A/B tests on copy, forms and offers." },
-          { code: "FRM", name: "Smart Forms", desc: "Qualifying questions that filter low-intent leads." },
-          { code: "CTA", name: "Offer Strategy", desc: "Audits, demos and consultations that pull." },
+        { icon: Filter, title: "Conversion", desc: "Turn ad clicks into qualified enquiries.", items: [
+          { code: "LP", name: "Landing Pages", desc: "Fast, distraction-free pages built around a single conversion goal." },
+          { code: "CRO", name: "Conversion Optimization", desc: "Continuous A/B tests on headlines, forms, and proof points." },
+          { code: "FRM", name: "Smart Forms", desc: "Qualifying fields that filter out low-budget and irrelevant enquiries." },
+          { code: "CTA", name: "Offer Strategy", desc: "Audits, demos, and consultations structured to pull buyer action." },
         ] },
-        { icon: Bot, title: "Nurture & Close", desc: "Move leads to sales faster.", items: [
-          { code: "CRM", name: "CRM Integration", desc: "Every lead routed to your team instantly." },
-          { code: "WA", name: "WhatsApp Follow-up", desc: "Automated replies within minutes." },
-          { code: "EML", name: "Email Nurture", desc: "Sequences that warm up undecided leads." },
-          { code: "RMK", name: "Remarketing", desc: "Bring back visitors who didn't convert." },
+        { icon: Bot, title: "Nurture & Close", desc: "Move qualified leads to sales faster.", items: [
+          { code: "CRM", name: "CRM Integration", desc: "Every enquiry routed to your sales team within seconds." },
+          { code: "WA", name: "WhatsApp Follow-up", desc: "Automated WhatsApp responses that engage buyers." },
+          { code: "EML", name: "Email Nurture", desc: "Targeted sequences that warm up prospects before sales calls." },
+          { code: "RMK", name: "Remarketing", desc: "Bring back high-intent visitors who left without booking a call." },
         ] },
       ],
       capabilities: ["Audience Research", "Offer Design", "Ad Creatives", "Landing Pages", "Conversion Tracking", "CRM Setup", "Lead Scoring", "Performance Analytics"],
     },
-    servicesTitle: "Everything you need for a", servicesHighlight: "predictable lead pipeline.", servicesFooter: "Let's fill your sales pipeline together.",
+    servicesTitle: "A Lead Generation Company In Bangalore Built For", servicesHighlight: "Qualified Leads.", servicesFooter: "See where ad spend is leaking with an AI lead generation company in Bangalore.",
     services: [
-      { icon: Search, title: "Search Ads Lead Generation", text: "Google Search campaigns built around buyer-intent keywords so you appear exactly when prospects look for your solution." },
-      { icon: Megaphone, title: "Social Lead Campaigns", text: "Meta and Instagram lead ads with tested creatives and instant forms that generate enquiries at scale." },
-      { icon: Linkedin, title: "LinkedIn B2B Campaigns", text: "Account and role-based targeting that reaches founders, managers and decision-makers in your target industries." },
-      { icon: LayoutTemplate, title: "Landing Page Development", text: "Conversion-focused landing pages with clear offers, trust signals and short forms that turn clicks into leads." },
-      { icon: Filter, title: "Funnel Strategy", text: "End-to-end funnels mapped from first touch to sale, with the right offer at every stage of the journey." },
-      { icon: Users, title: "Lead Qualification", text: "Qualifying questions and lead scoring so your sales team spends time only on serious prospects." },
-      { icon: Bot, title: "CRM & Automation", text: "Instant lead routing, WhatsApp and email follow-ups and pipeline tracking connected to your CRM." },
-      { icon: BarChart3, title: "Lead Analytics & Reporting", text: "Cost per lead, lead quality and revenue reporting so you know exactly which campaigns drive business." },
+      { icon: Search, title: "Search Ads Lead Generation", text: "Performance marketing services in Bangalore capturing high-intent Google searches right when buyers compare solutions." },
+      { icon: Megaphone, title: "Social Lead Campaigns", text: "Meta and Instagram ad funnels with tested creatives and qualifying forms that scale enquiries." },
+      { icon: Linkedin, title: "LinkedIn B2B Campaigns", text: "Account and role-based targeting that puts your offer in front of verified decision-makers." },
+      { icon: LayoutTemplate, title: "Landing Page Development", text: "Fast, focused landing pages with clear offers and proof points that turn clicks into leads." },
+      { icon: Filter, title: "Funnel Strategy", text: "End-to-end acquisition funnels mapped from first ad impression to booked sales consultation." },
+      { icon: Users, title: "Lead Qualification", text: "Multi-step forms and lead scoring so your sales team speaks only with serious buyers." },
+      { icon: Bot, title: "CRM & Automation", text: "Instant lead routing, WhatsApp alerts, and automated follow-ups synced directly with your CRM." },
+      { icon: BarChart3, title: "Lead Analytics & Reporting", text: "Clear dashboards tracking cost per qualified lead, booked calls, and exact revenue generated." },
     ],
-    why: { highlight: "Lead Generation", text: "We go beyond running ads. Our specialists combine targeting, offers, landing pages and automation to build a lead engine that keeps your sales team busy with the right conversations.", statValue: "300%+", statLabel: "Average Lead Growth", points: whyBase("lead generation") },
-    deliverables: { title: "Lead Generation Results That", highlight: "Grow Your Pipeline.", text: "The outcomes your business sees when lead generation is planned, built and optimised end to end.", items: [
-      { icon: Users, title: "More Qualified Leads", description: "A consistent flow of enquiries that match your ideal customer profile." },
-      { icon: DollarSign, title: "Lower Cost Per Lead", description: "Continuous optimisation that reduces wasted spend month after month." },
-      { icon: Zap, title: "Faster Response Times", description: "Automated follow-ups that reach leads within minutes of enquiry." },
-      { icon: Filter, title: "Better Lead Quality", description: "Qualifying forms and scoring that filter out low-intent contacts." },
-      { icon: TrendingUp, title: "Predictable Pipeline", description: "Forecastable lead volume so you can plan sales and growth confidently." },
-      { icon: BarChart3, title: "Revenue-Level Reporting", description: "Track every lead from click to closed deal with clear dashboards." },
+    why: { pre: "Lead Strategy Tied", highlight: "Directly To Sales.", text: "Our AI lead generation services in Bangalore focus on buyers ready to purchase. We align ad targeting, landing pages, and instant CRM follow-up to fill your sales calendar.", statValue: "300%+", statLabel: "Average Lead Growth", points: [
+      { title: "250+ Projects Delivered", description: "Proven lead generation across B2B SaaS, e-commerce, healthcare, and high-growth Indian brands." },
+      { title: "AI-Powered Qualification", description: "Smart scoring and automated WhatsApp follow-ups that filter junk leads before sales calls." },
+      { title: "30 Dedicated Growth Builders", description: "Media buyers, landing page builders, and CRM engineers working directly on your funnel." },
+      { title: "Revenue-Tied Reporting", description: "Monthly dashboards tracking cost per lead, SQL rates, and revenue closed." },
+      { title: "Sales-First Execution", description: "Every campaign is measured by booked demos and closed deals, not cheap form fills!" },
     ] },
-    framework: { eyebrow: "Our Lead Generation Framework", title: "From First Click", highlight: "to Closed Deal.", text: "A connected approach to finding buyers, converting them and scaling the channels that work.", steps: [
-      { icon: Search, title: "Audit & Research", description: "Analyse your audience, competitors and current funnel." },
-      { icon: Target, title: "Offer & Targeting", description: "Define offers and audiences that attract serious buyers." },
-      { icon: Rocket, title: "Launch Campaigns", description: "Go live with ads, landing pages and tracking." },
-      { icon: BarChart3, title: "Optimize & Qualify", description: "Improve cost per lead and lead quality weekly." },
-      { icon: TrendingUp, title: "Scale Revenue", description: "Increase budgets on winners and expand channels." },
+    deliverables: { title: "Measurable Gains Across", highlight: "Leads, Bookings, And Sales.", text: "No vanity clicks or junk form fills, just the commercial results your sales team sees.", items: [
+      { icon: Users, title: "More Sales-Ready Leads", description: "A steady flow of enquiries matching your exact buyer profile and budget." },
+      { icon: DollarSign, title: "Lower Cost Per Acquisition", description: "Continuous bid and landing page testing that cuts wasted ad spend weekly." },
+      { icon: Zap, title: "Sub-Minute Response Times", description: "Automated WhatsApp and CRM alerts that reach prospects while buying." },
+      { icon: Filter, title: "Higher Lead Quality", description: "Qualifying questions and scoring that filter out low-intent enquiries before sales calls." },
+      { icon: TrendingUp, title: "Predictable Monthly Pipeline", description: "Consistent weekly enquiry volume so your sales team forecasts revenue with confidence." },
+      { icon: BarChart3, title: "Revenue-Level Reporting", description: "Track every enquiry from initial ad click to closed deals in one dashboard." },
+    ] },
+    industries: { title: "Lead Funnels Tailored To", highlight: "How Your Buyers Decide.", text: "Industry-specific paid search, social, and AI lead funnels built around buyer intent.", items: [
+      { text: "High-intent search funnels that turn software evaluations into booked demos." },
+      { text: "Performance ad funnels and retargeting flows built for profitable repeat orders." },
+      { text: "Targeted search campaigns that bring decision-makers ready to hire." },
+      { text: "High-converting admission funnels and WhatsApp follow-ups that scale student enrolments." },
+      { text: "Local search ads and instant booking funnels that fill clinic appointment slots." },
+      { text: "Fast-testing acquisition funnels that validate demand and lower customer acquisition costs." },
+      { text: "Geo-targeted buyer campaigns and qualifying forms that book verified site visits." },
+      { text: "High-intent local search ads connecting urgent legal queries directly with lawyers." },
+      { text: "Direct booking ad funnels that fill rooms and packages without commissions." },
+    ] },
+    framework: { eyebrow: "How we work", title: "Five Steps From First Click To", highlight: "Closed Deal.", text: "A repeatable five-step acquisition system built to capture, qualify, and convert high-intent buyers.", steps: [
+      { icon: Search, title: "Audit & Research", description: "Uncover wasted ad spend, competitor offers, and leaks in your funnel." },
+      { icon: Target, title: "Offer & Targeting", description: "Build high-converting offers aimed at ready-to-buy decision-makers." },
+      { icon: Rocket, title: "Launch Campaigns", description: "Go live with targeted ads, dedicated landing pages, and CRM tracking." },
+      { icon: BarChart3, title: "Optimize & Qualify", description: "Cut cost per lead weekly while filtering out low-intent enquiries." },
+      { icon: TrendingUp, title: "Scale Revenue", description: "Increase budgets on winning campaigns to compound monthly leads and sales." },
     ] },
     team: { eyebrow: "Our lead generation experts", highlight: "Lead Gen Experts", text: "Performance marketers, funnel strategists, designers and analysts — one focused team working to fill your pipeline." },
   },
