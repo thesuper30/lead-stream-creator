@@ -408,7 +408,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false, dark = false }: 
   );
 };
 
-export const WorkPortfolioTabs = ({ homePreview = false, dark = false }: { homePreview?: boolean; dark?: boolean }) => {
+export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, description }: { homePreview?: boolean; dark?: boolean; heading?: React.ReactNode; description?: string }) => {
   const [activeTab, setActiveTab] = React.useState("logo");
   const activeCaption = tabs.find((t) => t.id === activeTab)?.caption ?? "";
   const visibleTabs = homePreview ? tabs.filter((tab) => tab.id !== "product-photoshoot") : tabs;
@@ -419,10 +419,10 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false }: { homeP
       <div className="container mx-auto px-3 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-3 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
-            Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span>
+            {heading ?? <>Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span></>}
           </h2>
           <p className={`max-w-2xl mx-auto ${dark ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-            Explore our portfolio across multiple services and discover how we can boost visibility, engagement, and growth for businesses with strategic digital initiatives.
+            {description ?? "Explore our portfolio across multiple services and discover how we can boost visibility, engagement, and growth for businesses with strategic digital initiatives."}
           </p>
         </div>
 

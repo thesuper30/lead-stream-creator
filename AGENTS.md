@@ -6,3 +6,5 @@
 - Keep case-study campaign data separate from the page and test supplied figures, so visual redesigns cannot silently alter results.
 - Scope case-study visual overrides to its page stylesheet, so reference-inspired changes leave service pages unchanged.
 - Our Work 2 reuses the original portfolio, logo, testimonial, blog and CTA components with page-scoped styling, so assets and content remain shared without changing the original page.
+
+- Shared portfolio headings accept optional page-specific copy; preserve default text so Homepage2 edits do not change other pages.
