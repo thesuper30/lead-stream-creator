@@ -36,3 +36,8 @@
 - [x] Add warm orange glow to the case study's dark sections and verify
 - [x] Add the Mamaearth logo and a short company intro above the snapshot cards
 - [x] Add a "Problem the client was facing and the solutions we provided" section before keyword rankings
+
+# Homepage2 content refresh
+
+- [x] Apply supplied text without changing section designs or unsupplied content
+- [x] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
