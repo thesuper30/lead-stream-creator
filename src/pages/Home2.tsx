@@ -86,7 +86,7 @@ const Home2 = () => (
           <div className="grid items-end gap-10 pb-12 pt-28 lg:grid-cols-[1.6fr_1fr] lg:pt-48">
             <div>
               <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> PREMIER AI DIGITAL MARKETING AGENCY</p>
-              <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl">The Digital Marketing Agency<br /><span className="text-brand">Built for Market Leaders.</span></h1>
+              <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl"><span className="block lg:whitespace-nowrap">The Digital Marketing Agency</span><span className="block text-brand">Built for Market Leaders</span></h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">Zero guesswork, unforgettable creatives, and smart AI that turn attention into compounding revenue growth.</p>
               <div className="mt-8"><PillCta to="/contact-us">Book a Free Consultation</PillCta></div>
             </div>
