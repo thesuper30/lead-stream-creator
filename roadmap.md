@@ -47,3 +47,8 @@
 
 - [x] Extract and replace logos on Homepage2, SEO Company 2 and Lead Generation 2 only
 - [x] Verify all eight logos render on desktop and mobile through hosted asset delivery
+
+# Content revert (Homepage2 & SEO Company 2)
+
+- [x] Restore both pages to yesterday's content while keeping the PDF logo set
+- [x] Verify old headlines render, PDF logos intact, typecheck and tests pass
