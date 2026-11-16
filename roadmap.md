@@ -46,4 +46,4 @@
 # PDF logo replacement
 
 - [x] Extract and replace logos on Homepage2, SEO Company 2 and Lead Generation 2 only
-- [ ] Verify all eight logos render on desktop and mobile
+- [x] Verify all eight logos render on desktop and mobile through hosted asset delivery
