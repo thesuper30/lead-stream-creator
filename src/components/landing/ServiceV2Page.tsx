@@ -134,7 +134,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               </div>
               <p className="mt-12 text-sm text-primary-foreground/80">Trusted by <b className="text-primary-foreground">50+</b> Brands That Value Real Results</p>
               <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-y-8 md:grid-cols-4">
-                {stats.map(([v, l], i) => (
+                {(c.heroStats ?? stats).map(([v, l], i) => (
                   <div key={l} className={`px-4 ${i > 0 ? "md:border-l md:border-primary-foreground/15" : ""}`}>
                     <p className="text-4xl font-semibold text-primary-foreground md:text-5xl">{v}</p>
                     <p className="mt-2 text-sm text-primary-foreground/75">{l}</p>
@@ -169,8 +169,8 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             <div className="relative">
               <img src={evolvingImage} alt={c.about.imageAlt} width={1100} height={900} loading="lazy" className="aspect-[5/4] w-full rounded-3xl object-cover" />
               <div className="absolute -bottom-6 left-6 rounded-2xl bg-background p-5 shadow-lg sm:left-10">
-                <p className="text-3xl font-semibold text-foreground">$2M+</p>
-                <p className="text-sm text-muted-foreground">Client Revenue Generated</p>
+                <p className="text-3xl font-semibold text-foreground">{c.aboutCard?.value ?? "$2M+"}</p>
+                <p className="text-sm text-muted-foreground">{c.aboutCard?.label ?? "Client Revenue Generated"}</p>
                 <div className="mt-4 border-t border-border pt-4"><Stars /></div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               <H2 pre={c.about.title} hl={c.about.highlight} />
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{c.about.text}</p>
               <div className="mt-8 grid gap-6 border-y border-border py-6 sm:grid-cols-2">
-                {[["50+", "AI Audits Delivered"], ["300%+", "Avg. Growth"]].map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
+                {(c.aboutStats ?? [["50+", "AI Audits Delivered"], ["300%+", "Avg. Growth"]]).map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
               </div>
               <ul className="mt-6 space-y-3">
                 {c.about.bullets.map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}
@@ -263,7 +263,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_45%_65%,hsl(var(--brand)/0.24),transparent_70%)]" />
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-12">
-              <div><Eyebrow light>Why choose us</Eyebrow><H2 light pre="Your Trusted Partner for" hl={c.why.highlight} /></div>
+              <div><Eyebrow light>Why choose us</Eyebrow><H2 light pre={c.why.pre ?? "Your Trusted Partner for"} hl={c.why.highlight} /></div>
               <p className="text-base leading-relaxed text-primary-foreground/70 lg:text-lg">{c.why.text}</p>
             </div>
             <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
@@ -321,17 +321,21 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             <Mesh />
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-3xl text-center">
-                <Eyebrow light>Industries we serve</Eyebrow>
-                <H2 light pre="Built for ambitious businesses" hl="ready to grow." />
-                <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market.</p>
+                <Eyebrow light>{c.industries?.eyebrow ?? "Industries we serve"}</Eyebrow>
+                <H2 light pre={c.industries?.title ?? "Built for ambitious businesses"} hl={c.industries?.highlight ?? "ready to grow."} />
+                <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">{c.industries?.text ?? "AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market."}</p>
               </div>
               <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {industries.map((ind) => (
-                  <Link key={ind.label} to={ind.href} className="group flex gap-5 rounded-3xl border border-primary-foreground/10 bg-foreground-card p-6 transition hover:-translate-y-1 hover:border-brand">
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><ind.icon className="h-5 w-5" /></span>
-                    <div><h3 className="flex items-center gap-2 text-lg font-semibold text-primary-foreground">{ind.label}<ArrowUpRight className="h-4 w-4 text-brand opacity-0 transition group-hover:opacity-100" /></h3><p className="mt-2 text-sm leading-relaxed text-primary-foreground/65">{ind.text}</p></div>
-                  </Link>
-                ))}
+                {industries.map((ind, i) => {
+                  const label = c.industries?.items?.[i]?.label ?? ind.label;
+                  const text = c.industries?.items?.[i]?.text ?? ind.text;
+                  return (
+                    <Link key={label} to={ind.href} className="group flex gap-5 rounded-3xl border border-primary-foreground/10 bg-foreground-card p-6 transition hover:-translate-y-1 hover:border-brand">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand transition group-hover:bg-brand group-hover:text-primary-foreground"><ind.icon className="h-5 w-5" /></span>
+                      <div><h3 className="flex items-center gap-2 text-lg font-semibold text-primary-foreground">{label}<ArrowUpRight className="h-4 w-4 text-brand opacity-0 transition group-hover:opacity-100" /></h3><p className="mt-2 text-sm leading-relaxed text-primary-foreground/65">{text}</p></div>
+                    </Link>
+                  );
+                })}
               </div>
               <p className="mt-10 text-center text-sm text-primary-foreground/70">Don&apos;t see your industry? <Link to="/industries" className="font-semibold text-primary-foreground underline underline-offset-4 hover:text-brand">Explore All Industries.</Link></p>
             </div>
