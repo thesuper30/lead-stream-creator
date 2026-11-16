@@ -8,3 +8,5 @@
 - Our Work 2 reuses the original portfolio, logo, testimonial, blog and CTA components with page-scoped styling, so assets and content remain shared without changing the original page.
 
 - Shared portfolio headings accept optional page-specific copy; preserve default text so Homepage2 edits do not change other pages.
+
+- The PDF client-logo dataset is shared only by Homepage2, SEO Company 2 and Lead Generation 2; keep other service pages on their existing logos to isolate page-specific replacements.

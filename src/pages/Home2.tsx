@@ -1,3 +1,4 @@
+import { pdfClientLogos } from "@/data/pdfClientLogos";
 import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -9,16 +10,6 @@ import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSect
 import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
 import seoTeamImage from "@/assets/home-seo-team.jpg";
-import magicbricksLogo from "@/assets/clients/magicbricks.png";
-import mamaearthLogo from "@/assets/clients/mamaearth.png";
-import upgradLogo from "@/assets/clients/upgrad.png";
-import tata1mgLogo from "@/assets/clients/tata1mg.png";
-import shriramLogo from "@/assets/clients/shriram-properties.png";
-import jainLogo from "@/assets/clients/jain-university.png";
-import harvestLogo from "@/assets/clients/harvest-international.png";
-import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
-import smrLogo from "@/assets/clients/smr-university.png";
-import atriaLogo from "@/assets/clients/atria-institute.png";
 import amitTeam from "@/assets/team/amit-singh.png";
 import mayankTeam from "@/assets/team/mayank-1.png";
 import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
@@ -55,7 +46,7 @@ const whyUs = [
   { icon: Zap, title: "Fast & Flexible", text: "Agile execution that adapts as priorities change." },
 ];
 
-const logos = [magicbricksLogo, mamaearthLogo, upgradLogo, tata1mgLogo, shriramLogo, jainLogo, harvestLogo, bhrighuLogo, smrLogo, atriaLogo];
+const logos = pdfClientLogos;
 
 const Eyebrow = ({ children, light }: { children: string; light?: boolean }) => (
   <p className={`mb-3 text-sm font-semibold uppercase tracking-wider ${light ? "text-brand" : "text-brand"}`}>— {children}</p>
@@ -366,7 +357,7 @@ const Home2 = () => (
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Trusted by <span className="text-brand">50+ leading companies</span> across industries</h2>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-5">
-            {logos.map((l, i) => <div key={i} className="grid h-24 place-items-center rounded-2xl border border-border bg-background p-4"><img src={l} alt="Client logo" className="max-h-12 w-auto object-contain" loading="lazy" /></div>)}
+            {logos.map((l, i) => <div key={i} className="grid h-24 place-items-center rounded-2xl border border-border bg-background p-4"><img src={l.src} alt={l.name} className="max-h-12 max-w-full w-auto object-contain" loading="lazy" /></div>)}
           </div>
         </div>
       </section>

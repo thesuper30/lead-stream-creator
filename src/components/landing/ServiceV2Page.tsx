@@ -1,3 +1,4 @@
+import { pdfClientLogos } from "@/data/pdfClientLogos";
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -99,6 +100,7 @@ const Stars = ({ light }: { light?: boolean }) => (
 export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
   const [open, setOpen] = useState(false);
   const cta = () => setOpen(true);
+  const pageLogos = c.path === "/lead-generation-agency-bangalore2" ? pdfClientLogos : logos;
   const svcCols = c.services.length % 5 === 0 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
@@ -154,8 +156,8 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">Trusted by growing brands across India.</p>
             </div>
             <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 sm:mt-12 sm:grid-cols-12">
-              {logos.map((l, i) => (
-                <div key={l.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${i < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${i % 2 === 1 ? "border-l border-foreground/10" : ""} ${i === 2 || i === 5 || i === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${i === 4 ? "sm:border-l-0" : ""} ${i === logos.length - 1 ? "col-span-2" : ""}`}>
+              {pageLogos.map((l, i) => (
+                <div key={l.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${pageLogos === pdfClientLogos || i < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${i % 2 === 1 ? "border-l border-foreground/10" : ""} ${i === 2 || i === 5 || i === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${i === 4 ? "sm:border-l-0" : ""} ${pageLogos !== pdfClientLogos && i === logos.length - 1 ? "col-span-2" : ""}`}>
                   <img src={l.src} alt={l.name} className="max-h-16 w-full max-w-[140px] object-contain sm:max-h-[72px] sm:max-w-[160px]" loading="lazy" />
                 </div>
               ))}
