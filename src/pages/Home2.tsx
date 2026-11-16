@@ -46,7 +46,7 @@ const whyUs = [
   { icon: Zap, title: "Fast & Flexible", text: "Agile execution that adapts as priorities change." },
 ];
 
-const logos = [magicbricksLogo, mamaearthLogo, upgradLogo, tata1mgLogo, shriramLogo, jainLogo, harvestLogo, bhrighuLogo, smrLogo, atriaLogo];
+const logos = pdfClientLogos;
 
 const Eyebrow = ({ children, light }: { children: string; light?: boolean }) => (
   <p className={`mb-3 text-sm font-semibold uppercase tracking-wider ${light ? "text-brand" : "text-brand"}`}>— {children}</p>

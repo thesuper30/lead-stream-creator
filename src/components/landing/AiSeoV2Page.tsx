@@ -97,15 +97,7 @@ const clientLogos = [
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
-const showcaseLogos = [
-  { src: showcaseHarvest.url, name: "Harvest International School" },
-  { src: showcaseInteriors.url, name: "Interiors & More" },
-  { src: showcaseAcademy.url, name: "Digital Academy 360" },
-  { src: showcaseIcs.url, name: "ICS" },
-  { src: showcaseJain.url, name: "Jain University" },
-  { src: showcaseAtria.url, name: "Atria Institute of Technology" },
-  { src: showcaseSmr.url, name: "SMR University" },
-];
+const showcaseLogos = pdfClientLogos;
 
 const ecosystem = [
   { icon: Search, title: "Search Engine Optimization", desc: "Get discovered across traditional search engines.", items: [
