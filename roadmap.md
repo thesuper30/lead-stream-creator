@@ -41,3 +41,8 @@
 
 - [x] Apply supplied text without changing section designs or unsupplied content
 - [x] Verify Homepage2 and main homepage text, portfolio tabs, and mobile layout
+
+# SEO Company Bangalore2 content refresh
+
+- [x] Update supplied ecosystem, services, proof, outcomes, industries, and process text only
+- [x] Preserve existing design and unspecified content; verify desktop/mobile rendering
