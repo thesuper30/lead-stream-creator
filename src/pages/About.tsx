@@ -126,6 +126,9 @@ const About = () => {
 
         <div id="about-culture" className="about-light about-band">
           <div className="container mx-auto about-culture-layout"><CultureSection /><img className="about-culture-photo" src={strategyImage} alt="Our team sharing ideas during a strategy session" loading="lazy" /></div>
+        </div>
+
+        <div id="about-showcase" className="about-dark about-band">
           <div className="container mx-auto"><figure className="about-wide-photo"><img src={heroImage} alt="Marketing specialists collaborating on digital growth" loading="lazy" /><figcaption><span>THE SUPER 30</span><strong>Where Passion Meets Performance</strong><Button asChild variant="outline" className="about-outline rounded-full"><Link to="/our-work">See Our Work<ArrowRight className="ml-3 h-4 w-4" /></Link></Button></figcaption></figure></div>
         </div>
 
