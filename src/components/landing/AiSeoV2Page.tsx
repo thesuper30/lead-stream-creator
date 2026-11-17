@@ -99,10 +99,10 @@ const clientLogos = [
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
-const showcaseLogos = [
+const showcaseLogos: { src: string; name: string; className?: string }[] = [
   ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
-  { src: icsLogo, name: "ICS" },
-  { src: digitalAcademy360Logo, name: "Digital Academy 360" },
+  { src: icsLogo, name: "ICS", className: "h-14 sm:h-28" },
+  { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-14 sm:h-28" },
 ];
 
 const ecosystem = [
@@ -224,7 +224,7 @@ export const AiSeoV2Page = () => {
             </div>
             <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
               {showcaseLogos.slice(5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[23%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+                <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[23%] object-contain sm:max-w-[220px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
               ))}
             </div>
           </div>
