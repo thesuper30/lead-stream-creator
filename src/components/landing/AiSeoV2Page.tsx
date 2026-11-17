@@ -216,12 +216,17 @@ export const AiSeoV2Page = () => {
             <h2 id="seo-client-brands-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Brands you know.<br /><span className="text-brand">A team they trust.</span></h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">Trusted by growing brands across India.</p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 sm:mt-12 sm:grid-cols-12">
-            {showcaseLogos.map((client, index) => (
-              <div key={client.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${index < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${index % 2 === 1 ? "border-l border-foreground/10" : ""} ${index === 2 || index === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 5 ? "sm:border-l sm:border-foreground/10" : ""} ${index === 4 ? "sm:border-l-0" : ""} ${index === showcaseLogos.length - 1 ? "col-span-2" : ""}`}>
-                <img src={client.src} alt={client.name} className="max-h-16 w-full max-w-[140px] object-contain sm:max-h-[72px] sm:max-w-[160px]" loading="lazy" />
-              </div>
-            ))}
+          <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center gap-8 sm:mt-12 sm:gap-10">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14">
+              {showcaseLogos.slice(0, 5).map((client) => (
+                <img key={client.name} src={client.src} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14">
+              {showcaseLogos.slice(5).map((client) => (
+                <img key={client.name} src={client.src} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+              ))}
+            </div>
           </div>
         </div>
       </section>
