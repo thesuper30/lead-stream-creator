@@ -99,7 +99,7 @@ const clientLogos = [
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
-const showcaseLogos = [
+const showcaseLogos: { src: string; name: string; className?: string }[] = [
   ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
   { src: icsLogo, name: "ICS", className: "h-14 sm:h-28" },
   { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-14 sm:h-28" },
