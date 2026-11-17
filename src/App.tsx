@@ -141,6 +141,7 @@ const DeferredUI = () => {
       <CookieConsent />
       <FloatingContactButtons />
       <ScrollToTopButton />
+      <LeadPopup />
     </Suspense>
   );
 };
