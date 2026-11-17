@@ -1,7 +1,23 @@
 import { expect, test } from "bun:test";
 import { serviceV2Pages } from "../../src/data/serviceV2Pages";
 
-const lead = serviceV2Pages.find((p) => p.path === "/lead-generation-agency-bangalore2");
+const lead = serviceV2Pages.find((p) => p.path === "/lead-generation-agency-bangalore");
+
+test("latest service designs resolve at all seven requested main URLs", () => {
+  expect(serviceV2Pages.map((page) => page.path)).toEqual([
+    "/lead-generation-agency-bangalore",
+    "/social-media-marketing-agency-bangalore",
+    "/google-ads-agency-bangalore",
+    "/design-agency-bangalore",
+    "/content-marketing-agency-bangalore",
+    "/website-design-company-bangalore",
+    "/sms-marketing-agency-bangalore",
+  ]);
+});
+
+test("latest service canonical paths match their main URLs", () => {
+  for (const page of serviceV2Pages) expect(page.seo.canonical).toBe(page.path);
+});
 
 test("lead gen hero metrics show the supplied figures with ₹16 Cr+ replacing $2M+", () => {
   expect(lead?.heroStats).toEqual([

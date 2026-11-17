@@ -1,3 +1,8 @@
+# Main page URL migration
+
+- [x] Move latest designs to the requested main URLs and preserve older designs at suffixed URLs
+- [x] Update navigation, internal links, redirects and SEO references; verify all nine destinations
+
 # Our Work 2
 
 - [x] Create `/our-work2` with an alternate light/dark design while preserving all portfolio content

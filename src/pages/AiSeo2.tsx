@@ -9,7 +9,7 @@ const AiSeo2 = () => {
     <>
       <Helmet>
         <title>SEO Company in Bangalore | #1 AI-Driven SEO Services Agency</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta name="description" content="Struggling to get organic leads? Trusted SEO agency in Bangalore delivering AI powered SEO services with 3x visibility &amp; 300% traffic growth. Book a free call" />
         <meta name="keywords" content="AI seo services in bangalore, AI seo agency in bangalore, AI seo company in bangalore, seo services in bangalore, seo agency in bangalore, seo company in bangalore, search engine optimization services in bangalore, search engine optimization company in bangalore" />
         <link rel="canonical" href="https://www.thesuper30.ai/seo-company-bangalore" />

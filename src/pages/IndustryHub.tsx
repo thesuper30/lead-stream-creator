@@ -112,7 +112,7 @@ const solutions = [
   { label: "Lead Generation", href: "/lead-generation-agency-bangalore" },
   { label: "Social Media Marketing", href: "/social-media-marketing-agency-bangalore" },
   { label: "Web Development", href: "/web-development-company-bangalore" },
-  { label: "Branding & Design", href: "/graphic-design-agency-bangalore" },
+  { label: "Branding & Design", href: "/design-agency-bangalore" },
 ];
 
 const IndustryHub = () => {

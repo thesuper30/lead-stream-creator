@@ -42,7 +42,7 @@ const services: Service[] = [
     subServices: [
       { label: "AI SEO", href: "/seo-company-bangalore" },
       { label: "Lead Generation", href: "/lead-generation-agency-bangalore" },
-      { label: "Social Media Marketing", href: "/social-media-design-agency-bangalore" },
+      { label: "Social Media Marketing", href: "/social-media-marketing-agency-bangalore" },
       { label: "Google Ads", href: "/google-ads-agency-bangalore" },
       { label: "Social Media Optimization", href: "/social-media-optimization-services-bangalore" },
       { label: "Ecommerce Marketing", href: "/ecommerce-marketing-agency-bangalore" },
@@ -68,7 +68,7 @@ const services: Service[] = [
       { label: "Logo Design", href: "/logo-design-company-bangalore" },
       { label: "Brand Kit", href: "/branding-agency-bangalore" },
     ],
-    href: "/graphic-design-agency-bangalore",
+    href: "/design-agency-bangalore",
   },
   {
     icon: FileText,
@@ -89,7 +89,7 @@ const services: Service[] = [
       { label: "Script Writing", href: "/script-writing-agency-bangalore" },
       { label: "Guest Posting", href: "/guest-posting-agency-bangalore" },
     ],
-    href: "/contact",
+    href: "/content-marketing-agency-bangalore",
   },
   {
     icon: MessageSquare,
@@ -111,7 +111,7 @@ const services: Service[] = [
       { label: "SMS Gateway", href: "/sms-gateway-service-bangalore" },
       { label: "RCS Messaging", href: "/rcs-messaging-provider-bangalore" },
     ],
-    href: "/contact",
+    href: "/sms-marketing-agency-bangalore",
   },
   {
     icon: Video,
@@ -149,13 +149,13 @@ const services: Service[] = [
       "SEO structure and conversion strategy integrated from launch",
     ],
     subServices: [
-      { label: "Website Development", href: "/web-design-company-bangalore" },
+      { label: "Website Development", href: "/website-design-company-bangalore" },
       { label: "E-commerce Website", href: "/ecommerce-website-development-bangalore" },
       { label: "WordPress Website", href: "/wordpress-development-company-bangalore" },
       { label: "Website Maintenance", href: "/website-maintenance-services-bangalore" },
     ],
     featuredTags: ["Website Development", "E-commerce Website", "WordPress Website"],
-    href: "/web-design-company-bangalore",
+    href: "/website-design-company-bangalore",
   },
 ];
 

@@ -27,9 +27,9 @@ const services = [
   { title: "AI SEO", href: "/seo-company-bangalore", icon: Search, points: ["Technical SEO & content clusters", "AEO, AIO & GEO visibility", "Authority building"] },
   { title: "Lead Generation", href: "/lead-generation-agency-bangalore", icon: Target, points: ["Targeted paid campaigns", "Conversion-focused landing pages", "Funnel optimization"] },
   { title: "Social Media", href: "/social-media-marketing-agency-bangalore", icon: Users, points: ["Platform strategy & calendars", "Community management", "Performance paid social"] },
-  { title: "Design & Creative", href: "/graphic-design-agency-bangalore", icon: Eye, points: ["Brand-aligned design systems", "Scroll-stopping creatives", "Conversion visual assets"] },
+  { title: "Design & Creative", href: "/design-agency-bangalore", icon: Eye, points: ["Brand-aligned design systems", "Scroll-stopping creatives", "Conversion visual assets"] },
   { title: "AI & Automation", href: "/digital-marketing-agency-bangalore", icon: Bot, points: ["Workflow automation", "Predictive analytics", "Integrated marketing ops"] },
-  { title: "Web Design & CRO", href: "/web-design-company-bangalore", icon: TrendingUp, points: ["UX design", "Conversion rate optimization", "Performance-focused builds"] },
+  { title: "Web Design & CRO", href: "/website-design-company-bangalore", icon: TrendingUp, points: ["UX design", "Conversion rate optimization", "Performance-focused builds"] },
 ];
 
 const steps = [
@@ -61,8 +61,15 @@ const PillCta = ({ to, children, href }: { to?: string; href?: string; children:
 const Home2 = () => (
   <>
     <Helmet>
-      <title>Homepage 2 | TheSuper30</title>
-      <meta name="robots" content="noindex, nofollow" />
+      <title>Digital Marketing Agency &amp; AI Growth Company | TheSuper30</title>
+      <meta name="description" content="A leading AI-driven digital marketing agency helping businesses achieve real ROI and scalable growth with proven strategies. Book a free consultation now." />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://www.thesuper30.ai/homepage" />
+      <meta property="og:title" content="Digital Marketing Agency &amp; AI Growth Company | TheSuper30" />
+      <meta property="og:description" content="AI-powered digital marketing for more traffic, more leads and real business growth." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.thesuper30.ai/homepage" />
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
     <Navbar />
     <main className="min-h-screen bg-background pt-16 md:pt-20">
