@@ -101,8 +101,8 @@ const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"],
 
 const showcaseLogos = [
   ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
-  { src: icsLogo, name: "ICS" },
-  { src: digitalAcademy360Logo, name: "Digital Academy 360" },
+  { src: icsLogo, name: "ICS", className: "h-14 sm:h-28" },
+  { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-14 sm:h-28" },
 ];
 
 const ecosystem = [
