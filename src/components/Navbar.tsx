@@ -25,7 +25,6 @@ interface NavMenuItem {
 const menuItems: NavMenuItem[] = [
   {
     label: "Digital Marketing",
-    href: "/digital-marketing-agency-bangalore",
     items: [
       { label: "SEO Services", href: "/seo-company-bangalore" },
       { label: "Lead Generation", href: "/lead-generation-agency-bangalore" },
