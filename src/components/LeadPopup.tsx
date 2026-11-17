@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { X, Send, Phone } from "lucide-react";
+import { X, Send, Phone, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,6 +15,7 @@ import { toast } from "sonner";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
 import { validateEmail, validatePhone, sanitizeInput } from "@/lib/validation";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
+import popupImage from "@/assets/home-strategy-session.jpg";
 
 const DISMISS_KEY = "s30_lead_popup_dismissed";
 // DeferredUI mounts this after 3s, so 2s here lands the popup at ~5s total.
@@ -101,52 +102,79 @@ const LeadPopup = () => {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-300"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300"
       onClick={close}
       role="dialog"
       aria-modal="true"
       aria-label="Free growth consultation"
     >
       <div
-        className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[hsl(var(--work-ink))] text-[hsl(var(--work-paper))] p-6 md:p-8 shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden"
+        className="relative w-full max-w-3xl rounded-2xl border border-border bg-white text-foreground shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden grid md:grid-cols-2"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Warm orange glow */}
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "var(--work-glow)" }} />
-
         <button
           onClick={close}
           aria-label="Close popup"
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition-colors"
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full border border-border bg-white/90 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
         >
           <X className="w-4 h-4" />
         </button>
 
-        <div className="relative">
-          <p className="text-brand text-xs font-semibold mb-2">— FREE GROWTH CONSULTATION</p>
-          <h2 className="text-xl md:text-2xl font-semibold leading-snug mb-2">
-            Get a Free Strategy Call Worth ₹5,000
-          </h2>
-          <p className="text-sm text-white/65 leading-relaxed mb-5">
-            Talk to our digital marketing experts and get a clear growth plan for your business. No spam, no obligation.
+        {/* Left: image with text */}
+        <div className="relative hidden md:block">
+          <img
+            src={popupImage}
+            alt="The Super 30 team planning a client growth strategy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
+          <div className="relative h-full flex flex-col justify-end p-7 text-white">
+            <p className="text-brand text-xs font-semibold mb-2">— FREE GROWTH CONSULTATION</p>
+            <h2 className="text-2xl font-semibold leading-snug mb-3">
+              Get a Free Strategy Call Worth ₹5,000
+            </h2>
+            <ul className="space-y-2 text-sm text-white/85">
+              {["Custom growth plan for your business", "AI SEO & ads audit included", "No spam, no obligation"].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-brand shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Right: form */}
+        <div className="p-6 md:p-8">
+          {/* Mobile-only heading (image panel hidden) */}
+          <div className="md:hidden mb-5">
+            <p className="text-brand text-xs font-semibold mb-2">— FREE GROWTH CONSULTATION</p>
+            <h2 className="text-xl font-semibold leading-snug">
+              Get a Free Strategy Call Worth ₹5,000
+            </h2>
+          </div>
+
+          <h3 className="hidden md:block text-lg font-semibold mb-1">Book your free call</h3>
+          <p className="hidden md:block text-sm text-muted-foreground mb-5">
+            Our experts respond within 24 hours.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-3.5">
             <div className="space-y-1.5">
-              <Label htmlFor="popup-name" className="text-white/85 text-xs">Full Name *</Label>
+              <Label htmlFor="popup-name" className="text-xs">Full Name *</Label>
               <Input
                 id="popup-name"
                 name="name"
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className={`bg-black/40 border-white/15 text-white placeholder:text-white/40 focus-visible:border-brand ${errors.name ? "border-destructive" : ""}`}
+                className={errors.name ? "border-destructive" : ""}
               />
               {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
             </div>
 
             <div className="space-y-1.5">
-              <Label htmlFor="popup-email" className="text-white/85 text-xs">Email *</Label>
+              <Label htmlFor="popup-email" className="text-xs">Email *</Label>
               <Input
                 id="popup-email"
                 name="email"
@@ -154,15 +182,15 @@ const LeadPopup = () => {
                 placeholder="john@company.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className={`bg-black/40 border-white/15 text-white placeholder:text-white/40 focus-visible:border-brand ${errors.email ? "border-destructive" : ""}`}
+                className={errors.email ? "border-destructive" : ""}
               />
               {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
             </div>
 
             <div className="space-y-1.5">
-              <Label htmlFor="popup-phone" className="text-white/85 text-xs">Phone</Label>
+              <Label htmlFor="popup-phone" className="text-xs">Phone</Label>
               <div className="flex">
-                <span className="inline-flex items-center gap-1 px-3 rounded-l-md bg-black/40 border border-r-0 border-white/15 text-white/60 text-sm font-medium">
+                <span className="inline-flex items-center gap-1 px-3 rounded-l-md bg-muted border border-r-0 border-input text-muted-foreground text-sm font-medium">
                   <Phone className="w-3.5 h-3.5" />
                   +91
                 </span>
@@ -176,19 +204,19 @@ const LeadPopup = () => {
                     if (cleaned.length > 0 && !/^[6-9]/.test(cleaned)) cleaned = "";
                     setFormData({ ...formData, phone: cleaned });
                   }}
-                  className={`rounded-l-none bg-black/40 border-white/15 text-white placeholder:text-white/40 focus-visible:border-brand ${errors.phone ? "border-destructive" : ""}`}
+                  className={`rounded-l-none ${errors.phone ? "border-destructive" : ""}`}
                 />
               </div>
               {errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
             </div>
 
             <div className="space-y-1.5">
-              <Label htmlFor="popup-service" className="text-white/85 text-xs">Service Interest</Label>
+              <Label htmlFor="popup-service" className="text-xs">Service Interest</Label>
               <Select
                 value={formData.service}
                 onValueChange={(value) => setFormData({ ...formData, service: value })}
               >
-                <SelectTrigger id="popup-service" name="service" className="bg-black/40 border-white/15 text-white data-[placeholder]:text-white/40">
+                <SelectTrigger id="popup-service" name="service">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
@@ -221,7 +249,7 @@ const LeadPopup = () => {
             </Button>
           </form>
 
-          <p className="text-[11px] text-white/45 text-center mt-3">
+          <p className="text-[11px] text-muted-foreground text-center mt-3">
             24hr response • Free consultation • No spam, ever
           </p>
         </div>
