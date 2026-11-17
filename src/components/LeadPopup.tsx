@@ -17,7 +17,8 @@ import { validateEmail, validatePhone, sanitizeInput } from "@/lib/validation";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
 
 const DISMISS_KEY = "s30_lead_popup_dismissed";
-const SHOW_DELAY_MS = 5000;
+// DeferredUI mounts this after 3s, so 2s here lands the popup at ~5s total.
+const SHOW_DELAY_MS = 2000;
 
 const LeadPopup = () => {
   const [open, setOpen] = useState(false);
