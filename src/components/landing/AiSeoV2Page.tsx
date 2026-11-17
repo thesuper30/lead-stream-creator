@@ -25,6 +25,8 @@ import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import lancesoftLogo from "@/assets/clients/lancesoft.png";
 import { pdfClientLogos } from "@/data/pdfClientLogos";
+import icsLogo from "@/assets/logos/ics.png";
+import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 
 
 import amitTeam from "@/assets/team/amit-singh.png";
@@ -97,7 +99,11 @@ const clientLogos = [
 
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
-const showcaseLogos = pdfClientLogos;
+const showcaseLogos = [
+  ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
+  { src: icsLogo, name: "ICS" },
+  { src: digitalAcademy360Logo, name: "Digital Academy 360" },
+];
 
 const ecosystem = [
   { icon: Search, title: "Search Engine Optimization", desc: "Get discovered across traditional search engines.", items: [
