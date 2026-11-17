@@ -57,3 +57,7 @@
 
 - [x] Restore both pages to yesterday's content while keeping the PDF logo set
 - [x] Verify old headlines render, PDF logos intact, typecheck and tests pass
+
+# Timed lead popup
+
+- [ ] Add a 5-second lead popup form shown once per session on all pages; verify timing, dismissal, submission, desktop/mobile
