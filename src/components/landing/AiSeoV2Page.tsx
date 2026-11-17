@@ -307,6 +307,36 @@ export const AiSeoV2Page = () => {
         </div>
       </section>
 
+      {/* SEO EXPERTS TEAM */}
+      <section aria-labelledby="seo-experts-heading" className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <Eyebrow>Our SEO experts</Eyebrow>
+              <h2 id="seo-experts-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet the <span className="text-brand">SEO Experts</span> Behind Your Growth</h2>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Search strategists, content specialists, performance marketers and creatives — one focused team working to rank your brand everywhere people search.</p>
+            </div>
+            <Pill to="/about">Meet the whole team</Pill>
+          </div>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {seoExperts.map((m) => (
+              <article key={m.name} className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
+                <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}>
+                  <img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" />
+                </div>
+                <div className="flex items-center justify-between gap-3 px-5 py-4">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold text-foreground">{m.name}</h3>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p>
+                  </div>
+                  <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
