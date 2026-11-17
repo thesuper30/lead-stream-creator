@@ -97,7 +97,6 @@ const Contact = () => {
     email: "",
     phone: "",
     company: "",
-    website: "",
     budget: "",
     teamSize: "",
     source: "",
@@ -152,7 +151,6 @@ const Contact = () => {
           email: sanitizeInput(formData.email),
           phone: formData.phone ? `+91${sanitizeInput(formData.phone)}` : "",
           company: formData.company ? sanitizeInput(formData.company) : "",
-          website: formData.website || "",
           budget: formData.budget || "",
           team_size: formData.teamSize || "",
           source: formData.source || "",
@@ -167,7 +165,6 @@ const Contact = () => {
         email: "",
         phone: "",
         company: "",
-        website: "",
         budget: "",
         teamSize: "",
         source: "",
@@ -351,16 +348,6 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="contact-website">Website URL</Label>
-                      <Input
-                        id="contact-website"
-                        name="website"
-                        placeholder="https://yourcompany.com"
-                        value={formData.website}
-                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      />
-                    </div>
-                    <div className="space-y-2">
                       <Label htmlFor="contact-budget">Budget Range</Label>
                       <Select
                         value={formData.budget}
@@ -528,7 +515,7 @@ const Contact = () => {
                 {/* Map */}
                 <div className="contact-map flex-1">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62224.92642918453!2d77.57034246322014!3d12.903998375556354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16256e8bd415%3A0x85acd49abea04935!2sDigital%20Academy%20360!5e0!3m2!1sen!2sin!4v1767928926902!5m2!1sen!2sin"
+                    src="https://maps.google.com/maps?q=The%20Super%2030%20%7C%20Digital%20Marketing%20%26%20AI%20Agency%20In%20Bangalore&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0, minHeight: "14rem" }}
