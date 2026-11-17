@@ -45,6 +45,7 @@
 .about-page #about-cta button { box-shadow: none; background: hsl(var(--brand)); color: hsl(var(--primary-foreground)); }
 .about-page #about-cta button.border,.about-page #about-cta button.border-2 { background: transparent; color: hsl(var(--foreground)); border-color: hsl(var(--border)); }
 .about-page #about-faq > section { background: transparent; }
+.about-page #about-faq .transition-all { opacity: 1; transform: none; }
 @media(max-width:767px) {
  .about-page .container { padding-left: 1.25rem; padding-right: 1.25rem; }
  .about-hero h1 { font-size: 2.25rem; }
