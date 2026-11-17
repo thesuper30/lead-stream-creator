@@ -214,97 +214,73 @@ const Contact = () => {
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
+      <main className="contact-page min-h-screen pt-16 md:pt-20">
         {/* Hero Section */}
-        <section id="contact-hero" className="relative bg-white overflow-hidden min-h-[70vh] md:min-h-[80vh] flex items-center">
-          {/* Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-          </div>
+        <section id="contact-hero" className="contact-hero">
+          <div className="container mx-auto">
+            <p className="contact-eyebrow">— GET IN TOUCH</p>
+            <h1>Ready to Accelerate Your Business Growth<span className="text-brand">?</span></h1>
+            <p className="contact-hero-copy">
+              Connect with TheSuper30 and discover how strategic digital marketing, creative execution, and performance driven campaigns can help your business generate more leads, increase visibility, and achieve measurable growth.
+            </p>
+            <nav aria-label="Breadcrumb" className="contact-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>Contact Us</span></nav>
 
-          <div className="container relative mx-auto px-3 md:px-4 py-8 md:py-12 lg:py-16">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              {/* Badge */}
-              <BentoBadge>
-                <MessageCircle className="w-4 h-4" />
-                Get in Touch
-              </BentoBadge>
+            {/* Trust Signals */}
+            <div className="contact-hero-signals">
+              {[
+                { icon: Clock, text: "24hr Response" },
+                { icon: Phone, text: "Free Consultation" },
+                { icon: Mail, text: "Expert Support" },
+                { icon: MapPin, text: "Bangalore, India" },
+              ].map((signal, index) => (
+                <div key={index}>
+                  <signal.icon />
+                  <span>{signal.text}</span>
+                </div>
+              ))}
+            </div>
 
-              {/* H1 and Description */}
-              <div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-4">
-                  Ready to Accelerate Your Business Growth?
-                </h1>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  Connect with TheSuper30 and discover how strategic digital marketing, creative execution, and performance driven campaigns can help your business generate more leads, increase visibility, and achieve measurable growth.
-                </p>
-              </div>
+            {/* Dual CTA Buttons */}
+            <div className="contact-hero-ctas">
+              <a href="tel:+918904150555">
+                <Button size="lg" className="contact-btn-solid">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Us Now
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+              <a href="mailto:hello@thesuper30.ai">
+                <Button size="lg" variant="outline" className="contact-btn-outline">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email Us
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+            </div>
 
-              {/* Trust Signals - Horizontal */}
-              <div className="flex flex-wrap justify-center gap-4 py-4">
-                {[
-                  { icon: Clock, text: "24hr Response" },
-                  { icon: Phone, text: "Free Consultation" },
-                  { icon: Mail, text: "Expert Support" },
-                  { icon: MapPin, text: "Bangalore, India" },
-                ].map((signal, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2"
-                  >
-                    <signal.icon className="w-4 h-4 text-brand" />
-                    <span className="font-medium text-foreground text-sm">{signal.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Dual CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-                <a href="tel:+918904150555">
-                  <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Us Now
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </a>
-                <a href="mailto:hello@thesuper30.ai">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-border text-foreground hover:bg-muted transition-all duration-300 w-full sm:w-auto"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Email Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </a>
-              </div>
-
-              {/* Expert credentials */}
-              <div className="flex flex-wrap gap-2 justify-center pt-2">
-                {["AI SEO", "Lead Generation", "Social Media", "Web Design", "Branding"].map((cred, i) => (
-                  <span 
-                    key={i}
-                    className="inline-flex items-center gap-1.5 bg-muted text-muted-foreground px-3 py-1.5 rounded-full text-xs font-medium"
-                  >
-                    <Award className="w-3 h-3 text-brand" />
-                    {cred}
-                  </span>
-                ))}
-              </div>
+            {/* Expert credentials */}
+            <div className="contact-hero-creds">
+              {["AI SEO", "Lead Generation", "Social Media", "Web Design", "Branding"].map((cred, i) => (
+                <span key={i}>
+                  <Award />
+                  {cred}
+                </span>
+              ))}
             </div>
           </div>
         </section>
 
-        <ClientLogosSection />
+        <div className="contact-light contact-band contact-brands">
+          <ClientLogosSection />
+        </div>
 
         {/* Contact Section */}
-        <section id="contact-form" className="py-12 md:py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-3 md:px-4">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <section id="contact-form" className="contact-dark contact-band">
+          <div className="container mx-auto">
+            <div className="contact-grid">
               {/* Contact Form */}
-              <div className="bento-card p-6 md:p-8 h-full flex flex-col">
-                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">Talk to Our Digital Marketing Experts in Bangalore</h2>
+              <div className="contact-form-card h-full flex flex-col">
+                <h2>Talk to Our Digital Marketing Experts in Bangalore</h2>
 
                 <form onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-4" id="contact-form">
                   <div className="grid md:grid-cols-2 gap-4">
