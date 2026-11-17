@@ -55,7 +55,7 @@
     "parent": "/digital-marketing-agency-bangalore",
     "price": 30000
   },
-  "/graphic-design-agency-bangalore": {
+  "/design-agency-bangalore": {
     "name": "Graphic Design & Creative Services",
     "serviceType": "Graphic Design",
     "faqSlug": "design",
@@ -68,7 +68,7 @@
     "serviceType": "UI UX Design",
     "faqSlug": "uiux-design",
     "type": "Service",
-    "parent": "/graphic-design-agency-bangalore",
+    "parent": "/design-agency-bangalore",
     "price": 25000
   },
   "/social-media-design-agency-bangalore": {
@@ -76,7 +76,7 @@
     "serviceType": "Social Media Creative Design",
     "faqSlug": "social-media-design",
     "type": "Service",
-    "parent": "/graphic-design-agency-bangalore",
+    "parent": "/design-agency-bangalore",
     "price": 15000
   },
   "/logo-design-company-bangalore": {
@@ -84,7 +84,7 @@
     "serviceType": "Logo Design",
     "faqSlug": "logo-design",
     "type": "Service",
-    "parent": "/graphic-design-agency-bangalore",
+    "parent": "/design-agency-bangalore",
     "price": 12000
   },
   "/branding-agency-bangalore": {
@@ -92,10 +92,10 @@
     "serviceType": "Branding",
     "faqSlug": "brand-kit",
     "type": "Service",
-    "parent": "/graphic-design-agency-bangalore",
+    "parent": "/design-agency-bangalore",
     "price": 35000
   },
-  "/content-writing-agency-bangalore": {
+  "/content-marketing-agency-bangalore": {
     "name": "Content Writing & Content Marketing",
     "serviceType": "Content Marketing",
     "faqSlug": "content-marketing",
@@ -108,7 +108,7 @@
     "serviceType": "SEO Content Writing",
     "faqSlug": "website-content",
     "type": "Service",
-    "parent": "/content-writing-agency-bangalore",
+    "parent": "/content-marketing-agency-bangalore",
     "price": 10000
   },
   "/blog-writing-services-bangalore": {
@@ -116,7 +116,7 @@
     "serviceType": "Blog Writing",
     "faqSlug": "blog-writing",
     "type": "Service",
-    "parent": "/content-writing-agency-bangalore",
+    "parent": "/content-marketing-agency-bangalore",
     "price": 8000
   },
   "/script-writing-agency-bangalore": {
@@ -124,7 +124,7 @@
     "serviceType": "Script Writing",
     "faqSlug": "script-writing",
     "type": "Service",
-    "parent": "/content-writing-agency-bangalore",
+    "parent": "/content-marketing-agency-bangalore",
     "price": 8000
   },
   "/guest-posting-agency-bangalore": {
@@ -132,10 +132,10 @@
     "serviceType": "Guest Posting & Link Building",
     "faqSlug": "guest-posting",
     "type": "Service",
-    "parent": "/content-writing-agency-bangalore",
+    "parent": "/content-marketing-agency-bangalore",
     "price": 15000
   },
-  "/bulk-sms-services-bangalore": {
+  "/sms-marketing-agency-bangalore": {
     "name": "Bulk SMS Services",
     "serviceType": "Bulk SMS Marketing",
     "faqSlug": "sms-marketing",
@@ -148,7 +148,7 @@
     "serviceType": "WhatsApp Marketing",
     "faqSlug": "whatsapp-business-api",
     "type": "Service",
-    "parent": "/bulk-sms-services-bangalore",
+    "parent": "/sms-marketing-agency-bangalore",
     "price": 10000
   },
   "/chatbot-development-company-bangalore": {
@@ -156,7 +156,7 @@
     "serviceType": "Chatbot Development",
     "faqSlug": "chatbot",
     "type": "Service",
-    "parent": "/bulk-sms-services-bangalore",
+    "parent": "/sms-marketing-agency-bangalore",
     "price": 25000
   },
   "/customer-engagement-agency-bangalore": {
@@ -164,7 +164,7 @@
     "serviceType": "Customer Engagement",
     "faqSlug": "customer-engagement",
     "type": "Service",
-    "parent": "/bulk-sms-services-bangalore",
+    "parent": "/sms-marketing-agency-bangalore",
     "price": 15000
   },
   "/sms-gateway-service-bangalore": {
@@ -172,7 +172,7 @@
     "serviceType": "SMS Gateway",
     "faqSlug": "sms-gateway",
     "type": "Service",
-    "parent": "/bulk-sms-services-bangalore",
+    "parent": "/sms-marketing-agency-bangalore",
     "price": 5000
   },
   "/rcs-messaging-provider-bangalore": {
@@ -180,7 +180,7 @@
     "serviceType": "RCS Messaging",
     "faqSlug": "rcs",
     "type": "Service",
-    "parent": "/bulk-sms-services-bangalore",
+    "parent": "/sms-marketing-agency-bangalore",
     "price": 10000
   },
   "/corporate-video-maker-bangalore": {
@@ -207,7 +207,7 @@
     "parent": "/corporate-video-maker-bangalore",
     "price": 25000
   },
-  "/web-design-company-bangalore": {
+  "/website-design-company-bangalore": {
     "name": "Web Design & Development",
     "serviceType": "Web Design and Development",
     "faqSlug": "web-design",
@@ -220,7 +220,7 @@
     "serviceType": "Web Development",
     "faqSlug": "web-development",
     "type": "Service",
-    "parent": "/web-design-company-bangalore",
+    "parent": "/website-design-company-bangalore",
     "price": 45000
   },
   "/ecommerce-website-development-company-bangalore": {
@@ -228,7 +228,7 @@
     "serviceType": "Ecommerce Website Development",
     "faqSlug": "ecommerce-website",
     "type": "Service",
-    "parent": "/web-design-company-bangalore",
+    "parent": "/website-design-company-bangalore",
     "price": 60000
   },
   "/wordpress-website-development-company-bangalore": {
@@ -236,7 +236,7 @@
     "serviceType": "WordPress Development",
     "faqSlug": "wordpress-website",
     "type": "Service",
-    "parent": "/web-design-company-bangalore",
+    "parent": "/website-design-company-bangalore",
     "price": 30000
   },
   "/website-maintenance-company-bangalore": {
@@ -244,7 +244,7 @@
     "serviceType": "Website Maintenance",
     "faqSlug": "website-maintenance",
     "type": "Service",
-    "parent": "/web-design-company-bangalore",
+    "parent": "/website-design-company-bangalore",
     "price": 8000
   },
   "/our-work": {

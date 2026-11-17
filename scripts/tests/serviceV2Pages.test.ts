@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { serviceV2Pages } from "../../src/data/serviceV2Pages";
 
-const lead = serviceV2Pages.find((p) => p.path === "/lead-generation-agency-bangalore2");
+const lead = serviceV2Pages.find((p) => p.path === "/lead-generation-agency-bangalore");
 
 test("lead gen hero metrics show the supplied figures with ₹16 Cr+ replacing $2M+", () => {
   expect(lead?.heroStats).toEqual([

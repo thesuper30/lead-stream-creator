@@ -159,7 +159,8 @@ const App = () => (
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<Home2 />} />
-<Route path="/homepage2" element={<Home2 />} />
+                <Route path="/homepage" element={<Home2 />} />
+                <Route path="/homepage2" element={<Home />} />
                 <Route path="/homepage3" element={<Home3 />} />
                 <Route path="/internet-marketing-agency" element={<About />} />
                 <Route path="/our-work" element={<Work />} />
@@ -188,39 +189,42 @@ const App = () => (
 
                 {/* Digital Marketing */}
                 <Route path="/digital-marketing-agency-bangalore" element={<DigitalMarketing />} />
-                <Route path="/seo-company-bangalore" element={<AiSeo />} />
-                <Route path="/seo-company-bangalore2" element={<AiSeo2 />} />
-                <Route path="/lead-generation-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/social-media-marketing-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/google-ads-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/design-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/content-marketing-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/website-design-company-bangalore2" element={<ServiceV2 />} />
-                <Route path="/sms-marketing-agency-bangalore2" element={<ServiceV2 />} />
-                <Route path="/lead-generation-agency-bangalore" element={<PerformanceMarketing />} />
-                <Route path="/google-ads-agency-bangalore" element={<GoogleAds />} />
+                <Route path="/seo-company-bangalore" element={<AiSeo2 />} />
+                <Route path="/seo-company-bangalore2" element={<AiSeo />} />
+                <Route path="/lead-generation-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/lead-generation-agency-bangalore2" element={<PerformanceMarketing />} />
+                <Route path="/social-media-marketing-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/social-media-marketing-agency-bangalore2" element={<SocialMediaMarketing />} />
+                <Route path="/google-ads-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/google-ads-agency-bangalore2" element={<GoogleAds />} />
+                <Route path="/design-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/design-agency-bangalore2" element={<Design />} />
+                <Route path="/content-marketing-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/content-marketing-agency-bangalore2" element={<ContentMarketing />} />
+                <Route path="/website-design-company-bangalore" element={<ServiceV2 />} />
+                <Route path="/website-design-company-bangalore2" element={<WebDesign />} />
+                <Route path="/sms-marketing-agency-bangalore" element={<ServiceV2 />} />
+                <Route path="/sms-marketing-agency-bangalore2" element={<SmsMarketing />} />
                 <Route path="/social-media-optimization-services-bangalore" element={<SocialMediaOptimisation />} />
-                <Route path="/social-media-marketing-agency-bangalore" element={<SocialMediaMarketing />} />
                 <Route path="/ecommerce-marketing-agency-bangalore" element={<EcommerceMarketing />} />
 
                 {/* Design */}
-                <Route path="/graphic-design-agency-bangalore" element={<Design />} />
+                <Route path="/graphic-design-agency-bangalore" element={<Navigate to="/design-agency-bangalore" replace />} />
                 <Route path="/ui-ux-design-agency-bangalore" element={<UIUXDesign />} />
                 <Route path="/social-media-design-agency-bangalore" element={<SocialMediaDesign />} />
                 <Route path="/logo-design-company-bangalore" element={<LogoDesign />} />
                 <Route path="/branding-agency-bangalore" element={<BrandKit />} />
 
                 {/* Content */}
-                <Route path="/content-writing-agency-bangalore" element={<ContentMarketing />} />
-                <Route path="/content-marketing-agency-bangalore" element={<Navigate to="/content-writing-agency-bangalore" replace />} />
+                <Route path="/content-writing-agency-bangalore" element={<Navigate to="/content-marketing-agency-bangalore" replace />} />
                 <Route path="/seo-content-writing-company-bangalore" element={<WebsiteContent />} />
                 <Route path="/blog-writing-services-bangalore" element={<BlogWriting />} />
                 <Route path="/script-writing-agency-bangalore" element={<ScriptWriting />} />
                 <Route path="/guest-posting-agency-bangalore" element={<GuestPosting />} />
 
                 {/* SMS & Messaging */}
-                <Route path="/bulk-sms-services-bangalore" element={<SmsMarketing />} />
-                <Route path="/bulk-sms-marketing-agency-bangalore" element={<Navigate to="/bulk-sms-services-bangalore" replace />} />
+                <Route path="/bulk-sms-services-bangalore" element={<Navigate to="/sms-marketing-agency-bangalore" replace />} />
+                <Route path="/bulk-sms-marketing-agency-bangalore" element={<Navigate to="/sms-marketing-agency-bangalore" replace />} />
                 <Route path="/whatsapp-marketing-company-bangalore" element={<WhatsappBusinessApi />} />
                 <Route path="/chatbot-development-company-bangalore" element={<Chatbot />} />
                 <Route path="/customer-engagement-agency-bangalore" element={<CustomerEngagement />} />
@@ -234,7 +238,7 @@ const App = () => (
                 <Route path="/photography-services-bangalore" element={<Photography />} />
 
                 {/* Website */}
-                <Route path="/web-design-company-bangalore" element={<WebDesign />} />
+                <Route path="/web-design-company-bangalore" element={<Navigate to="/website-design-company-bangalore" replace />} />
                 <Route path="/web-development-company-bangalore" element={<WebDevelopment />} />
                 <Route path="/ecommerce-website-development-company-bangalore" element={<EcommerceWebsite />} />
                 <Route path="/wordpress-website-development-company-bangalore" element={<WordpressWebsite />} />
@@ -256,7 +260,7 @@ const App = () => (
                 <Route path="/social-media-post-design" element={<Navigate to="/social-media-design-agency-bangalore" replace />} />
                 <Route path="/google-ads" element={<Navigate to="/google-ads-agency-bangalore" replace />} />
                 <Route path="/social-media-optimisation" element={<Navigate to="/social-media-optimization-services-bangalore" replace />} />
-                <Route path="/design" element={<Navigate to="/graphic-design-agency-bangalore" replace />} />
+                <Route path="/design" element={<Navigate to="/design-agency-bangalore" replace />} />
                 <Route path="/ui-ux-design" element={<Navigate to="/ui-ux-design-agency-bangalore" replace />} />
                 <Route path="/logo-design" element={<Navigate to="/logo-design-company-bangalore" replace />} />
                 <Route path="/brand-kit" element={<Navigate to="/branding-agency-bangalore" replace />} />
@@ -272,7 +276,7 @@ const App = () => (
                 <Route path="/rcs" element={<Navigate to="/rcs-messaging-provider-bangalore" replace />} />
                 <Route path="/video-production" element={<Navigate to="/video-production-agency-bangalore" replace />} />
                 <Route path="/photography" element={<Navigate to="/photography-services-bangalore" replace />} />
-                <Route path="/web-design-development" element={<Navigate to="/web-design-company-bangalore" replace />} />
+                <Route path="/web-design-development" element={<Navigate to="/website-design-company-bangalore" replace />} />
                 <Route path="/ecommerce-website" element={<Navigate to="/ecommerce-website-development-company-bangalore" replace />} />
                 <Route path="/ecommerce-website-development-bangalore" element={<Navigate to="/ecommerce-website-development-company-bangalore" replace />} />
                 <Route path="/wordpress-website" element={<Navigate to="/wordpress-website-development-company-bangalore" replace />} />

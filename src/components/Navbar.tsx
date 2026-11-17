@@ -27,16 +27,16 @@ const menuItems: NavMenuItem[] = [
     label: "Digital Marketing",
     href: "/digital-marketing-agency-bangalore",
     items: [
-      { label: "SEO Services", href: "/seo-company-bangalore2" },
-      { label: "Lead Generation", href: "/lead-generation-agency-bangalore2" },
-      { label: "Social Media Marketing", href: "/social-media-marketing-agency-bangalore2" },
-      { label: "Google Ads", href: "/google-ads-agency-bangalore2" },
+      { label: "SEO Services", href: "/seo-company-bangalore" },
+      { label: "Lead Generation", href: "/lead-generation-agency-bangalore" },
+      { label: "Social Media Marketing", href: "/social-media-marketing-agency-bangalore" },
+      { label: "Google Ads", href: "/google-ads-agency-bangalore" },
     ],
   },
-  { label: "Design", href: "/design-agency-bangalore2" },
-  { label: "Content Marketing", href: "/content-marketing-agency-bangalore2" },
-  { label: "Website Design", href: "/website-design-company-bangalore2" },
-  { label: "SMS & WhatsApp", href: "/sms-marketing-agency-bangalore2" },
+  { label: "Design", href: "/design-agency-bangalore" },
+  { label: "Content Marketing", href: "/content-marketing-agency-bangalore" },
+  { label: "Website Design", href: "/website-design-company-bangalore" },
+  { label: "SMS & WhatsApp", href: "/sms-marketing-agency-bangalore" },
   { label: "Our Work", href: "/our-work" },
   { label: "Team S30", href: "/internet-marketing-agency" },
 ];
@@ -87,7 +87,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center shrink-0">
+          <Link to="/homepage" className="flex items-center shrink-0">
             <img
               src={super30Logo}
               alt="The Super 30 — AI SEO Agency Bangalore"
@@ -136,7 +136,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                   )
                 ) : (
                   <Link
-                    to={item.href || "/"}
+                    to={item.href || "/homepage"}
                     className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 block ${
                       location.pathname === item.href
                         ? "text-[hsl(var(--brand-orange))]"
@@ -332,7 +332,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                   </>
                 ) : (
                   <Link
-                    to={item.href || "/"}
+                    to={item.href || "/homepage"}
                     className={`block px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
                       location.pathname === item.href
                         ? "text-[hsl(var(--brand-orange))] bg-[hsl(var(--brand-orange))]/10"

@@ -40,7 +40,7 @@ const whyBase = (focus: string) => [
 
 export const serviceV2Pages: ServiceV2Config[] = [
   {
-    path: "/lead-generation-agency-bangalore2",
+    path: "/lead-generation-agency-bangalore",
     seo: { title: "Lead Generation Agency in Bangalore | B2B Leads That Convert", description: "Trusted lead generation company in Bangalore helping B2B businesses attract & convert high-value leads. Real pipeline growth & measurable results. Let's Talk!", canonical: "/lead-generation-agency-bangalore" },
     ctaLabel: "Get My Free Lead Gen Audit",
     hero: { tags: "Lead Generation · Paid Ads · Funnels · CRM", title: "Lead Generation Agency in Bangalore. Turn Clicks into Qualified", highlight: "Leads", sub: "We deliver data-backed lead generation services in Bangalore that turn high-intent clicks into sales-qualified enquiries and revenue." },
@@ -119,7 +119,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our lead generation experts", highlight: "Lead Gen Experts", text: "Performance marketers, funnel strategists, designers and analysts — one focused team working to fill your pipeline." },
   },
   {
-    path: "/social-media-marketing-agency-bangalore2",
+    path: "/social-media-marketing-agency-bangalore",
     seo: { title: "Social Media Marketing Agency in Bangalore | SMM Services", description: "Social media marketing agency in Bangalore offering content, reels, paid social and community management that grow reach, engagement and leads.", canonical: "/social-media-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Social Audit",
     hero: { tags: "Instagram · LinkedIn · YouTube · Meta Ads", title: "Social Media Marketing Agency in Bangalore. Scale Your Digital", highlight: "Presence", sub: "Strategy, scroll-stopping creatives, reels and paid social campaigns that turn followers into leads and customers." },
@@ -178,7 +178,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our social media experts", highlight: "Social Media Experts", text: "Strategists, designers, video editors and paid social specialists — one focused team growing your brand on every platform." },
   },
   {
-    path: "/google-ads-agency-bangalore2",
+    path: "/google-ads-agency-bangalore",
     seo: { title: "Google Ads Agency in Bangalore | PPC Service | Upto 10X ROAS", description: "Google Ads agency in Bangalore running Search, Shopping, YouTube and Performance Max campaigns focused on ROAS, lower CPC and qualified leads.", canonical: "/google-ads-agency-bangalore" },
     ctaLabel: "Get My Free Google Ads Audit",
     hero: { tags: "Search · Shopping · YouTube · Performance Max", title: "Google Ads Agency in Bangalore. Turn Ad Spend into Real", highlight: "ROAS", sub: "Data-driven Google Ads campaigns that reach high-intent buyers, cut wasted spend and deliver measurable leads and sales." },
@@ -237,8 +237,8 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our Google Ads experts", highlight: "Google Ads Experts", text: "PPC strategists, copywriters, designers and analysts — one focused team making your ad spend profitable." },
   },
   {
-    path: "/design-agency-bangalore2",
-    seo: { title: "Design Agency in Bangalore | UI/UX, Branding, Video & Photography", description: "Creative design company in Bangalore for UI/UX, brand identity, video production and photography. 100+ brands, 98% satisfaction. Let's Connect!", canonical: "/graphic-design-agency-bangalore" },
+    path: "/design-agency-bangalore",
+    seo: { title: "Design Agency in Bangalore | UI/UX, Branding, Video & Photography", description: "Creative design company in Bangalore for UI/UX, brand identity, video production and photography. 100+ brands, 98% satisfaction. Let's Connect!", canonical: "/design-agency-bangalore" },
     ctaLabel: "Start My Design Project",
     hero: { tags: "UI/UX · Branding · Video · Photography", title: "Design Agency in Bangalore. Give Your Brand a Bold", highlight: "Identity", sub: "UI/UX, brand identity, video production and photography under one roof — creative that looks premium and performs." },
     about: { eyebrow: "Your creative partner", title: "The Best Design Agency", highlight: "for Brands That Want to Stand Out.", text: "At The Super 30, designers, video producers and photographers work together to create a consistent, premium brand experience across every touchpoint.", bullets: ["Brand-First Design Across Every Channel", "In-House Video & Photography Production", "Fast Iterations Until You're 100% Happy"], imageAlt: "Designers working on brand concepts" },
@@ -296,8 +296,8 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our creative experts", highlight: "Creative Experts", text: "Designers, video editors, photographers and creative directors — one focused team crafting your brand." },
   },
   {
-    path: "/content-marketing-agency-bangalore2",
-    seo: { title: "Content Marketing Agency in Bangalore | Website, Blogs, Scripts & PR", description: "Content marketing agency in Bangalore for website content, SEO blogs, scripts, articles and PR that rank, engage and convert.", canonical: "/content-writing-agency-bangalore" },
+    path: "/content-marketing-agency-bangalore",
+    seo: { title: "Content Marketing Agency in Bangalore | Website, Blogs, Scripts & PR", description: "Content marketing agency in Bangalore for website content, SEO blogs, scripts, articles and PR that rank, engage and convert.", canonical: "/content-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Content Audit",
     hero: { tags: "Website Content · Blogs · Scripts · PR", title: "Content Marketing Agency in Bangalore. Words That Rank and", highlight: "Convert", sub: "Website content, SEO blogs, video scripts, articles and PR that build authority, drive traffic and turn readers into customers." },
     about: { eyebrow: "Your content partner", title: "The Best Content Marketing Agency", highlight: "for Authority & Growth.", text: "At The Super 30, we combine keyword research, AI-powered research and expert human writing to produce content that ranks on Google, gets cited by AI and converts.", bullets: ["Content Strategy Built Around Search Intent", "Expert Writers Across Web, Blog, Script & PR", "Consistent Publishing with Performance Tracking"], imageAlt: "Content team planning an editorial calendar" },
@@ -355,8 +355,8 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our content experts", highlight: "Content Experts", text: "Strategists, SEO writers, scriptwriters and editors — one focused team telling your brand story everywhere." },
   },
   {
-    path: "/website-design-company-bangalore2",
-    seo: { title: "Website Design Company in Bangalore | E-commerce, WordPress & Custom", description: "Website design company in Bangalore building e-commerce, WordPress and custom-coded websites that are fast, SEO-ready and built to convert.", canonical: "/web-design-company-bangalore" },
+    path: "/website-design-company-bangalore",
+    seo: { title: "Website Design Company in Bangalore | E-commerce, WordPress & Custom", description: "Website design company in Bangalore building e-commerce, WordPress and custom-coded websites that are fast, SEO-ready and built to convert.", canonical: "/website-design-company-bangalore" },
     ctaLabel: "Get My Free Website Audit",
     hero: { tags: "E-commerce · WordPress · Custom Coded", title: "Website Design Company in Bangalore. Websites Built to", highlight: "Convert", sub: "E-commerce stores, WordPress sites and custom-coded websites that are fast, responsive, SEO-ready and designed for growth." },
     about: { eyebrow: "Your website partner", title: "The Best Website Design Company", highlight: "for Business Growth.", text: "At The Super 30, we design and develop websites that strengthen your credibility, load fast, rank on search and turn visitors into enquiries and sales.", bullets: ["Conversion-Focused Design for Every Page", "E-commerce, WordPress & Custom Development", "SEO-Ready, Fast and Fully Responsive"], imageAlt: "Web designers reviewing a website layout" },
@@ -414,8 +414,8 @@ export const serviceV2Pages: ServiceV2Config[] = [
     team: { eyebrow: "Our website experts", highlight: "Website Experts", text: "UI/UX designers, developers, SEO specialists and project managers — one focused team building your website." },
   },
   {
-    path: "/sms-marketing-agency-bangalore2",
-    seo: { title: "SMS & WhatsApp Marketing Company in Bangalore | Customer Engagement", description: "Bulk SMS, WhatsApp Business API, RCS and customer engagement platforms in Bangalore that reach customers instantly and drive conversions.", canonical: "/bulk-sms-services-bangalore" },
+    path: "/sms-marketing-agency-bangalore",
+    seo: { title: "SMS & WhatsApp Marketing Company in Bangalore | Customer Engagement", description: "Bulk SMS, WhatsApp Business API, RCS and customer engagement platforms in Bangalore that reach customers instantly and drive conversions.", canonical: "/sms-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Messaging Audit",
     hero: { tags: "Bulk SMS · WhatsApp · RCS · Chatbots", title: "SMS & WhatsApp Marketing Company in Bangalore. Reach Customers", highlight: "Instantly", sub: "Bulk SMS, WhatsApp Business API, RCS and customer engagement automation that deliver faster replies, higher engagement and more conversions." },
     about: { eyebrow: "Your messaging partner", title: "The Best SMS & WhatsApp Marketing Company", highlight: "for Customer Engagement.", text: "At The Super 30, we set up compliant messaging, automate customer journeys and run targeted campaigns across SMS, WhatsApp and RCS that customers actually open.", bullets: ["DLT-Compliant SMS & Meta-Approved WhatsApp", "Automated Journeys Across Every Channel", "Live Delivery, Click and Conversion Reporting"], imageAlt: "Customer engagement team managing messaging campaigns" },

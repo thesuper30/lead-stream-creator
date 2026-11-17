@@ -100,7 +100,7 @@ const Stars = ({ light }: { light?: boolean }) => (
 export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
   const [open, setOpen] = useState(false);
   const cta = () => setOpen(true);
-  const pageLogos = c.path === "/lead-generation-agency-bangalore2" ? pdfClientLogos : logos;
+  const pageLogos = c.path === "/lead-generation-agency-bangalore" ? pdfClientLogos : logos;
   const svcCols = c.services.length % 5 === 0 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
@@ -108,7 +108,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
       <Helmet>
         <title>{c.seo.title}</title>
         <meta name="description" content={c.seo.description} />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://www.thesuper30.ai${c.seo.canonical}`} />
         <meta property="og:title" content={c.seo.title} />
         <meta property="og:description" content={c.seo.description} />

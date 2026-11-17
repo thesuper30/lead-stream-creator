@@ -7,11 +7,11 @@
     "ogDescription": "From strategy to execution, Super 30 delivers proven 10x revenue growth. Book your free call now!",
     "twitterTitle": "Stop Guessing. Start Growing With AI-Powered Marketing.",
     "twitterDescription": "From strategy to execution, Super 30 delivers proven 10x revenue growth. Book your free call now!",
-    "canonical": "https://www.thesuper30.ai/",
+    "canonical": "https://www.thesuper30.ai/homepage",
     "robots": "index, follow",
     "ogType": "website",
     "twitterCard": "summary_large_image",
-    "ogUrl": "https://www.thesuper30.ai/"
+    "ogUrl": "https://www.thesuper30.ai/homepage"
   },
   "/internet-marketing-agency": {
     "title": "Internet Marketing Agency With 30+ Digital Marketing Experts",
@@ -153,20 +153,6 @@
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/ecommerce-marketing-agency-bangalore"
   },
-  "/graphic-design-agency-bangalore": {
-    "title": "Design Agency in Bangalore | Graphic Design Services",
-    "description": "Give your brand a bold identity with a creative design company in Bangalore. Expert graphic design services. 100+ brands, 98% satisfaction. Let's Connect!",
-    "keywords": "graphic design agency in bangalore, design agency in bangalore, design company in bangalore, graphic design services in bangalore, graphic design company in bangalore, Creative design agency in Bangalore",
-    "ogTitle": "100+ Brands Designed. Yours Could Be Next in Line.",
-    "ogDescription": "Bold visuals. Strong brand identity. Graphic design that makes your brand impossible to scroll past!",
-    "twitterTitle": "100+ Brands Designed. Yours Could Be Next in Line.",
-    "twitterDescription": "Bold visuals. Strong brand identity. Graphic design that makes your brand impossible to scroll past!",
-    "canonical": "https://www.thesuper30.ai/graphic-design-agency-bangalore",
-    "robots": "index, follow",
-    "ogType": "website",
-    "twitterCard": "summary_large_image",
-    "ogUrl": "https://www.thesuper30.ai/graphic-design-agency-bangalore"
-  },
   "/ui-ux-design-agency-bangalore": {
     "title": "UI UX Design Agency in Bangalore | Best UX Design Company",
     "description": "UI UX design company in Bangalore focused on creating experiences users love. We design simple and user friendly apps and websites that convert. Let’s build!",
@@ -223,20 +209,6 @@
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/branding-agency-bangalore"
   },
-  "/content-writing-agency-bangalore": {
-    "title": "Copywriting & Content Writing Agency in Bangalore",
-    "description": "Copywriting done by experienced writers, customized for your business. Content writing services in Bangalore that build authority and trust for brands.",
-    "keywords": "content writing services in bangalore, content writing agency in bangalore, content marketing services in bangalore, content writing company in bangalore",
-    "ogTitle": "Great Content Brings the Right Audience to Your Business.",
-    "ogDescription": "SEO-ready content and marketing copy that attract the right audience and drive growth. Let's write!",
-    "twitterTitle": "Great Content Brings the Right Audience to Your Business.",
-    "twitterDescription": "SEO-ready content and marketing copy that attract the right audience and drive growth. Let's write!",
-    "canonical": "https://www.thesuper30.ai/content-writing-agency-bangalore",
-    "robots": "index, follow",
-    "ogType": "website",
-    "twitterCard": "summary_large_image",
-    "ogUrl": "https://www.thesuper30.ai/content-writing-agency-bangalore"
-  },
   "/seo-content-writing-company-bangalore": {
     "title": "SEO Content Writing company in Bangalore | Copy That Ranks",
     "description": "SEO Optimize semantic website content that ranks & converts. Structured SEO copywriting services in Bangalore deliver website content for search engine",
@@ -292,20 +264,6 @@
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/guest-posting-agency-bangalore"
-  },
-  "/bulk-sms-services-bangalore": {
-    "title": "Bulk SMS marketing company in Bangalore | Reach More Customers Fast",
-    "description": "Reach thousands instantly with bulk SMS services in Bangalore. We deliver promotional and transactional messages with high open rates. Let's Connect!",
-    "keywords": "bulk sms services in bangalore, bulk sms marketing company in bangalore, bulk sms service provider in bangalore, bulk sms marketing services in bangalore, bulk sms provider in bangalore",
-    "ogTitle": "Reach Thousands of Customers With One Click. That Simple.",
-    "ogDescription": "Promotional & transactional bulk SMS that reach thousands with high open rates. Let's connect!",
-    "twitterTitle": "Reach Thousands of Customers With One Click. That Simple.",
-    "twitterDescription": "Promotional & transactional bulk SMS that reach thousands with high open rates. Let's connect!",
-    "canonical": "https://www.thesuper30.ai/bulk-sms-services-bangalore",
-    "robots": "index, follow",
-    "ogType": "website",
-    "twitterCard": "summary_large_image",
-    "ogUrl": "https://www.thesuper30.ai/bulk-sms-services-bangalore"
   },
   "/whatsapp-marketing-company-bangalore": {
     "title": "WhatsApp Marketing in Bangalore | Bulk WhatsApp Services",
@@ -419,20 +377,6 @@
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/photography-services-bangalore"
   },
-  "/web-design-company-bangalore": {
-    "title": "Web Design Company in Bangalore | Custom Website Design",
-    "description": "Looking for a website designing agency in Bangalore? We build custom, E-Commerce and responsive sites. 50+ delivered, 98% satisfaction. Let's Build!",
-    "keywords": "web design company in bangalore, website design services in bangalore, website designing agency in bangalore, Custom website designing in bangalore",
-    "ogTitle": "Your Website Should Work for You. Not Against You.",
-    "ogDescription": "Custom and responsive websites built to convert. 50+ projects, 98% satisfaction. Let's build yours!",
-    "twitterTitle": "Your Website Should Work for You. Not Against You.",
-    "twitterDescription": "Custom and responsive websites built to convert. 50+ projects, 98% satisfaction. Let's build yours!",
-    "canonical": "https://www.thesuper30.ai/web-design-company-bangalore",
-    "robots": "index, follow",
-    "ogType": "website",
-    "twitterCard": "summary_large_image",
-    "ogUrl": "https://www.thesuper30.ai/web-design-company-bangalore"
-  },
   "/web-development-company-bangalore": {
     "title": "Web Development Company in Bangalore | Custom Web Solutions",
     "description": "Build a website that performs. Our web development agency in Bangalore creates fast, scalable websites built for your business goals. Let's Build!",
@@ -502,5 +446,75 @@
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/digital-marketing-for-coaching-institutes"
+  },
+  "/homepage": {
+    "title": "Digital Marketing Agency & AI Growth Company | TheSuper30",
+    "description": "A leading AI-driven digital marketing agency helping businesses achieve real ROI and scalable growth with proven strategies. Book a free consultation now.",
+    "keywords": "Digital Marketing Agency, Digital Marketing Company, AI digital marketing agency, AI Digital Marketing Company, AI based digital marketing agency",
+    "ogTitle": "Stop Guessing. Start Growing With AI-Powered Marketing.",
+    "ogDescription": "From strategy to execution, Super 30 delivers proven 10x revenue growth. Book your free call now!",
+    "twitterTitle": "Stop Guessing. Start Growing With AI-Powered Marketing.",
+    "twitterDescription": "From strategy to execution, Super 30 delivers proven 10x revenue growth. Book your free call now!",
+    "canonical": "https://www.thesuper30.ai/homepage",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/homepage"
+  },
+  "/design-agency-bangalore": {
+    "title": "Design Agency in Bangalore | Graphic Design Services",
+    "description": "Give your brand a bold identity with a creative design company in Bangalore. Expert graphic design services. 100+ brands, 98% satisfaction. Let's Connect!",
+    "keywords": "graphic design agency in bangalore, design agency in bangalore, design company in bangalore, graphic design services in bangalore, graphic design company in bangalore, Creative design agency in Bangalore",
+    "ogTitle": "100+ Brands Designed. Yours Could Be Next in Line.",
+    "ogDescription": "Bold visuals. Strong brand identity. Graphic design that makes your brand impossible to scroll past!",
+    "twitterTitle": "100+ Brands Designed. Yours Could Be Next in Line.",
+    "twitterDescription": "Bold visuals. Strong brand identity. Graphic design that makes your brand impossible to scroll past!",
+    "canonical": "https://www.thesuper30.ai/design-agency-bangalore",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/design-agency-bangalore"
+  },
+  "/content-marketing-agency-bangalore": {
+    "title": "Copywriting & Content Writing Agency in Bangalore",
+    "description": "Copywriting done by experienced writers, customized for your business. Content writing services in Bangalore that build authority and trust for brands.",
+    "keywords": "content writing services in bangalore, content writing agency in bangalore, content marketing services in bangalore, content writing company in bangalore",
+    "ogTitle": "Great Content Brings the Right Audience to Your Business.",
+    "ogDescription": "SEO-ready content and marketing copy that attract the right audience and drive growth. Let's write!",
+    "twitterTitle": "Great Content Brings the Right Audience to Your Business.",
+    "twitterDescription": "SEO-ready content and marketing copy that attract the right audience and drive growth. Let's write!",
+    "canonical": "https://www.thesuper30.ai/content-marketing-agency-bangalore",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/content-marketing-agency-bangalore"
+  },
+  "/website-design-company-bangalore": {
+    "title": "Web Design Company in Bangalore | Custom Website Design",
+    "description": "Looking for a website designing agency in Bangalore? We build custom, E-Commerce and responsive sites. 50+ delivered, 98% satisfaction. Let's Build!",
+    "keywords": "web design company in bangalore, website design services in bangalore, website designing agency in bangalore, Custom website designing in bangalore",
+    "ogTitle": "Your Website Should Work for You. Not Against You.",
+    "ogDescription": "Custom and responsive websites built to convert. 50+ projects, 98% satisfaction. Let's build yours!",
+    "twitterTitle": "Your Website Should Work for You. Not Against You.",
+    "twitterDescription": "Custom and responsive websites built to convert. 50+ projects, 98% satisfaction. Let's build yours!",
+    "canonical": "https://www.thesuper30.ai/website-design-company-bangalore",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/website-design-company-bangalore"
+  },
+  "/sms-marketing-agency-bangalore": {
+    "title": "Bulk SMS marketing company in Bangalore | Reach More Customers Fast",
+    "description": "Reach thousands instantly with bulk SMS services in Bangalore. We deliver promotional and transactional messages with high open rates. Let's Connect!",
+    "keywords": "bulk sms services in bangalore, bulk sms marketing company in bangalore, bulk sms service provider in bangalore, bulk sms marketing services in bangalore, bulk sms provider in bangalore",
+    "ogTitle": "Reach Thousands of Customers With One Click. That Simple.",
+    "ogDescription": "Promotional & transactional bulk SMS that reach thousands with high open rates. Let's connect!",
+    "twitterTitle": "Reach Thousands of Customers With One Click. That Simple.",
+    "twitterDescription": "Promotional & transactional bulk SMS that reach thousands with high open rates. Let's connect!",
+    "canonical": "https://www.thesuper30.ai/sms-marketing-agency-bangalore",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/sms-marketing-agency-bangalore"
   }
 }

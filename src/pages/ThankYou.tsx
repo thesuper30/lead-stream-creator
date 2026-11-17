@@ -300,7 +300,7 @@ For questions, contact: thesuper30.ai@gmail.com
                 </div>
 
                 <Button asChild className="bg-brand-gradient hover:opacity-90">
-                  <a href="/">Explore Our Services <ArrowRight className="w-4 h-4 ml-2" /></a>
+                  <a href="/homepage">Explore Our Services <ArrowRight className="w-4 h-4 ml-2" /></a>
                 </Button>
               </div>
             </div>

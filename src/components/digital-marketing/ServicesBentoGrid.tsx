@@ -11,11 +11,11 @@ import emailImg from "@/assets/services/email-content.jpg";
 
 const services = [
   { title: "Digital Marketing", description: "Dominate Google rankings with data-driven SEO. We deliver 300% average traffic growth for Bangalore businesses.", href: "/seo-company-bangalore", image: seoImg },
-  { title: "Design Services", description: "Brand identity, social creatives, and marketing collaterals that make your business stand out from competition.", href: "/design", image: brandImg },
-  { title: "Content Marketing", description: "Automated email sequences, lead nurturing funnels, and content that turns visitors into loyal customers.", href: "/contact", image: emailImg },
-  { title: "SMS & Messaging", description: "WhatsApp Business API, SMS Gateway, and RCS campaigns that reach your audience instantly with 98% open rates.", href: "/whatsapp-business-api-bangalore", image: leadGenImg },
+  { title: "Design Services", description: "Brand identity, social creatives, and marketing collaterals that make your business stand out from competition.", href: "/design-agency-bangalore", image: brandImg },
+  { title: "Content Marketing", description: "Automated email sequences, lead nurturing funnels, and content that turns visitors into loyal customers.", href: "/content-marketing-agency-bangalore", image: emailImg },
+  { title: "SMS & Messaging", description: "WhatsApp Business API, SMS Gateway, and RCS campaigns that reach your audience instantly with 98% open rates.", href: "/sms-marketing-agency-bangalore", image: leadGenImg },
   { title: "Production Studio", description: "Content calendars, community management, and viral short-form video strategies for Bangalore's audience.", href: "/video-production-agency-bangalore", image: socialImg },
-  { title: "Website Design", description: "High-converting, responsive websites optimized for speed and SEO — built in-house in Bangalore.", href: "/web-design-company-bangalore", image: webImg },
+  { title: "Website Design", description: "High-converting, responsive websites optimized for speed and SEO — built in-house in Bangalore.", href: "/website-design-company-bangalore", image: webImg },
 ];
 
 const ServiceRow = ({ service, index }: { service: typeof services[0]; index: number }) => {

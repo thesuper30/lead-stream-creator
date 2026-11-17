@@ -8,9 +8,9 @@ const services = [
   { name: "Digital Marketing", href: "/digital-marketing-agency-bangalore" },
   { name: "AI SEO", href: "/seo-company-bangalore" },
   { name: "Lead Generation", href: "/lead-generation-agency-bangalore" },
-  { name: "Social Media", href: "/social-media-design-agency-bangalore" },
-  { name: "Design", href: "/graphic-design-agency-bangalore" },
-  { name: "Web Design", href: "/web-design-company-bangalore" },
+  { name: "Social Media", href: "/social-media-marketing-agency-bangalore" },
+  { name: "Design", href: "/design-agency-bangalore" },
+  { name: "Web Design", href: "/website-design-company-bangalore" },
 ];
 
 const company = [
@@ -39,7 +39,7 @@ const serviceGroups: { title: string; href: string; links: { name: string; href:
   },
   {
     title: "Design",
-    href: "/graphic-design-agency-bangalore",
+    href: "/design-agency-bangalore",
     links: [
       { name: "UI / UX Design", href: "/ui-ux-design-agency-bangalore" },
       { name: "Social Media Posts", href: "/social-media-design-agency-bangalore" },
@@ -49,7 +49,7 @@ const serviceGroups: { title: string; href: string; links: { name: string; href:
   },
   {
     title: "Content",
-    href: "/content-writing-agency-bangalore",
+    href: "/content-marketing-agency-bangalore",
     links: [
       { name: "Website Content", href: "/seo-content-writing-company-bangalore" },
       { name: "Blog Writing", href: "/blog-writing-services-bangalore" },
@@ -59,7 +59,7 @@ const serviceGroups: { title: string; href: string; links: { name: string; href:
   },
   {
     title: "SMS & Messaging",
-    href: "/bulk-sms-services-bangalore",
+    href: "/sms-marketing-agency-bangalore",
     links: [
       { name: "WhatsApp Business API", href: "/whatsapp-marketing-company-bangalore" },
       { name: "Chatbot Development", href: "/chatbot-development-company-bangalore" },
@@ -78,7 +78,7 @@ const serviceGroups: { title: string; href: string; links: { name: string; href:
   },
   {
     title: "Website",
-    href: "/web-design-company-bangalore",
+    href: "/website-design-company-bangalore",
     links: [
       { name: "Web Development", href: "/web-development-company-bangalore" },
       { name: "Ecommerce Website", href: "/ecommerce-website-development-company-bangalore" },
@@ -125,7 +125,7 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 mb-12">
           {/* Column 1: Company Branding */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center mb-4 group">
+            <Link to="/homepage" className="flex items-center mb-4 group">
               <img 
                 src={super30FooterLogo} 
                 alt="The Super 30 — AI SEO Agency Bangalore" 
