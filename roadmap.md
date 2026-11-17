@@ -1,5 +1,10 @@
 # Our Work 2
 
+# Main page URL migration
+
+- [ ] Move latest designs to the requested main URLs and preserve older designs at suffixed URLs
+- [ ] Update navigation, internal links, redirects and SEO references; verify all nine destinations
+
 - [x] Create `/our-work2` with an alternate light/dark design while preserving all portfolio content
 - [x] Verify portfolio tabs, report opening, and desktop/mobile layouts without changing `/our-work`
 
