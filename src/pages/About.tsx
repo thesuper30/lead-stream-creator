@@ -12,6 +12,8 @@ import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 import { CultureSection } from "@/components/about/CultureSection";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/home-agency-team.jpg";
+import strategyImage from "@/assets/home-strategy-session.jpg";
+import workspaceImage from "@/assets/seo-real-growth-workspace.jpg";
 import "./About.css";
 import {
   ArrowRight,
@@ -22,7 +24,6 @@ import {
   Shield,
   Heart,
   CheckCircle2,
-  Sparkles,
   Play,
 } from "lucide-react";
 
@@ -80,33 +81,56 @@ const About = () => {
       <main className="about-page min-h-screen pt-16 md:pt-20">
         <section id="about-hero" className="about-hero">
           <img src={heroImage} alt="The digital marketing team collaborating on a growth strategy" fetchPriority="high" />
-          <div className="container mx-auto py-16 md:py-24">
-            <p className="about-eyebrow">— 10+ Years of Excellence</p>
-            <h1>The Best <span className="text-brand">Digital Marketing Experts</span> Driving Measurable Business Growth</h1>
-            <p className="about-hero-description mt-6 text-base md:text-lg leading-relaxed">Success in today's digital landscape requires more than marketing tools. Our team of digital marketing experts combines industry experience, strategic insights, and performance driven execution to help businesses increase visibility, generate quality leads, and achieve sustainable growth.</p>
-            <div className="flex flex-col sm:flex-row gap-3 mt-8">
-              <Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us"><Users className="mr-2 h-4 w-4" />Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
-              <Button asChild size="lg" variant="outline" className="about-outline rounded-full"><Link to="/our-work"><Play className="mr-2 h-4 w-4" />See Our Work<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
-            </div>
-            <div className="about-proof">
-              {[{ icon: Target, text: "300+ Projects" }, { icon: Award, text: "₹50Cr+ Revenue" }, { icon: Users, text: "50+ Clients" }, { icon: Shield, text: "AI-Powered Strategy" }].map(signal => <span key={signal.text}><signal.icon className="h-4 w-4 shrink-0 text-brand" />{signal.text}</span>)}
-            </div>
-            <div className="about-credentials">{["Ex-Google Experts", "AI-Powered Solutions", "Results-Driven"].map(cred => <span key={cred}>{cred}</span>)}</div>
+          <div className="container mx-auto">
+            <p className="about-eyebrow">— THE SUPER 30</p>
+            <h1>About Us<span className="text-brand">.</span></h1>
+            <nav aria-label="Breadcrumb" className="about-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>About Us</span></nav>
           </div>
         </section>
-        <div className="about-light about-brands"><ClientLogosSection /></div>
-        <section id="about-mission" className="about-dark about-band">
-          <div className="container mx-auto about-mission-grid">
+
+        <section id="about-intro" className="about-light about-band">
+          <div className="container mx-auto about-intro-grid">
+            <div className="about-intro-photo">
+              <img src={workspaceImage} alt="Digital marketing specialists working on a campaign" loading="lazy" />
+              <div className="about-photo-note"><Award className="text-brand h-7 w-7" /><div><strong>10+ Years</strong><span>of Excellence</span></div></div>
+            </div>
             <div>
-              <p className="about-eyebrow">— Our Mission</p>
-              <h2 className="mb-6">A Human-Driven Internet Marketing Agency for the <span className="text-brand">AI Era</span></h2>
-              <p className="text-muted-foreground mb-4 leading-relaxed">We believe that a great internet marketing agency should act as a true partner to your business. Our online marketing agency works with total transparency and passion to turn complex growth goals into measurable results.</p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">Our internet marketing company combines ex-Google expertise with proprietary AI tools to deliver enterprise-grade results at founder-friendly prices.</p>
-              <ul className="grid sm:grid-cols-2 gap-4">{["No long-term lock-ins", "Transparent pricing", "Results-based approach", "AI + Human expertise"].map(item => <li key={item} className="flex gap-3 items-center"><CheckCircle2 className="h-5 w-5 shrink-0 text-brand" />{item}</li>)}</ul>
+              <p className="about-eyebrow">— PEOPLE. STRATEGY. GROWTH.</p>
+              <h2>The Best <span className="text-brand">Digital Marketing Experts</span> Driving Measurable Business Growth</h2>
+              <p className="about-copy">Success in today's digital landscape requires more than marketing tools. Our team of digital marketing experts combines industry experience, strategic insights, and performance driven execution to help businesses increase visibility, generate quality leads, and achieve sustainable growth.</p>
+              <div className="about-intro-details">
+                <div className="about-mini-stats"><div><strong>300+</strong><span>Projects</span></div><div><strong>50+</strong><span>Clients</span></div></div>
+                <ul className="about-checks">{["Ex-Google Experts", "AI-Powered Solutions", "Results-Driven"].map(item => <li key={item}><CheckCircle2 className="h-4 w-4 text-brand shrink-0" />{item}</li>)}</ul>
+              </div>
+              <Button asChild className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
+            </div>
+          </div>
+          <div className="about-brands"><ClientLogosSection /></div>
+        </section>
+
+        <section id="about-mission" className="about-dark about-band">
+          <div className="container mx-auto">
+            <div className="about-section-heading">
+              <p className="about-eyebrow">— OUR MISSION</p>
+              <h2>A Human-Driven Internet Marketing Agency for the <span className="text-brand">AI Era</span></h2>
+              <p className="about-copy">We believe that a great internet marketing agency should act as a true partner to your business. Our online marketing agency works with total transparency and passion to turn complex growth goals into measurable results.</p>
+            </div>
+            <div className="about-growth-grid">
+              <article className="about-growth-story"><img src={heroImage} alt="A collaborative marketing team" loading="lazy" /><div><h3>AI + Human expertise</h3><p>Our internet marketing company combines ex-Google expertise with proprietary AI tools to deliver enterprise-grade results at founder-friendly prices.</p></div></article>
+              <article className="about-growth-feature"><Target className="h-8 w-8" /><strong>₹50Cr+</strong><h3>Revenue</h3><p>Results-based approach.<br />AI-Powered Strategy.</p></article>
+              <div className="about-growth-promises"><p className="about-eyebrow">BUILT ON TRUST</p><h3>Your growth.<br />Our commitment.</h3><ul className="about-checks">{["No long-term lock-ins", "Transparent pricing", "Results-based approach", "AI + Human expertise"].map(item => <li key={item}><CheckCircle2 className="h-4 w-4 shrink-0 text-brand" />{item}</li>)}</ul></div>
             </div>
             <div className="about-values">{values.map(value => <article key={value.title} className="about-value"><value.icon /><h3>{value.title}</h3><p>{value.description}</p></article>)}</div>
           </div>
         </section>
+
+        <div id="about-culture" className="about-light about-band">
+          <div className="container mx-auto about-culture-layout"><CultureSection /><img className="about-culture-photo" src={strategyImage} alt="Our team sharing ideas during a strategy session" loading="lazy" /></div>
+        </div>
+
+        <div id="about-showcase" className="about-dark about-band">
+          <div className="container mx-auto"><figure className="about-wide-photo"><img src={heroImage} alt="Marketing specialists collaborating on digital growth" loading="lazy" /><figcaption><span>THE SUPER 30</span><strong>Where Passion Meets Performance</strong><Button asChild variant="outline" className="about-outline rounded-full"><Link to="/our-work">See Our Work<ArrowRight className="ml-3 h-4 w-4" /></Link></Button></figcaption></figure></div>
+        </div>
 
         {/* Team Section */}
         <div id="about-team" className="about-light about-band">
@@ -119,17 +143,12 @@ const About = () => {
         </div>
 
 
-        {/* Culture Section */}
-        <div id="about-culture" className="about-light about-band">
-          <CultureSection />
+        <div id="about-faq" className="about-light about-band">
+          <div className="container mx-auto about-faq-layout"><img src={workspaceImage} alt="The team discussing a client marketing strategy" loading="lazy" /><FAQSection slug="internet-marketing-agency" /></div>
         </div>
 
         <div id="about-cta" className="about-dark about-band">
           <UnifiedCTASection variant="dark" />
-        </div>
-
-        <div id="about-faq" className="about-light about-band">
-          <FAQSection slug="internet-marketing-agency" />
         </div>
 
         <Footer />
