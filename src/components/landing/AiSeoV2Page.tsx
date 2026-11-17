@@ -217,14 +217,14 @@ export const AiSeoV2Page = () => {
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">Trusted by growing brands across India.</p>
           </div>
           <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center gap-8 sm:mt-12 sm:gap-10">
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14">
+            <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
               {showcaseLogos.slice(0, 5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+                <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[19%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
               ))}
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14">
+            <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
               {showcaseLogos.slice(5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+                <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[23%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
               ))}
             </div>
           </div>
