@@ -94,7 +94,7 @@ const About = () => {
             <div className="about-credentials">{["Ex-Google Experts", "AI-Powered Solutions", "Results-Driven"].map(cred => <span key={cred}>{cred}</span>)}</div>
           </div>
         </section>
-        <div className="about-light"><ClientLogosSection /></div>
+        <div className="about-light about-brands"><ClientLogosSection /></div>
         <section id="about-mission" className="about-dark about-band">
           <div className="container mx-auto about-mission-grid">
             <div>

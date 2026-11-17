@@ -15,6 +15,11 @@
 .about-outline:hover { background: hsl(var(--work-paper) / .1); color: hsl(var(--work-paper)); }
 .about-credentials { display: flex; flex-wrap: wrap; gap: 1.5rem; color: hsl(var(--work-paper) / .7); font-size: .75rem; margin-top: 1.5rem; }
 .about-light { --background: var(--work-paper); --foreground: var(--work-ink); --card: var(--work-paper); --card-foreground: var(--work-ink); --muted: 0 0% 96%; --muted-foreground: 0 0% 42%; --border: 0 0% 88%; background: hsl(var(--background)); }
+.about-brands > section { background: hsl(var(--work-paper)); padding: 3.5rem 0; }
+.about-brands p,.about-brands span { color: hsl(var(--work-ink)); }
+.about-brands .animate-marquee > div { background: hsl(var(--work-paper)); border-color: hsl(var(--border)); border-radius: 8px; }
+.about-brands .border-t { border-color: hsl(var(--border)); }
+.about-brands .border-t > .w-px { background: hsl(var(--border)); }
 .about-dark { --background: var(--work-ink); --foreground: var(--work-paper); --card: var(--work-surface); --card-foreground: var(--work-paper); --muted: var(--work-surface); --muted-foreground: 0 0% 68%; --border: 0 0% 24%; background: hsl(var(--background)); background-image: var(--work-glow),var(--work-mesh); background-size: auto,24px 24px,24px 24px; color: hsl(var(--foreground)); }
 .about-band { padding: 5rem 0; }
 .about-band > section { padding: 0; background: transparent; }
@@ -38,7 +43,7 @@
 .about-page #about-cta .container > div > .absolute { display: none; }
 .about-page #about-cta .container > div > .relative { opacity: 1; transform: none; }
 .about-page #about-cta button { box-shadow: none; background: hsl(var(--brand)); color: hsl(var(--primary-foreground)); }
-.about-page #about-cta button.border { background: transparent; color: hsl(var(--foreground)); border-color: hsl(var(--border)); }
+.about-page #about-cta button.border,.about-page #about-cta button.border-2 { background: transparent; color: hsl(var(--foreground)); border-color: hsl(var(--border)); }
 .about-page #about-faq > section { background: transparent; }
 @media(max-width:767px) {
  .about-page .container { padding-left: 1.25rem; padding-right: 1.25rem; }
