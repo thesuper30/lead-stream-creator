@@ -317,7 +317,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="contact-phone">Phone</Label>
                       <div className="flex">
-                        <span className="inline-flex items-center gap-1 px-3 rounded-l-md bg-muted border border-r-0 border-input text-muted-foreground text-sm font-medium">
+                        <span className="contact-phone-prefix inline-flex items-center gap-1 px-3 rounded-l-md bg-muted border border-r-0 border-input text-muted-foreground text-sm font-medium">
                           <Phone className="w-3.5 h-3.5" />
                           +91
                         </span>
@@ -459,7 +459,7 @@ const Contact = () => {
                     id="btn-contact-form-submit"
                     name="submit-contact-form"
                     type="submit"
-                    className="w-full bg-brand-gradient hover:opacity-90 text-white shadow-lg"
+                    className="contact-submit w-full"
                     disabled={loading}
                   >
                     {loading ? (
@@ -475,44 +475,42 @@ const Contact = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-6 md:space-y-8 h-full flex flex-col">
+              <div className="h-full flex flex-col">
                 <div>
-                  <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">Get in touch</h2>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="contact-eyebrow">— CONTACT DETAILS</p>
+                  <h2 className="contact-info-title">Get in touch</h2>
+                  <p className="contact-info-copy">
                     Have a question or ready to start? Reach out through any of these channels and we'll respond within 24 hours.
                   </p>
 
-                  <div className="space-y-3">
+                  <div>
                     {contactInfo.map((info, index) => (
-                      <BentoCard key={index} className="group !p-4">
-                        <div className="flex items-center gap-4">
-                          <BentoIcon size="sm">
-                            <info.icon className="w-5 h-5 text-brand group-hover:text-white transition-colors" />
-                          </BentoIcon>
-                          <div>
-                            <p className="text-sm text-muted-foreground">{info.title}</p>
-                            {info.link ? (
-                              <a
-                                href={info.link}
-                                id={`contact-info-${info.title.toLowerCase()}`}
-                                className="text-foreground font-medium hover:text-brand transition-colors"
-                              >
-                                {info.value}
-                              </a>
-                            ) : (
-                              <p className="text-foreground font-medium">{info.value}</p>
-                            )}
-                          </div>
+                      <div key={index} className="contact-info-card">
+                        <span className="contact-info-icon">
+                          <info.icon className="w-5 h-5" />
+                        </span>
+                        <div>
+                          <p>{info.title}</p>
+                          {info.link ? (
+                            <a
+                              href={info.link}
+                              id={`contact-info-${info.title.toLowerCase()}`}
+                            >
+                              {info.value}
+                            </a>
+                          ) : (
+                            <strong>{info.value}</strong>
+                          )}
                         </div>
-                      </BentoCard>
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Social Links */}
-                <div>
-                  <h3 className="text-base md:text-lg font-bold text-foreground mb-4">Follow Us</h3>
-                  <div className="flex flex-wrap gap-3">
+                <div className="mt-8">
+                  <h3 className="text-base font-semibold mb-1">Follow Us</h3>
+                  <div className="contact-socials">
                     {socialLinks.map((social) => (
                       <a
                         key={social.name}
@@ -520,7 +518,6 @@ const Contact = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 icon-bg-glow rounded-full flex items-center justify-center hover:bg-brand-gradient hover:text-white transition-all duration-300"
                         aria-label={social.name}
                       >
                         {social.icon}
@@ -530,17 +527,16 @@ const Contact = () => {
                 </div>
 
                 {/* Map */}
-                <div className="bento-card overflow-hidden flex-1">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62224.92642918453!2d77.57034246322014!3d12.903998375556354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16256e8bd415%3A0x85acd49abea04935!2sDigital%20Academy%20360!5e0!3m2!1sen!2sin!4v1767928926902!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0, minHeight: "12rem" }}
+                <div className="contact-map flex-1">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62224.92642918453!2d77.57034246322014!3d12.903998375556354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16256e8bd415%3A0x85acd49abea04935!2sDigital%20Academy%20360!5e0!3m2!1sen!2sin!4v1767928926902!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, minHeight: "14rem" }}
                     allowFullScreen
-                    loading="lazy" 
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Office Location"
-                    className="w-full h-full min-h-48"
                   />
                 </div>
               </div>
