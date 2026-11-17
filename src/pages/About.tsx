@@ -11,7 +11,8 @@ import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 
 import { CultureSection } from "@/components/about/CultureSection";
 import { Button } from "@/components/ui/button";
-import { BentoCard, BentoIcon, BentoBadge } from "@/components/ui/bento-grid";
+import heroImage from "@/assets/home-agency-team.jpg";
+import "./About.css";
 import {
   ArrowRight,
   Bot,
@@ -76,167 +77,58 @@ const About = () => {
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
-        {/* Hero Section */}
-        <section id="about-hero" className="relative bg-white overflow-hidden min-h-[70vh] md:min-h-[80vh] flex items-center">
-          {/* Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-          </div>
-
-          <div className="container relative mx-auto px-3 md:px-4 py-8 md:py-12 lg:py-16">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              {/* Badge */}
-              <BentoBadge>
-                <Award className="w-4 h-4" />
-                10+ Years of Excellence
-              </BentoBadge>
-
-              {/* H1 and Description */}
-              <div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-4">
-                  The Best{" "}
-                  <span className="relative inline-block">
-                    <span className="text-brand-gradient">Digital Marketing Experts</span>
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-brand-gradient rounded-full opacity-50" />
-                  </span>
-                  {" "}Driving Measurable Business Growth
-                </h1>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  Success in today's digital landscape requires more than marketing tools. Our team of{" "}
-                  <span className="text-foreground font-semibold">digital marketing experts</span> combines industry experience, strategic insights, and performance driven execution to help businesses increase visibility, generate quality leads, and achieve sustainable growth.
-                </p>
-              </div>
-
-              {/* Trust Signals - Horizontal */}
-              <div className="flex flex-wrap justify-center gap-4 py-4">
-                {[
-                  { icon: Target, text: "300+ Projects" },
-                  { icon: Award, text: "₹50Cr+ Revenue" },
-                  { icon: Users, text: "50+ Clients" },
-                  { icon: Shield, text: "AI-Powered Strategy" },
-                ].map((signal, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2"
-                  >
-                    <signal.icon className="w-4 h-4 text-brand" />
-                    <span className="font-medium text-foreground text-sm">{signal.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Dual CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-                <Link to="/contact-us">
-                  <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto">
-                    <Users className="w-4 h-4 mr-2" />
-                    Get In Touch
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-                <Link to="/our-work">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-border text-foreground hover:bg-muted transition-all duration-300 w-full sm:w-auto"
-                  >
-                    <Play className="w-4 h-4 mr-2" />
-                    See Our Work
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Expert credentials */}
-              <div className="flex flex-wrap gap-2 justify-center pt-2">
-                {["Ex-Google Experts", "AI-Powered Solutions", "Results-Driven"].map((cred, i) => (
-                  <span 
-                    key={i}
-                    className="inline-flex items-center gap-1.5 bg-muted text-muted-foreground px-3 py-1.5 rounded-full text-xs font-medium"
-                  >
-                    <Award className="w-3 h-3 text-brand" />
-                    {cred}
-                  </span>
-                ))}
-              </div>
+      <main className="about-page min-h-screen pt-16 md:pt-20">
+        <section id="about-hero" className="about-hero">
+          <img src={heroImage} alt="The digital marketing team collaborating on a growth strategy" fetchPriority="high" />
+          <div className="container mx-auto py-16 md:py-24">
+            <p className="about-eyebrow">— 10+ Years of Excellence</p>
+            <h1>The Best <span className="text-brand">Digital Marketing Experts</span> Driving Measurable Business Growth</h1>
+            <p className="about-hero-description mt-6 text-base md:text-lg leading-relaxed">Success in today's digital landscape requires more than marketing tools. Our team of digital marketing experts combines industry experience, strategic insights, and performance driven execution to help businesses increase visibility, generate quality leads, and achieve sustainable growth.</p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-8">
+              <Button asChild size="lg" className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us"><Users className="mr-2 h-4 w-4" />Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
+              <Button asChild size="lg" variant="outline" className="about-outline rounded-full"><Link to="/our-work"><Play className="mr-2 h-4 w-4" />See Our Work<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
             </div>
+            <div className="about-proof">
+              {[{ icon: Target, text: "300+ Projects" }, { icon: Award, text: "₹50Cr+ Revenue" }, { icon: Users, text: "50+ Clients" }, { icon: Shield, text: "AI-Powered Strategy" }].map(signal => <span key={signal.text}><signal.icon className="h-4 w-4 shrink-0 text-brand" />{signal.text}</span>)}
+            </div>
+            <div className="about-credentials">{["Ex-Google Experts", "AI-Powered Solutions", "Results-Driven"].map(cred => <span key={cred}>{cred}</span>)}</div>
           </div>
         </section>
-
-        <ClientLogosSection />
-
-        {/* Mission Section */}
-        <section id="about-mission" className="py-12 md:py-16 lg:py-20 bg-background">
-          <div className="container mx-auto px-3 md:px-4">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
-              <div>
-                <BentoBadge className="mb-4">Our Mission</BentoBadge>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                  A Human-Driven Internet Marketing Agency for the AI Era
-                </h2>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  We believe that a great internet marketing agency should act as a true partner to your business. Our online marketing agency works with total transparency and passion to turn complex growth goals into measurable results.
-                </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our internet marketing company combines ex-Google expertise with proprietary AI tools to deliver enterprise-grade results at founder-friendly prices.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    "No long-term lock-ins",
-                    "Transparent pricing",
-                    "Results-based approach",
-                    "AI + Human expertise",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-foreground group">
-                      <div className="icon-bg-glow w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300">
-                        <CheckCircle2 className="w-4 h-4 text-brand group-hover:text-white transition-colors" />
-                      </div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Values Grid */}
-              <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
-                {values.map((value, index) => (
-                  <BentoCard key={index} className="group p-3 sm:p-4 md:p-6">
-                    <BentoIcon size="sm" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
-                      <value.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-brand group-hover:text-white transition-colors" />
-                    </BentoIcon>
-                    <h3 className="font-bold text-foreground mt-2 sm:mt-3 mb-1 sm:mb-2 text-sm sm:text-base group-hover:text-brand transition-colors">
-                      {value.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-                  </BentoCard>
-                ))}
-              </div>
+        <div className="about-light about-brands"><ClientLogosSection /></div>
+        <section id="about-mission" className="about-dark about-band">
+          <div className="container mx-auto about-mission-grid">
+            <div>
+              <p className="about-eyebrow">— Our Mission</p>
+              <h2 className="mb-6">A Human-Driven Internet Marketing Agency for the <span className="text-brand">AI Era</span></h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed">We believe that a great internet marketing agency should act as a true partner to your business. Our online marketing agency works with total transparency and passion to turn complex growth goals into measurable results.</p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">Our internet marketing company combines ex-Google expertise with proprietary AI tools to deliver enterprise-grade results at founder-friendly prices.</p>
+              <ul className="grid sm:grid-cols-2 gap-4">{["No long-term lock-ins", "Transparent pricing", "Results-based approach", "AI + Human expertise"].map(item => <li key={item} className="flex gap-3 items-center"><CheckCircle2 className="h-5 w-5 shrink-0 text-brand" />{item}</li>)}</ul>
             </div>
+            <div className="about-values">{values.map(value => <article key={value.title} className="about-value"><value.icon /><h3>{value.title}</h3><p>{value.description}</p></article>)}</div>
           </div>
         </section>
 
         {/* Team Section */}
-        <div id="about-team">
+        <div id="about-team" className="about-light about-band">
           <TeamSection />
         </div>
 
         {/* Interactive Timeline */}
-        <div id="about-timeline">
+        <div id="about-timeline" className="about-dark about-band">
           <InteractiveTimeline />
         </div>
 
 
         {/* Culture Section */}
-        <div id="about-culture">
+        <div id="about-culture" className="about-light about-band">
           <CultureSection />
         </div>
 
-        <div id="about-cta">
+        <div id="about-cta" className="about-dark about-band">
           <UnifiedCTASection variant="dark" />
         </div>
 
-        <div id="about-faq">
+        <div id="about-faq" className="about-light about-band">
           <FAQSection slug="internet-marketing-agency" />
         </div>
 
