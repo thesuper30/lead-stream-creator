@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -27,8 +28,8 @@ import {
 import { toast } from "sonner";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
 import { validateEmail, validatePhone, validateMessage, sanitizeInput } from "@/lib/validation";
-import { BentoCard, BentoIcon, BentoBadge } from "@/components/ui/bento-grid";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
+import "./Contact.css";
 
 const contactInfo = [
   {
