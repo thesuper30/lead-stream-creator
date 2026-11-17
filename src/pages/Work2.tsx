@@ -21,9 +21,11 @@ const Work2 = () => {
   return (
     <>
       <Helmet>
-        <title>Our Work 2 | Digital Marketing Results | The Super 30</title>
+        <title>Our Work | Digital Marketing Results | The Super 30</title>
         <meta name="description" content="Explore The Super 30's work across SEO, lead generation, brand identity, social creatives, UGC and product photography." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.thesuper30.ai/our-work" />
+        <meta property="og:url" content="https://www.thesuper30.ai/our-work" />
         <meta property="og:title" content="Our Work | The Super 30" />
         <meta property="og:description" content="Digital marketing, creative work and results for growing brands. Explore The Super 30 portfolio." />
         <meta property="og:type" content="website" />
