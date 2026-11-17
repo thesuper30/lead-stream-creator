@@ -24,6 +24,7 @@ const FloatingContactButtons = lazy(() =>
 const ScrollToTopButton = lazy(() => 
   import("@/components/ScrollToTopButton").then(m => ({ default: m.ScrollToTopButton }))
 );
+const LeadPopup = lazy(() => import("@/components/LeadPopup"));
 
 // Lazy load all pages for code splitting
 const Home = lazy(() => import("./pages/Home"));
