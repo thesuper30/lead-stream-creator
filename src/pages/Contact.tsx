@@ -21,7 +21,6 @@ import {
   MapPin,
   Clock,
   Send,
-  MessageCircle,
   ArrowRight,
   Award,
 } from "lucide-react";
