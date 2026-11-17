@@ -224,7 +224,7 @@ export const AiSeoV2Page = () => {
             </div>
             <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
               {showcaseLogos.slice(5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[23%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+                <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[23%] object-contain sm:max-w-[220px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
               ))}
             </div>
           </div>
