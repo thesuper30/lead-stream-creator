@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -20,15 +21,14 @@ import {
   MapPin,
   Clock,
   Send,
-  MessageCircle,
   ArrowRight,
   Award,
 } from "lucide-react";
 import { toast } from "sonner";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
 import { validateEmail, validatePhone, validateMessage, sanitizeInput } from "@/lib/validation";
-import { BentoCard, BentoIcon, BentoBadge } from "@/components/ui/bento-grid";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
+import "./Contact.css";
 
 const contactInfo = [
   {
@@ -213,97 +213,73 @@ const Contact = () => {
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
+      <main className="contact-page min-h-screen pt-16 md:pt-20">
         {/* Hero Section */}
-        <section id="contact-hero" className="relative bg-white overflow-hidden min-h-[70vh] md:min-h-[80vh] flex items-center">
-          {/* Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-          </div>
+        <section id="contact-hero" className="contact-hero">
+          <div className="container mx-auto">
+            <p className="contact-eyebrow">— GET IN TOUCH</p>
+            <h1>Ready to Accelerate Your Business Growth<span className="text-brand">?</span></h1>
+            <p className="contact-hero-copy">
+              Connect with TheSuper30 and discover how strategic digital marketing, creative execution, and performance driven campaigns can help your business generate more leads, increase visibility, and achieve measurable growth.
+            </p>
+            <nav aria-label="Breadcrumb" className="contact-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>Contact Us</span></nav>
 
-          <div className="container relative mx-auto px-3 md:px-4 py-8 md:py-12 lg:py-16">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              {/* Badge */}
-              <BentoBadge>
-                <MessageCircle className="w-4 h-4" />
-                Get in Touch
-              </BentoBadge>
+            {/* Trust Signals */}
+            <div className="contact-hero-signals">
+              {[
+                { icon: Clock, text: "24hr Response" },
+                { icon: Phone, text: "Free Consultation" },
+                { icon: Mail, text: "Expert Support" },
+                { icon: MapPin, text: "Bangalore, India" },
+              ].map((signal, index) => (
+                <div key={index}>
+                  <signal.icon />
+                  <span>{signal.text}</span>
+                </div>
+              ))}
+            </div>
 
-              {/* H1 and Description */}
-              <div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-4">
-                  Ready to Accelerate Your Business Growth?
-                </h1>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                  Connect with TheSuper30 and discover how strategic digital marketing, creative execution, and performance driven campaigns can help your business generate more leads, increase visibility, and achieve measurable growth.
-                </p>
-              </div>
+            {/* Dual CTA Buttons */}
+            <div className="contact-hero-ctas">
+              <a href="tel:+918904150555">
+                <Button size="lg" className="contact-btn-solid">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Us Now
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+              <a href="mailto:hello@thesuper30.ai">
+                <Button size="lg" variant="outline" className="contact-btn-outline">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email Us
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
+            </div>
 
-              {/* Trust Signals - Horizontal */}
-              <div className="flex flex-wrap justify-center gap-4 py-4">
-                {[
-                  { icon: Clock, text: "24hr Response" },
-                  { icon: Phone, text: "Free Consultation" },
-                  { icon: Mail, text: "Expert Support" },
-                  { icon: MapPin, text: "Bangalore, India" },
-                ].map((signal, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2"
-                  >
-                    <signal.icon className="w-4 h-4 text-brand" />
-                    <span className="font-medium text-foreground text-sm">{signal.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Dual CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-                <a href="tel:+918904150555">
-                  <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Us Now
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </a>
-                <a href="mailto:hello@thesuper30.ai">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-border text-foreground hover:bg-muted transition-all duration-300 w-full sm:w-auto"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Email Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </a>
-              </div>
-
-              {/* Expert credentials */}
-              <div className="flex flex-wrap gap-2 justify-center pt-2">
-                {["AI SEO", "Lead Generation", "Social Media", "Web Design", "Branding"].map((cred, i) => (
-                  <span 
-                    key={i}
-                    className="inline-flex items-center gap-1.5 bg-muted text-muted-foreground px-3 py-1.5 rounded-full text-xs font-medium"
-                  >
-                    <Award className="w-3 h-3 text-brand" />
-                    {cred}
-                  </span>
-                ))}
-              </div>
+            {/* Expert credentials */}
+            <div className="contact-hero-creds">
+              {["AI SEO", "Lead Generation", "Social Media", "Web Design", "Branding"].map((cred, i) => (
+                <span key={i}>
+                  <Award />
+                  {cred}
+                </span>
+              ))}
             </div>
           </div>
         </section>
 
-        <ClientLogosSection />
+        <div className="contact-light contact-band contact-brands">
+          <ClientLogosSection />
+        </div>
 
         {/* Contact Section */}
-        <section id="contact-form" className="py-12 md:py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-3 md:px-4">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <section id="contact-form-section" className="contact-dark contact-band">
+          <div className="container mx-auto">
+            <div className="contact-grid">
               {/* Contact Form */}
-              <div className="bento-card p-6 md:p-8 h-full flex flex-col">
-                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">Talk to Our Digital Marketing Experts in Bangalore</h2>
+              <div className="contact-form-card h-full flex flex-col">
+                <h2>Talk to Our Digital Marketing Experts in Bangalore</h2>
 
                 <form onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-4" id="contact-form">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -340,7 +316,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="contact-phone">Phone</Label>
                       <div className="flex">
-                        <span className="inline-flex items-center gap-1 px-3 rounded-l-md bg-muted border border-r-0 border-input text-muted-foreground text-sm font-medium">
+                        <span className="contact-phone-prefix inline-flex items-center gap-1 px-3 rounded-l-md bg-muted border border-r-0 border-input text-muted-foreground text-sm font-medium">
                           <Phone className="w-3.5 h-3.5" />
                           +91
                         </span>
@@ -482,7 +458,7 @@ const Contact = () => {
                     id="btn-contact-form-submit"
                     name="submit-contact-form"
                     type="submit"
-                    className="w-full bg-brand-gradient hover:opacity-90 text-white shadow-lg"
+                    className="contact-submit w-full"
                     disabled={loading}
                   >
                     {loading ? (
@@ -498,44 +474,42 @@ const Contact = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-6 md:space-y-8 h-full flex flex-col">
+              <div className="h-full flex flex-col">
                 <div>
-                  <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">Get in touch</h2>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="contact-eyebrow">— CONTACT DETAILS</p>
+                  <h2 className="contact-info-title">Get in touch</h2>
+                  <p className="contact-info-copy">
                     Have a question or ready to start? Reach out through any of these channels and we'll respond within 24 hours.
                   </p>
 
-                  <div className="space-y-3">
+                  <div>
                     {contactInfo.map((info, index) => (
-                      <BentoCard key={index} className="group !p-4">
-                        <div className="flex items-center gap-4">
-                          <BentoIcon size="sm">
-                            <info.icon className="w-5 h-5 text-brand group-hover:text-white transition-colors" />
-                          </BentoIcon>
-                          <div>
-                            <p className="text-sm text-muted-foreground">{info.title}</p>
-                            {info.link ? (
-                              <a
-                                href={info.link}
-                                id={`contact-info-${info.title.toLowerCase()}`}
-                                className="text-foreground font-medium hover:text-brand transition-colors"
-                              >
-                                {info.value}
-                              </a>
-                            ) : (
-                              <p className="text-foreground font-medium">{info.value}</p>
-                            )}
-                          </div>
+                      <div key={index} className="contact-info-card">
+                        <span className="contact-info-icon">
+                          <info.icon className="w-5 h-5" />
+                        </span>
+                        <div>
+                          <p>{info.title}</p>
+                          {info.link ? (
+                            <a
+                              href={info.link}
+                              id={`contact-info-${info.title.toLowerCase()}`}
+                            >
+                              {info.value}
+                            </a>
+                          ) : (
+                            <strong>{info.value}</strong>
+                          )}
                         </div>
-                      </BentoCard>
+                      </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Social Links */}
-                <div>
-                  <h3 className="text-base md:text-lg font-bold text-foreground mb-4">Follow Us</h3>
-                  <div className="flex flex-wrap gap-3">
+                <div className="mt-8">
+                  <h3 className="text-base font-semibold mb-1">Follow Us</h3>
+                  <div className="contact-socials">
                     {socialLinks.map((social) => (
                       <a
                         key={social.name}
@@ -543,7 +517,6 @@ const Contact = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 icon-bg-glow rounded-full flex items-center justify-center hover:bg-brand-gradient hover:text-white transition-all duration-300"
                         aria-label={social.name}
                       >
                         {social.icon}
@@ -553,17 +526,16 @@ const Contact = () => {
                 </div>
 
                 {/* Map */}
-                <div className="bento-card overflow-hidden flex-1">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62224.92642918453!2d77.57034246322014!3d12.903998375556354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16256e8bd415%3A0x85acd49abea04935!2sDigital%20Academy%20360!5e0!3m2!1sen!2sin!4v1767928926902!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0, minHeight: "12rem" }}
+                <div className="contact-map flex-1">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62224.92642918453!2d77.57034246322014!3d12.903998375556354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16256e8bd415%3A0x85acd49abea04935!2sDigital%20Academy%20360!5e0!3m2!1sen!2sin!4v1767928926902!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, minHeight: "14rem" }}
                     allowFullScreen
-                    loading="lazy" 
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Office Location"
-                    className="w-full h-full min-h-48"
                   />
                 </div>
               </div>
