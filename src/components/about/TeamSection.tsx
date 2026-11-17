@@ -4,12 +4,10 @@ import { BentoBadge } from "@/components/ui/bento-grid";
 import amitImg from "@/assets/team/amit.png";
 import lalitImg from "@/assets/team/lalit.png";
 import mayankImg from "@/assets/team/mayank.png";
-import vigneshImg from "@/assets/team/vignesh.png";
 import sujeetImg from "@/assets/team/sujeet.png";
 import swanandImg from "@/assets/team/swanand.png";
 import sathyaImg from "@/assets/team/sathya.png";
 import monishaImg from "@/assets/team/monisha.png";
-import kailashImg from "@/assets/team/kailash.png";
 import deepakImg from "@/assets/team/deepak.png";
 import madhuImg from "@/assets/team/madhu.png";
 import anushImg from "@/assets/team/anush.png";
@@ -20,12 +18,10 @@ const teamMembers = [
   { name: "Amit", expertise: "Growth Strategy & Business Development", image: amitImg },
   { name: "Lalit", expertise: "SEO Architecture & Technical Audits", image: lalitImg },
   { name: "Mayank", expertise: "Digital Strategy & Analytics", image: mayankImg },
-  { name: "Vignesh", expertise: "Ex-Google, 12+ years in SEO", image: vigneshImg },
   { name: "Sujeet", expertise: "AI/ML SEO Specialist", image: sujeetImg },
   { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", image: swanandImg },
   { name: "Sathya", expertise: "Content Strategy & SEO Expert", image: sathyaImg },
   { name: "Monisha", expertise: "Full-stack Developer, SEO Engineer", image: monishaImg },
-  { name: "Kailash", expertise: "IIT Delhi, Analytics Expert", image: kailashImg },
   { name: "Deepak", expertise: "10+ years in SEO & PPC", image: deepakImg },
   { name: "Madhu", expertise: "E-commerce SEO Expert", image: madhuImg },
   { name: "Anush", expertise: "Google Ads Certified, ROI Expert", image: anushImg },
