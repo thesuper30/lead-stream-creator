@@ -60,4 +60,4 @@
 
 # Timed lead popup
 
-- [ ] Add a 5-second lead popup form shown once per session on all pages; verify timing, dismissal, submission, desktop/mobile
+- [x] Add a 5-second lead popup form shown once per session on all pages; verify timing, dismissal, submission, desktop/mobile
