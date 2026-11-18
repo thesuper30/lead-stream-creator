@@ -98,3 +98,9 @@
  .about-growth-story img { height: 220px; }
 }
 @media(prefers-reduced-motion:reduce) { .about-page *, .about-page *::before, .about-page *::after { animation: none !important; transition: none !important; } }
+
+.about-page #about-team .container { max-width: 1400px; }
+.about-page #about-team h2 { font-size: 3rem; line-height: 1.2; }
+@media(max-width:1023px) { .about-page #about-team h2 { font-size: 2.25rem; } }
+@media(max-width:639px) { .about-page #about-team h2 { font-size: 1.875rem; } }
+@media(max-width:639px) { .about-page #about-team .container { padding-left: 1rem; padding-right: 1rem; } }

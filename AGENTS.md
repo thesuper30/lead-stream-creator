@@ -13,4 +13,4 @@
 - Homepage2 keeps the original PDF client-logo dataset; the latest SEO and seven shared service pages use that dataset without SkyMarvel plus ICS and Digital Academy 360, so service logo updates remain consistent without changing the homepage.
 - Keep the eight-person team before services in the shared service template with page-specific headings, so all seven latest service pages match the SEO page structure.
 
-- Keep About page theme overrides in its page stylesheet and reuse the existing team data and journey section, so the redesign does not affect other pages.
+- Keep About page theme overrides in its page stylesheet and use the same eight service-page portraits and preserve the journey section, so the redesign does not affect other pages.

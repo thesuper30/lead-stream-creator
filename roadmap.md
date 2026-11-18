@@ -73,3 +73,9 @@
 - [x] Match the rounded, centered service banner and team card design while preserving all current members
 - [x] Remove both Passion Meets Performance sections and alternate the remaining light/dark bands with warm glow
 - [x] Verify desktop/mobile sections, photos and links
+
+# About team reference correction
+
+- [x] Replace old portrait assets with the eight service-page portraits and roles
+- [x] Match wider cards and add the pill CTA above the grid
+- [x] Verify every portrait and CTA on desktop and phone
