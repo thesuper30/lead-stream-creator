@@ -48,6 +48,7 @@
 .contact-form-band .contact-form-card textarea::placeholder { color: hsl(var(--work-ink) / .38); }
 .contact-form-band .contact-form-card input:focus-visible,
 .contact-form-band .contact-form-card textarea:focus-visible { border-color: hsl(var(--brand)); }
+.contact-form-band .contact-form-card .border-destructive { border-color: hsl(var(--destructive)); }
 .contact-phone-prefix { background: hsl(var(--brand) / .08) !important; border-color: hsl(var(--work-ink) / .16) !important; color: hsl(var(--brand-dark)) !important; }
 .contact-submit { background: hsl(var(--brand)); color: hsl(var(--primary-foreground)); border-radius: 9999px; box-shadow: none; }
 .contact-submit:hover { background: hsl(var(--brand-dark)); opacity: 1; }
