@@ -2,16 +2,16 @@
 .about-page h1,.about-page h2,.about-page h3 { letter-spacing: 0; }
 .about-page .container { max-width: 1180px; padding-left: 2rem; padding-right: 2rem; }
 .about-page h2 { font-size: 2.5rem; line-height: 1.22; font-weight: 600; }
-.about-hero { position: relative; isolation: isolate; overflow: hidden; color: hsl(var(--work-paper)); background: hsl(var(--work-ink)); padding: 120px 0 90px; }
-.about-hero-content { position: relative; }
-.about-hero-highlight { display: inline-block; background: hsl(var(--brand)); color: hsl(var(--primary-foreground)); padding: 0 .3em .08em; border-radius: 1rem; transform: rotate(-2deg); }
-.about-hero-copy { max-width: 650px; margin: 1.75rem 0 0; color: hsl(var(--work-paper) / .75); line-height: 1.8; }
-.about-hero-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+.about-hero { position: relative; isolation: isolate; overflow: hidden; color: hsl(var(--work-paper)); background: hsl(var(--work-ink)); }
+.about-hero .container { max-width: 1400px; position: relative; }
+.about-hero .about-eyebrow { font-size: .875rem; }
+.about-hero-description { max-width: 700px; color: hsl(var(--work-paper) / .75); }
+.about-credentials { display: flex; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid hsl(var(--work-paper) / .18); padding-top: 1.5rem; margin-top: 3rem; font-size: .875rem; color: hsl(var(--work-paper) / .8); }
+.about-credentials span { display: inline-flex; align-items: center; gap: .5rem; }
 .about-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; z-index: -3; }
 .about-hero::before { content: ''; position: absolute; inset: 0; background: var(--work-hero-shade); z-index: -2; }
 .about-hero::after { content: ''; position: absolute; inset: 0; background: var(--work-glow); z-index: -1; pointer-events: none; }
 .about-hero h1 { font-size: 3.5rem; line-height: 1.15; font-weight: 600; max-width: 950px; }
-.about-breadcrumb { display: flex; align-items: center; gap: .8rem; margin-top: 1.25rem; font-size: .8rem; color: hsl(var(--work-paper) / .7); }
 .about-logos { padding-bottom: 0; }
 .about-logos .about-brands { margin-top: 0; }
 .about-eyebrow { color: hsl(var(--brand)); font-size: .75rem; font-weight: 600; margin-bottom: 1.25rem; }
@@ -87,9 +87,8 @@
 }
 @media(max-width:767px) {
  .about-page .container { padding-left: 1.25rem; padding-right: 1.25rem; }
- .about-hero { padding: 64px 0 48px; }
- .about-hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
- .about-hero h1 { font-size: 2.25rem; }
+ .about-hero h1 { font-size: 2rem; }
+ .about-credentials { gap: 1rem; margin-top: 2rem; }
  .about-page h2 { font-size: 2rem; }
  .about-band { padding: 3.5rem 0; }
  .about-intro-photo > img { height: 340px; }

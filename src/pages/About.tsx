@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
@@ -10,6 +11,8 @@ import { TeamSection } from "@/components/about/TeamSection";
 import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 
 import { Button } from "@/components/ui/button";
+import { EnquiryPopup } from "@/components/EnquiryPopup";
+import { AuditChoicePopup } from "@/components/popups/AuditChoicePopup";
 import heroImage from "@/assets/home-agency-team.jpg";
 import workspaceImage from "@/assets/seo-real-growth-workspace.jpg";
 import "./About.css";
@@ -18,6 +21,8 @@ import {
   Bot,
   Target,
   Award,
+  MessageCircle,
+  Search,
   Shield,
   Heart,
   CheckCircle2,
@@ -47,6 +52,9 @@ const values = [
 ];
 
 const About = () => {
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
+  const [auditOpen, setAuditOpen] = useState(false);
+
   return (
     <>
       <Helmet>
@@ -77,12 +85,17 @@ const About = () => {
       <main className="about-page min-h-screen pt-16 md:pt-20">
         <section id="about-hero" className="about-hero">
           <img src={heroImage} alt="The digital marketing team collaborating on a growth strategy" fetchPriority="high" />
-          <div className="container mx-auto about-hero-content">
-            <p className="about-eyebrow">— THE SUPER 30</p>
-            <h1>The People Behind <span className="about-hero-highlight">Your Growth.</span></h1>
-            <p className="about-hero-copy">Real people. Real strategies. AI-powered results. Meet the team behind your growth.</p>
-            <div className="about-hero-actions"><Button asChild className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button><Link to="/our-work" className="text-sm font-semibold underline-offset-4 hover:underline">View Our Work</Link></div>
-            <nav aria-label="Breadcrumb" className="about-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>Our Team</span></nav>
+          <div className="container mx-auto py-16 md:py-24">
+            <p className="about-eyebrow">— 30+ Digital Marketing Experts</p>
+            <h1>Meet the Team Behind<br /><span className="text-brand">Your Growth Story.</span></h1>
+            <p className="about-hero-description mt-6 text-base leading-relaxed md:text-lg">From emerging startups to established enterprises, our 30+ specialists in SEO, performance marketing, design, content and web turn marketing spend into measurable business growth. Ex-Google expertise, AI-powered execution and full transparency on every campaign we run.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button size="lg" onClick={() => setAuditOpen(true)} className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Search className="mr-2 h-4 w-4" />Get Free Audit &amp; Strategy<ArrowRight className="ml-3 h-4 w-4" /></Button>
+              <Button size="lg" variant="outline" onClick={() => setEnquiryOpen(true)} className="about-outline rounded-full"><MessageCircle className="mr-2 h-4 w-4" />Enquire Now<ArrowRight className="ml-3 h-4 w-4" /></Button>
+            </div>
+            <div className="about-credentials">
+              {["30+ In-House Experts", "Ex-Google Leadership", "98% Client Satisfaction"].map((label) => <span key={label}><Award className="h-4 w-4 text-brand" />{label}</span>)}
+            </div>
           </div>
         </section>
 
@@ -146,6 +159,8 @@ const About = () => {
 
         <Footer />
       </main>
+      <EnquiryPopup open={enquiryOpen} onOpenChange={setEnquiryOpen} />
+      <AuditChoicePopup open={auditOpen} onOpenChange={setAuditOpen} />
     </>
   );
 };
