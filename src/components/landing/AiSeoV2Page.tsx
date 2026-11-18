@@ -100,9 +100,13 @@ const clientLogos = [
 const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
 
 const showcaseLogos: { src: string; name: string; className?: string }[] = [
-  ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
-  { src: icsLogo, name: "ICS", className: "h-14 sm:h-28" },
-  { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-14 sm:h-28" },
+  ...pdfClientLogos.map((logo) =>
+    logo.name === "Devakrti by Paramporul Gallery" || logo.name === "JAIN University"
+      ? { ...logo, className: "h-8 sm:h-14" }
+      : logo
+  ),
+  { src: icsLogo, name: "ICS", className: "h-16 sm:h-32" },
+  { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-16 sm:h-32" },
 ];
 
 const ecosystem = [
