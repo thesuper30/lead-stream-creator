@@ -1,0 +1,86 @@
+.remaining-service-page {
+  --background: var(--work-paper);
+  --foreground: var(--work-ink);
+  --card: var(--work-paper);
+  --card-foreground: var(--work-ink);
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
+  --primary-foreground: var(--work-paper);
+  --service-banner-background: var(--work-glow), var(--work-mesh);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.remaining-service-page .service-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.remaining-service-page .service-band-dark {
+  --background: var(--work-ink);
+  --foreground: var(--work-paper);
+  --card: var(--work-surface);
+  --card-foreground: var(--work-paper);
+  --muted: var(--work-surface);
+  --muted-foreground: 0 0% 72%;
+  --border: 0 0% 24%;
+  --accent: var(--work-surface);
+  --primary: var(--work-paper);
+  --primary-foreground: var(--work-paper);
+  background-image: var(--work-glow), var(--work-mesh);
+  background-size: auto, 46px 46px, 46px 46px;
+}
+.remaining-service-page .service-band section {
+  background: transparent !important;
+  padding-block: 5rem;
+}
+.remaining-service-page .service-band .container { max-width: 1400px; }
+.remaining-service-page .service-band h2 { font-weight: 600; line-height: 1.18; letter-spacing: 0; }
+.remaining-service-page .service-band h3 { line-height: 1.35; }
+.remaining-service-page .service-band p { line-height: 1.7; }
+.remaining-service-page .service-band [class*="rounded-2xl"],
+.remaining-service-page .service-band [class*="rounded-xl"] { border-radius: 1.5rem; }
+.remaining-service-page .service-band [class*="hover:-translate"],
+.remaining-service-page .service-band [class*="hover:scale"] { transform: none; }
+.remaining-service-page .service-band-dark [class*="text-gray-"],
+.remaining-service-page .service-band-dark [class*="text-slate-"],
+.remaining-service-page .service-band-dark [class*="text-black"] { color: hsl(var(--foreground) / .75); }
+.remaining-service-page .service-band-light [class*="text-white"] { color: hsl(var(--foreground)); }
+.remaining-service-page .service-band-light [class*="bg-[#0"],
+.remaining-service-page .service-band-light [class*="bg-black"] { background: hsl(var(--card)); }
+.remaining-service-page .service-band [class*="bg-brand"] [class*="text-white"],
+.remaining-service-page .service-band [class*="bg-[hsl(var(--brand-orange))]"][class*="text-white"] { color: hsl(var(--work-paper)); }
+.remaining-service-page .service-band .bg-brand { color: hsl(var(--work-paper)); }
+.remaining-service-page .service-band-dark [class*="bg-white"] { background-color: hsl(var(--card)); }
+.remaining-service-page .service-band-dark [class*="border-white"] { border-color: hsl(var(--border)); }
+.remaining-service-page .service-band [class*="blur-"] { display: none; }
+.remaining-service-page .service-band a[class*="rounded-full"] { white-space: normal; text-align: center; }
+.remaining-service-page .service-band [class*="grid-cols"] > * { min-width: 0; }
+.remaining-service-page .service-band-dark .service-client-logo { background: hsl(var(--work-paper)); }
+.remaining-service-page .modern-service-hero {
+  margin: .75rem;
+  border-radius: 2rem;
+  background: hsl(var(--work-ink));
+  background-image: var(--service-banner-background);
+  background-size: auto, 46px 46px, 46px 46px;
+  color: hsl(var(--work-paper));
+  padding: 6rem 1.5rem 4rem;
+}
+.remaining-service-page .modern-service-hero h1 { max-width: 1100px; margin-inline: auto; font-weight: 600; }
+.remaining-service-page .modern-service-hero h1 span { font-size: inherit; line-height: inherit; }
+.remaining-service-page .modern-service-hero p span { color: inherit; }
+.remaining-service-page .modern-service-hero .hero-description { color: hsl(var(--work-paper) / .75); }
+.remaining-service-page .modern-service-hero .hero-description .text-foreground { color: inherit; }
+.remaining-service-page .service-hero-photo { height: 220px; width: 100%; object-fit: cover; border-radius: 1.5rem; }
+@media (min-width: 768px) {
+  .remaining-service-page .modern-service-hero { margin: 1.25rem; padding-block: 7rem 4rem; }
+}
+@media (max-width: 640px) {
+  .remaining-service-page .service-band > section { padding-block: 3.5rem; }
+  .remaining-service-page .service-band h2 { font-size: 1.875rem; }
+  .remaining-service-page .modern-service-hero { padding: 4rem 1rem 3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .remaining-service-page * { animation: none !important; transition: none !important; }
+}

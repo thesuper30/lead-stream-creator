@@ -1,3 +1,5 @@
+import { ServicePageBand } from "@/components/service/ServicePageBand";
+import { ServiceClientLogos } from "@/components/service/ServiceClientLogos";
 import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -133,7 +135,7 @@ const services = [
       "Print, banner and standee design",
       "Campaign creatives for every admission cycle",
     ],
-    href: "/graphic-design-agency-bangalore",
+    href: "/design-agency-bangalore",
   },
 ];
 
@@ -226,7 +228,7 @@ const CoachingInstitutes = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="remaining-service-page min-h-screen bg-background">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -244,7 +246,7 @@ const CoachingInstitutes = () => {
       <Navbar />
 
       {/* Hero + lead form */}
-      <section className="pt-28 md:pt-36 pb-16 md:pb-20 bg-[#0a0a0a] text-white relative overflow-hidden">
+      <section className="modern-service-hero mt-24 text-center">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -253,7 +255,7 @@ const CoachingInstitutes = () => {
           }}
         />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-10 lg:gap-14 items-start">
             <div>
               <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[hsl(var(--brand-orange))] mb-5">
                 <GraduationCap className="w-4 h-4" />
@@ -262,13 +264,13 @@ const CoachingInstitutes = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
                 Digital Marketing Agency for Coaching Institutes
               </h1>
-              <p className="text-gray-400 text-base md:text-lg max-w-2xl mb-7">
+              <p className="hero-description text-base md:text-lg max-w-3xl mx-auto mb-7">
                 From AI SEO and admission campaigns to enquiry funnels, websites and creatives — we run the
                 complete marketing engine for coaching institutes in Bangalore and across India, so your
                 counsellors spend their day speaking to serious students.
               </p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="mx-auto max-w-2xl space-y-3 mb-8">
                 {[
                   "Be the institute students find first for 'coaching near me'",
                   "Every enquiry captured on WhatsApp, call and form",
@@ -281,7 +283,7 @@ const CoachingInstitutes = () => {
                 ))}
               </ul>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col justify-center sm:flex-row gap-4">
                 <a
                   href="#free-audit"
                   className="inline-flex h-11 items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold text-white bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 transition-all"
@@ -298,14 +300,20 @@ const CoachingInstitutes = () => {
                 </a>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-xs text-gray-400">
+              <div className="flex flex-wrap items-center gap-x-6 justify-center gap-y-2 mt-6 text-xs text-gray-400">
                 <span>Education-specialist team</span>
                 <span>No lock-in contracts</span>
                 <span>Reply within 24 hours</span>
               </div>
             </div>
 
-            <div id="free-audit" className="scroll-mt-28">
+
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof: client logos marquee (same as home page) */}
+      <ServicePageBand><section className="py-16"><div className="container mx-auto max-w-3xl px-4">            <div id="free-audit" className="scroll-mt-28">
               <LeadCaptureForm
                 onSubmit={handleFormSubmit}
                 loading={loading}
@@ -315,16 +323,11 @@ const CoachingInstitutes = () => {
                 formId="coaching_institutes_lead_form"
                 formName="Coaching Institutes Landing Page"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social proof: client logos marquee (same as home page) */}
-      <ClientLogosSection />
+            </div></div></section></ServicePageBand>
+      <ServicePageBand dark><ServiceClientLogos /></ServicePageBand>
 
       {/* Services */}
-      <section className="py-16 md:py-20">
+      <ServicePageBand><section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">Our Services</span>
@@ -365,10 +368,10 @@ const CoachingInstitutes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Who we serve */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <ServicePageBand dark><section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">Who We Serve</span>
@@ -391,10 +394,10 @@ const CoachingInstitutes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Problems */}
-      <section className="py-16 md:py-20">
+      <ServicePageBand><section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">The Problem</span>
@@ -417,10 +420,10 @@ const CoachingInstitutes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Mid-page conversion band */}
-      <section className="py-12 md:py-14">
+      <ServicePageBand dark><section className="py-12 md:py-14">
         <div className="container mx-auto px-4">
           <div className="rounded-3xl border border-border/60 bg-card p-7 md:p-10 flex flex-col md:flex-row md:items-center gap-6 justify-between">
             <div>
@@ -440,13 +443,13 @@ const CoachingInstitutes = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Proof of work (shared section) */}
-      <SEOProofSection />
+      <ServicePageBand><SEOProofSection /></ServicePageBand>
 
       {/* Comparison */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <ServicePageBand dark><section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">The Difference</span>
@@ -479,10 +482,10 @@ const CoachingInstitutes = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Process */}
-      <section className="py-16 md:py-20">
+      <ServicePageBand><section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">How It Works</span>
@@ -500,10 +503,10 @@ const CoachingInstitutes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Engagement models */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <ServicePageBand dark><section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="badge-brand mb-4">Engagement Models</span>
@@ -550,13 +553,13 @@ const CoachingInstitutes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* Stats (shared component used across pages) */}
-      <StatsSection stats={defaultStats} />
+      <ServicePageBand><StatsSection stats={defaultStats} /></ServicePageBand>
 
       {/* Talk to us band */}
-      <section className="py-12 md:py-14">
+      <ServicePageBand dark><section className="py-12 md:py-14">
         <div className="container mx-auto px-4">
           <div className="rounded-3xl border border-border/60 bg-card p-7 md:p-10 text-center max-w-3xl mx-auto">
             <MessageSquare className="w-6 h-6 text-[hsl(var(--brand-orange))] mx-auto mb-4" />
@@ -575,14 +578,14 @@ const CoachingInstitutes = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
       {/* CTA (black) */}
-      <UnifiedCTASection variant="dark" />
+      <ServicePageBand><UnifiedCTASection variant="dark" /></ServicePageBand>
 
       {/* FAQ after CTA */}
       <Suspense fallback={null}>
-        <FAQSection slug="coaching-institutes" />
+        <ServicePageBand dark><FAQSection slug="coaching-institutes" /></ServicePageBand>
       </Suspense>
 
       <Footer />

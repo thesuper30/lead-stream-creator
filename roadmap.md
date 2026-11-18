@@ -84,3 +84,9 @@
 
 - [x] Include all existing team members without duplicating Amit or Mayank, keeping the new eight portraits first
 - [x] Verify every photo and the CTA on desktop and phone
+
+# Remaining footer service and industry pages
+
+- [x] Redesign remaining services and six industry hubs while retaining existing content and enquiry flows
+- [x] Preserve the eight completed main service pages and older suffixed designs
+- [x] Verify all 30 remaining footer destinations, alternating themes and mobile layouts

@@ -3,6 +3,11 @@ import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ServicePageBand } from "@/components/service/ServicePageBand";
+import { ServiceClientLogos } from "@/components/service/ServiceClientLogos";
+import strategyImage from "@/assets/home-strategy-session.jpg";
+import { industryCategories } from "@/data/industries";
 
 interface IndustryData {
   name: string;
@@ -125,7 +130,7 @@ const IndustryHub = () => {
   const metaDescription = industry.description.slice(0, 155);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="remaining-service-page min-h-screen bg-background pt-16 md:pt-20">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={metaDescription} />
@@ -137,36 +142,17 @@ const IndustryHub = () => {
       </Helmet>
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-28 md:pt-36 pb-16 md:pb-20 bg-[#0a0a0a] text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--brand-orange)) 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--brand-orange))] mb-4">
-            Solutions by Industry
-          </p>
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight max-w-4xl mb-6">
-            {industry.headline}
-          </h1>
-          <p className="text-gray-400 text-lg max-w-3xl mb-8">{industry.description}</p>
-          <Link
-            to="/contact-us"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold text-white bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 transition-all"
-          >
-            Talk to a Strategist
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+      <section className="modern-service-hero text-center">
+        <p className="mb-5 text-sm font-semibold uppercase tracking-wider text-brand">Solutions by Industry</p>
+        <h1 className="text-4xl leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">{industry.headline}</h1>
+        <p className="hero-description mx-auto mt-6 max-w-3xl text-lg">{industry.description}</p>
+        <Button asChild variant="unstyled" className="mt-8 h-auto rounded-full bg-brand px-7 py-3 text-primary-foreground"><Link to="/contact-us">Talk to a Strategist<ArrowRight /></Link></Button>
       </section>
+      <ServicePageBand><ServiceClientLogos /></ServicePageBand>
 
       {/* Sub-categories */}
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
+      <ServicePageBand dark><section className="py-16 md:py-24">
+        <div className="container mx-auto grid items-center gap-12 px-4 lg:grid-cols-[.8fr_1.2fr]"><img src={strategyImage} alt="The Super 30 team developing an industry marketing strategy" width={1200} height={800} loading="lazy" className="aspect-[4/5] w-full rounded-3xl object-cover" /><div>
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Who We Serve in {industry.name}
           </h2>
@@ -175,20 +161,21 @@ const IndustryHub = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {industry.subCategories.map((sub) => (
-              <div
+              <Link
+                to={industryCategories.find(category => category.href === `/industries/${slug}`)?.items.find(item => item.label === sub)?.href ?? `/industries/${slug}`}
                 key={sub}
                 className="flex items-center gap-3 rounded-xl border border-border/60 bg-card p-4 hover:border-[hsl(var(--brand-orange))]/40 transition-colors"
               >
                 <CheckCircle2 className="w-5 h-5 text-[hsl(var(--brand-orange))] shrink-0" />
                 <span className="text-sm font-medium text-foreground">{sub}</span>
-              </div>
+              </Link>
             ))}
           </div>
-        </div>
-      </section>
+        </div></div>
+      </section></ServicePageBand>
 
       {/* Solutions grid */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <ServicePageBand><section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-10">
             Growth Solutions for {industry.name}
@@ -208,33 +195,17 @@ const IndustryHub = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section></ServicePageBand>
 
-      {/* CTA */}
-      <section className="py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="relative overflow-hidden rounded-3xl bg-[#0a0a0a] p-8 md:p-12 lg:p-16 text-center">
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[hsl(var(--brand-orange))]/10 blur-3xl" aria-hidden="true" />
-            <div className="absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-[hsl(var(--brand-orange))]/5 blur-3xl" aria-hidden="true" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-            <div className="relative">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-                Ready to Grow Your {industry.name} Business?
-              </h2>
-              <p className="text-white/60 max-w-2xl mx-auto mb-8">
-                Get a free strategy session with our AI digital marketing experts in Bangalore.
-              </p>
-              <Link
-                to="/contact-us"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full px-8 text-sm font-semibold text-white bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 transition-all"
-              >
-                Get Free Consultation
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+      <ServicePageBand dark>
+        <section className="py-16 md:py-24 text-center">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">Ready to Grow Your <span className="text-brand">{industry.name} Business?</span></h2>
+            <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">Get a free strategy session with our AI digital marketing experts in Bangalore.</p>
+            <Button asChild variant="unstyled" className="mt-8 h-auto rounded-full bg-brand px-8 py-3 text-primary-foreground"><Link to="/contact-us">Get Free Consultation<ArrowRight /></Link></Button>
           </div>
-        </div>
-      </section>
+        </section>
+      </ServicePageBand>
 
       <Footer />
     </div>

@@ -9,8 +9,11 @@ const services = [
   { name: "AI SEO", href: "/seo-company-bangalore" },
   { name: "Lead Generation", href: "/lead-generation-agency-bangalore" },
   { name: "Social Media", href: "/social-media-marketing-agency-bangalore" },
+  { name: "Google Ads", href: "/google-ads-agency-bangalore" },
   { name: "Design", href: "/design-agency-bangalore" },
+  { name: "Content Marketing", href: "/content-marketing-agency-bangalore" },
   { name: "Web Design", href: "/website-design-company-bangalore" },
+  { name: "SMS & WhatsApp", href: "/sms-marketing-agency-bangalore" },
 ];
 
 const company = [

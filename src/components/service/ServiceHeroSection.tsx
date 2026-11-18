@@ -2,6 +2,7 @@ import { lazy, useState, Suspense } from "react";
 import { LeadCaptureForm } from "@/components/landing/LeadCaptureForm";
 import { ArrowRight, MessageCircle, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import strategyImage from "@/assets/home-strategy-session.jpg";
 
 const EnquiryPopup = lazy(() => import("@/components/EnquiryPopup").then(m => ({ default: m.EnquiryPopup })));
 
@@ -25,6 +26,7 @@ interface ServiceHeroSectionProps {
   formButtonText?: string;
   formId?: string;
   formName?: string;
+  modern?: boolean;
 }
 
 export const ServiceHeroSection = ({
@@ -42,8 +44,34 @@ export const ServiceHeroSection = ({
   formButtonText,
   formId,
   formName,
+  modern = false,
 }: ServiceHeroSectionProps) => {
   const [showEnquiryPopup, setShowEnquiryPopup] = useState(false);
+
+  if (modern) return (
+    <>
+      <section className="modern-service-hero text-center">
+        <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-sm text-primary-foreground"><BadgeIcon className="h-4 w-4 text-brand" />{badgeText}</p>
+        <h1 className="mt-7 text-4xl leading-[1.12] text-primary-foreground sm:text-5xl lg:text-6xl">{headline}</h1>
+        <div className="hero-description mx-auto mt-6 max-w-3xl text-base leading-relaxed sm:text-lg">{description}</div>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Button variant="unstyled" className="h-auto rounded-full bg-brand px-6 py-3 text-primary-foreground" onClick={() => setShowEnquiryPopup(true)}>Enquire Now <ArrowRight /></Button>
+          <Button asChild variant="unstyled" className="h-auto rounded-full border border-primary-foreground/30 px-6 py-3 text-primary-foreground"><a href="#service-enquiry">{formButtonText ?? "Get Started"}<ArrowRight /></a></Button>
+        </div>
+        <div className="mx-auto mt-10 grid max-w-5xl gap-5 border-t border-primary-foreground/15 pt-8 sm:grid-cols-2 lg:grid-cols-4">
+          {trustSignals.map(({ icon: Icon, text }) => <div key={text} className="flex items-center justify-center gap-3 text-sm text-primary-foreground/85"><Icon className="h-5 w-5 shrink-0 text-brand" />{text}</div>)}
+        </div>
+        <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm text-primary-foreground/70">{credentials.map(x => <span key={x}>{x}</span>)}</div>
+      </section>
+      <section id="service-enquiry" className="service-band service-band-light scroll-mt-24 px-4 py-14 md:py-20">
+        <div className="container mx-auto grid items-center gap-10 lg:grid-cols-2">
+          <div><img src={strategyImage} alt="The Super 30 team planning a marketing strategy" width={1200} height={800} className="aspect-[5/4] w-full rounded-3xl object-cover" loading="lazy" /><h2 className="mt-6 text-2xl font-semibold text-foreground sm:text-3xl">{formTitle}</h2><p className="mt-3 text-muted-foreground">{formDescription}</p></div>
+          <LeadCaptureForm onSubmit={onSubmit} loading={loading} formTitle={formTitle} formDescription={formDescription} formBadgeText={formBadgeText} formButtonText={formButtonText} formId={formId} formName={formName} />
+        </div>
+      </section>
+      {showEnquiryPopup && <Suspense fallback={null}><EnquiryPopup open={showEnquiryPopup} onOpenChange={setShowEnquiryPopup} /></Suspense>}
+    </>
+  );
 
   return (
     <section className="relative bg-background overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center">

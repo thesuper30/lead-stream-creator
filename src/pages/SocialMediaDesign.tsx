@@ -1,3 +1,5 @@
+import { ServicePageBand } from "@/components/service/ServicePageBand";
+import { ServiceClientLogos } from "@/components/service/ServiceClientLogos";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -56,9 +58,9 @@ const SocialMediaDesign = () => {
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
+      <main className="remaining-service-page min-h-screen pt-16 md:pt-20">
         <div id="sm-hero">
-          <ServiceHeroSection
+          <ServiceHeroSection modern
             badgeIcon={Palette}
             badgeText="Social Media Design Agency"
             headline={
@@ -93,24 +95,24 @@ const SocialMediaDesign = () => {
           />
         </div>
 
-        <ClientLogosSection />
+        <ServicePageBand dark><ServiceClientLogos /></ServicePageBand>
 
         <Suspense fallback={null}>
-          <SMProblemSection />
-          <SMComparisonSection />
-          <SMClientProfilesSection />
-          <AadhyaInstagramGridSection />
-          <SMBenefitsSection />
-          <SMMoodboardSection />
-          <SMReelsContentSection />
-          <SMWhoIsThisForSection />
-          <SMProcessSection />
-          <SMPricingSection />
-          <SMRelevanceSection />
-          <TestimonialSection />
-          <BlogSection />
-          <SMFinalCTASection />
-          <SMFAQSection />
+          <ServicePageBand><SMProblemSection /></ServicePageBand>
+          <ServicePageBand dark><SMComparisonSection /></ServicePageBand>
+          <ServicePageBand><SMClientProfilesSection /></ServicePageBand>
+          <ServicePageBand dark><AadhyaInstagramGridSection /></ServicePageBand>
+          <ServicePageBand><SMBenefitsSection /></ServicePageBand>
+          <ServicePageBand dark><SMMoodboardSection /></ServicePageBand>
+          <ServicePageBand><SMReelsContentSection /></ServicePageBand>
+          <ServicePageBand dark><SMWhoIsThisForSection /></ServicePageBand>
+          <ServicePageBand><SMProcessSection /></ServicePageBand>
+          <ServicePageBand dark><SMPricingSection /></ServicePageBand>
+          <ServicePageBand><SMRelevanceSection /></ServicePageBand>
+          <ServicePageBand dark><TestimonialSection /></ServicePageBand>
+          <ServicePageBand><BlogSection /></ServicePageBand>
+          <ServicePageBand dark><SMFinalCTASection /></ServicePageBand>
+          <ServicePageBand><SMFAQSection /></ServicePageBand>
         </Suspense>
 
         <Footer />

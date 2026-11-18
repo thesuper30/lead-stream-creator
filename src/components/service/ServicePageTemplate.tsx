@@ -11,7 +11,10 @@ import {
   ArrowRight, CheckCircle, XCircle, ChevronDown, LucideIcon,
 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ServicePageBand } from "./ServicePageBand";
+import { ServiceClientLogos } from "./ServiceClientLogos";
 
 const TestimonialSection = lazy(() =>
   import("@/components/landing/TestimonialSection").then(m => ({ default: m.TestimonialSection }))
@@ -360,13 +363,14 @@ const FAQSection = ({ faq }: { faq: ServicePageConfig["faq"] }) => {
         <div className="max-w-3xl mx-auto space-y-3">
           {faq.map((item, i) => (
             <div key={i} className="bg-background border border-border/50 rounded-xl overflow-hidden">
-              <button
+              <Button variant="unstyled"
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                aria-expanded={open === i}
+                className="h-auto w-full flex items-center justify-between whitespace-normal p-5 text-left"
               >
                 <span className="font-medium text-foreground text-sm md:text-base pr-4">{item.question}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`} />
-              </button>
+              </Button>
               {open === i && (
                 <div className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed">
                   {item.answer}
@@ -410,6 +414,9 @@ const FinalCTASection = ({ data }: { data: ServicePageConfig["finalCTA"] }) => (
 
 // ── Main Template ──
 export const ServicePageTemplate = ({ config }: { config: ServicePageConfig }) => {
+  const { pathname } = useLocation();
+  const modern = !pathname.endsWith("2");
+  const Band = ({ children, dark }: { children: React.ReactNode; dark?: boolean }) => modern ? <ServicePageBand dark={dark}>{children}</ServicePageBand> : <>{children}</>;
   const { loading, handleFormSubmit } = useLeadSubmit({
     source: config.source,
     formId: `${config.source}_form`,
@@ -436,8 +443,9 @@ export const ServicePageTemplate = ({ config }: { config: ServicePageConfig }) =
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
+      <main className={`min-h-screen pt-16 md:pt-20 ${modern ? "remaining-service-page" : ""}`}>
         <ServiceHeroSection
+          modern={modern}
           badgeIcon={config.hero.badgeIcon}
           badgeText={config.hero.badgeText}
           headline={
@@ -463,17 +471,17 @@ export const ServicePageTemplate = ({ config }: { config: ServicePageConfig }) =
         />
 
         <Suspense fallback={null}>
-          <ClientLogosSection />
-          <LazySection minHeight="400px"><ProblemSection problems={config.problems} heading={config.sections?.problems} /></LazySection>
-          <LazySection minHeight="400px"><ServicesGrid services={config.services} eyebrow={config.sections?.services?.eyebrow} title={config.sections?.services?.title} description={config.sections?.services?.description} ctaText={config.sections?.services?.ctaText} /></LazySection>
-          <LazySection minHeight="400px"><ComparisonSection comparison={config.comparison} heading={config.sections?.comparison} /></LazySection>
-          <LazySection minHeight="400px"><BenefitsSection benefits={config.benefits} heading={config.sections?.benefits} /></LazySection>
-          <LazySection minHeight="500px"><DMIndustriesSection {...(config.sections?.industries ?? {})} /></LazySection>
-          <LazySection minHeight="400px"><ProcessSection process={config.process} heading={config.sections?.process} /></LazySection>
-          <LazySection minHeight="400px"><TestimonialSection /></LazySection>
-          <LazySection minHeight="300px"><WhoIsThisForSection data={config.whoIsThisFor} heading={config.sections?.whoIsThisFor} /></LazySection>
-          <LazySection minHeight="200px"><FinalCTASection data={config.finalCTA} /></LazySection>
-          <LazySection minHeight="300px"><FAQSection faq={config.faq} /></LazySection>
+          <Band dark>{modern ? <ServiceClientLogos /> : <ClientLogosSection />}</Band>
+          <Band><LazySection minHeight="400px"><ProblemSection problems={config.problems} heading={config.sections?.problems} /></LazySection></Band>
+          <Band dark><LazySection minHeight="400px"><ServicesGrid services={config.services} eyebrow={config.sections?.services?.eyebrow} title={config.sections?.services?.title} description={config.sections?.services?.description} ctaText={config.sections?.services?.ctaText} /></LazySection></Band>
+          <Band><LazySection minHeight="400px"><ComparisonSection comparison={config.comparison} heading={config.sections?.comparison} /></LazySection></Band>
+          <Band dark><LazySection minHeight="400px"><BenefitsSection benefits={config.benefits} heading={config.sections?.benefits} /></LazySection></Band>
+          <Band><LazySection minHeight="500px"><DMIndustriesSection {...(config.sections?.industries ?? {})} /></LazySection></Band>
+          <Band dark><LazySection minHeight="400px"><ProcessSection process={config.process} heading={config.sections?.process} /></LazySection></Band>
+          <Band><LazySection minHeight="400px"><TestimonialSection /></LazySection></Band>
+          <Band dark><LazySection minHeight="300px"><WhoIsThisForSection data={config.whoIsThisFor} heading={config.sections?.whoIsThisFor} /></LazySection></Band>
+          <Band><LazySection minHeight="200px"><FinalCTASection data={config.finalCTA} /></LazySection></Band>
+          <Band dark><LazySection minHeight="300px"><FAQSection faq={config.faq} /></LazySection></Band>
         </Suspense>
 
         <Footer />

@@ -1,3 +1,5 @@
+import { ServicePageBand } from "@/components/service/ServicePageBand";
+import { ServiceClientLogos } from "@/components/service/ServiceClientLogos";
 import { Helmet } from "react-helmet-async";
 import { getFaqs } from "@/data/faqs";
 import { lazy, Suspense } from "react";
@@ -60,10 +62,10 @@ const DigitalMarketing = () => {
 
       <Navbar />
 
-      <main className="min-h-screen pt-16 md:pt-20">
+      <main className="remaining-service-page min-h-screen pt-16 md:pt-20">
         {/* Section 1: Hero */}
         <div id="dm-hero">
-          <ServiceHeroSection
+          <ServiceHeroSection modern
             badgeIcon={Megaphone}
             badgeText="#1 Digital Marketing Agency in Bangalore"
             headline={
@@ -94,68 +96,68 @@ const DigitalMarketing = () => {
         </div>
 
         {/* Client Logos */}
-        <ClientLogosSection />
+        <ServicePageBand dark><ServiceClientLogos /></ServicePageBand>
 
         <Suspense fallback={null}>
-          <DMProblemSection />
-          <DMSocialProofSection />
-          <DMComparisonSection />
+          <ServicePageBand><DMProblemSection /></ServicePageBand>
+          <ServicePageBand dark><DMSocialProofSection /></ServicePageBand>
+          <ServicePageBand><DMComparisonSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 2: Why Bangalore */}
         <Suspense fallback={null}>
-          <DMWhyBangaloreSection />
+          <ServicePageBand dark><DMWhyBangaloreSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 3: Services */}
         <Suspense fallback={null}>
-          <ServicesDetailSection />
+          <ServicePageBand><ServicesDetailSection /></ServicePageBand>
           <DMAISections />
         </Suspense>
 
         {/* Section 4: Industries */}
         <Suspense fallback={null}>
-          <DMIndustriesSection />
+          <ServicePageBand dark><DMIndustriesSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 5: Why Choose Us */}
         <Suspense fallback={null}>
-          <DMBenefitsSection />
+          <ServicePageBand><DMBenefitsSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 6: Process */}
         <Suspense fallback={null}>
-          <DMProcessSection />
+          <ServicePageBand dark><DMProcessSection /></ServicePageBand>
         </Suspense>
 
         <Suspense fallback={null}>
-          <DMContentSection />
+          <ServicePageBand><DMContentSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 7: Pricing */}
         <Suspense fallback={null}>
-          <DMPricingSection />
+          <ServicePageBand dark><DMPricingSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 8: Case Studies */}
         <Suspense fallback={null}>
-          <DMCaseStudySection />
+          <ServicePageBand><DMCaseStudySection /></ServicePageBand>
         </Suspense>
 
         {/* Testimonials */}
         <Suspense fallback={null}>
-          <DMTestimonialsSection />
-          <DMRelevanceSection />
+          <ServicePageBand dark><DMTestimonialsSection /></ServicePageBand>
+          <ServicePageBand><DMRelevanceSection /></ServicePageBand>
         </Suspense>
 
         {/* Section 9: Final CTA */}
         <Suspense fallback={null}>
-          <DMFinalCTASection />
+          <ServicePageBand dark><DMFinalCTASection /></ServicePageBand>
         </Suspense>
 
         {/* Section 10: FAQ */}
         <Suspense fallback={null}>
-          <DMFAQSection />
+          <ServicePageBand><DMFAQSection /></ServicePageBand>
         </Suspense>
 
         <Suspense fallback={null}>
