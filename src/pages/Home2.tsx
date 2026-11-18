@@ -126,22 +126,22 @@ const Home2 = () => (
           </div>
           <div>
             <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Super30 Team</p>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Team of <span className="text-brand">30 SEO Specialists</span></h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">A team of strategists, analysts and creators working together to rank brands higher — across SEO, AEO, AIO, GEO and beyond.</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-[2.05rem] xl:text-[2.35rem]">Your Team of <span className="text-brand">30 Digital Specialists</span></h2>
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">Not your typical digital marketing company. Just 30 obsessive minds turning brand ideas into revenue.</p>
             <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
-              <div className="flex items-center gap-4"><Target className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Data-Driven Strategies</h3></div>
-              <div className="flex items-center gap-4"><Eye className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Transparent Reporting</h3></div>
+              <div className="flex items-center gap-4"><Target className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Full-Funnel Execution</h3></div>
+              <div className="flex items-center gap-4"><Eye className="h-12 w-12 shrink-0 text-brand" strokeWidth={1.3} /><h3 className="text-xl font-semibold leading-snug text-foreground">Clear Revenue Tracking</h3></div>
             </div>
             <div className="mt-8 grid items-center gap-6 sm:grid-cols-[1.4fr_1fr]">
               <div>
-                <h3 className="text-xl font-semibold text-foreground">AI-Powered Execution</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">Smarter, faster campaigns with AI tools, automation, and a team focused on your ROI.</p>
+                <h3 className="text-xl font-semibold text-foreground">AI-Driven Momentum</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">Real-time optimization and creative agility that keep your brand ahead of the market.</p>
                 <div className="mt-7"><PillCta to="/internet-marketing-agency">Meet Our Team</PillCta></div>
               </div>
               <div className="rounded-3xl bg-background p-7">
                 <TrendingUp className="h-10 w-10 text-brand" strokeWidth={1.4} />
-                <p className="mt-8 text-3xl font-semibold text-foreground">10,000+</p>
-                <p className="mt-1 font-medium text-foreground">Keywords Ranked for Clients</p>
+                <p className="mt-8 text-3xl font-semibold text-foreground">₹16 Cr+</p>
+                <p className="mt-1 font-medium text-foreground">Client Revenue Influenced</p>
               </div>
             </div>
           </div>
