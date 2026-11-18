@@ -67,3 +67,9 @@
 - [x] Match the SEO page logos, 5+4 rows and enlarged ICS/Digital Academy 360 on all seven latest services
 - [x] Move the eight-person team above services while preserving service-specific copy
 - [x] Verify all seven pages on desktop and mobile
+
+# About page service-style refresh
+
+- [x] Match the rounded, centered service banner and team card design while preserving all current members
+- [x] Remove both Passion Meets Performance sections and alternate the remaining light/dark bands with warm glow
+- [x] Verify desktop/mobile sections, photos and links

@@ -9,22 +9,18 @@ import { FAQSection } from "@/components/landing/FAQSection";
 import { TeamSection } from "@/components/about/TeamSection";
 import { InteractiveTimeline } from "@/components/about/InteractiveTimeline";
 
-import { CultureSection } from "@/components/about/CultureSection";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/home-agency-team.jpg";
-import strategyImage from "@/assets/home-strategy-session.jpg";
 import workspaceImage from "@/assets/seo-real-growth-workspace.jpg";
 import "./About.css";
 import {
   ArrowRight,
   Bot,
   Target,
-  Users,
   Award,
   Shield,
   Heart,
   CheckCircle2,
-  Play,
 } from "lucide-react";
 
 const values = [
@@ -81,9 +77,11 @@ const About = () => {
       <main className="about-page min-h-screen pt-16 md:pt-20">
         <section id="about-hero" className="about-hero">
           <img src={heroImage} alt="The digital marketing team collaborating on a growth strategy" fetchPriority="high" />
-          <div className="container mx-auto">
+          <div className="container mx-auto about-hero-content">
             <p className="about-eyebrow">— THE SUPER 30</p>
-            <h1>About Us<span className="text-brand">.</span></h1>
+            <h1>About <span className="about-hero-highlight">Us.</span></h1>
+            <p className="about-hero-copy">Real people. Real strategies. AI-powered results. Meet the team behind your growth.</p>
+            <div className="about-hero-actions"><Button asChild className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button><Link to="/our-work" className="text-sm font-semibold underline-offset-4 hover:underline">View Our Work</Link></div>
             <nav aria-label="Breadcrumb" className="about-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>About Us</span></nav>
           </div>
         </section>
@@ -123,14 +121,6 @@ const About = () => {
             <div className="about-values">{values.map(value => <article key={value.title} className="about-value"><value.icon /><h3>{value.title}</h3><p>{value.description}</p></article>)}</div>
           </div>
         </section>
-
-        <div id="about-culture" className="about-light about-band">
-          <div className="container mx-auto about-culture-layout"><CultureSection /><img className="about-culture-photo" src={strategyImage} alt="Our team sharing ideas during a strategy session" loading="lazy" /></div>
-        </div>
-
-        <div id="about-showcase" className="about-dark about-band">
-          <div className="container mx-auto"><figure className="about-wide-photo"><img src={heroImage} alt="Marketing specialists collaborating on digital growth" loading="lazy" /><figcaption><span>THE SUPER 30</span><strong>Where Passion Meets Performance</strong><Button asChild variant="outline" className="about-outline rounded-full"><Link to="/our-work">See Our Work<ArrowRight className="ml-3 h-4 w-4" /></Link></Button></figcaption></figure></div>
-        </div>
 
         {/* Team Section */}
         <div id="about-team" className="about-light about-band">

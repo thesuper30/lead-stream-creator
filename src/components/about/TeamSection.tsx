@@ -1,5 +1,4 @@
-import { Linkedin, Instagram } from "lucide-react";
-import { BentoBadge } from "@/components/ui/bento-grid";
+import { Linkedin } from "lucide-react";
 
 import amitImg from "@/assets/team/amit.png";
 import lalitImg from "@/assets/team/lalit.png";
@@ -29,62 +28,29 @@ const teamMembers = [
   { name: "Azarudheen", expertise: "UI/UX & Creative Design", image: azarudheeImg },
 ];
 
-const PolaroidCard = ({ member }: { member: typeof teamMembers[0] }) => (
-  <div className="group relative bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-border/30">
-    {/* Photo with social icons */}
-    <div className="relative aspect-[4/5] overflow-hidden">
-      <img
-        src={member.image}
-        alt={`${member.name} at The Super 30`}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        loading="lazy"
-      />
-      {/* Small social icons on right side of image */}
-      <div className="absolute right-2 bottom-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <a
-          href="#"
-          className="w-8 h-8 rounded-full bg-[#0A66C2]/90 backdrop-blur-sm flex items-center justify-center text-white hover:scale-110 transition-transform"
-          aria-label={`${member.name}'s LinkedIn`}
-        >
-          <Linkedin className="w-4 h-4" />
-        </a>
-        <a
-          href="#"
-          className="w-8 h-8 rounded-full bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] backdrop-blur-sm flex items-center justify-center text-white hover:scale-110 transition-transform"
-          aria-label={`${member.name}'s Instagram`}
-        >
-          <Instagram className="w-4 h-4" />
-        </a>
-      </div>
+const TeamCard = ({ member }: { member: typeof teamMembers[0] }) => (
+  <article className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
+    <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+      <img src={member.image} alt={`${member.name} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" />
     </div>
-    {/* Info */}
-    <div className="p-4 text-center">
-      <h3 className="font-bold text-sm md:text-base text-foreground">{member.name}</h3>
-      <p className="text-[11px] md:text-xs text-muted-foreground mt-1 leading-tight">{member.expertise}</p>
+    <div className="flex items-center justify-between gap-3 px-5 py-4">
+      <div className="min-w-0"><h3 className="text-lg font-semibold text-foreground">{member.name}</h3><p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{member.expertise}</p></div>
+      <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
     </div>
-  </div>
+  </article>
 );
 
-export const TeamSection = () => {
-  return (
-    <section className="py-12 md:py-16 lg:py-20 bg-muted/30">
-      <div className="container mx-auto px-3 md:px-4">
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-          <BentoBadge className="mb-4">Our Team</BentoBadge>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
-            Meet Our Digital Marketing Experts
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            Our SEO specialists and PPC specialists work collaboratively to deliver integrated strategies for your growth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <PolaroidCard key={index} member={member} />
-          ))}
-        </div>
+export const TeamSection = () => (
+  <section aria-labelledby="about-team-heading" className="py-16 md:py-24 bg-background">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl">
+        <p className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase text-foreground"><span className="h-2 w-2 rounded-full bg-brand" />Our Team</p>
+        <h2 id="about-team-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Digital Marketing Experts</span></h2>
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Our SEO specialists and PPC specialists work collaboratively to deliver integrated strategies for your growth.</p>
       </div>
-    </section>
-  );
-};
+      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {teamMembers.map(member => <TeamCard key={member.name} member={member} />)}
+      </div>
+    </div>
+  </section>
+);
