@@ -10,6 +10,7 @@
 
 - Shared portfolio headings accept optional page-specific copy; preserve default text so Homepage2 edits do not change other pages.
 
-- The PDF client-logo dataset is shared only by Homepage2, SEO Company 2 and Lead Generation 2; keep other service pages on their existing logos to isolate page-specific replacements.
+- Homepage2 keeps the original PDF client-logo dataset; the latest SEO and seven shared service pages use that dataset without SkyMarvel plus ICS and Digital Academy 360, so service logo updates remain consistent without changing the homepage.
+- Keep the eight-person team before services in the shared service template with page-specific headings, so all seven latest service pages match the SEO page structure.
 
 - Keep About page theme overrides in its page stylesheet and reuse existing team, journey and culture sections, so the redesign does not affect other pages.

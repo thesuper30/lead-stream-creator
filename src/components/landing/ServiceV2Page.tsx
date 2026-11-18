@@ -20,23 +20,26 @@ import featuredSearchImage from "@/assets/seo-featured-ai-search.jpg";
 import magicbricksClientLogo from "@/assets/clients/magicbricks.png";
 import mamaearthClientLogo from "@/assets/clients/mamaearth.png";
 import upgradClientLogo from "@/assets/clients/upgrad.png";
-import showcaseHarvest from "@/assets/seo-company2-logos/harvest-international.png.asset.json";
-import showcaseInteriors from "@/assets/seo-company2-logos/interiors-and-more.png.asset.json";
-import showcaseAcademy from "@/assets/seo-company2-logos/digital-academy-360.png.asset.json";
-import showcaseIcs from "@/assets/seo-company2-logos/ics.png.asset.json";
-import showcaseJain from "@/assets/seo-company2-logos/jain-university.png.asset.json";
-import showcaseAtria from "@/assets/seo-company2-logos/atria-institute.png.asset.json";
-import showcaseSmr from "@/assets/seo-company2-logos/smr-university.png.asset.json";
+import icsLogo from "@/assets/logos/ics.png";
+import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 import amitTeam from "@/assets/team/amit-singh.png";
 import mayankTeam from "@/assets/team/mayank-1.png";
 import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
 import praveenTeam from "@/assets/team/praveen-1.png";
+import harshavardhanTeam from "@/assets/team/harshavardhan.png";
+import chandrasekharTeam from "@/assets/team/chandrashekar.png";
+import anandTeam from "@/assets/team/anand-3.png";
+import likhithTeam from "@/assets/team/likith-1.png";
 
 const team = [
   { name: "Amit Singh", role: "Co-Founder", image: amitTeam, card: "bg-[#FDE2E4]" },
   { name: "Mayank", role: "VP - Business Growth", image: mayankTeam, card: "bg-[#D8F3DC]" },
   { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam, card: "bg-[#FFF3C4]" },
   { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam, card: "bg-[#E5DEFF]" },
+  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam, card: "bg-muted" },
+  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam, card: "bg-muted" },
+  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam, card: "bg-muted" },
+  { name: "Likhith P", role: "Video Editor", image: likhithTeam, card: "bg-muted" },
 ];
 
 const industries = [
@@ -59,11 +62,10 @@ const testimonials = [
 
 const avatars = [magicbricksClientLogo, mamaearthClientLogo, upgradClientLogo];
 const stats = [["300%+", "Avg. Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
-const logos = [
-  { src: showcaseHarvest.url, name: "Harvest International School" }, { src: showcaseInteriors.url, name: "Interiors & More" },
-  { src: showcaseAcademy.url, name: "Digital Academy 360" }, { src: showcaseIcs.url, name: "ICS" },
-  { src: showcaseJain.url, name: "Jain University" }, { src: showcaseAtria.url, name: "Atria Institute of Technology" },
-  { src: showcaseSmr.url, name: "SMR University" },
+const logos: { src: string; name: string; className?: string }[] = [
+  ...pdfClientLogos.filter((logo) => logo.name !== "SkyMarvel"),
+  { src: icsLogo, name: "ICS", className: "h-14 sm:h-28" },
+  { src: digitalAcademy360Logo, name: "Digital Academy 360", className: "h-14 sm:h-28" },
 ];
 const pointImages = [evolvingImage, heroImage, featuredSearchImage, partnerImage, realGrowthImage];
 
@@ -100,7 +102,6 @@ const Stars = ({ light }: { light?: boolean }) => (
 export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
   const [open, setOpen] = useState(false);
   const cta = () => setOpen(true);
-  const pageLogos = c.path === "/lead-generation-agency-bangalore" ? pdfClientLogos : logos;
   const svcCols = c.services.length % 5 === 0 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
@@ -155,12 +156,17 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Brands you know.<br /><span className="text-brand">A team they trust.</span></h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">Trusted by growing brands across India.</p>
             </div>
-            <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 sm:mt-12 sm:grid-cols-12">
-              {pageLogos.map((l, i) => (
-                <div key={l.name} className={`flex h-28 min-w-0 items-center justify-center px-5 sm:h-32 sm:px-8 ${pageLogos === pdfClientLogos || i < 4 ? "sm:col-span-3" : "sm:col-span-4"} ${i % 2 === 1 ? "border-l border-foreground/10" : ""} ${i === 2 || i === 5 || i === 6 ? "sm:border-l sm:border-foreground/10" : ""} ${i === 4 ? "sm:border-l-0" : ""} ${pageLogos !== pdfClientLogos && i === logos.length - 1 ? "col-span-2" : ""}`}>
-                  <img src={l.src} alt={l.name} className="max-h-16 w-full max-w-[140px] object-contain sm:max-h-[72px] sm:max-w-[160px]" loading="lazy" />
-                </div>
-              ))}
+            <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center gap-8 sm:mt-12 sm:gap-10">
+              <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
+                {logos.slice(0, 5).map((client) => (
+                  <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[19%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+                ))}
+              </div>
+              <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
+                {logos.slice(5).map((client) => (
+                  <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[23%] object-contain sm:max-w-[220px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -232,6 +238,31 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               <div className="relative mt-6 flex flex-wrap gap-3 lg:mt-0 lg:w-2/3">
                 {c.ecosystem.capabilities.map((x) => <span key={x} className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/15 bg-primary-foreground/5 px-4 py-2 text-sm font-medium text-primary-foreground transition hover:border-brand hover:bg-brand/15"><span className="h-1.5 w-1.5 rounded-full bg-brand" />{x}</span>)}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* TEAM */}
+        <section aria-labelledby="service-experts-heading" className="bg-background py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+              <div className="max-w-2xl">
+                <Eyebrow>{c.team.eyebrow}</Eyebrow>
+                <h2 id="service-experts-heading" className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet the <span className="text-brand">{c.team.highlight}</span> Behind Your Growth</h2>
+                <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{c.team.text}</p>
+              </div>
+              <Pill to="/about">Meet the whole team</Pill>
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {team.map((m) => (
+                <article key={m.name} className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
+                  <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}><img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" /></div>
+                  <div className="flex items-center justify-between gap-3 px-5 py-4">
+                    <div className="min-w-0"><h3 className="text-lg font-semibold text-foreground">{m.name}</h3><p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p></div>
+                    <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -385,31 +416,6 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
                   <blockquote className="flex-1 text-lg leading-relaxed text-foreground">“{t.quote}”</blockquote>
                   <figcaption className="mt-8 flex items-center gap-3 border-t border-border pt-5"><span className="h-2 w-2 rounded-full bg-brand" /><span className="text-sm font-semibold text-foreground">{t.role}</span></figcaption>
                 </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* TEAM */}
-        <section className="bg-background py-16 md:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
-              <div className="max-w-2xl">
-                <Eyebrow>{c.team.eyebrow}</Eyebrow>
-                <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">Meet the <span className="text-brand">{c.team.highlight}</span> Behind Your Growth</h2>
-                <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{c.team.text}</p>
-              </div>
-              <Pill to="/about">Meet the whole team</Pill>
-            </div>
-            <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {team.map((m) => (
-                <article key={m.name} className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
-                  <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}><img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" /></div>
-                  <div className="flex items-center justify-between gap-3 px-5 py-4">
-                    <div className="min-w-0"><h3 className="text-lg font-semibold text-foreground">{m.name}</h3><p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p></div>
-                    <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
-                  </div>
-                </article>
               ))}
             </div>
           </div>

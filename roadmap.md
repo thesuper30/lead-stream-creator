@@ -61,3 +61,9 @@
 # Timed lead popup
 
 - [x] Add a 5-second lead popup form shown once per session on all pages; verify timing, dismissal, submission, desktop/mobile
+
+# Service-page logos and team
+
+- [x] Match the SEO page logos, 5+4 rows and enlarged ICS/Digital Academy 360 on all seven latest services
+- [x] Move the eight-person team above services while preserving service-specific copy
+- [x] Verify all seven pages on desktop and mobile
