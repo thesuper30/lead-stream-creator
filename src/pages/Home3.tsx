@@ -186,8 +186,8 @@ const Home3 = () => (
       <section className="border-t border-primary-foreground/10 bg-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-14 max-w-3xl text-center">
-            <Eyebrow>Our core value</Eyebrow>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind <span className="text-brand">Smarter AI Solutions</span></h2>
+            <Eyebrow>How we work</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind <span className="text-brand">Market-Leading Brands</span></h2>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Alignment */}
@@ -197,10 +197,10 @@ const Home3 = () => (
                 <img src={seoTeamImage} alt="The Super 30 team at work" className="absolute right-0 top-0 h-40 w-1/2 rounded-2xl border-4 border-foreground object-cover" loading="lazy" />
               </div>
               <h3 className="mt-7 text-2xl font-semibold text-primary-foreground">Alignment</h3>
-              <p className="mt-3 leading-relaxed text-primary-foreground/70">We Bring People And AI Technology Together To Create Smarter Marketing Solutions.</p>
+              <p className="mt-3 leading-relaxed text-primary-foreground/70">We pair sharp brand strategists with smart AI to eliminate guesswork.</p>
               <div className="mt-6 border-t border-primary-foreground/15 pt-6">
                 <ul className="space-y-3">
-                  {["Connect Teams With AI Solutions", "Building Business Partnerships"].map((p) => (
+                  {["Human-led brand thinking", "True growth partnerships"].map((p) => (
                     <li key={p} className="flex items-center gap-3 text-sm text-primary-foreground/70"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>
                   ))}
                 </ul>
@@ -218,11 +218,11 @@ const Home3 = () => (
                 </div>
               </div>
               <div className="relative mt-auto pt-40">
-                <h3 className="text-2xl font-semibold">Transformation</h3>
-                <p className="mt-3 leading-relaxed text-primary-foreground/80">We Transform Ideas And AI Technology Into Solutions That Drive Growth.</p>
+                <h3 className="text-2xl font-semibold">Acceleration</h3>
+                <p className="mt-3 leading-relaxed text-primary-foreground/80">We turn bold creative ideas and live data into compounding revenue.</p>
                 <div className="mt-6 grid grid-cols-2 gap-6 border-t border-primary-foreground/20 pt-6">
-                  <div><p className="text-3xl font-semibold">300%+</p><p className="mt-1 text-sm text-primary-foreground/75">Growth Generated</p></div>
-                  <div className="border-l border-primary-foreground/20 pl-6"><p className="text-3xl font-semibold">50+</p><p className="mt-1 text-sm text-primary-foreground/75">Audits Delivered</p></div>
+                  <div><p className="text-3xl font-semibold">300%+</p><p className="mt-1 text-sm text-primary-foreground/75">Average Traffic Lift</p></div>
+                  <div className="border-l border-primary-foreground/20 pl-6"><p className="text-3xl font-semibold">50+</p><p className="mt-1 text-sm text-primary-foreground/75">Growth Audits Delivered</p></div>
                 </div>
               </div>
             </div>
@@ -231,17 +231,18 @@ const Home3 = () => (
               <img src={heroImage} alt="The team at work" className="h-64 w-full rounded-3xl object-cover lg:flex-1" loading="lazy" />
               <div className="rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-7">
                 <p className="text-lg font-semibold uppercase leading-snug tracking-wide text-primary-foreground">
-                  Our commitment to building smarter
+                  Built for ambitious brands
                   <span className="mx-2 inline-flex -space-x-2 align-middle">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-foreground object-cover" loading="lazy" />)}<span className="grid h-7 w-7 place-items-center rounded-full border-2 border-foreground bg-brand text-primary-foreground"><Users className="h-3.5 w-3.5" /></span></span>
-                  AI solutions for modern businesses
+                  that refuse to blend
                   <span className="mx-2 inline-flex -space-x-2 align-middle">{[gaganTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-foreground object-cover" loading="lazy" />)}</span>
+                  into the noise
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-center">
             <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-foreground object-cover" loading="lazy" />)}<span className="grid h-9 w-9 place-items-center rounded-full border-2 border-foreground bg-brand text-primary-foreground"><ArrowRight className="h-4 w-4" /></span></span>
-            <span className="text-primary-foreground">Driven by strong principles — <Link to="/internet-marketing-agency" className="font-semibold text-brand underline underline-offset-4">Discover What Defines Our Success!</Link></span>
+            <span className="text-primary-foreground">Built on conviction, backed by numbers. <Link to="/internet-marketing-agency" className="font-semibold text-brand underline underline-offset-4">See How We Win</Link></span>
           </div>
         </div>
       </section>
