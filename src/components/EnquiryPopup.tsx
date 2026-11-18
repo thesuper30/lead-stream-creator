@@ -1,4 +1,5 @@
 import { useState } from "react";
+import super30Logo from "@/assets/super30-new-logo.png";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
 import {
   Dialog,
@@ -20,7 +21,6 @@ import {
   Phone,
   CheckCircle,
   AlertCircle,
-  MessageCircle,
   ArrowRight,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -147,9 +147,13 @@ export const EnquiryPopup = ({ open, onOpenChange }: EnquiryPopupProps) => {
       }}
     >
       <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-xl border border-border/40 shadow-2xl rounded-2xl p-6 sm:p-8">
-        {/* Modern icon treatment */}
-        <div className="flex items-center justify-center w-12 h-12 mx-auto rounded-xl bg-primary/10">
-          <MessageCircle className="w-6 h-6 text-primary" />
+        {/* Brand mark */}
+        <div className="flex items-center justify-center mx-auto">
+          <img
+            src={super30Logo}
+            alt="Super30"
+            className="h-9 w-auto sm:h-10"
+          />
         </div>
 
         <DialogHeader className="text-center space-y-2">
