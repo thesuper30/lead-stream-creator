@@ -99,3 +99,10 @@
 
 - [x] Hide the "Meet the SEO Experts Behind Your Growth" team section from the SEO page and all seven service pages, keeping the markup for a later restore
 - [x] Verify the section is gone and neighbouring sections join cleanly on all eight pages, desktop and phone
+
+# All forms → Google Sheet
+
+- [x] Send every form (popups, contact, careers, service pages, course, ads questionnaire, booking) to the Google Sheet with page, source, UTM and device details
+- [x] Redirect every form to the thank you page (course forms now included)
+- [x] Write the Google Apps Script (POST) for the sheet
+- [ ] Add the Apps Script web app link — waiting on the user to deploy the script and paste the link

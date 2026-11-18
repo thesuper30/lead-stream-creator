@@ -20,11 +20,15 @@ function isLovablePreviewOrigin(origin: string): boolean {
     if (protocol !== 'https:') return false;
 
     // Only allow this project's specific Lovable preview/hosted domains
-    const PROJECT_ID = '9fc41acf-a44c-4b4e-b257-9336c6b074a9';
+    const PROJECT_IDS = ['9fc41acf-a44c-4b4e-b257-9336c6b074a9', 'ed96b800-cd80-4073-bb8a-cfe70717d608'];
     const ALLOWED_LOVABLE_HOSTS = [
-      `id-preview--${PROJECT_ID}.lovableproject.com`,
-      `id-preview--${PROJECT_ID}.lovable.app`,
+      ...PROJECT_IDS.flatMap((id) => [
+        `${id}.lovableproject.com`,
+        `id-preview--${id}.lovableproject.com`,
+        `id-preview--${id}.lovable.app`,
+      ]),
       `super30ai.lovable.app`,
+      `lead-stream-creator.lovable.app`,
     ];
     return ALLOWED_LOVABLE_HOSTS.includes(hostname);
   } catch {

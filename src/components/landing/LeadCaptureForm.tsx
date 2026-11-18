@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Sparkles, Loader2, CheckCircle, AlertCircle, Phone } from "lucide-react";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
-import { detectService, getServiceHeadline, submitToGoogleSheets } from "@/lib/serviceDetection";
+import { detectService, getServiceHeadline } from "@/lib/serviceDetection";
 
 interface LeadCaptureFormProps {
   onSubmit: (data: { website_url: string; email: string; phone?: string; role?: string; monthly_revenue?: string; full_name?: string; company_name?: string }) => void;
@@ -123,7 +123,7 @@ export const LeadCaptureForm = ({
         company_name: companyName || undefined,
       };
 
-      // Submit to Web3Forms (non-blocking)
+      // Send to Google Sheet + email (non-blocking; keepalive survives the redirect)
       void submitFormToGoogleSheets({
         form_id: formId,
         form_name: formName,
@@ -140,20 +140,6 @@ export const LeadCaptureForm = ({
           message: message || "",
           service,
         },
-      });
-
-      // Submit to Google Sheets via Apps Script (non-blocking)
-      void submitToGoogleSheets({
-        name: fullName,
-        company: companyName,
-        website: websiteUrl,
-        email: email,
-        phone: phone ? `+91${phone}` : "",
-        role: roleOptions.find(r => r.value === role)?.label || role || "",
-        revenue: revenueOptions.find(r => r.value === monthlyRevenue)?.label || monthlyRevenue || "",
-        message: message || "",
-        service,
-        page_url: window.location.href,
       });
 
       onSubmit(formData);

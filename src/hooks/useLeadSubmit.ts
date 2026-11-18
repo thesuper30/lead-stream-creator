@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { openThankYouPage } from '@/lib/thankYouRedirect';
-import { submitFormToGoogleSheets } from '@/hooks/useFormSubmit';
 import { detectService } from '@/lib/serviceDetection';
 
 interface FormData {
@@ -45,40 +44,10 @@ export const useLeadSubmit = ({ source, formId, formName }: UseLeadSubmitOptions
         headers: sessionId ? { 'x-session-id': sessionId } : undefined,
       });
 
-      // 2. Submit to Web3Forms (non-blocking)
-      void submitFormToGoogleSheets({
-        form_id: formId || `${source}_form`,
-        form_name: formName || `Lead Capture - ${source}`,
-        page_url: window.location.href,
-        trigger_type: 'form_submit',
-        data: {
-          name: data.full_name || '',
-          company: data.company_name || '',
-          website: data.website_url,
-          email: data.email,
-          phone: data.phone || '',
-          role: data.role || '',
-          revenue: data.monthly_revenue || '',
-          service,
-        },
-      });
-
-      // 3. Sync to Google Sheets via edge function (non-blocking)
-      void supabase.functions.invoke('sync-lead-to-sheets', {
-        body: {
-          website: data.website_url,
-          email: data.email,
-          phone: data.phone || '',
-          role: data.role || '',
-          revenue: data.monthly_revenue || '',
-          formSource: source,
-        },
-      });
-
       // Wait for the lead to be created so we can send email with session data
       const { data: leadResult } = await createLeadPromise;
 
-      // 4. Send notification email via edge function (non-blocking)
+      // 2. Send notification email via edge function (non-blocking)
       if (sessionId) {
         // Get session data for the email
         void supabase.functions.invoke('send-lead-email', {

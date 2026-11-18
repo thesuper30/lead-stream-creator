@@ -28,6 +28,7 @@ import { useToast } from "@/hooks/use-toast";
 import { courseApplicationSchema, validateField } from "@/lib/courseFormValidation";
 import { FormFieldError } from "./FormFieldError";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
+import { openThankYouPage } from "@/lib/thankYouRedirect";
 
 interface CourseEnquiryFormProps {
   onSuccess?: () => void;
@@ -127,13 +128,11 @@ export const CourseEnquiryForm = ({ onSuccess }: CourseEnquiryFormProps) => {
         },
       });
 
-      setSubmittedName(formData.fullName.split(' ')[0]);
-      setSubmitted(true);
       onSuccess?.();
-      
-      toast({
-        title: "Application Received! 🎉",
-        description: "We'll call you within 24 hours. Check your WhatsApp too!",
+      openThankYouPage({
+        name: formData.fullName.trim(),
+        email: formData.email.trim(),
+        source: "course_enquiry",
       });
 
     } catch (error: any) {

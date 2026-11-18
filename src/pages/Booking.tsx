@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
+import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { useSession } from "@/hooks/useSession";
@@ -120,6 +121,23 @@ const Booking = () => {
           };
           setBookingData(bookingInfo);
           
+          void submitFormToGoogleSheets({
+            form_id: "consultation_booking",
+            form_name: "Consultation Booking",
+            page_url: window.location.href,
+            trigger_type: "embedded",
+            data: {
+              name: bookingInfo.attendeeName || "",
+              email: bookingInfo.attendeeEmail || leadData?.email || "",
+              phone: leadData?.phone || "",
+              website: leadData?.website_url || "",
+              booking_date: bookingInfo.date || "",
+              start_time: bookingInfo.startTime,
+              end_time: bookingInfo.endTime || "",
+              meeting_link: bookingInfo.meetingLink || "",
+            },
+          });
+
           toast.success("Consultation booked successfully!");
           // Open thank you page in new tab
           openThankYouPage({

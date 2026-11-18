@@ -17,3 +17,4 @@
 
 - Remaining footer services and industry hubs use scoped ServicePageBand themes and the modern ServiceHeroSection option; retain original content and submission handlers, and exclude suffixed archive routes so completed pages remain unchanged.
 - Careers vacancies live in a data file listed on a page-scoped Careers page, so roles can be added or removed without layout edits.
+- Every website form submits through `submitFormToGoogleSheets` (src/hooks/useFormSubmit.ts), which attaches `getTrackingFields()` and posts to the `submit-form-to-sheet` function that forwards to the Apps Script URL secret; never post to Apps Script from the browser, so the sheet link stays private and every row carries the same tracking columns.

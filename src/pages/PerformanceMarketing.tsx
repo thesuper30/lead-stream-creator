@@ -1,5 +1,6 @@
 import { useState, Suspense, lazy } from "react";
 import { openThankYouPage } from "@/lib/thankYouRedirect";
+import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
 import { useSession } from "@/hooks/useSession";
 import { useLead } from "@/hooks/useLead";
 import { Navbar } from "@/components/Navbar";
@@ -127,6 +128,26 @@ const PerformanceMarketing = () => {
           "Performance Marketing - Ads Audit Request"
         );
       }
+
+      // Add the completed questionnaire to the Google Sheet (keepalive survives the redirect)
+      void submitFormToGoogleSheets({
+        form_id: "pm_ads_audit_questionnaire",
+        form_name: "Ads Audit Questionnaire",
+        page_url: window.location.href,
+        trigger_type: "popup",
+        data: {
+          name: initialFormData.full_name || "",
+          email: initialFormData.email,
+          phone: initialFormData.phone || "",
+          company: initialFormData.company_name || "",
+          website: initialFormData.website_url,
+          role: initialFormData.role || "",
+          monthly_ad_budget: initialFormData.monthly_revenue || "",
+          business_type: questionnaireData.business_type,
+          preferred_platforms: questionnaireData.preferred_platforms,
+          service: "lead-generation",
+        },
+      });
 
       toast.success("Form submitted successfully!");
       

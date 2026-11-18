@@ -38,6 +38,7 @@ import {
 import { courseApplicationSchema, validateField } from "@/lib/courseFormValidation";
 import { FormFieldError } from "./FormFieldError";
 import { submitFormToGoogleSheets } from "@/hooks/useFormSubmit";
+import { openThankYouPage } from "@/lib/thankYouRedirect";
 
 interface FieldErrors {
   fullName?: string | null;
@@ -161,12 +162,10 @@ export const CourseApplicationSection = () => {
         },
       });
 
-      setSubmittedName(formData.fullName.split(' ')[0]);
-      setSubmitted(true);
-      
-      toast({
-        title: "Application Received! 🎉",
-        description: "We'll call you within 24 hours. Check your WhatsApp too!",
+      openThankYouPage({
+        name: formData.fullName.trim(),
+        email: formData.email.trim(),
+        source: "course_application",
       });
 
     } catch (error: any) {

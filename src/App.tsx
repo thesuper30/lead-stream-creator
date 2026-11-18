@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { AttributionTracker } from "@/components/AttributionTracker";
 import { PageSchema } from "@/components/seo/PageSchema";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { HelmetProvider } from "react-helmet-async";
@@ -157,6 +158,7 @@ const App = () => (
         <BrowserRouter>
           <DeferredUI />
           <ScrollToTop />
+          <AttributionTracker />
           <PageSchema />
           <ErrorBoundary>
             <Suspense fallback={<PageLoader />}>
