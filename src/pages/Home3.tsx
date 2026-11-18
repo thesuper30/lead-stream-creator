@@ -19,10 +19,15 @@ import harvestLogo from "@/assets/clients/harvest-international.png";
 import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
-import amitTeam from "@/assets/team/amit-singh.png";
-import mayankTeam from "@/assets/team/mayank-1.png";
-import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
-import praveenTeam from "@/assets/team/praveen-1.png";
+import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
+import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
+import gaganTeamJson from "@/assets/team/gagan.png.asset.json";
+import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
+
+const amitTeam = amitTeamJson.url;
+const mayankTeam = mayankTeamJson.url;
+const gaganTeam = gaganTeamJson.url;
+const praveenTeam = praveenTeamJson.url;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 

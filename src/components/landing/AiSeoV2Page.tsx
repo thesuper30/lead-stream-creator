@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight, BarChart3, BrainCircuit, BriefcaseBusiness, Building2, Check, FileText,
-  GraduationCap, Linkedin, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
+  GraduationCap, Hotel, Link2, MapPin, PenLine, Phone, Rocket, Scale, Search, ShoppingBag, Smartphone,
   Sparkles, Star, Stethoscope, Target, TrendingUp, Quote,
 } from "lucide-react";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
@@ -29,24 +29,24 @@ import icsLogo from "@/assets/logos/ics.png";
 import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 
 
-import amitTeam from "@/assets/team/amit-singh.png";
-import mayankTeam from "@/assets/team/mayank-1.png";
-import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
-import praveenTeam from "@/assets/team/praveen-1.png";
-import harshavardhanTeam from "@/assets/team/harshavardhan.png";
-import chandrasekharTeam from "@/assets/team/chandrashekar.png";
-import anandTeam from "@/assets/team/anand-3.png";
-import likhithTeam from "@/assets/team/likith-1.png";
+import amitTeam from "@/assets/team/amit-singh.png.asset.json";
+import mayankTeam from "@/assets/team/mayank.png.asset.json";
+import gaganTeam from "@/assets/team/gagan.png.asset.json";
+import praveenTeam from "@/assets/team/praveen.png.asset.json";
+import harshavardhanTeam from "@/assets/team/harshavardhan.png.asset.json";
+import chandrasekharTeam from "@/assets/team/chandrasekhar.png.asset.json";
+import anandTeam from "@/assets/team/anand.png.asset.json";
+import likhithTeam from "@/assets/team/likhith.png.asset.json";
 
 const seoExperts = [
-  { name: "Amit Singh", role: "Co-Founder", image: amitTeam, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
-  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
-  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam, card: "bg-[#FFF3C4]", blob: "bg-[#FDE68A]" },
-  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
-  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
-  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
-  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam, card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
-  { name: "Likhith P", role: "Video Editor", image: likhithTeam, card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
+  { name: "Amit Singh", role: "Co-Founder", image: amitTeam.url, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
+  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam.url, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
+  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam.url, card: "bg-[#FFF3C4]", blob: "bg-[#FDE68A]" },
+  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam.url, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
+  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam.url, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
+  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam.url, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
+  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam.url, card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
+  { name: "Likhith P", role: "Video Editor", image: likhithTeam.url, card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
 ];
 
 const industries = [
@@ -333,12 +333,11 @@ export const AiSeoV2Page = () => {
                 <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}>
                   <img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" />
                 </div>
-                <div className="flex items-center justify-between gap-3 px-5 py-4">
+                <div className="px-5 py-4">
                   <div className="min-w-0">
                     <h3 className="text-lg font-semibold text-foreground">{m.name}</h3>
                     <p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p>
                   </div>
-                  <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
                 </div>
               </article>
             ))}

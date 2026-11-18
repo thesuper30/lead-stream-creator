@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, BarChart3, Bot, CheckCircle2, Eye, Linkedin, Phone, Search, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BarChart3, Bot, CheckCircle2, Eye, Phone, Search, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { WorkPortfolioTabs } from "@/components/work/WorkPortfolioTabs";
@@ -10,10 +10,15 @@ import heroImage from "@/assets/home-agency-team.jpg";
 import strategyImage from "@/assets/home-strategy-session.jpg";
 import seoTeamImage from "@/assets/home-seo-team.jpg";
 import { pdfClientLogos } from "@/data/pdfClientLogos";
-import amitTeam from "@/assets/team/amit-singh.png";
-import mayankTeam from "@/assets/team/mayank-1.png";
-import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
-import praveenTeam from "@/assets/team/praveen-1.png";
+import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
+import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
+import gaganTeamJson from "@/assets/team/gagan.png.asset.json";
+import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
+
+const amitTeam = amitTeamJson.url;
+const mayankTeam = mayankTeamJson.url;
+const gaganTeam = gaganTeamJson.url;
+const praveenTeam = praveenTeamJson.url;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
@@ -344,9 +349,8 @@ const Home2 = () => (
             {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Gagan", r: "VP - Digital Marketing", i: gaganTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (
               <div key={m.n} className="overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5">
                 <img src={m.i} alt={m.n} width={800} height={1000} className="aspect-[4/5] w-full object-cover object-top" loading="lazy" />
-                <div className="flex items-center justify-between gap-3 p-4">
+                <div className="p-4">
                   <div><h3 className="font-semibold text-primary-foreground">{m.n}</h3><p className="text-sm text-primary-foreground/60">{m.r}</p></div>
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground"><Linkedin className="h-4 w-4" /></span>
                 </div>
               </div>
             ))}

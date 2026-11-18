@@ -3,7 +3,7 @@ import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
-  ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, Check, GraduationCap, Hotel, Linkedin,
+  ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, Check, GraduationCap, Hotel,
   Quote, Rocket, Scale, ShoppingBag, Star, Stethoscope,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -22,24 +22,24 @@ import mamaearthClientLogo from "@/assets/clients/mamaearth.png";
 import upgradClientLogo from "@/assets/clients/upgrad.png";
 import icsLogo from "@/assets/logos/ics.png";
 import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
-import amitTeam from "@/assets/team/amit-singh.png";
-import mayankTeam from "@/assets/team/mayank-1.png";
-import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
-import praveenTeam from "@/assets/team/praveen-1.png";
-import harshavardhanTeam from "@/assets/team/harshavardhan.png";
-import chandrasekharTeam from "@/assets/team/chandrashekar.png";
-import anandTeam from "@/assets/team/anand-3.png";
-import likhithTeam from "@/assets/team/likith-1.png";
+import amitTeam from "@/assets/team/amit-singh.png.asset.json";
+import mayankTeam from "@/assets/team/mayank.png.asset.json";
+import gaganTeam from "@/assets/team/gagan.png.asset.json";
+import praveenTeam from "@/assets/team/praveen.png.asset.json";
+import harshavardhanTeam from "@/assets/team/harshavardhan.png.asset.json";
+import chandrasekharTeam from "@/assets/team/chandrasekhar.png.asset.json";
+import anandTeam from "@/assets/team/anand.png.asset.json";
+import likhithTeam from "@/assets/team/likhith.png.asset.json";
 
 const team = [
-  { name: "Amit Singh", role: "Co-Founder", image: amitTeam, card: "bg-[#FDE2E4]" },
-  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam, card: "bg-[#D8F3DC]" },
-  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam, card: "bg-[#FFF3C4]" },
-  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam, card: "bg-[#E5DEFF]" },
-  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam, card: "bg-muted" },
-  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam, card: "bg-muted" },
-  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam, card: "bg-muted" },
-  { name: "Likhith P", role: "Video Editor", image: likhithTeam, card: "bg-muted" },
+  { name: "Amit Singh", role: "Co-Founder", image: amitTeam.url, card: "bg-[#FDE2E4]" },
+  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam.url, card: "bg-[#D8F3DC]" },
+  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam.url, card: "bg-[#FFF3C4]" },
+  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam.url, card: "bg-[#E5DEFF]" },
+  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam.url, card: "bg-[#D7E3FC]" },
+  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam.url, card: "bg-[#FFE5D9]" },
+  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam.url, card: "bg-[#CFF7E5]" },
+  { name: "Likhith P", role: "Video Editor", image: likhithTeam.url, card: "bg-[#FCE1F0]" },
 ];
 
 const industries = [
@@ -261,9 +261,8 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
               {team.map((m) => (
                 <article key={m.name} className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl">
                   <div className={`relative aspect-[4/5] overflow-hidden ${m.card}`}><img src={m.image} alt={`${m.name}, ${m.role} at The Super 30`} width={800} height={1000} loading="lazy" className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]" /></div>
-                  <div className="flex items-center justify-between gap-3 px-5 py-4">
+                  <div className="px-5 py-4">
                     <div className="min-w-0"><h3 className="text-lg font-semibold text-foreground">{m.name}</h3><p className="mt-0.5 text-sm text-muted-foreground">{m.role}</p></div>
-                    <a href="https://www.linkedin.com/company/thesuper30/" target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground transition hover:border-brand hover:bg-brand hover:text-primary-foreground"><Linkedin className="h-4 w-4" /></a>
                   </div>
                 </article>
               ))}
