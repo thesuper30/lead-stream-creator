@@ -218,13 +218,13 @@ export const AiSeoV2Page = () => {
           </div>
           <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center gap-8 sm:mt-12 sm:gap-10">
             <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
-              {showcaseLogos.slice(0, 5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className="h-10 w-auto min-w-0 max-w-[19%] object-contain sm:h-20 sm:max-w-[220px]" loading="lazy" />
+              {showcaseLogos.slice(0, 6).map((client) => (
+                <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[16%] object-contain sm:max-w-[190px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
               ))}
             </div>
             <div className="flex w-full flex-nowrap items-center justify-center gap-x-4 sm:gap-x-14">
-              {showcaseLogos.slice(5).map((client) => (
-                <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[23%] object-contain sm:max-w-[220px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
+              {showcaseLogos.slice(6).map((client) => (
+                <img key={client.name} src={client.src} alt={client.name} className={`w-auto min-w-0 max-w-[16%] object-contain sm:max-w-[190px] ${client.className ?? "h-10 sm:h-20"}`} loading="lazy" />
               ))}
             </div>
           </div>
