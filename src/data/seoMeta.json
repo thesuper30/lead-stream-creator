@@ -55,6 +55,20 @@
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/contact-us"
   },
+  "/careers": {
+    "title": "Careers at TheSuper30 | Digital Marketing Jobs in Bangalore",
+    "description": "Join TheSuper30 in Bangalore. Open roles for SEO Expert, E-Commerce Marketer, Social Media Executive and Digital Marketing Executive. Apply today.",
+    "keywords": "digital marketing jobs bangalore, seo jobs bangalore, social media executive jobs, careers",
+    "ogTitle": "Careers at TheSuper30 | Digital Marketing Jobs in Bangalore",
+    "ogDescription": "Join TheSuper30 in Bangalore. Open roles for SEO Expert, E-Commerce Marketer, Social Media Executive and Digital Marketing Executive. Apply today.",
+    "twitterTitle": "Careers at TheSuper30 | Digital Marketing Jobs in Bangalore",
+    "twitterDescription": "Join TheSuper30 in Bangalore. Open roles for SEO Expert, E-Commerce Marketer, Social Media Executive and Digital Marketing Executive. Apply today.",
+    "canonical": "https://www.thesuper30.ai/careers",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/careers"
+  },
   "/digital-marketing-agency-bangalore": {
     "title": "Digital Marketing Agency in Bangalore | 10x Your Growth",
     "description": "Scale your brand with leading digital marketing company in Bangalore. Our services deliver ROI-focused SEO, PPC & social media strategies. Get a free brand audit",

@@ -90,3 +90,5 @@
 - [x] Redesign remaining services and six industry hubs while retaining existing content and enquiry flows
 - [x] Preserve the eight completed main service pages and older suffixed designs
 - [x] Verify all 30 remaining footer destinations, alternating themes and mobile layouts
+
+- [x] Careers page with four vacancies, linked in footer below Contact Us

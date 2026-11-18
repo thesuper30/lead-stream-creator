@@ -16,3 +16,4 @@
 - Keep About page theme overrides in its page stylesheet; show the full active team with the eight service-page portraits first and preserve the journey section, so the redesign does not affect other pages.
 
 - Remaining footer services and industry hubs use scoped ServicePageBand themes and the modern ServiceHeroSection option; retain original content and submission handlers, and exclude suffixed archive routes so completed pages remain unchanged.
+- Careers vacancies live in a data file listed on a page-scoped Careers page, so roles can be added or removed without layout edits.

@@ -40,6 +40,7 @@ const Work2 = lazy(() => import("./pages/Work2"));
 const EcommerceSeoCaseStudy = lazy(() => import("./pages/EcommerceSeoCaseStudy"));
 
 const Contact = lazy(() => import("./pages/Contact"));
+const Careers = lazy(() => import("./pages/Careers"));
 const Audit = lazy(() => import("./pages/Audit"));
 const Booking = lazy(() => import("./pages/Booking"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
@@ -171,6 +172,7 @@ const App = () => (
 
 
                 <Route path="/contact-us" element={<Contact />} />
+                <Route path="/careers" element={<Careers />} />
                 <Route path="/industries/:slug" element={<IndustryHub />} />
                 {/* Industry solution landing pages */}
                 <Route path="/digital-marketing-for-coaching-institutes" element={<CoachingInstitutes />} />

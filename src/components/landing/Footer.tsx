@@ -20,6 +20,7 @@ const company = [
   { name: "About / Team 30", href: "/internet-marketing-agency" },
   { name: "Our Work", href: "/our-work" },
   { name: "Contact Us", href: "/contact-us" },
+  { name: "Careers", href: "/careers" },
 ];
 
 const resources = [

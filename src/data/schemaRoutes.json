@@ -255,6 +255,10 @@
     "name": "Contact Us",
     "type": "ContactPage"
   },
+  "/careers": {
+    "name": "Careers",
+    "type": "WebPage"
+  },
   "/internet-marketing-agency": {
     "name": "About The Super 30",
     "type": "AboutPage",
