@@ -259,6 +259,10 @@
     "name": "Careers",
     "type": "WebPage"
   },
+  "/industries": {
+    "name": "Industries We Serve",
+    "type": "CollectionPage"
+  },
   "/internet-marketing-agency": {
     "name": "About The Super 30",
     "type": "AboutPage",

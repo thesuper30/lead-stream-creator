@@ -69,6 +69,20 @@
     "twitterCard": "summary_large_image",
     "ogUrl": "https://www.thesuper30.ai/careers"
   },
+  "/industries": {
+    "title": "Industries We Serve | Digital Marketing by Industry | The Super 30",
+    "description": "Explore the industries The Super 30 serves in Bangalore: education, e-commerce, lifestyle, sports, B2B and hospitality. AI SEO and lead generation by industry.",
+    "keywords": "",
+    "ogTitle": "Industries We Serve | Digital Marketing by Industry | The Super 30",
+    "ogDescription": "Explore the industries The Super 30 serves in Bangalore: education, e-commerce, lifestyle, sports, B2B and hospitality. AI SEO and lead generation by industry.",
+    "twitterTitle": "Industries We Serve | Digital Marketing by Industry | The Super 30",
+    "twitterDescription": "Explore the industries The Super 30 serves in Bangalore: education, e-commerce, lifestyle, sports, B2B and hospitality. AI SEO and lead generation by industry.",
+    "canonical": "https://www.thesuper30.ai/industries",
+    "robots": "index, follow",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "ogUrl": "https://www.thesuper30.ai/industries"
+  },
   "/digital-marketing-agency-bangalore": {
     "title": "Digital Marketing Agency in Bangalore | 10x Your Growth",
     "description": "Scale your brand with leading digital marketing company in Bangalore. Our services deliver ROI-focused SEO, PPC & social media strategies. Get a free brand audit",

@@ -333,7 +333,7 @@ const Home = () => {
               <p className="mt-3 text-base text-muted-foreground">Real strategies. Real rankings. Real business growth.</p>
             </div>
 
-            <Button asChild size="lg" className="mt-8 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark"><Link to="/about">Meet Our Team <ArrowRight className="ml-3 h-5 w-5" /></Link></Button>
+            <Button asChild size="lg" className="mt-8 rounded-full bg-brand px-8 text-primary-foreground hover:bg-brand-dark"><Link to="/internet-marketing-agency">Meet Our Team <ArrowRight className="ml-3 h-5 w-5" /></Link></Button>
           </div>
         </div>
       </section>
@@ -427,7 +427,7 @@ const Home = () => {
               <h2 className="mt-3 text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">Meet Our <span className="text-brand">Super 30</span></h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">Strategists, search specialists, media experts, developers, and designers — one focused team built around your growth.</p>
             </div>
-            <Button asChild variant="outline" className="w-fit rounded-full border-border bg-background px-6"><Link to="/about">Meet the whole team <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
+            <Button asChild variant="outline" className="w-fit rounded-full border-border bg-background px-6"><Link to="/internet-marketing-agency">Meet the whole team <ArrowRight className="ml-2 h-4 w-4" /></Link></Button>
           </div>
 
           <div className="mt-9 flex gap-2 overflow-x-auto pb-2" aria-label="Filter team by specialty">

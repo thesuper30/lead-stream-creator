@@ -134,7 +134,7 @@ const IndustryHub = () => {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={`https://thesuper30.com/industries/${slug}`} />
+        <link rel="canonical" href={`https://www.thesuper30.ai/industries/${slug}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />

@@ -186,7 +186,7 @@ export const CourseEnquiryForm = ({ onSuccess }: CourseEnquiryFormProps) => {
             variant="outline"
             size="sm"
             className="border-border text-primary hover:bg-primary/10"
-            onClick={() => window.open('https://wa.me/919876543210?text=Hi, I just applied for the AI SEO course and have a quick question', '_blank')}
+            onClick={() => window.open('https://wa.me/918904150555?text=Hi, I just applied for the AI SEO course and have a quick question', '_blank')}
           >
             Chat on WhatsApp
           </Button>

@@ -119,7 +119,7 @@ const Home2 = () => (
               <img src={heroImage} alt="Team collaborating" className="h-[220px] w-full rounded-3xl object-cover sm:h-[300px]" loading="lazy" />
               <img src={strategyImage} alt="Strategy session" className="h-[220px] w-full rounded-3xl object-cover sm:h-[320px]" loading="lazy" />
             </div>
-            <Link to="/about" aria-label="More about us" className="absolute left-[56%] top-1/2 grid h-32 w-32 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-background bg-brand text-primary-foreground sm:h-40 sm:w-40">
+            <Link to="/internet-marketing-agency" aria-label="More about us" className="absolute left-[56%] top-1/2 grid h-32 w-32 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-background bg-brand text-primary-foreground sm:h-40 sm:w-40">
               <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_14s_linear_infinite]"><defs><path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" /></defs><text className="fill-current text-[9px] font-semibold tracking-[1.5px]"><textPath href="#c">More About Us * More About Us * More About Us *</textPath></text></svg>
               <span className="grid h-11 w-11 place-items-center rounded-full bg-background text-brand"><ArrowRight className="h-5 w-5" /></span>
             </Link>
@@ -136,7 +136,7 @@ const Home2 = () => (
               <div>
                 <h3 className="text-xl font-semibold text-foreground">AI-Powered Execution</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">Smarter, faster campaigns with AI tools, automation, and a team focused on your ROI.</p>
-                <div className="mt-7"><PillCta to="/about">Meet Our Team</PillCta></div>
+                <div className="mt-7"><PillCta to="/internet-marketing-agency">Meet Our Team</PillCta></div>
               </div>
               <div className="rounded-3xl bg-background p-7">
                 <TrendingUp className="h-10 w-10 text-brand" strokeWidth={1.4} />
@@ -162,7 +162,6 @@ const Home2 = () => (
             </div>
             <div className="lg:justify-self-end">
               <p className="max-w-md text-base leading-relaxed text-primary-foreground/75">AI-powered SEO, lead generation, creative, and automation — everything your brand needs to grow traffic, leads, and revenue in one team.</p>
-              <div className="mt-6"><PillCta to="/digital-marketing-agency-bangalore">View All Services</PillCta></div>
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -241,7 +240,7 @@ const Home2 = () => (
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-center">
             <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-9 w-9 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><ArrowRight className="h-4 w-4" /></span></span>
-            <span className="text-foreground">Driven by strong principles — <Link to="/about" className="font-semibold text-brand underline underline-offset-4">Discover What Defines Our Success!</Link></span>
+            <span className="text-foreground">Driven by strong principles — <Link to="/internet-marketing-agency" className="font-semibold text-brand underline underline-offset-4">Discover What Defines Our Success!</Link></span>
           </div>
         </div>
       </section>
@@ -285,7 +284,7 @@ const Home2 = () => (
               ))}
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-primary-foreground/15 pt-8">
-              <PillCta to="/about">Learn More</PillCta>
+              <PillCta to="/internet-marketing-agency">Learn More</PillCta>
               <a href="tel:+918904150555" className="inline-flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-5 w-5" /></span><span><span className="block text-sm font-semibold text-primary-foreground">Talk to an SEO Expert</span><span className="text-sm text-primary-foreground/70">+91 89041 50555</span></span></a>
             </div>
           </div>
@@ -343,7 +342,7 @@ const Home2 = () => (
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div><Eyebrow>The people behind the work</Eyebrow><h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Meet Our <span className="text-brand">Super 30</span></h2></div>
-            <PillCta to="/about">Meet the whole team</PillCta>
+            <PillCta to="/internet-marketing-agency">Meet the whole team</PillCta>
           </div>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Gagan", r: "VP - Digital Marketing", i: gaganTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (

@@ -19,8 +19,8 @@ interface UnifiedCTASectionProps {
 export const UnifiedCTASection = forwardRef<HTMLElement, UnifiedCTASectionProps>(({
   headline = "Ready to Grow Your Business?",
   subtext = "Let's build a digital marketing strategy that drives real results. Book a free consultation with our experts.",
-  primaryCTA = { label: "Get Free Strategy Consultation", href: "/seo-company-bangalore" },
-  secondaryCTA = { label: "Explore Our Services", href: "/lead-generation-agency-bangalore" },
+  primaryCTA = { label: "Get Free Strategy Consultation", href: "/contact-us" },
+  secondaryCTA = { label: "Explore Our Services", href: "/digital-marketing-agency-bangalore" },
   variant = "dark",
 }, ref) => {
   const isDark = variant === "dark";

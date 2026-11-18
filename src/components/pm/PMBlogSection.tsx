@@ -85,9 +85,11 @@ export const PMBlogSection = () => {
         </div>
 
         <div className="text-center mt-6 md:mt-10">
-          <Button variant="outline" className="border-[#F95B00]/30 hover:bg-[#F95B00]/10 hover:border-[#F95B00]">
-            View All Articles
-            <ArrowRight className="w-4 h-4 ml-2" />
+          <Button asChild variant="outline" className="border-[#F95B00]/30 hover:bg-[#F95B00]/10 hover:border-[#F95B00]">
+            <Link to="/blog">
+              View All Articles
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </div>
       </div>

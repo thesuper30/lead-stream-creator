@@ -121,7 +121,7 @@ export const CourseFAQSection = forwardRef<HTMLElement>((_, forwardedRef) => {
             Still have doubts? That's normal. Let's talk.
           </p>
           <a 
-            href="https://wa.me/919876543210?text=Hi, I have some questions about the AI SEO course"
+            href="https://wa.me/918904150555?text=Hi, I have some questions about the AI SEO course"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[hsl(var(--brand-orange))] font-semibold hover:underline"

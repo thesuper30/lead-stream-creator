@@ -103,12 +103,15 @@ export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark =
 
         <div className="text-center">
           <Button 
+            asChild
             variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-accent hover:border-primary"
           >
-            Explore All Blogs
-            <ArrowRight className="w-4 h-4 ml-2" />
+            <Link to="/blog">
+              Explore All Blogs
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </div>
       </div>

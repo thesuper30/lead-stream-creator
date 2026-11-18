@@ -92,3 +92,5 @@
 - [x] Verify all 30 remaining footer destinations, alternating themes and mobile layouts
 
 - [x] Careers page with four vacancies, linked in footer below Contact Us
+- [x] Remove "View all services" buttons from homepage
+- [x] Check every link and button across the site works and points to the right page

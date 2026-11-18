@@ -123,6 +123,10 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
                     </Link>
                   ) : (
                     <button
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded={openDesktop === item.label}
+                      onClick={() => setOpenDesktop(openDesktop === item.label ? null : item.label)}
                       className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                         openDesktop === item.label
                           ? "text-[hsl(var(--brand-orange))] bg-muted/50"

@@ -16,7 +16,7 @@ const projects = [
       "Designed and developed a cinematic, dark-themed website for a leading video production company — with bold CTAs, portfolio showcases, and SEO-optimized structure.",
     tags: ["Corporate Site", "Dark Theme", "SEO Ready", "Portfolio"],
     image: aadhyaImg,
-    cta: "View Case Study",
+    cta: "Start a Similar Project",
   },
   {
     category: "E-COMMERCE STORE",
@@ -25,7 +25,7 @@ const projects = [
       "Built a complete e-commerce platform for office furniture with product catalogs, payment gateway integration, and a streamlined checkout experience.",
     tags: ["E-Commerce", "Payment Gateway", "Product Catalog", "Mobile First"],
     image: isitImg,
-    cta: "View Case Study",
+    cta: "Start a Similar Project",
   },
   {
     category: "INTERIOR DESIGN WEBSITE",
@@ -34,7 +34,7 @@ const projects = [
       "Crafted a visually stunning website for an interior design studio — featuring project galleries, service pages, and lead capture forms for consultations.",
     tags: ["Corporate Site", "Gallery", "Lead Generation", "Responsive"],
     image: interiorsImg,
-    cta: "View Case Study",
+    cta: "Start a Similar Project",
   },
   {
     category: "RACING ACADEMY WEBSITE",
@@ -43,7 +43,7 @@ const projects = [
       "Designed a bold, high-energy website for India's premier motorcycle racing academy — with dynamic visuals, course listings, and enrollment-driven CTAs.",
     tags: ["Landing Page", "Enrollment Focused", "Responsive", "Action Sports"],
     image: madrabbitImg,
-    cta: "View Case Study",
+    cta: "Start a Similar Project",
   },
 ];
 

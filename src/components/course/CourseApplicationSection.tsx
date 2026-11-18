@@ -227,7 +227,7 @@ export const CourseApplicationSection = () => {
                   <Button 
                     variant="outline"
                     className="border-[hsl(var(--brand-orange))]/30 text-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/10"
-                    onClick={() => window.open('https://wa.me/919876543210?text=Hi, I just applied for the AI SEO course and have a quick question', '_blank')}
+                    onClick={() => window.open('https://wa.me/918904150555?text=Hi, I just applied for the AI SEO course and have a quick question', '_blank')}
                   >
                     Chat on WhatsApp
                   </Button>
@@ -500,7 +500,7 @@ export const CourseApplicationSection = () => {
                       variant="outline"
                       size="sm"
                       className="border-[hsl(var(--brand-orange))]/30 text-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/10"
-                      onClick={() => window.open('https://wa.me/919876543210?text=Hi, I have questions about the AI SEO course', '_blank')}
+                      onClick={() => window.open('https://wa.me/918904150555?text=Hi, I have questions about the AI SEO course', '_blank')}
                     >
                       Chat on WhatsApp First
                     </Button>
