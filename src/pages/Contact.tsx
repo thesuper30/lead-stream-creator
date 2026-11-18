@@ -265,7 +265,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Section */}
-        <section id="contact-form-section" className="contact-dark contact-band">
+        <section id="contact-form-section" className="contact-light contact-band contact-form-band">
           <div className="container mx-auto">
             <div className="contact-grid">
               {/* Contact Form */}
