@@ -97,7 +97,9 @@ const clientLogos = [
   { src: lancesoftLogo, name: "Lancesoft" },
 ];
 
-const stats = [["300%+", "Avg. Traffic Growth"], ["50+", "AI Audits Delivered"], ["$2M+", "Revenue Generated"], ["4.9/5", "Client Rating"]];
+const seoHeroStats = [["10,000+", "Keywords Ranked"], ["3,500+", "Page-1 Rankings"], ["285%", "Avg. Organic Traffic Growth"], ["1,200+", "Top-3 Google Positions"]];
+const seoAboutStats = [["50+", "SEO Audits Delivered"], ["600+", "AI Search Citations Earned"]];
+const stats = seoHeroStats;
 
 const showcaseLogos: { src: string; name: string; className?: string }[] = [
   ...pdfClientLogos.map((logo) =>
@@ -241,8 +243,8 @@ export const AiSeoV2Page = () => {
           <div className="relative">
             <img src={evolvingImage} alt="People discovering businesses through search" width={1100} height={900} loading="lazy" className="aspect-[5/4] w-full rounded-3xl object-cover" />
             <div className="absolute -bottom-6 left-6 rounded-2xl bg-background p-5 shadow-lg sm:left-10">
-              <p className="text-3xl font-semibold text-foreground">$2M+</p>
-              <p className="text-sm text-muted-foreground">Client Revenue Generated</p>
+              <p className="text-3xl font-semibold text-foreground">₹6 Cr+</p>
+              <p className="text-sm text-muted-foreground">Revenue From Organic Search</p>
               <div className="mt-4 border-t border-border pt-4"><Rating /></div>
             </div>
           </div>
@@ -251,7 +253,7 @@ export const AiSeoV2Page = () => {
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Best SEO Agency <span className="text-brand">for Your Business Growth.</span></h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">At The Super 30, we combine technical expertise, high-quality content and AI SEO to help your business rank higher, attract the right customers and turn organic search into qualified leads.</p>
             <div className="mt-8 grid gap-6 border-y border-border py-6 sm:grid-cols-2">
-              {[["50+", "AI Audits Delivered"], ["300%+", "Avg. Traffic Growth"]].map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
+              {seoAboutStats.map(([v, l]) => <div key={l}><p className="text-4xl font-semibold text-brand">{v}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>)}
             </div>
             <ul className="mt-6 space-y-3">
               {["SEO Strategies Built Around Your Business", "Expert Execution Across Content & Technical SEO", "AI SEO Visibility with Transparent Reporting"].map((x) => <li key={x} className="flex items-center gap-3 text-foreground"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand"><Check className="h-3.5 w-3.5 text-primary-foreground" /></span>{x}</li>)}

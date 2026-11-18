@@ -44,10 +44,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Lead Generation Agency in Bangalore | B2B Leads That Convert", description: "Trusted lead generation company in Bangalore helping B2B businesses attract & convert high-value leads. Real pipeline growth & measurable results. Let's Talk!", canonical: "/lead-generation-agency-bangalore" },
     ctaLabel: "Get My Free Lead Gen Audit",
     hero: { tags: "Lead Generation · Paid Ads · Funnels · CRM", title: "Lead Generation Agency in Bangalore. Turn Clicks into Qualified", highlight: "Leads", sub: "We deliver data-backed lead generation services in Bangalore that turn high-intent clicks into sales-qualified enquiries and revenue." },
-    heroStats: [["300%+", "Avg. Pipeline Lift"], ["50+", "Funnel Audits Delivered"], ["₹16 Cr+", "Client Revenue Generated"], ["4.9/5", "Client Rating"]],
+    heroStats: [["25,000+", "Qualified Leads Generated"], ["₹16 Cr+", "Sales Pipeline Generated"], ["42%", "Lower Cost Per Lead"], ["8,500+", "Sales Calls Booked"]],
     about: { eyebrow: "Built for revenue", title: "Turn Ad Spend Into", highlight: "Sales-Ready Enquiries.", text: "As an AI lead generation agency in Bangalore and trusted B2B lead generation company in Bangalore, we connect targeted ads, conversion pages, and CRM routing into qualified enquiries.", bullets: ["Campaigns Built Around Ready-To-Buy Audiences", "High-Converting Landing Pages & Qualifying Funnels", "Lead Quality Scoring Tied To Closed Revenue"], imageAlt: "Sales team reviewing qualified leads" },
     aboutCard: { value: "₹16 Cr+", label: "Client Revenue Generated" },
-    aboutStats: [["50+", "Funnel Audits Delivered"], ["300%+", "Avg. Enquiry Lift"]],
+    aboutStats: [["3.2X", "Avg. Enquiry Growth"], ["< 5 Min", "Avg. Lead Response Time"]],
     ecosystem: {
       eyebrow: "The Lead Engine", title: "One Funnel. Every Channel.", highlight: "Every Qualified Lead.", text: "A performance marketing agency in Bangalore connecting ad targeting, landing pages, and instant follow-up into one sales engine.",
       pillars: [
@@ -123,7 +123,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Social Media Marketing Agency in Bangalore | SMM Services", description: "Social media marketing agency in Bangalore offering content, reels, paid social and community management that grow reach, engagement and leads.", canonical: "/social-media-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Social Audit",
     hero: { tags: "Instagram · LinkedIn · YouTube · Meta Ads", title: "Social Media Marketing Agency in Bangalore. Scale Your Digital", highlight: "Presence", sub: "Strategy, scroll-stopping creatives, reels and paid social campaigns that turn followers into leads and customers." },
+    heroStats: [["2M+", "Followers Gained"], ["150M+", "Organic Impressions"], ["5,000+", "Reels & Creatives Produced"], ["8.5%", "Avg. Engagement Rate"]],
     about: { eyebrow: "Your social media partner", title: "The Best Social Media Agency", highlight: "for Brand & Business Growth.", text: "At The Super 30, we plan content, produce creatives and run paid social campaigns that build a loyal community and drive measurable business results.", bullets: ["Content Calendars Built Around Your Audience", "In-House Creative & Reel Production", "Paid Social with Clear ROI Reporting"], imageAlt: "Social media content planning session" },
+    aboutCard: { value: "320%", label: "Avg. Follower Growth" },
+    aboutStats: [["60M+", "Reel Views Generated"], ["4X", "Avg. Engagement Lift"]],
     ecosystem: {
       eyebrow: "The Social Ecosystem", title: "One Brand. Every Platform.", highlight: "Every Audience Moment.", text: "We build your presence across the platforms your customers use every day — organically and with paid reach.",
       pillars: [
@@ -159,7 +162,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
       { icon: BarChart3, title: "Analytics & Performance Reporting", text: "Monthly reporting dashboards measuring reach, engagement, leads, and revenue with meaningful business insights." },
       { icon: Zap, title: "Platform Performance Optimization", text: "Profile, bio, and link optimization designed to convert profile visits into followers, inquiries, and leads." },
     ],
-    why: { highlight: "Social Media Growth", text: "We don't just post content. We build a strategy around your audience, produce creatives in-house and connect every campaign to leads and revenue.", statValue: "250+", statLabel: "Projects Delivered", points: whyBase("social media") },
+    why: { highlight: "Social Media Growth", text: "We don't just post content. We build a strategy around your audience, produce creatives in-house and connect every campaign to leads and revenue.", statValue: "2M+", statLabel: "Followers Gained for Clients", points: whyBase("social media") },
     deliverables: { title: "Social Media Results That", highlight: "Move Your Business Forward.", text: "The outcomes your brand sees when social media is planned, created and managed end to end.", items: [
       { icon: TrendingUp, title: "Higher Audience Engagement", description: "Strategic content and active community management improve engagement within the first 90 days." },
       { icon: Users, title: "Qualified Audience Growth", description: "Attract relevant followers aligned with your ideal customer profile." },
@@ -182,7 +185,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Google Ads Agency in Bangalore | PPC Service | Upto 10X ROAS", description: "Google Ads agency in Bangalore running Search, Shopping, YouTube and Performance Max campaigns focused on ROAS, lower CPC and qualified leads.", canonical: "/google-ads-agency-bangalore" },
     ctaLabel: "Get My Free Google Ads Audit",
     hero: { tags: "Search · Shopping · YouTube · Performance Max", title: "Google Ads Agency in Bangalore. Turn Ad Spend into Real", highlight: "ROAS", sub: "Data-driven Google Ads campaigns that reach high-intent buyers, cut wasted spend and deliver measurable leads and sales." },
+    heroStats: [["₹3 Cr+", "Ad Spend Managed"], ["₹12 Cr+", "Revenue Generated"], ["4.5X", "Avg. ROAS"], ["38%", "Lower Cost Per Acquisition"]],
     about: { eyebrow: "Your Google Ads partner", title: "The Best Google Ads Agency", highlight: "for Profitable Growth.", text: "At The Super 30, we build, manage and optimise Google Ads campaigns around your business goals — so every rupee spent works harder.", bullets: ["Keyword & Audience Strategy Built for Intent", "AI-Driven Bidding and Weekly Optimisation", "Complete Spend Transparency with Live Reporting"], imageAlt: "Marketer analysing Google Ads performance" },
+    aboutCard: { value: "₹12 Cr+", label: "Revenue From Paid Campaigns" },
+    aboutStats: [["1,500+", "Campaigns Launched"], ["52%", "Avg. CTR Improvement"]],
     ecosystem: {
       eyebrow: "The Google Ads Ecosystem", title: "One Budget. Every Google Channel.", highlight: "Every Buying Moment.", text: "We run campaigns across Search, Display, Shopping and YouTube so your brand shows up wherever buyers are deciding.",
       pillars: [
@@ -241,7 +247,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Design Agency in Bangalore | UI/UX, Branding, Video & Photography", description: "Creative design company in Bangalore for UI/UX, brand identity, video production and photography. 100+ brands, 98% satisfaction. Let's Connect!", canonical: "/design-agency-bangalore" },
     ctaLabel: "Start My Design Project",
     hero: { tags: "UI/UX · Branding · Video · Photography", title: "Design Agency in Bangalore. Give Your Brand a Bold", highlight: "Identity", sub: "UI/UX, brand identity, video production and photography under one roof — creative that looks premium and performs." },
+    heroStats: [["15,000+", "Creatives Delivered"], ["1,200+", "Videos Produced"], ["50M+", "Video Views Generated"], ["45%", "Avg. Conversion Lift"]],
     about: { eyebrow: "Your creative partner", title: "The Best Design Agency", highlight: "for Brands That Want to Stand Out.", text: "At The Super 30, designers, video producers and photographers work together to create a consistent, premium brand experience across every touchpoint.", bullets: ["Brand-First Design Across Every Channel", "In-House Video & Photography Production", "Fast Iterations Until You're 100% Happy"], imageAlt: "Designers working on brand concepts" },
+    aboutCard: { value: "500+", label: "Photoshoots Completed" },
+    aboutStats: [["2,500+", "UI Screens Designed"], ["72 Hrs", "Avg. Creative Turnaround"]],
     ecosystem: {
       eyebrow: "The Creative Ecosystem", title: "One Brand. Every Touchpoint.", highlight: "Every Visual Story.", text: "From your logo to your app, ads, videos and product shoots — we design everything your brand needs.",
       pillars: [
@@ -300,7 +309,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Content Marketing Agency in Bangalore | Website, Blogs, Scripts & PR", description: "Content marketing agency in Bangalore for website content, SEO blogs, scripts, articles and PR that rank, engage and convert.", canonical: "/content-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Content Audit",
     hero: { tags: "Website Content · Blogs · Scripts · PR", title: "Content Marketing Agency in Bangalore. Words That Rank and", highlight: "Convert", sub: "Website content, SEO blogs, video scripts, articles and PR that build authority, drive traffic and turn readers into customers." },
+    heroStats: [["5,000+", "Articles & Blogs Published"], ["10,000+", "Keywords Ranked via Content"], ["4M+", "Organic Readers Reached"], ["250+", "PR Features Secured"]],
     about: { eyebrow: "Your content partner", title: "The Best Content Marketing Agency", highlight: "for Authority & Growth.", text: "At The Super 30, we combine keyword research, AI-powered research and expert human writing to produce content that ranks on Google, gets cited by AI and converts.", bullets: ["Content Strategy Built Around Search Intent", "Expert Writers Across Web, Blog, Script & PR", "Consistent Publishing with Performance Tracking"], imageAlt: "Content team planning an editorial calendar" },
+    aboutCard: { value: "1,500+", label: "Video & Ad Scripts Written" },
+    aboutStats: [["68%", "Avg. Time-on-Page Lift"], ["40+", "Industries Covered"]],
     ecosystem: {
       eyebrow: "The Content Ecosystem", title: "One Voice. Every Format.", highlight: "Every Discovery Channel.", text: "We create content for your website, search, social, video and media so your brand story reaches people everywhere.",
       pillars: [
@@ -336,7 +348,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
       { icon: Layers, title: "Content Strategy", text: "Topic clusters, pillar content, and editorial planning aligned with audience intent and business objectives." },
       { icon: Search, title: "Keyword Research & Audits", text: "Search intent driven keyword analysis and content reviews that find opportunities and strengthen weak pages." },
     ],
-    why: { highlight: "Content That Performs", text: "We blend strategy, research and expert writing so every piece of content has a job — rank, engage, build trust or convert.", statValue: "10,000", statLabel: "Keywords Ranked", points: whyBase("content") },
+    why: { highlight: "Content That Performs", text: "We blend strategy, research and expert writing so every piece of content has a job — rank, engage, build trust or convert.", statValue: "3.5X", statLabel: "Avg. Organic Traffic Lift", points: whyBase("content") },
     deliverables: { title: "Content Results That", highlight: "Build Authority.", text: "The outcomes your business sees when content is planned, written and distributed end to end.", items: [
       { icon: TrendingUp, title: "Sustained Traffic Growth", description: "Every asset designed to generate consistent long-term traffic." },
       { icon: Search, title: "Search Page Rankings", description: "Strategic keyword targeting puts you where customers search." },
@@ -359,7 +371,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "Website Design Company in Bangalore | E-commerce, WordPress & Custom", description: "Website design company in Bangalore building e-commerce, WordPress and custom-coded websites that are fast, SEO-ready and built to convert.", canonical: "/website-design-company-bangalore" },
     ctaLabel: "Get My Free Website Audit",
     hero: { tags: "E-commerce · WordPress · Custom Coded", title: "Website Design Company in Bangalore. Websites Built to", highlight: "Convert", sub: "E-commerce stores, WordPress sites and custom-coded websites that are fast, responsive, SEO-ready and designed for growth." },
+    heroStats: [["250+", "Websites Launched"], ["95+", "Avg. PageSpeed Score"], ["2.8X", "Avg. Conversion Rate Lift"], ["₹4 Cr+", "Online Sales Driven"]],
     about: { eyebrow: "Your website partner", title: "The Best Website Design Company", highlight: "for Business Growth.", text: "At The Super 30, we design and develop websites that strengthen your credibility, load fast, rank on search and turn visitors into enquiries and sales.", bullets: ["Conversion-Focused Design for Every Page", "E-commerce, WordPress & Custom Development", "SEO-Ready, Fast and Fully Responsive"], imageAlt: "Web designers reviewing a website layout" },
+    aboutCard: { value: "< 2s", label: "Avg. Page Load Time" },
+    aboutStats: [["60%", "Lower Bounce Rate"], ["99.9%", "Uptime Maintained"]],
     ecosystem: {
       eyebrow: "The Website Ecosystem", title: "One Website. Every Device.", highlight: "Every Business Goal.", text: "Whichever platform suits your business, we build it to perform — beautifully designed and technically sound.",
       pillars: [
@@ -395,7 +410,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
       { icon: Zap, title: "Website Speed Optimization", text: "Performance optimization for faster loading and improved search engine visibility." },
       { icon: Wrench, title: "Website Maintenance & Support", text: "Regular updates, security monitoring, and ongoing performance management." },
     ],
-    why: { highlight: "Websites That Perform", text: "We combine design, development and SEO from day one so your website looks premium, loads fast and keeps generating business.", statValue: "250+", statLabel: "Projects Delivered", points: whyBase("website") },
+    why: { highlight: "Websites That Perform", text: "We combine design, development and SEO from day one so your website looks premium, loads fast and keeps generating business.", statValue: "120+", statLabel: "E-commerce Stores Built", points: whyBase("website") },
     deliverables: { title: "Website Results That", highlight: "Drive Business.", text: "The outcomes your business sees when your website is designed and built the right way.", items: [
       { icon: MousePointerClick, title: "More Enquiries & Sales", description: "Clear journeys and CTAs that turn visitors into customers." },
       { icon: Zap, title: "Faster Load Times", description: "Optimised builds that pass Core Web Vitals." },
@@ -418,7 +433,10 @@ export const serviceV2Pages: ServiceV2Config[] = [
     seo: { title: "SMS & WhatsApp Marketing Company in Bangalore | Customer Engagement", description: "Bulk SMS, WhatsApp Business API, RCS and customer engagement platforms in Bangalore that reach customers instantly and drive conversions.", canonical: "/sms-marketing-agency-bangalore" },
     ctaLabel: "Get My Free Messaging Audit",
     hero: { tags: "Bulk SMS · WhatsApp · RCS · Chatbots", title: "SMS & WhatsApp Marketing Company in Bangalore. Reach Customers", highlight: "Instantly", sub: "Bulk SMS, WhatsApp Business API, RCS and customer engagement automation that deliver faster replies, higher engagement and more conversions." },
+    heroStats: [["50M+", "Messages Delivered"], ["98%", "WhatsApp Open Rate"], ["35%", "Avg. Click-Through Rate"], ["4.2X", "Avg. Campaign ROI"]],
     about: { eyebrow: "Your messaging partner", title: "The Best SMS & WhatsApp Marketing Company", highlight: "for Customer Engagement.", text: "At The Super 30, we set up compliant messaging, automate customer journeys and run targeted campaigns across SMS, WhatsApp and RCS that customers actually open.", bullets: ["DLT-Compliant SMS & Meta-Approved WhatsApp", "Automated Journeys Across Every Channel", "Live Delivery, Click and Conversion Reporting"], imageAlt: "Customer engagement team managing messaging campaigns" },
+    aboutCard: { value: "₹3 Cr+", label: "Revenue From Messaging" },
+    aboutStats: [["60%", "Faster Customer Response"], ["25%", "Repeat Purchase Lift"]],
     ecosystem: {
       eyebrow: "The Engagement Ecosystem", title: "One Customer. Every Channel.", highlight: "Every Conversation.", text: "We connect SMS, WhatsApp, RCS, chatbots and email into one engagement platform that reaches customers where they respond.",
       pillars: [
@@ -454,7 +472,7 @@ export const serviceV2Pages: ServiceV2Config[] = [
       { icon: Users, title: "Customer Engagement Platforms", text: "Setup and management of engagement platforms that unify customer data, segments and messaging journeys." },
       { icon: BarChart3, title: "Performance Analytics Reports", text: "Live reporting dashboards tracking delivery, engagement, clicks, conversions, and campaign performance insights." },
     ],
-    why: { highlight: "Customer Engagement", text: "We handle compliance, setup, automation and campaigns end to end — so your messages reach the right customers at the right moment.", statValue: "250+", statLabel: "Projects Delivered", points: whyBase("messaging") },
+    why: { highlight: "Customer Engagement", text: "We handle compliance, setup, automation and campaigns end to end — so your messages reach the right customers at the right moment.", statValue: "500+", statLabel: "Automated Journeys Built", points: whyBase("messaging") },
     deliverables: { title: "Messaging Results That", highlight: "Keep Customers Coming Back.", text: "The outcomes your business sees when SMS, WhatsApp and engagement platforms work together.", items: [
       { icon: Eye, title: "Higher Open Rates", description: "SMS and WhatsApp reach customers faster than email." },
       { icon: Zap, title: "Faster Customer Conversions", description: "Direct messaging encourages quicker bookings and purchases." },

@@ -19,13 +19,29 @@ test("latest service canonical paths match their main URLs", () => {
   for (const page of serviceV2Pages) expect(page.seo.canonical).toBe(page.path);
 });
 
-test("lead gen hero metrics show the supplied figures with ₹16 Cr+ replacing $2M+", () => {
+const heroLabels = (path: string) => serviceV2Pages.find((p) => p.path === path)?.heroStats?.map(([, label]) => label) ?? [];
+
+test("lead gen hero metrics are about leads and pipeline", () => {
   expect(lead?.heroStats).toEqual([
-    ["300%+", "Avg. Pipeline Lift"],
-    ["50+", "Funnel Audits Delivered"],
-    ["₹16 Cr+", "Client Revenue Generated"],
-    ["4.9/5", "Client Rating"],
+    ["25,000+", "Qualified Leads Generated"],
+    ["₹16 Cr+", "Sales Pipeline Generated"],
+    ["42%", "Lower Cost Per Lead"],
+    ["8,500+", "Sales Calls Booked"],
   ]);
+});
+
+test("google ads hero metrics cover ad spend and revenue generated", () => {
+  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Ad Spend Managed");
+  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Revenue Generated");
+});
+
+test("social media hero metrics cover followers gained", () => {
+  expect(heroLabels("/social-media-marketing-agency-bangalore")).toContain("Followers Gained");
+});
+
+test("every service page has its own four hero metrics", () => {
+  for (const page of serviceV2Pages) expect(page.heroStats?.length).toBe(4);
+  expect(new Set(serviceV2Pages.map((p) => heroLabels(p.path).join("|"))).size).toBe(serviceV2Pages.length);
 });
 
 test("lead gen revenue card shows ₹16 Cr+ Client Revenue Generated", () => {
