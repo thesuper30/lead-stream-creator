@@ -2,6 +2,7 @@ import { ArrowRight, Clock, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { SHOW_BLOG_SECTION } from "@/components/landing/BlogSection";
 
 const articles = [
   {
@@ -31,6 +32,9 @@ const articles = [
 ];
 
 export const PMBlogSection = () => {
+  // Paused with the rest of the blog sections until real posts exist.
+  if (!SHOW_BLOG_SECTION) return null;
+
   return (
     <section className="py-8 md:py-14 lg:py-20 bg-background">
       <div className="container mx-auto px-4">

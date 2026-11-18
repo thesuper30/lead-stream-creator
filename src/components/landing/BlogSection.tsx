@@ -17,10 +17,15 @@ interface LatestPost {
   published_at: string | null;
 }
 
+// Blog articles are paused site-wide. Flip this to true once new posts are published
+// to bring the "Latest Insights" section back on every page that uses it.
+export const SHOW_BLOG_SECTION = false;
+
 export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark = false }, ref) => {
   const [blogs, setBlogs] = useState<LatestPost[]>([]);
 
   useEffect(() => {
+    if (!SHOW_BLOG_SECTION) return;
     let active = true;
     supabase
       .from("blogs")
@@ -35,6 +40,9 @@ export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark =
       active = false;
     };
   }, []);
+
+  // Blog articles are paused; flip SHOW_BLOG_SECTION back to true to restore the section.
+  if (!SHOW_BLOG_SECTION) return null;
 
   // Only real published articles are shown; the section stays hidden until one exists.
   if (blogs.length === 0) return null;
