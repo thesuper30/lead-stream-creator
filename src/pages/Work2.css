@@ -45,7 +45,7 @@
 .work2-testimonials button { border-color: hsl(var(--border)); background: hsl(var(--work-paper)); color: hsl(var(--work-ink)); }
 .work2-insights .grid > a > div { border-radius: 20px; background: hsl(var(--work-surface)); box-shadow: none; }
 .work2-insights .text-primary { color: hsl(var(--brand)); }
-.work2-insights .text-center > button { border-radius: 999px; border-color: hsl(var(--work-paper) / .3); color: hsl(var(--work-paper)); background: transparent; }
+.work2-insights .text-center > a, .work2-insights .text-center > button { border-radius: 999px; border-color: hsl(var(--work-paper) / .3); color: hsl(var(--work-paper)); background: transparent; }
 .work2-final > section { padding: 4rem 0; background: hsl(var(--work-paper)); }
 .work2-final .container > div { background: hsl(var(--work-ink)); background-image: var(--work-glow), var(--work-mesh); background-size: auto, 12px 12px, 12px 12px; border-radius: 24px; }
 .work2-final .container > div > .absolute { display: none; }

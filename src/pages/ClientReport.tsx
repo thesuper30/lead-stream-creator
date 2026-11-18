@@ -10,6 +10,9 @@ import shriramLogo from "@/assets/case-studies/shriram-properties.png";
 import jainUniversityLogo from "@/assets/case-studies/jain-university.png";
 import atriaInstituteLogo from "@/assets/case-studies/atria-institute.png";
 import bhrighuAcademyLogo from "@/assets/case-studies/bhrighu-academy.png";
+import bookMyScansLogo from "@/assets/case-studies/book-my-scans.png";
+import suranaLogo from "@/assets/case-studies/surana-educational.png";
+import harvestLogo from "@/assets/case-studies/harvest-international.png";
 import { Navbar } from "@/components/Navbar";
 import { ArrowLeft } from "lucide-react";
 
@@ -22,6 +25,9 @@ const clientData: Record<string, { name: string; industry: string; logo: string;
   "atria-institute": { name: "Atria Institute", industry: "Education", logo: atriaInstituteLogo, domain: "atria.edu" },
   "bhrighu-academy": { name: "Bhrighu Academy", industry: "Education", logo: bhrighuAcademyLogo, domain: "bhrighuacademy.com" },
   "shriram-properties": { name: "Shriram Properties", industry: "Real Estate", logo: shriramLogo, domain: "shriramproperties.com" },
+  "book-my-scans": { name: "Book My Scans", industry: "Healthcare", logo: bookMyScansLogo, domain: "bookmyscans.com" },
+  "surana-educational": { name: "Surana Educational Institutions", industry: "Education", logo: suranaLogo, domain: "suranavidyalaya.org" },
+  "harvest-international": { name: "Harvest International School", industry: "Education", logo: harvestLogo, domain: "harvestinternationalschool.in" },
 };
 
 const navSections = [

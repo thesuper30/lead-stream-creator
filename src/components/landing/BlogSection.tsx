@@ -1,43 +1,44 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { formatPublishedDate, toMediaUrl } from "@/lib/blogFormat";
 
-const blogs = [
-  {
-    id: 1,
-    slug: "how-ai-is-changing-seo-2025",
-    title: "How AI Is Reshaping Digital Marketing in 2025",
-    excerpt: "From AI-powered ad bidding to automated content strategies — discover how smart brands are using AI to dominate every digital channel.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    category: "AI Marketing",
-    readTime: "8 min read",
-    date: "Dec 15, 2024"
-  },
-  {
-    id: 2,
-    slug: "getting-cited-by-chatgpt-guide",
-    title: "The Complete Guide to Multi-Channel Digital Marketing for B2B",
-    excerpt: "Learn how to build an integrated digital marketing strategy across SEO, paid ads, social media, and email that drives consistent pipeline.",
-    image: "https://images.unsplash.com/photo-1676299081847-824916de030a?w=600&h=400&fit=crop",
-    category: "Growth Strategy",
-    readTime: "12 min read",
-    date: "Dec 10, 2024"
-  },
-  {
-    id: 3,
-    slug: "roi-of-ai-seo-case-studies",
-    title: "Digital Marketing ROI: Case Studies from Our Top Clients",
-    excerpt: "Real numbers from real businesses. See how integrated digital marketing strategies transformed growth for SaaS and E-commerce brands.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    category: "Case Studies",
-    readTime: "10 min read",
-    date: "Dec 5, 2024"
-  }
-];
+interface LatestPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  cover_image_url: string | null;
+  category: string | null;
+  read_time: string | null;
+  published_at: string | null;
+}
 
 export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark = false }, ref) => {
+  const [blogs, setBlogs] = useState<LatestPost[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    supabase
+      .from("blogs")
+      .select("id, slug, title, excerpt, cover_image_url, category, read_time, published_at")
+      .eq("status", "published")
+      .order("published_at", { ascending: false })
+      .limit(3)
+      .then(({ data }) => {
+        if (active) setBlogs((data as LatestPost[]) ?? []);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  // Only real published articles are shown; the section stays hidden until one exists.
+  if (blogs.length === 0) return null;
+
   return (
     <section ref={ref} className={`py-8 md:py-14 lg:py-20 relative overflow-hidden ${dark ? "bg-foreground" : "bg-background"}`}>
       {/* Subtle background */}
@@ -61,29 +62,39 @@ export const BlogSection = forwardRef<HTMLElement, { dark?: boolean }>(({ dark =
                 className={`overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group cursor-pointer h-full ${dark ? "bg-primary-foreground/5 border-primary-foreground/15" : "bg-background/80 backdrop-blur-sm border-border/50"}`}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={blog.image} 
-                    alt={blog.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                      {blog.category}
-                    </span>
-                  </div>
+                  {blog.cover_image_url ? (
+                    <img 
+                      src={toMediaUrl(blog.cover_image_url)} 
+                      alt={blog.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="h-48 w-full bg-muted" aria-hidden />
+                  )}
+                  {blog.category && (
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                        {blog.category}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <CardContent className="p-4 md:p-6">
                   <div className={`flex items-center gap-4 text-sm mb-3 ${dark ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {blog.date}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {blog.readTime}
-                    </div>
+                    {blog.published_at && (
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {formatPublishedDate(blog.published_at)}
+                      </div>
+                    )}
+                    {blog.read_time && (
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {blog.read_time}
+                      </div>
+                    )}
                   </div>
                   <h3 className={`text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
                     {blog.title}

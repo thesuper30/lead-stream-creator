@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { formatPublishedDate, toMediaUrl } from "@/lib/blogFormat";
 import { Calendar, Clock, ArrowRight, Loader2, Search, Sparkles, BookOpen, ChartNoAxesCombined, SearchCheck, Target } from "lucide-react";
 
 interface Post {
@@ -18,29 +19,6 @@ interface Post {
   author_name: string | null;
   published_at: string | null;
 }
-
-/** Rewrite legacy public-bucket URLs to the public media proxy. */
-const toMediaUrl = (url?: string | null): string | undefined =>
-  url
-    ? url.replace(
-        /\/storage\/v1\/object\/public\/blog-media\//g,
-        "/functions/v1/blog-media/"
-      )
-    : undefined;
-
-const formatPublishedDate = (date: string): string => {
-  const parts = new Intl.DateTimeFormat("en-GB", {
-    timeZone: "Asia/Kolkata",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  }).formatToParts(new Date(date));
-  const value = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value ?? "";
-  return `${value("day")} ${value("month")} ${value("year")} ${value("hour")}:${value("minute")} ${value("dayPeriod").toUpperCase()} IST`;
-};
 
 const ArticleImage = ({ post, priority = false }: { post: Post; priority?: boolean }) => (
   <div className="aspect-[16/9] overflow-hidden bg-muted">
