@@ -94,3 +94,8 @@
 - [x] Careers page with four vacancies, linked in footer below Contact Us
 - [x] Remove "View all services" buttons from homepage
 - [x] Check every link and button across the site works and points to the right page
+
+# Hide team section from service pages
+
+- [x] Hide the "Meet the SEO Experts Behind Your Growth" team section from the SEO page and all seven service pages, keeping the markup for a later restore
+- [x] Verify the section is gone and neighbouring sections join cleanly on all eight pages, desktop and phone

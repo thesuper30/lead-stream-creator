@@ -11,6 +11,7 @@ import { Footer } from "@/components/landing/Footer";
 import { StickyCTA } from "@/components/landing/StickyCTA";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
 import type { ServiceV2Config } from "@/data/serviceV2Pages";
+import { SHOW_SERVICE_TEAM_SECTION } from "@/lib/sectionFlags";
 
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
 import heroImage from "@/assets/seo-reference-hero.jpg";
@@ -247,6 +248,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
         </section>
 
         {/* TEAM */}
+        {SHOW_SERVICE_TEAM_SECTION && (
         <section aria-labelledby="service-experts-heading" className="bg-background py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
@@ -269,6 +271,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             </div>
           </div>
         </section>
+        )}
 
         {/* SERVICES */}
         <section className="bg-muted/40 py-16 md:py-24">

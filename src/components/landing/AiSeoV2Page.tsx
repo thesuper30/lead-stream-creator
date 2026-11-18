@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { EnquiryPopup } from "@/components/EnquiryPopup";
 import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
+import { SHOW_SERVICE_TEAM_SECTION } from "@/lib/sectionFlags";
 
 import heroImage from "@/assets/seo-reference-hero.jpg";
 import evolvingImage from "@/assets/seo-search-evolving.jpg";
@@ -319,6 +320,7 @@ export const AiSeoV2Page = () => {
       </section>
 
       {/* SEO EXPERTS TEAM */}
+      {SHOW_SERVICE_TEAM_SECTION && (
       <section aria-labelledby="seo-experts-heading" className="bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
@@ -346,6 +348,7 @@ export const AiSeoV2Page = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* SERVICES */}
       <section className="bg-muted/40 py-16 md:py-24">
