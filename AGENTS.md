@@ -11,7 +11,7 @@
 - Shared portfolio headings accept optional page-specific copy; preserve default text so Homepage2 edits do not change other pages.
 
 - Homepage2 keeps the original PDF client-logo dataset; the latest SEO and seven shared service pages use that dataset without SkyMarvel plus ICS and Digital Academy 360, so service logo updates remain consistent without changing the homepage.
-- Keep the eight-person team before services in the shared service template with page-specific headings, so all seven latest service pages match the SEO page structure.
+- Keep the eight-person team before services in the shared service template with page-specific headings, so all seven latest service pages match the SEO page structure; the section is currently hidden behind `SHOW_SERVICE_TEAM_SECTION` in src/lib/sectionFlags.ts, so keep the markup and flip the flag to restore it.
 
 - Keep About page theme overrides in its page stylesheet; show the full active team with the eight service-page portraits first and preserve the journey section, so the redesign does not affect other pages.
 
