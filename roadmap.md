@@ -79,3 +79,8 @@
 - [x] Replace old portrait assets with the eight service-page portraits and roles
 - [x] Match wider cards and add the pill CTA above the grid
 - [x] Verify every portrait and CTA on desktop and phone
+
+# Full About team
+
+- [x] Include all existing team members without duplicating Amit or Mayank, keeping the new eight portraits first
+- [x] Verify every photo and the CTA on desktop and phone

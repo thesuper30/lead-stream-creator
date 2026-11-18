@@ -11,6 +11,16 @@ import harshavardhanImg from "@/assets/team/harshavardhan.png";
 import chandrasekharImg from "@/assets/team/chandrashekar.png";
 import anandImg from "@/assets/team/anand-3.png";
 import likhithImg from "@/assets/team/likith-1.png";
+import lalitImg from "@/assets/team/lalit.png";
+import sujeetImg from "@/assets/team/sujeet.png";
+import swanandImg from "@/assets/team/swanand.png";
+import sathyaImg from "@/assets/team/sathya.png";
+import monishaImg from "@/assets/team/monisha.png";
+import deepakImg from "@/assets/team/deepak.png";
+import madhuImg from "@/assets/team/madhu.png";
+import anushImg from "@/assets/team/anush.png";
+import abhishekImg from "@/assets/team/abhishek.png";
+import azarudheenImg from "@/assets/team/azarudheen.jpg";
 
 const teamMembers = [
   { name: "Amit Singh", expertise: "Co-Founder", image: amitImg },
@@ -21,6 +31,16 @@ const teamMembers = [
   { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", image: chandrasekharImg },
   { name: "Anand Kumar", expertise: "Performance Marketing Manager", image: anandImg },
   { name: "Likhith P", expertise: "Video Editor", image: likhithImg },
+  { name: "Lalit", expertise: "SEO Architecture & Technical Audits", image: lalitImg },
+  { name: "Sujeet", expertise: "AI/ML SEO Specialist", image: sujeetImg },
+  { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", image: swanandImg },
+  { name: "Sathya", expertise: "Content Strategy & SEO Expert", image: sathyaImg },
+  { name: "Monisha", expertise: "Full-stack Developer, SEO Engineer", image: monishaImg },
+  { name: "Deepak", expertise: "10+ years in SEO & PPC", image: deepakImg },
+  { name: "Madhu", expertise: "E-commerce SEO Expert", image: madhuImg },
+  { name: "Anush", expertise: "Google Ads Certified, ROI Expert", image: anushImg },
+  { name: "Abhishek", expertise: "React & Node.js Expert", image: abhishekImg },
+  { name: "Azarudheen", expertise: "UI/UX & Creative Design", image: azarudheenImg },
 ];
 
 const TeamCard = ({ member }: { member: typeof teamMembers[0] }) => (
