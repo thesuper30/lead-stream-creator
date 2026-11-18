@@ -79,11 +79,15 @@ const About = () => {
           <img src={heroImage} alt="The digital marketing team collaborating on a growth strategy" fetchPriority="high" />
           <div className="container mx-auto about-hero-content">
             <p className="about-eyebrow">— THE SUPER 30</p>
-            <h1>About <span className="about-hero-highlight">Us.</span></h1>
+            <h1>The People Behind <span className="about-hero-highlight">Your Growth.</span></h1>
             <p className="about-hero-copy">Real people. Real strategies. AI-powered results. Meet the team behind your growth.</p>
             <div className="about-hero-actions"><Button asChild className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button><Link to="/our-work" className="text-sm font-semibold underline-offset-4 hover:underline">View Our Work</Link></div>
-            <nav aria-label="Breadcrumb" className="about-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>About Us</span></nav>
+            <nav aria-label="Breadcrumb" className="about-breadcrumb"><Link to="/homepage">Home</Link><ArrowRight className="h-3 w-3" /><span>Our Team</span></nav>
           </div>
+        </section>
+
+        <section id="about-logos" className="about-light about-band about-logos">
+          <div className="container mx-auto about-brands"><ClientLogosSection /></div>
         </section>
 
         <section id="about-intro" className="about-light about-band">
@@ -103,7 +107,6 @@ const About = () => {
               <Button asChild className="rounded-full bg-brand text-primary-foreground hover:bg-brand-dark"><Link to="/contact-us">Get In Touch<ArrowRight className="ml-3 h-4 w-4" /></Link></Button>
             </div>
           </div>
-          <div className="about-brands"><ClientLogosSection /></div>
         </section>
 
         <section id="about-mission" className="about-dark about-band">
