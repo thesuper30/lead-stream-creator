@@ -254,7 +254,7 @@ export const Navbar = ({ forceWhiteBg = false }: { forceWhiteBg?: boolean }) => 
           {/* Mobile Call Button */}
           <a
             href="tel:+918904150555"
-            className="lg:hidden inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--brand-orange))] text-white shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
+            className="lg:hidden ml-auto mr-2 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--brand-orange))] text-white shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
             aria-label="Call us"
           >
             <Phone className="h-5 w-5" />
