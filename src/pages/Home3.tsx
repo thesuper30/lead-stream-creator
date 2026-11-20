@@ -22,10 +22,12 @@ import atriaLogo from "@/assets/clients/atria-institute.png";
 import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
 import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
 import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
+import harshavardhanTeamJson from "@/assets/team/harshavardhan.png.asset.json";
 
 const amitTeam = amitTeamJson.url;
 const mayankTeam = mayankTeamJson.url;
 const praveenTeam = praveenTeamJson.url;
+const harshavardhanTeam = harshavardhanTeamJson.url;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
@@ -340,7 +342,7 @@ const Home3 = () => (
             <PillCta to="/internet-marketing-agency">Meet the whole team</PillCta>
           </div>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (
+            {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }, { n: "Harshavardhan", r: "Graphic Designer", i: harshavardhanTeam }].map((m) => (
               <div key={m.n} className="overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5"><img src={m.i} alt={m.n} width={800} height={1000} className="aspect-[4/5] w-full object-cover object-top" loading="lazy" /><div className="p-4"><h3 className="font-semibold text-primary-foreground">{m.n}</h3><p className="text-sm text-primary-foreground/60">{m.r}</p></div></div>
             ))}
           </div>
