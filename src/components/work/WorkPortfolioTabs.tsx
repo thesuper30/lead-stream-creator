@@ -408,8 +408,8 @@ const BentoClientGrid = ({ clients, limit, homePreview = false, dark = false }: 
   );
 };
 
-export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, description }: { homePreview?: boolean; dark?: boolean; heading?: React.ReactNode; description?: string }) => {
-  const [activeTab, setActiveTab] = React.useState("logo");
+export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, description, defaultTab = "logo" }: { homePreview?: boolean; dark?: boolean; heading?: React.ReactNode; description?: string; defaultTab?: string }) => {
+  const [activeTab, setActiveTab] = React.useState(defaultTab);
   const activeCaption = tabs.find((t) => t.id === activeTab)?.caption ?? "";
   const visibleTabs = homePreview ? tabs.filter((tab) => tab.id !== "product-photoshoot") : tabs;
   const previewLimit = homePreview ? 8 : undefined;
@@ -426,7 +426,7 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, 
           </p>
         </div>
 
-        <Tabs defaultValue="logo" value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <Tabs defaultValue={defaultTab} value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="w-full flex flex-wrap justify-center h-auto gap-1 bg-transparent p-0 rounded-none mb-8">
             {visibleTabs.map((tab) => (
               <TabsTrigger

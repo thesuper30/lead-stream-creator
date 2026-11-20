@@ -16,6 +16,7 @@ import teamWindowJson from "@/assets/home/home-team-window.jpg.asset.json";
 import foundersJson from "@/assets/home/home-founders.jpg.asset.json";
 import teamMacbookJson from "@/assets/home/home-team-macbook.jpg.asset.json";
 import { pdfClientLogos } from "@/data/pdfClientLogos";
+import { ClientLogoChips, logoGroups } from "@/components/landing/ClientLogoChips";
 import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
 import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
 import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
@@ -227,16 +228,13 @@ const Home2 = () => (
               <div className="rounded-3xl border border-border bg-background p-6">
                 <p className="text-base font-semibold uppercase leading-snug tracking-wide text-foreground">
                   Built for ambitious brands
-                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-7 w-7 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><Users className="h-3.5 w-3.5" /></span></span>
                   that refuse to blend
-                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}</span>
                   into the noise
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-center">
-            <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-9 w-9 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><ArrowRight className="h-4 w-4" /></span></span>
             <span className="text-foreground">Built on conviction, backed by numbers. <Link to="/internet-marketing-agency" className="font-semibold text-brand underline underline-offset-4">See How We Win</Link></span>
           </div>
         </div>
@@ -288,7 +286,7 @@ const Home2 = () => (
         </div>
         <div className="container relative mx-auto mt-12 px-4 sm:px-6 lg:px-8">
           <p className="flex flex-wrap items-center justify-center gap-3 text-center text-primary-foreground">
-            <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-foreground object-cover" loading="lazy" />)}</span>
+            <ClientLogoChips logos={logoGroups.stripAlt} size="strip" ring="border-foreground" />
             Smarter strategies, better rankings — <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Get Your SEO Growth Plan.</Link>
           </p>
         </div>
@@ -329,7 +327,7 @@ const Home2 = () => (
       </section>
 
       <SeoAchievementsSection glow />
-      <WorkPortfolioTabs homePreview />
+      <WorkPortfolioTabs homePreview defaultTab="brand-identity" />
 
       {/* TEAM */}
       <section className="relative overflow-hidden bg-foreground py-16 md:py-24">

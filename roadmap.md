@@ -105,4 +105,7 @@
 - [x] Send every form (popups, contact, careers, service pages, course, ads questionnaire, booking) to the Google Sheet with page, source, UTM and device details
 - [x] Redirect every form to the thank you page (course forms now included)
 - [x] Write the Google Apps Script (POST) for the sheet
-- [ ] Add the Apps Script web app link — waiting on the user to deploy the script and paste the link
+- [x] Add the Apps Script web app link
+- [x] Homepage: client logos in small round icons (kept only in the "Smarter strategies" strip)
+- [x] Homepage work section: open the Brand Identity tab by default
+- [x] Homepage Core Principles: removed the round icon stacks
