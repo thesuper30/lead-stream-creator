@@ -3,13 +3,14 @@ import { serviceV2Pages } from "../../src/data/serviceV2Pages";
 
 const lead = serviceV2Pages.find((p) => p.path === "/lead-generation-agency-bangalore");
 
-test("latest service designs resolve at all seven requested main URLs", () => {
+test("latest service designs resolve at all requested main URLs", () => {
   expect(serviceV2Pages.map((page) => page.path)).toEqual([
     "/lead-generation-agency-bangalore",
     "/social-media-marketing-agency-bangalore",
     "/google-ads-agency-bangalore",
     "/design-agency-bangalore",
     "/content-marketing-agency-bangalore",
+    "/content-writing-agency-bangalore",
     "/website-design-company-bangalore",
     "/sms-marketing-agency-bangalore",
   ]);
@@ -58,4 +59,13 @@ test("lead gen two-colour headings carry the supplied highlights", () => {
 test("lead gen industries copy is tailored per industry", () => {
   expect(lead?.industries?.items?.[0]?.text).toBe("High-intent search funnels that turn software evaluations into booked demos.");
   expect(lead?.industries?.items?.[8]?.text).toBe("Direct booking ad funnels that fill rooms and packages without commissions.");
+});
+
+test("content writing page keeps the live page's offers, reasons, industries and process", () => {
+  const cw = serviceV2Pages.find((p) => p.path === "/content-writing-agency-bangalore");
+  expect(cw?.services.length).toBe(8);
+  expect(cw?.deliverables.items.length).toBe(9);
+  expect(cw?.industries?.chips?.length).toBe(18);
+  expect(cw?.framework.steps.map((s) => s.title)).toEqual(["Audit & Research", "Strategy & Calendar", "Write & Optimise", "Publish & Measure"]);
+  expect(cw?.faqSlug).toBe("content-marketing");
 });

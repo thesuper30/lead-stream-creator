@@ -6,8 +6,10 @@ import { PageSeo } from "@/components/seo/PageSeo";
 import { getSeo } from "@/data/seoMeta";
 import {
   ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, Check, GraduationCap, Hotel,
-  Quote, Rocket, Scale, ShoppingBag, Star, Stethoscope,
+  CircleCheck, CircleX, Quote, Rocket, Scale, ShoppingBag, Star, Stethoscope,
 } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { getFaqs } from "@/data/faqs";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { StickyCTA } from "@/components/landing/StickyCTA";
@@ -208,7 +210,35 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
           </div>
         </section>
 
+        {/* PROBLEMS (optional) */}
+        {c.problems && (
+        <section className="relative overflow-hidden bg-foreground py-20 md:py-28">
+          <Mesh />
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <Eyebrow light>{c.problems.eyebrow}</Eyebrow>
+              <H2 light pre={c.problems.title} hl={c.problems.highlight} />
+              <p className="mt-5 text-lg leading-relaxed text-primary-foreground/70">{c.problems.text}</p>
+            </div>
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {c.problems.items.map((it, i) => (
+                <article key={it.title} className="group relative flex min-w-0 flex-col rounded-[28px] border border-primary-foreground/10 bg-foreground-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand/50 sm:p-7">
+                  <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-brand to-transparent opacity-60" />
+                  <div className="flex items-start justify-between gap-4">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand text-primary-foreground"><it.icon className="h-6 w-6" /></span>
+                    <span className="text-5xl font-semibold leading-none text-primary-foreground/10">0{i + 1}</span>
+                  </div>
+                  <h3 className="mt-6 text-xl font-semibold leading-snug text-primary-foreground">{it.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-primary-foreground/65">{it.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        )}
+
         {/* ECOSYSTEM */}
+        {c.ecosystem && (
         <section className="relative overflow-hidden bg-foreground py-20 md:py-28">
           <div className="pointer-events-none absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,hsl(var(--primary-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary-foreground))_1px,transparent_1px)] bg-[size:10px_10px]" />
           <div className="pointer-events-none absolute left-1/2 top-1/3 h-[820px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/30 blur-[160px]" />
@@ -252,6 +282,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             </div>
           </div>
         </section>
+        )}
 
         {/* TEAM */}
         {SHOW_SERVICE_TEAM_SECTION && (
@@ -283,8 +314,9 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
         <section className="bg-muted/40 py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <Eyebrow>Our services</Eyebrow>
+              <Eyebrow>{c.servicesEyebrow ?? "Our services"}</Eyebrow>
               <H2 pre={c.servicesTitle} hl={c.servicesHighlight} />
+              {c.servicesText && <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{c.servicesText}</p>}
             </div>
             <div className={`mt-12 grid gap-5 sm:grid-cols-2 ${svcCols}`}>
               {c.services.map((s) => (
@@ -303,7 +335,38 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
           </div>
         </section>
 
+        {/* COMPARISON (optional) */}
+        {c.comparison && (
+        <section className="relative isolate overflow-hidden bg-foreground py-16 md:py-24">
+          <Mesh />
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <Eyebrow light>{c.comparison.eyebrow}</Eyebrow>
+              <H2 light pre={c.comparison.title} hl={c.comparison.highlight} />
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">{c.comparison.text}</p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-2">
+              <div className="rounded-[28px] border border-primary-foreground/10 bg-foreground-card p-6 sm:p-8">
+                <h3 className="text-xl font-semibold text-primary-foreground/80">{c.comparison.left.title}</h3>
+                <ul className="mt-6 space-y-4">
+                  {c.comparison.left.points.map((x) => <li key={x} className="flex items-start gap-3 text-primary-foreground/65"><CircleX className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground/40" />{x}</li>)}
+                </ul>
+              </div>
+              <div className="relative overflow-hidden rounded-[28px] border border-brand/50 bg-brand/10 p-6 sm:p-8">
+                <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/30 blur-[90px]" />
+                <h3 className="relative text-xl font-semibold text-brand">{c.comparison.right.title}</h3>
+                <ul className="relative mt-6 space-y-4">
+                  {c.comparison.right.points.map((x) => <li key={x} className="flex items-start gap-3 text-primary-foreground"><CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" />{x}</li>)}
+                </ul>
+              </div>
+            </div>
+            <div className="mt-12 text-center"><Pill onClick={cta}>{c.ctaLabel}</Pill></div>
+          </div>
+        </section>
+        )}
+
         {/* WHY US */}
+        {c.why && (
         <section className="relative isolate overflow-hidden bg-foreground py-16 md:py-24">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_45%_65%,hsl(var(--brand)/0.24),transparent_70%)]" />
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,13 +399,14 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             </div>
           </div>
         </section>
+        )}
 
         {/* DELIVERABLES */}
         <section className="relative isolate overflow-hidden bg-muted/40 py-16 md:py-24">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--brand)/0.08),transparent_60%)]" />
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <Eyebrow>What you get</Eyebrow>
+              <Eyebrow>{c.deliverables.eyebrow ?? "What you get"}</Eyebrow>
               <H2 pre={c.deliverables.title} hl={c.deliverables.highlight} />
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{c.deliverables.text}</p>
             </div>
@@ -370,6 +434,11 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
                 <H2 light pre={c.industries?.title ?? "Built for ambitious businesses"} hl={c.industries?.highlight ?? "ready to grow."} />
                 <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70">{c.industries?.text ?? "AI-powered digital marketing shaped around the buying journey, competition, and opportunities in your market."}</p>
               </div>
+              {c.industries?.chips ? (
+              <div className="mx-auto mt-12 flex max-w-5xl flex-wrap justify-center gap-3">
+                {c.industries.chips.map((x) => <span key={x} className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/15 bg-primary-foreground/5 px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:border-brand hover:bg-brand/15"><span className="h-1.5 w-1.5 rounded-full bg-brand" />{x}</span>)}
+              </div>
+              ) : (
               <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {industries.map((ind, i) => {
                   const label = c.industries?.items?.[i]?.label ?? ind.label;
@@ -382,6 +451,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
                   );
                 })}
               </div>
+              )}
               <p className="mt-10 text-center text-sm text-primary-foreground/70">Don&apos;t see your industry? <Link to="/industries" className="font-semibold text-primary-foreground underline underline-offset-4 hover:text-brand">Explore All Industries.</Link></p>
             </div>
           </div>
@@ -392,13 +462,15 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
           <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] lg:items-end lg:gap-16">
               <div><Eyebrow>{c.framework.eyebrow}</Eyebrow><H2 pre={c.framework.title} hl={c.framework.highlight} /></div>
-              <p className="max-w-md border-l-2 border-brand pl-5 text-base leading-relaxed text-muted-foreground">{c.framework.text}</p>
+              {c.framework.text && <p className="max-w-md border-l-2 border-brand pl-5 text-base leading-relaxed text-muted-foreground">{c.framework.text}</p>}
             </div>
-            <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-5 lg:gap-0">
+            <ol className={`mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:gap-0 ${c.framework.steps.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-5"}`}>
               {c.framework.steps.map((s, i) => {
-                const last = i === 4;
+                const n = c.framework.steps.length;
+                const last = i === n - 1;
+                const stairs = ["lg:pt-32", "lg:pt-24", "lg:pt-16", "lg:pt-8", "lg:pt-0"].slice(5 - n);
                 return (
-                  <li key={s.title} className={`relative min-w-0 ${["lg:pt-32", "lg:pt-24", "lg:pt-16", "lg:pt-8", "lg:pt-0"][i]} ${last ? "sm:col-span-2 lg:col-span-1" : ""}`}>
+                  <li key={s.title} className={`relative min-w-0 ${stairs[i] ?? ""} ${last && n % 2 === 1 ? "sm:col-span-2 lg:col-span-1" : ""}`}>
                     <div className={`relative flex h-full flex-col border-t-2 px-5 pb-7 pt-6 sm:px-6 ${last ? "rounded-b-lg border-brand bg-brand text-primary-foreground" : "border-brand bg-muted/40 text-foreground lg:border-r lg:border-r-border"}`}>
                       <div className="flex items-center justify-between gap-3">
                         <span className={`text-5xl font-semibold leading-none ${last ? "text-primary-foreground/40" : "text-brand/25"}`}>0{i + 1}</span>
@@ -420,7 +492,7 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
         {/* TESTIMONIALS */}
         <section className="bg-muted/40 py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center"><Eyebrow>Testimonials</Eyebrow><H2 pre="What our" hl="clients say." /></div>
+            <div className="mx-auto max-w-3xl text-center"><Eyebrow>Testimonials</Eyebrow><H2 pre={c.testimonialsHeading?.title ?? "What our"} hl={c.testimonialsHeading?.highlight ?? "clients say."} />{c.testimonialsHeading?.text && <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{c.testimonialsHeading.text}</p>}</div>
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {testimonials.map((t) => (
                 <figure key={t.role} className="flex min-w-0 flex-col rounded-lg border border-border bg-background p-7 md:p-8">
@@ -432,6 +504,67 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
             </div>
           </div>
         </section>
+
+        {/* FIT (optional) */}
+        {c.fit && (
+        <section className="px-3 sm:px-5">
+          <div className="relative isolate overflow-hidden rounded-[2rem] bg-foreground py-16 md:py-24">
+            <Mesh />
+            <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-3xl text-center">
+                <Eyebrow light>{c.fit.eyebrow}</Eyebrow>
+                <H2 light pre={c.fit.title} hl={c.fit.highlight} />
+                <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/70">{c.fit.text}</p>
+              </div>
+              <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-2">
+                <div className="relative overflow-hidden rounded-[28px] border border-brand/50 bg-brand/10 p-6 sm:p-8">
+                  <h3 className="text-xl font-semibold text-brand">{c.fit.good.title}</h3>
+                  <ul className="mt-6 space-y-4">
+                    {c.fit.good.points.map((x) => <li key={x} className="flex items-start gap-3 text-primary-foreground"><CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand" />{x}</li>)}
+                  </ul>
+                </div>
+                <div className="rounded-[28px] border border-primary-foreground/10 bg-foreground-card p-6 sm:p-8">
+                  <h3 className="text-xl font-semibold text-primary-foreground/80">{c.fit.bad.title}</h3>
+                  <ul className="mt-6 space-y-4">
+                    {c.fit.bad.points.map((x) => <li key={x} className="flex items-start gap-3 text-primary-foreground/65"><CircleX className="mt-0.5 h-5 w-5 shrink-0 text-primary-foreground/40" />{x}</li>)}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        )}
+
+        {/* FINAL CTA + FAQ (optional) */}
+        {(c.finalCta || c.faqSlug) && (
+        <section className="bg-background py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {c.finalCta && (
+              <div className="mx-auto max-w-4xl text-center">
+                <H2 pre={c.finalCta.title} hl={c.finalCta.highlight} />
+                <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{c.finalCta.text}</p>
+                <div className="mt-8"><Pill onClick={cta}>{c.finalCta.button}</Pill></div>
+              </div>
+            )}
+            {c.faqSlug && getFaqs(c.faqSlug).length > 0 && (
+              <div className={`mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 ${c.finalCta ? "mt-20 border-t border-border pt-16" : ""}`}>
+                <div className="lg:sticky lg:top-32 lg:self-start">
+                  <Eyebrow>FAQs</Eyebrow>
+                  <H2 pre="Frequently Asked" hl="Questions" />
+                </div>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {getFaqs(c.faqSlug).map((f, i) => (
+                    <AccordionItem key={f.question} value={`faq-${i}`} className="rounded-2xl border border-border bg-sand px-5 data-[state=open]:border-brand/50">
+                      <AccordionTrigger className="py-5 text-left text-base font-semibold text-foreground hover:no-underline">{f.question}</AccordionTrigger>
+                      <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">{f.answer}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            )}
+          </div>
+        </section>
+        )}
 
         <EnquiryPopup open={open} onOpenChange={setOpen} />
         <Footer />

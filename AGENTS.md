@@ -2,7 +2,7 @@
 
 - Keep the SEO Company 2 platform section local to its page and import illustrations as project assets, so other SEO page designs remain unchanged.
 - Keep the SEO Company 2 growth framework local to its page with data-driven steps, so changes do not affect other SEO pages.
-- Service "v2" pages share one data-driven template (ServiceV2Page + serviceV2Pages config), so new copies only need a config entry and route.
+- Service "v2" pages share one data-driven template (ServiceV2Page + serviceV2Pages config) whose extra sections (problems, comparison, fit, final CTA, FAQ, headings) are optional config fields, so new pages only need a config entry and route and existing pages stay unchanged.
 - Latest page designs use the unsuffixed main routes (homepage at `/homepage`); suffixed `2` routes preserve the older designs, so navigation must always target the main routes.
 - Keep case-study campaign data separate from the page and test supplied figures, so visual redesigns cannot silently alter results.
 - Scope case-study visual overrides to its page stylesheet, so reference-inspired changes leave service pages unchanged.
