@@ -178,23 +178,23 @@ const Home2 = () => (
       </section>
 
       {/* CORE PRINCIPLES */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-background py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
             <Eyebrow>How we work</Eyebrow>
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">The Core Principles Behind <span className="text-brand">Market-Leading Brands</span></h2>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Alignment */}
-            <div className="flex flex-col rounded-3xl border border-border bg-background p-7">
-              <div className="relative h-44">
-                <img src={strategyDuoJson.url} alt="Strategists aligning on a growth plan" className="absolute left-0 top-4 h-36 w-3/5 rounded-2xl object-cover" loading="lazy" />
-                <img src={teamTabletJson.url} alt="The Super30 team reviewing a plan on a tablet" className="absolute right-0 top-0 h-40 w-1/2 rounded-2xl border-4 border-background object-cover" loading="lazy" />
+            <div className="flex flex-col rounded-3xl border border-border bg-background p-6">
+              <div className="relative h-32">
+                <img src={strategyDuoJson.url} alt="Strategists aligning on a growth plan" className="absolute left-0 top-3 h-24 w-3/5 rounded-2xl object-cover" loading="lazy" />
+                <img src={teamTabletJson.url} alt="The Super30 team reviewing a plan on a tablet" className="absolute right-0 top-0 h-28 w-1/2 rounded-2xl border-4 border-background object-cover" loading="lazy" />
               </div>
-              <h3 className="mt-7 text-2xl font-semibold text-foreground">Alignment</h3>
+              <h3 className="mt-5 text-2xl font-semibold text-foreground">Alignment</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">We pair sharp brand strategists with smart AI to eliminate guesswork.</p>
-              <div className="mt-6 border-t border-border pt-6">
-                <ul className="space-y-3">
+              <div className="mt-4 border-t border-border pt-4">
+                <ul className="space-y-2">
                   {["Human-led brand thinking", "True growth partnerships"].map((p) => (
                     <li key={p} className="flex items-center gap-3 text-sm text-muted-foreground"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-primary-foreground" />{p}</li>
                   ))}
@@ -203,7 +203,7 @@ const Home2 = () => (
             </div>
             {/* Transformation */}
             <div className="relative flex flex-col overflow-hidden rounded-3xl bg-foreground p-7 text-primary-foreground">
-              <svg aria-hidden viewBox="0 0 400 400" className="pointer-events-none absolute -right-10 -top-16 h-80 w-80 text-primary-foreground/[0.06]" fill="none" stroke="currentColor" strokeWidth="28" strokeLinecap="round">
+              <svg aria-hidden viewBox="0 0 400 400" className="pointer-events-none absolute -right-10 -top-16 h-64 w-64 text-primary-foreground/[0.06]" fill="none" stroke="currentColor" strokeWidth="28" strokeLinecap="round">
                 <path d="M20 300 C 120 340, 140 180, 90 120 S 260 40, 300 150 S 220 330, 360 320" />
               </svg>
               <div className="relative">
@@ -212,10 +212,10 @@ const Home2 = () => (
                   <span><span className="block text-sm font-semibold leading-tight">Amit Singh</span><span className="block text-xs text-primary-foreground/70">Co-Founder</span></span>
                 </div>
               </div>
-              <div className="relative mt-auto pt-40">
+              <div className="relative mt-auto pt-20">
                 <h3 className="text-2xl font-semibold">Acceleration</h3>
                 <p className="mt-3 leading-relaxed text-primary-foreground/80">We turn bold creative ideas and live data into compounding revenue.</p>
-                <div className="mt-6 grid grid-cols-2 gap-6 border-t border-primary-foreground/20 pt-6">
+                <div className="mt-4 grid grid-cols-2 gap-4 border-t border-primary-foreground/20 pt-4">
                   <div><p className="text-3xl font-semibold">300%+</p><p className="mt-1 text-sm text-primary-foreground/75">Average Traffic Lift</p></div>
                   <div className="border-l border-primary-foreground/20 pl-6"><p className="text-3xl font-semibold">50+</p><p className="mt-1 text-sm text-primary-foreground/75">Growth Audits Delivered</p></div>
                 </div>
@@ -223,9 +223,9 @@ const Home2 = () => (
             </div>
             {/* Commitment */}
             <div className="flex flex-col gap-6">
-              <img src={teamWindowJson.url} alt="The Super30 team reviewing results on a laptop" className="h-64 w-full rounded-3xl object-cover object-[center_30%] lg:flex-1" loading="lazy" />
-              <div className="rounded-3xl border border-border bg-background p-7">
-                <p className="text-lg font-semibold uppercase leading-snug tracking-wide text-foreground">
+              <img src={teamWindowJson.url} alt="The Super30 team reviewing results on a laptop" className="h-48 w-full rounded-3xl object-cover object-[center_30%] lg:[flex:1_1_0px]" loading="lazy" />
+              <div className="rounded-3xl border border-border bg-background p-6">
+                <p className="text-base font-semibold uppercase leading-snug tracking-wide text-foreground">
                   Built for ambitious brands
                   <span className="mx-2 inline-flex -space-x-2 align-middle">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-7 w-7 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><Users className="h-3.5 w-3.5" /></span></span>
                   that refuse to blend
@@ -235,7 +235,7 @@ const Home2 = () => (
               </div>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-center">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-center">
             <span className="inline-flex -space-x-2">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="h-9 w-9 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-9 w-9 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><ArrowRight className="h-4 w-4" /></span></span>
             <span className="text-foreground">Built on conviction, backed by numbers. <Link to="/internet-marketing-agency" className="font-semibold text-brand underline underline-offset-4">See How We Win</Link></span>
           </div>

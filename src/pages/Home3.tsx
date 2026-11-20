@@ -228,7 +228,7 @@ const Home3 = () => (
             </div>
             {/* Commitment */}
             <div className="flex flex-col gap-6">
-              <img src={heroImage} alt="The team at work" className="h-64 w-full rounded-3xl object-cover lg:flex-1" loading="lazy" />
+              <img src={heroImage} alt="The team at work" className="h-64 w-full rounded-3xl object-cover lg:[flex:1_1_0px]" loading="lazy" />
               <div className="rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5 p-7">
                 <p className="text-lg font-semibold uppercase leading-snug tracking-wide text-primary-foreground">
                   Built for ambitious brands
