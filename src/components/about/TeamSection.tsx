@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import amitImg from "@/assets/team/amit-singh.png.asset.json";
 import mayankImg from "@/assets/team/mayank.png.asset.json";
-import gaganImg from "@/assets/team/gagan.png.asset.json";
 import praveenImg from "@/assets/team/praveen.png.asset.json";
 import harshavardhanImg from "@/assets/team/harshavardhan.png.asset.json";
 import chandrasekharImg from "@/assets/team/chandrasekhar.png.asset.json";
@@ -19,7 +18,6 @@ import azarudheenImg from "@/assets/team/azarudheen.png.asset.json";
 const teamMembers = [
   { name: "Amit Singh", expertise: "Co-Founder", image: amitImg.url, card: "bg-[#FDE2E4]" },
   { name: "Mayank", expertise: "VP - Business Growth", image: mayankImg.url, card: "bg-[#D8F3DC]" },
-  { name: "Gagan", expertise: "VP - Digital Marketing", image: gaganImg.url, card: "bg-[#FFF3C4]" },
   { name: "Praveen", expertise: "Senior Creative Manager", image: praveenImg.url, card: "bg-[#E5DEFF]" },
   { name: "Harshavardhan", expertise: "Graphic Designer", image: harshavardhanImg.url, card: "bg-[#D7E3FC]" },
   { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", image: chandrasekharImg.url, card: "bg-[#FFE5D9]" },

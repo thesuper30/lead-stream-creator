@@ -62,7 +62,6 @@ import harshavardhanTeam from "@/assets/team/harshavardhan.png";
 import chandrasekharTeam from "@/assets/team/chandrashekar.png";
 import anandTeam from "@/assets/team/anand-3.png";
 import likhithTeam from "@/assets/team/likith-1.png";
-import gaganTeam from "@/assets/team/gagan-vp-digital-marketing.jpg";
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
@@ -90,7 +89,6 @@ const industries = [
 const teamMembers = [
   { name: "Amit Singh", expertise: "Co-Founder", category: "Strategy", image: amitTeam },
   { name: "Mayank", expertise: "VP - Business Growth", category: "Strategy", image: mayankTeam },
-  { name: "Gagan", expertise: "VP - Digital Marketing", category: "Strategy", image: gaganTeam },
   { name: "Praveen", expertise: "Senior Creative Manager", category: "Creative", image: praveenTeam },
   { name: "Harshavardhan", expertise: "Graphic Designer", category: "Creative", image: harshavardhanTeam },
   { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", category: "Strategy", image: chandrasekharTeam },

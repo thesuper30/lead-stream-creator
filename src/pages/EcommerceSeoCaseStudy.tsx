@@ -7,11 +7,9 @@ import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import mamaearthLogo from "@/assets/clients/mamaearth-transparent.png";
 import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
-import gaganTeamJson from "@/assets/team/gagan.png.asset.json";
 import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
 
 const amitTeam = amitTeamJson.url;
-const gaganTeam = gaganTeamJson.url;
 const praveenTeam = praveenTeamJson.url;
 import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
 import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
@@ -33,7 +31,6 @@ const sections = [
 ];
 const projectTeam = [
   { name: "Amit Singh", role: "Co-Founder · Campaign Strategy", focus: "Overall growth strategy, keyword mapping and revenue alignment across the six-month campaign.", image: amitTeam },
-  { name: "Gagan", role: "VP - Digital Marketing · SEO Lead", focus: "Technical SEO, on-page optimization and search visibility across 220 page-one keywords.", image: gaganTeam },
   { name: "Praveen", role: "Senior Creative Manager · Content", focus: "Category content, topical authority and conversion-focused creative for the store.", image: praveenTeam },
 ];
 const strategyIcons = [Code2, Search, FileText, Layers, Link2, ShoppingBag];

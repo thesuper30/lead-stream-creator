@@ -29,7 +29,6 @@ import icsLogo from "@/assets/logos/ics.png";
 import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 import amitTeam from "@/assets/team/amit-singh.png.asset.json";
 import mayankTeam from "@/assets/team/mayank.png.asset.json";
-import gaganTeam from "@/assets/team/gagan.png.asset.json";
 import praveenTeam from "@/assets/team/praveen.png.asset.json";
 import harshavardhanTeam from "@/assets/team/harshavardhan.png.asset.json";
 import chandrasekharTeam from "@/assets/team/chandrasekhar.png.asset.json";
@@ -39,7 +38,6 @@ import likhithTeam from "@/assets/team/likhith.png.asset.json";
 const team = [
   { name: "Amit Singh", role: "Co-Founder", image: amitTeam.url, card: "bg-[#FDE2E4]" },
   { name: "Mayank", role: "VP - Business Growth", image: mayankTeam.url, card: "bg-[#D8F3DC]" },
-  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam.url, card: "bg-[#FFF3C4]" },
   { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam.url, card: "bg-[#E5DEFF]" },
   { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam.url, card: "bg-[#D7E3FC]" },
   { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam.url, card: "bg-[#FFE5D9]" },

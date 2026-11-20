@@ -18,12 +18,10 @@ import teamMacbookJson from "@/assets/home/home-team-macbook.jpg.asset.json";
 import { pdfClientLogos } from "@/data/pdfClientLogos";
 import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
 import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
-import gaganTeamJson from "@/assets/team/gagan.png.asset.json";
 import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
 
 const amitTeam = amitTeamJson.url;
 const mayankTeam = mayankTeamJson.url;
-const gaganTeam = gaganTeamJson.url;
 const praveenTeam = praveenTeamJson.url;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
@@ -229,7 +227,7 @@ const Home2 = () => (
                   Built for ambitious brands
                   <span className="mx-2 inline-flex -space-x-2 align-middle">{[amitTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}<span className="grid h-7 w-7 place-items-center rounded-full border-2 border-background bg-brand text-primary-foreground"><Users className="h-3.5 w-3.5" /></span></span>
                   that refuse to blend
-                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[gaganTeam, mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}</span>
+                  <span className="mx-2 inline-flex -space-x-2 align-middle">{[mayankTeam, praveenTeam].map((img, i) => <img key={i} src={img} alt="" className="inline h-7 w-7 rounded-full border-2 border-background object-cover" loading="lazy" />)}</span>
                   into the noise
                 </p>
               </div>
@@ -342,7 +340,7 @@ const Home2 = () => (
             <PillCta to="/internet-marketing-agency">Meet the whole team</PillCta>
           </div>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Gagan", r: "VP - Digital Marketing", i: gaganTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (
+            {[{ n: "Amit Singh", r: "Co-Founder", i: amitTeam }, { n: "Mayank", r: "VP - Business Growth", i: mayankTeam }, { n: "Praveen", r: "Senior Creative Manager", i: praveenTeam }].map((m) => (
               <div key={m.n} className="overflow-hidden rounded-3xl border border-primary-foreground/15 bg-primary-foreground/5">
                 <img src={m.i} alt={m.n} width={800} height={1000} className="aspect-[4/5] w-full object-cover object-top" loading="lazy" />
                 <div className="p-4">

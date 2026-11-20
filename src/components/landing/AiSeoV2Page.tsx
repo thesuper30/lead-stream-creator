@@ -32,7 +32,6 @@ import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 
 import amitTeam from "@/assets/team/amit-singh.png.asset.json";
 import mayankTeam from "@/assets/team/mayank.png.asset.json";
-import gaganTeam from "@/assets/team/gagan.png.asset.json";
 import praveenTeam from "@/assets/team/praveen.png.asset.json";
 import harshavardhanTeam from "@/assets/team/harshavardhan.png.asset.json";
 import chandrasekharTeam from "@/assets/team/chandrasekhar.png.asset.json";
@@ -42,7 +41,6 @@ import likhithTeam from "@/assets/team/likhith.png.asset.json";
 const seoExperts = [
   { name: "Amit Singh", role: "Co-Founder", image: amitTeam.url, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
   { name: "Mayank", role: "VP - Business Growth", image: mayankTeam.url, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
-  { name: "Gagan", role: "VP - Digital Marketing", image: gaganTeam.url, card: "bg-[#FFF3C4]", blob: "bg-[#FDE68A]" },
   { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam.url, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
   { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam.url, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
   { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam.url, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
