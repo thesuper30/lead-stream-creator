@@ -82,7 +82,7 @@ const Home2 = () => (
         {/* Warm orange glow, same as the other dark sections */}
         <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/3 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-end gap-10 pb-12 pt-28 lg:grid-cols-[1.6fr_1fr] lg:pt-48">
+          <div className="grid items-end gap-10 pb-10 pt-24 lg:grid-cols-[1.6fr_1fr] lg:pt-32">
             <div>
               <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> AI-powered digital marketing agency</p>
               <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl">Real Marketing for Real <span className="text-brand">Business Growth.</span></h1>
@@ -95,7 +95,7 @@ const Home2 = () => (
               <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">Measured across our clients' AI SEO and lead generation programs.</p>
             </div>
           </div>
-          <div className="grid gap-8 border-t border-primary-foreground/15 py-10 md:grid-cols-3">
+          <div className="grid gap-8 border-t border-primary-foreground/15 py-8 md:grid-cols-3">
             {heroFeatures.map((f) => (
               <div key={f.title} className="flex gap-4">
                 <f.icon className="h-10 w-10 shrink-0 text-brand" strokeWidth={1.4} />
