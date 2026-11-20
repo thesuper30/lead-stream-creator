@@ -23,3 +23,14 @@ describe("Page meta from the SEO sheet", () => {
     expect(meta["/wordpress-website-development-company-bangalore"].description.endsWith("Let's Build!")).toBe(true);
   });
 });
+
+describe("Content Writing page meta", () => {
+  test("uses the live Content Writing page's title and description", () => {
+    const page = meta["/content-writing-agency-bangalore"];
+    expect(page.title).toBe("Copywriting & Content Writing Agency in Bangalore");
+    expect(page.description).toBe(
+      "Copywriting done by experienced writers, customized for your business. Content writing services in Bangalore that build authority and trust for brands.",
+    );
+    expect(page.canonical).toBe("https://www.thesuper30.ai/content-writing-agency-bangalore");
+  });
+});

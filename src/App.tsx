@@ -224,7 +224,7 @@ const App = () => (
                 <Route path="/branding-agency-bangalore" element={<BrandKit />} />
 
                 {/* Content */}
-                <Route path="/content-writing-agency-bangalore" element={<Navigate to="/content-marketing-agency-bangalore" replace />} />
+                <Route path="/content-writing-agency-bangalore" element={<ContentMarketing />} />
                 <Route path="/seo-content-writing-company-bangalore" element={<WebsiteContent />} />
                 <Route path="/blog-writing-services-bangalore" element={<BlogWriting />} />
                 <Route path="/script-writing-agency-bangalore" element={<ScriptWriting />} />

@@ -55,6 +55,7 @@ const serviceGroups: { title: string; href: string; links: { name: string; href:
     title: "Content",
     href: "/content-marketing-agency-bangalore",
     links: [
+      { name: "Content Writing", href: "/content-writing-agency-bangalore" },
       { name: "Website Content", href: "/seo-content-writing-company-bangalore" },
       { name: "Blog Writing", href: "/blog-writing-services-bangalore" },
       { name: "Script Writing", href: "/script-writing-agency-bangalore" },

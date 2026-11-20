@@ -103,6 +103,14 @@
     "primary": true,
     "price": 10000
   },
+  "/content-writing-agency-bangalore": {
+    "name": "Content Writing Services",
+    "serviceType": "Content Writing",
+    "faqSlug": "content-marketing",
+    "type": "Service",
+    "parent": "/content-marketing-agency-bangalore",
+    "price": 10000
+  },
   "/seo-content-writing-company-bangalore": {
     "name": "SEO Content Writing",
     "serviceType": "SEO Content Writing",
