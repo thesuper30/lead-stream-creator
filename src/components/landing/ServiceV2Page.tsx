@@ -2,6 +2,8 @@ import { pdfClientLogos } from "@/data/pdfClientLogos";
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
+import { getSeo } from "@/data/seoMeta";
 import {
   ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, Check, GraduationCap, Hotel,
   Quote, Rocket, Scale, ShoppingBag, Star, Stethoscope,
@@ -111,16 +113,20 @@ export const ServiceV2Page = ({ c }: { c: ServiceV2Config }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{c.seo.title}</title>
-        <meta name="description" content={c.seo.description} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://www.thesuper30.ai${c.seo.canonical}`} />
-        <meta property="og:title" content={c.seo.title} />
-        <meta property="og:description" content={c.seo.description} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      {getSeo(c.seo.canonical) ? (
+        <PageSeo path={c.seo.canonical} />
+      ) : (
+        <Helmet>
+          <title>{c.seo.title}</title>
+          <meta name="description" content={c.seo.description} />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href={`https://www.thesuper30.ai${c.seo.canonical}`} />
+          <meta property="og:title" content={c.seo.title} />
+          <meta property="og:description" content={c.seo.description} />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Helmet>
+      )}
       <Navbar />
       <main className="min-h-screen bg-background pt-16 md:pt-20">
         {/* HERO */}

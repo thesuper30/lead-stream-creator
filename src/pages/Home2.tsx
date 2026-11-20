@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async";
+import { PageSeo } from "@/components/seo/PageSeo";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, BarChart3, Bot, CheckCircle2, Eye, Phone, Search, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -65,17 +65,7 @@ const PillCta = ({ to, children, href }: { to?: string; href?: string; children:
 
 const Home2 = () => (
   <>
-    <Helmet>
-      <title>Digital Marketing Agency &amp; AI Growth Company | TheSuper30</title>
-      <meta name="description" content="A leading AI-driven digital marketing agency helping businesses achieve real ROI and scalable growth with proven strategies. Book a free consultation now." />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://www.thesuper30.ai/homepage" />
-      <meta property="og:title" content="Digital Marketing Agency &amp; AI Growth Company | TheSuper30" />
-      <meta property="og:description" content="AI-powered digital marketing for more traffic, more leads and real business growth." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.thesuper30.ai/homepage" />
-      <meta name="twitter:card" content="summary_large_image" />
-    </Helmet>
+    <PageSeo path="/homepage" />
     <Navbar />
     <main className="min-h-screen bg-background pt-16 md:pt-20">
       {/* HERO */}
