@@ -128,3 +128,8 @@
 - [x] Phone call button moved into the top menu bar on mobile only
 - [x] WhatsApp floating button moved to bottom-right on mobile only (above scroll-to-top)
 - [x] Desktop layout left unchanged and verified
+
+# Mobile readiness pass (mobile only, desktop untouched)
+
+- [x] Audit phone-width padding, alignment and overflow on homepage and main pages; fix what is off
+- [x] Re-verify desktop layout is unchanged after the mobile fixes

@@ -37,6 +37,7 @@
 .about-checks li { display: flex; gap: .65rem; align-items: center; }
 .about-brands { margin-top: 3.5rem; }
 .about-brands > section { background: transparent; padding: 0; }
+.about-brands > section > .container { padding-left: 0; padding-right: 0; }
 .about-brands p,.about-brands span { color: hsl(var(--work-ink)); }
 .about-brands .animate-marquee > div { background: hsl(var(--work-paper)); border-color: hsl(var(--border)); border-radius: 8px; }
 .about-brands .border-t { border-color: hsl(var(--border)); }
@@ -104,4 +105,4 @@
 .about-page #about-team h2 { font-size: 3rem; line-height: 1.2; }
 @media(max-width:1023px) { .about-page #about-team h2 { font-size: 2.25rem; } }
 @media(max-width:639px) { .about-page #about-team h2 { font-size: 1.875rem; } }
-@media(max-width:639px) { .about-page #about-team .container { padding-left: 1rem; padding-right: 1rem; } }
+@media(max-width:639px) { .about-page #about-team .container { padding-left: 1.25rem; padding-right: 1.25rem; } }

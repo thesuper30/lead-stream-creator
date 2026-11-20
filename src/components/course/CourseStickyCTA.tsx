@@ -35,7 +35,7 @@ export const CourseStickyCTA = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div
       ref={ref}
-      className={`fixed bottom-0 left-0 right-0 z-50 transform transition-transform duration-300 ${
+      className={`sticky-cta-bar fixed bottom-0 left-0 right-0 z-50 transform transition-transform duration-300 ${
         shouldShow ? "translate-y-0" : "translate-y-full"
       }`}
       style={{ visibility: shouldShow ? 'visible' : 'hidden' }}

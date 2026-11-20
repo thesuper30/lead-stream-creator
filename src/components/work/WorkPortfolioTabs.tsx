@@ -415,7 +415,7 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, 
 
   return (
     <section className={`${homePreview ? "py-16 md:py-24" : "py-16 md:py-20"} ${dark ? "bg-foreground" : "bg-background"}`}>
-      <div className="container mx-auto px-3 md:px-4">
+      <div className="container mx-auto px-4 md:px-4">
         <div className="text-center mb-8 md:mb-10">
           <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-3 ${dark ? "text-primary-foreground" : "text-foreground"}`}>
             {heading ?? <>Real Projects. Real Results. <span className="text-brand-gradient">Real Growth.</span></>}
@@ -431,7 +431,7 @@ export const WorkPortfolioTabs = ({ homePreview = false, dark = false, heading, 
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className={`flex items-center gap-1.5 text-xs md:text-sm px-4 py-2.5 rounded-t-lg border-b-2 border-transparent data-[state=active]:border-[hsl(18,100%,48%)] data-[state=active]:bg-[hsl(18,100%,48%)] data-[state=active]:text-white data-[state=active]:shadow-none transition-all bg-transparent ${dark ? "text-primary-foreground/60 hover:text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+                className={`flex min-h-[44px] md:min-h-0 items-center gap-1.5 text-xs md:text-sm px-4 py-2.5 rounded-t-lg border-b-2 border-transparent data-[state=active]:border-[hsl(18,100%,48%)] data-[state=active]:bg-[hsl(18,100%,48%)] data-[state=active]:text-white data-[state=active]:shadow-none transition-all bg-transparent ${dark ? "text-primary-foreground/60 hover:text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
               >
                 <tab.icon className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">{tab.label}</span>

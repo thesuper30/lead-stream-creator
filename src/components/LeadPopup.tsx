@@ -115,7 +115,7 @@ const LeadPopup = () => {
         <button
           onClick={close}
           aria-label="Close popup"
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full border border-border bg-white/90 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
+          className="absolute top-4 right-4 z-10 w-11 h-11 md:w-8 md:h-8 rounded-full border border-border bg-white/90 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
         >
           <X className="w-4 h-4" />
         </button>

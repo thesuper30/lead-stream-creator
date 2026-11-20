@@ -26,7 +26,7 @@ export const StickyCTA = forwardRef<HTMLDivElement, StickyCTAProps>(({ onClick }
   return (
     <div
       ref={ref}
-      className="fixed bottom-0 left-0 right-0 z-40 p-3 sm:p-4 lg:hidden animate-in slide-in-from-bottom-4 duration-300"
+      className="sticky-cta-bar fixed bottom-0 left-0 right-0 z-40 p-3 sm:p-4 lg:hidden animate-in slide-in-from-bottom-4 duration-300"
     >
       <div className="bg-background/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-border/50 p-3 sm:p-4">
         <div className="flex items-center justify-between gap-3">

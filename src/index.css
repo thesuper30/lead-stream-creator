@@ -563,3 +563,9 @@ All colors MUST be HSL.
 @layer utilities {
   .bg-sand { background-color: hsl(41 41% 93%); } /* #F4F0E7 */
 }
+
+/* Mobile only: keep the floating call/WhatsApp stack clear of the sticky bottom CTA bar */
+@media (max-width: 1023px) {
+  body:has(.sticky-cta-bar) .floating-contact-stack { bottom: 6.5rem; }
+  body:has(.sticky-cta-bar) .scroll-top-button { bottom: 10.25rem; }
+}
