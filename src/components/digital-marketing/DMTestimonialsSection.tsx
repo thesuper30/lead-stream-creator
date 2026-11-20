@@ -23,15 +23,6 @@ const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
       ))}
     </div>
     <p className="text-sm text-muted-foreground leading-relaxed flex-1">"{t.text}"</p>
-    <div className="flex items-center gap-3 pt-3 border-t border-border/30">
-      <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
-        <span className="text-xs font-bold text-foreground">{t.name[0]}</span>
-      </div>
-      <div>
-        <div className="text-sm font-semibold text-foreground">{t.name}</div>
-        <div className="text-xs text-muted-foreground">{t.role}</div>
-      </div>
-    </div>
   </div>
 );
 

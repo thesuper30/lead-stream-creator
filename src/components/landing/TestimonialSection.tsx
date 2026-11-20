@@ -134,7 +134,7 @@ const VideoCard = ({ video, isHovered, onHover, onLeave, index }: VideoCardProps
   );
 };
 
-export const TestimonialSection = () => {
+export const TestimonialSection = ({ hideAuthor = false }: { hideAuthor?: boolean }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hoveredVideo, setHoveredVideo] = useState<number | null>(null);
   const videoScrollRef = useRef<HTMLDivElement>(null);
@@ -210,6 +210,7 @@ export const TestimonialSection = () => {
               </blockquote>
 
               <div className="flex flex-col md:flex-row md:items-center gap-6">
+                {!hideAuthor && (
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-brand to-orange-600 rounded-2xl flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                     {currentTestimonial.initials}
@@ -219,9 +220,10 @@ export const TestimonialSection = () => {
                     <div className="text-gray-400 text-sm md:text-base">{currentTestimonial.role}</div>
                   </div>
                 </div>
+                )}
 
                 {/* Stars with Staggered Animation */}
-                <div className="md:ml-auto flex items-center gap-1.5">
+                <div className={`${hideAuthor ? "mx-auto" : "md:ml-auto"} flex items-center gap-1.5`}>
                   {[1, 2, 3, 4, 5].map((star, i) => (
                     <Star 
                       key={star} 

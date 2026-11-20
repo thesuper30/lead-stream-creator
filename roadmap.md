@@ -109,3 +109,14 @@
 - [x] Homepage: client logos in small round icons (kept only in the "Smarter strategies" strip)
 - [x] Homepage work section: open the Brand Identity tab by default
 - [x] Homepage Core Principles: removed the round icon stacks
+
+# Testimonials and portfolio tabs
+
+- [x] Remove designations from testimonial sections on all service pages, keeping quotes only
+- [x] Remove the per-tab description line from the portfolio tabs on homepage and Our Work
+- [ ] Verify both changes in the browser and publish
+
+# New website content (Super30_New_Website_Content.docx)
+
+- [ ] Apply supplied content to Home, SEO, Lead Generation, Social Media, Google Ads & PPC, Design, Content Marketing, Website, SMS & WhatsApp
+- [ ] Verify each page in the browser after the content swap
