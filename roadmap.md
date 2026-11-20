@@ -114,9 +114,11 @@
 
 - [x] Remove designations from testimonial sections on all service pages, keeping quotes only
 - [x] Remove the per-tab description line from the portfolio tabs on homepage and Our Work
-- [ ] Verify both changes in the browser and publish
+- [x] Verify both changes in the browser and publish
 
 # New website content (Super30_New_Website_Content.docx)
 
-- [ ] Apply supplied content to Home, SEO, Lead Generation, Social Media, Google Ads & PPC, Design, Content Marketing, Website, SMS & WhatsApp
-- [ ] Verify each page in the browser after the content swap
+- [x] Apply supplied content to Home, SEO, Lead Generation, Social Media, Google Ads & PPC, Design, Content Marketing, Website, SMS & WhatsApp
+- [x] Verify each page in the browser after the content swap
+- [x] Keep the homepage headline on one line at desktop widths
+- [ ] Client logo band photos: confirm they render in the real preview (sandbox cannot serve uploaded assets)

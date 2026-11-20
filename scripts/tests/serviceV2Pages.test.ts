@@ -24,20 +24,21 @@ const heroLabels = (path: string) => serviceV2Pages.find((p) => p.path === path)
 
 test("lead gen hero metrics are about leads and pipeline", () => {
   expect(lead?.heroStats).toEqual([
-    ["25,000+", "Qualified Leads Generated"],
-    ["₹16 Cr+", "Sales Pipeline Generated"],
-    ["42%", "Lower Cost Per Lead"],
-    ["8,500+", "Sales Calls Booked"],
+    ["300%+", "Avg. Pipeline Lift"],
+    ["50+", "Funnel Audits Delivered"],
+    ["₹16 Cr+", "Client Revenue Generated"],
+    ["4.9/5", "Client Rating"],
   ]);
 });
 
-test("google ads hero metrics cover ad spend and revenue generated", () => {
-  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Ad Spend Managed");
-  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Revenue Generated");
+test("google ads hero metrics cover enquiry lift and revenue generated", () => {
+  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Avg. Enquiry Lift");
+  expect(heroLabels("/google-ads-agency-bangalore")).toContain("Client Revenue Generated");
 });
 
-test("social media hero metrics cover followers gained", () => {
-  expect(heroLabels("/social-media-marketing-agency-bangalore")).toContain("Followers Gained");
+test("social media hero metrics cover engagement lift", () => {
+  expect(heroLabels("/social-media-marketing-agency-bangalore")).toContain("Avg. Engagement Lift");
+  expect(heroLabels("/social-media-marketing-agency-bangalore")).toContain("Client Revenue Generated");
 });
 
 test("every service page has its own four hero metrics", () => {

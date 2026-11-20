@@ -30,30 +30,30 @@ const harshavardhanTeam = harshavardhanTeamJson.url;
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
 const heroFeatures = [
-  { icon: BarChart3, title: "Data-Driven Strategies", text: "Every campaign is guided by clear performance signals and measurable goals." },
-  { icon: Bot, title: "AI-Powered Execution", text: "AI tools and automation make campaigns smarter, faster, and more responsive." },
-  { icon: TrendingUp, title: "Focused On Your ROI", text: "More traffic, more leads, and more revenue — with transparent reporting." },
+  { icon: BarChart3, title: "Brand-First Strategy", text: "Every campaign protects your brand positioning while capturing high-intent market share." },
+  { icon: Bot, title: "AI-Powered Execution", text: "Proprietary AI workflows make targeting sharper, bidding smarter, and scaling faster." },
+  { icon: TrendingUp, title: "Boardroom-Ready ROI", text: "Qualified pipeline, lower acquisition costs, and verifiable revenue with live executive reporting." },
 ];
 
 const services = [
-  { title: "AI SEO", href: "/seo-company-bangalore", icon: Search, points: ["Technical SEO & content clusters", "AEO, AIO & GEO visibility", "Authority building"] },
-  { title: "Lead Generation", href: "/lead-generation-agency-bangalore", icon: Target, points: ["Targeted paid campaigns", "Conversion-focused landing pages", "Funnel optimization"] },
-  { title: "Social Media", href: "/social-media-marketing-agency-bangalore", icon: Users, points: ["Platform strategy & calendars", "Community management", "Performance paid social"] },
-  { title: "Design & Creative", href: "/design-agency-bangalore", icon: Eye, points: ["Brand-aligned design systems", "Scroll-stopping creatives", "Conversion visual assets"] },
-  { title: "AI & Automation", href: "/digital-marketing-agency-bangalore", icon: Bot, points: ["Workflow automation", "Predictive analytics", "Integrated marketing ops"] },
-  { title: "Web Design & CRO", href: "/website-design-company-bangalore", icon: TrendingUp, points: ["UX design", "Conversion rate optimization", "Performance-focused builds"] },
+  { title: "AI SEO", href: "/seo-company-bangalore", icon: Search, points: ["Technical SEO & site architecture", "Top rankings on AI platforms", "High-authority link building"] },
+  { title: "Lead Generation", href: "/lead-generation-agency-bangalore", icon: Target, points: ["High-converting & data-backed paid ad campaigns", "Conversion-engineered landing pages", "Full-funnel pipeline optimization"] },
+  { title: "Social Media", href: "/social-media-marketing-agency-bangalore", icon: Users, points: ["Brand storytelling & content calendars", "Active community management", "Performance paid social campaigns"] },
+  { title: "Design & Creative", href: "/design-agency-bangalore", icon: Eye, points: ["Cohesive brand design systems", "Unforgettable ad creatives", "High-converting campaign visuals"] },
+  { title: "AI & Automation", href: "/digital-marketing-agency-bangalore", icon: Bot, points: ["Custom AI marketing workflows", "Predictive audience targeting", "Automated CRM & lead nurturing"] },
+  { title: "Web Design & CRO", href: "/website-design-company-bangalore", icon: TrendingUp, points: ["Conversion-focused UI/UX design", "Higher visitor-to-lead conversion", "Fast, scalable web builds"] },
 ];
 
 const steps = [
-  { title: "Discover", text: "We audit your website, search presence, and competitors to uncover the biggest growth gaps." },
-  { title: "Strategize", text: "We build a data-driven plan across SEO, ads, social, and content around your business goals." },
-  { title: "Execute", text: "Our 30-member team implements with AI-powered tools, creative, and continuous optimization." },
-  { title: "Measure & Grow", text: "Transparent reporting on traffic, leads, and revenue — then we double down on what works." },
+  { title: "Discover", text: "Deep audits of your brand, funnel, and competitors uncover the highest-leverage growth opportunities." },
+  { title: "Strategize", text: "We build a custom roadmap aligning creative, search, paid media, and content around clear revenue targets." },
+  { title: "Execute", text: "Our 30 specialists launch campaigns with bold creative, precision targeting, and data-backed optimization." },
+  { title: "Optimize & Scale", text: "Live pipeline and revenue tracking guide every move, doubling down on what drives real ROI." },
 ];
 
 const whyUs = [
-  { icon: Users, title: "30+ Expert Marketers", text: "Strategy, creative, media, and technology in one focused team." },
-  { icon: Bot, title: "AI-Powered Strategies", text: "Smarter, faster, more responsive campaigns." },
+  { icon: Users, title: "30 Full-Stack Specialists", text: "Brand strategists, creatives, media buyers, and analysts under one roof." },
+  { icon: Bot, title: "AI-Accelerated Execution", text: "Faster testing, sharper targeting, and zero wasted ad spend." },
   { icon: BarChart3, title: "Data-Driven Growth", text: "Guided by testing and measurable goals." },
   { icon: Zap, title: "Fast & Flexible", text: "Agile execution that adapts as priorities change." },
 ];
@@ -83,17 +83,17 @@ const Home2 = () => (
         {/* Warm orange glow, same as the other dark sections */}
         <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/3 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-end gap-10 pb-10 pt-24 lg:grid-cols-[1.6fr_1fr] lg:pt-32">
+          <div className="grid items-end gap-10 pb-10 pt-24 lg:grid-cols-[2fr_1fr] lg:pt-32">
             <div>
-              <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> AI-powered digital marketing agency</p>
-              <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl">Real Marketing for Real <span className="text-brand">Business Growth.</span></h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">We combine AI, data, and human creativity to help brands get more traffic, more leads, and more revenue.</p>
+              <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Premier AI Digital Marketing Agency</p>
+              <h1 className="max-w-3xl text-[clamp(2rem,4.1vw,3.25rem)] font-semibold leading-[1.08] text-primary-foreground">The Digital Marketing Agency<br /><span className="text-brand">Built for Market Leaders</span></h1>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">Zero guesswork, unforgettable creatives, and smart AI that turn attention into compounding revenue growth.</p>
               <div className="mt-8"><PillCta to="/contact-us">Book a Free Consultation</PillCta></div>
             </div>
             <div className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/10 p-7 backdrop-blur-md">
               <div className="flex items-start justify-between"><Search className="h-12 w-12 text-primary-foreground" strokeWidth={1.3} /><p className="text-5xl font-semibold text-primary-foreground">300%+</p></div>
               <h3 className="mt-8 text-xl font-semibold text-primary-foreground">Average Traffic Growth</h3>
-              <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">Measured across our clients' AI SEO and lead generation programs.</p>
+              <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">Measured across our clients' AI SEO and growth programs.</p>
             </div>
           </div>
           <div className="grid gap-8 border-t border-primary-foreground/15 py-8 md:grid-cols-3">
@@ -122,7 +122,7 @@ const Home2 = () => (
             </Link>
           </div>
           <div>
-            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Super30 Team</p>
+            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> The Super30 Collective</p>
             <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-[2.05rem] xl:text-[2.35rem]">Your Team of <span className="text-brand">30 Digital Specialists</span></h2>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">Not your typical digital marketing company. Just 30 obsessive minds turning brand ideas into revenue.</p>
             <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
@@ -155,10 +155,10 @@ const Home2 = () => (
           <div className="mb-14 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
             <div>
               <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Services</p>
-              <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">End-to-end <span className="text-brand">digital marketing</span> solutions.</h2>
+              <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Built to <span className="text-brand">scale your brand</span> faster.</h2>
             </div>
             <div className="lg:justify-self-end">
-              <p className="max-w-md text-base leading-relaxed text-primary-foreground/75">AI-powered SEO, lead generation, creative, and automation — everything your brand needs to grow traffic, leads, and revenue in one team.</p>
+              <p className="max-w-md text-base leading-relaxed text-primary-foreground/75">SEO, performance media, bold creative, and smart automation, all working together under one roof.</p>
             </div>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -251,8 +251,8 @@ const Home2 = () => (
               <div className="flex flex-col gap-4">
                 <img src={teamMacbookJson.url} alt="Super30 specialists working on a client strategy" className="h-[300px] w-full rounded-3xl object-cover sm:h-[400px]" loading="lazy" />
                 <div className="rounded-2xl border-r-4 border-brand bg-background p-5 shadow-xl sm:p-6">
-                  <h3 className="text-lg font-semibold text-foreground">Comprehensive</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">End-to-end growth services across every sector.</p>
+                  <h3 className="text-lg font-semibold text-foreground">Unified</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Creative storytelling and paid media working as one.</p>
                 </div>
               </div>
             </div>
@@ -262,9 +262,9 @@ const Home2 = () => (
             </Link>
           </div>
           <div>
-            <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Why Us</p>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Why We Are Your <span className="text-brand">AI Growth Partner</span></h2>
-            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/75">We combine human creativity with AI-led insight to anticipate market shifts, sharpen decisions, and help brands grow profitably.</p>
+            <p className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Why The Super30</p>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Built To Be Your <span className="text-brand">Next Growth Engine</span></h2>
+            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/75">We pair sharp creative instincts with predictive AI to outmaneuver competitors, capture demand, and scale brand revenue.</p>
             <div className="mt-8 grid gap-6 rounded-2xl bg-primary-foreground/10 p-6 sm:grid-cols-2 sm:p-7">
               {whyUs.slice(0, 2).map((w) => (
                 <div key={w.title} className="flex gap-4">
@@ -274,20 +274,20 @@ const Home2 = () => (
               ))}
             </div>
             <div className="mt-7 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
-              {["AI-powered keyword & market insights", "SEO and website optimization", "Search-focused content strategy", "Continuous performance monitoring"].map((point) => (
+              {["High-converting paid & organic funnels", "Scroll-stopping creative & brand systems", "Search, social, and AI visibility", "Real-time revenue & ROI tracking"].map((point) => (
                 <p key={point} className="flex items-center gap-2.5 text-sm font-medium text-primary-foreground"><CheckCircle2 className="h-5 w-5 shrink-0 fill-brand text-foreground" />{point}</p>
               ))}
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-primary-foreground/15 pt-8">
               <PillCta to="/internet-marketing-agency">Learn More</PillCta>
-              <a href="tel:+918904150555" className="inline-flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-5 w-5" /></span><span><span className="block text-sm font-semibold text-primary-foreground">Talk to an SEO Expert</span><span className="text-sm text-primary-foreground/70">+91 89041 50555</span></span></a>
+              <a href="tel:+918904150555" className="inline-flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-5 w-5" /></span><span><span className="block text-sm font-semibold text-primary-foreground">Talk to a Strategist</span><span className="text-sm text-primary-foreground/70">+91 89041 50555</span></span></a>
             </div>
           </div>
         </div>
         <div className="container relative mx-auto mt-12 px-4 sm:px-6 lg:px-8">
           <p className="flex flex-wrap items-center justify-center gap-3 text-center text-primary-foreground">
             <ClientLogoChips logos={logoGroups.stripAlt} size="strip" ring="border-foreground" />
-            Smarter strategies, better rankings — <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Get Your SEO Growth Plan.</Link>
+            Tired of slow, fragmented agency work? <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Talk to Our Strategists</Link>
           </p>
         </div>
       </section>
@@ -296,8 +296,8 @@ const Home2 = () => (
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> How It Works</p>
-            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">AI-Powered for Sustainable<br className="hidden sm:block" /> <span className="text-brand">Business Growth</span></h2>
+            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground"><span className="h-2 w-2 rounded-full bg-brand" /> Our Process</p>
+            <h2 className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">How We Turn Strategy Into<br className="hidden sm:block" /> <span className="text-brand">Measurable Revenue</span></h2>
           </div>
           <div className="relative mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div className="absolute left-0 right-0 top-[92px] hidden border-t border-dashed border-foreground/20 lg:block" />
@@ -315,19 +315,19 @@ const Home2 = () => (
             })}
           </div>
           <div className="mt-14 flex flex-wrap items-center justify-center gap-3">
-            {["Intelligent SEO", "Keyword Research", "Content Optimization", "SEO Analytics"].map((tag) => (
+            {["Brand Strategy", "Paid Media", "Organic Search", "Creative Studio"].map((tag) => (
               <span key={tag} className="flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2 text-sm font-medium text-foreground"><span className="h-1.5 w-1.5 rounded-full bg-brand" />{tag}</span>
             ))}
           </div>
           <p className="mt-8 flex flex-wrap items-center justify-center gap-3 text-center text-foreground">
             <span className="grid h-10 w-10 place-items-center rounded-full bg-brand text-primary-foreground"><Phone className="h-4 w-4" /></span>
-            Ready to grow your business with AI-powered marketing — <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Contact Us Now.</Link>
+            Ready to turn your marketing into a growth engine? <Link to="/contact-us" className="font-semibold text-brand underline underline-offset-4">Book a Strategy Call →</Link>
           </p>
         </div>
       </section>
 
       <SeoAchievementsSection glow />
-      <WorkPortfolioTabs homePreview defaultTab="brand-identity" />
+      <WorkPortfolioTabs homePreview defaultTab="brand-identity" heading={<>Client Results That <span className="text-brand-gradient">Speak Louder.</span></>} description="A curated showcase of the brand identities, creative campaigns, and high-converting growth systems we've delivered for our clients." />
 
       {/* TEAM */}
       <section className="relative overflow-hidden bg-foreground py-16 md:py-24">
@@ -373,11 +373,11 @@ const Home2 = () => (
           <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,hsl(var(--primary-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary-foreground))_1px,transparent_1px)] bg-[size:46px_46px] [mask-image:radial-gradient(ellipse_at_center,transparent_35%,black_85%)]" />
           <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand/25 blur-[140px]" />
           <div className="relative mx-auto max-w-3xl">
-            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Ready to grow?</p>
-            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">search growth strategy.</span></h2>
-            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear view of your current search visibility, biggest opportunities and the actions that will drive qualified growth.</p>
+            <p className="mb-3 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand"><span className="h-2 w-2 rounded-full bg-brand" /> Let's Talk Growth</p>
+            <h2 className="text-3xl font-semibold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">Let's build your <span className="text-brand">next growth engine.</span></h2>
+            <p className="mx-auto mt-5 max-w-xl text-primary-foreground/70">Get a clear breakdown of your brand positioning, funnel gaps, and highest-leverage moves to accelerate revenue.</p>
             <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
-              <PillCta to="/contact-us">Get My Free SEO Audit</PillCta>
+              <PillCta to="/contact-us">Get My Free Growth Audit</PillCta>
               <Link to="/booking" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:text-brand"><Phone className="h-4 w-4 text-brand" />Book a Strategy Call</Link>
             </div>
           </div>
