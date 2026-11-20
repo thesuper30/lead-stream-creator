@@ -122,3 +122,9 @@
 - [x] Verify each page in the browser after the content swap
 - [x] Keep the homepage headline on one line at desktop widths
 - [ ] Client logo band photos: confirm they render in the real preview (sandbox cannot serve uploaded assets)
+
+# Mobile contact buttons
+
+- [x] Phone call button moved into the top menu bar on mobile only
+- [x] WhatsApp floating button moved to bottom-right on mobile only (above scroll-to-top)
+- [x] Desktop layout left unchanged and verified

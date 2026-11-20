@@ -6,11 +6,11 @@ const WHATSAPP_MESSAGE = "Hello Super 30, I would like to know more.";
 
 export const FloatingContactButtons = () => {
   return (
-    <div className="fixed bottom-24 left-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-40 right-6 left-auto z-50 flex flex-col gap-3 lg:bottom-24 lg:left-6 lg:right-auto">
       {/* Phone Button */}
       <a
         href={`tel:${PHONE_NUMBER}`}
-        className="group relative w-12 h-12 sm:w-14 sm:h-14 bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 border border-[hsl(var(--brand-orange))]/30"
+        className="group relative hidden lg:flex w-12 h-12 sm:w-14 sm:h-14 bg-[hsl(var(--brand-orange))] hover:bg-[hsl(var(--brand-orange))]/90 rounded-2xl items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 border border-[hsl(var(--brand-orange))]/30"
         aria-label="Call us"
       >
         <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -35,7 +35,7 @@ export const FloatingContactButtons = () => {
         <span className="absolute inset-0 rounded-2xl bg-[#25D366] animate-ping opacity-20" aria-hidden="true" />
 
         {/* Tooltip */}
-        <span className="absolute left-full ml-3 px-3 py-2 bg-background/90 backdrop-blur-sm text-foreground text-sm font-medium rounded-xl border border-border/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-lg">
+        <span className="absolute right-full mr-3 left-auto px-3 py-2 bg-background/90 backdrop-blur-sm text-foreground text-sm font-medium rounded-xl border border-border/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-lg lg:left-full lg:ml-3 lg:right-auto">
           WhatsApp us
         </span>
       </a>
