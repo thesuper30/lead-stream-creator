@@ -6,26 +6,25 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { WorkPortfolioTabs } from "@/components/work/WorkPortfolioTabs";
 import { SeoAchievementsSection } from "@/components/landing/SeoAchievementsSection";
-import teamLaptopsJson from "@/assets/home/home-team-laptops.jpg.asset.json";
-import teamSofaJson from "@/assets/home/home-team-sofa.jpg.asset.json";
-import teamCorridorJson from "@/assets/home/home-team-corridor.jpg.asset.json";
-import teamPortraitJson from "@/assets/home/home-team-portrait.jpg.asset.json";
-import strategyDuoJson from "@/assets/home/home-strategy-duo.jpg.asset.json";
-import teamTabletJson from "@/assets/home/home-team-tablet.jpg.asset.json";
-import teamWindowJson from "@/assets/home/home-team-window.jpg.asset.json";
-import foundersJson from "@/assets/home/home-founders.jpg.asset.json";
-import teamMacbookJson from "@/assets/home/home-team-macbook.jpg.asset.json";
+import teamLaptopsJson from "@/assets/home/home-team-laptops.jpg";
+import teamSofaJson from "@/assets/home/home-team-sofa.jpg";
+import teamCorridorJson from "@/assets/home/home-team-corridor.jpg";
+import teamPortraitJson from "@/assets/home/home-team-portrait.jpg";
+import strategyDuoJson from "@/assets/home/home-strategy-duo.jpg";
+import teamTabletJson from "@/assets/home/home-team-tablet.jpg";
+import teamWindowJson from "@/assets/home/home-team-window.jpg";
+import foundersJson from "@/assets/home/home-founders.jpg";
+import teamMacbookJson from "@/assets/home/home-team-macbook.jpg";
 import { pdfClientLogos } from "@/data/pdfClientLogos";
 import { ClientLogoChips, logoGroups } from "@/components/landing/ClientLogoChips";
-import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
-import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
-import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
-import harshavardhanTeamJson from "@/assets/team/harshavardhan.png.asset.json";
-
-const amitTeam = amitTeamJson.url;
-const mayankTeam = mayankTeamJson.url;
-const praveenTeam = praveenTeamJson.url;
-const harshavardhanTeam = harshavardhanTeamJson.url;
+import amitTeamJson from "@/assets/team/amit-singh-card.png";
+import mayankTeamJson from "@/assets/team/mayank-card.png";
+import praveenTeamJson from "@/assets/team/praveen.png";
+import harshavardhanTeamJson from "@/assets/team/harshavardhan-card.png";
+const amitTeam = amitTeamJson;
+const mayankTeam = mayankTeamJson;
+const praveenTeam = praveenTeamJson;
+const harshavardhanTeam = harshavardhanTeamJson;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 
@@ -77,7 +76,7 @@ const Home2 = () => (
     <main className="min-h-screen bg-background pt-16 md:pt-20">
       {/* HERO */}
       <section className="relative overflow-hidden bg-foreground">
-        <img src={teamLaptopsJson.url} alt="The Super30 team reviewing campaign results together" className="absolute inset-0 h-full w-full object-cover" width={1541} height={1020} fetchPriority="high" />
+        <img src={teamLaptopsJson} alt="The Super30 team reviewing campaign results together" className="absolute inset-0 h-full w-full object-cover" width={1541} height={1020} fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/75 to-foreground/40" />
         <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-foreground to-transparent" />
         {/* Warm orange glow, same as the other dark sections */}
@@ -111,10 +110,10 @@ const Home2 = () => (
       <section className="bg-muted/40 py-16 md:py-24">
         <div className="container mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
           <div className="relative grid grid-cols-[1.3fr_1fr] gap-4">
-            <img src={teamSofaJson.url} alt="The Super30 team planning around a laptop" className="mt-16 h-[420px] w-full rounded-3xl object-cover object-bottom sm:h-[560px]" width={1020} height={1541} loading="lazy" />
+            <img src={teamSofaJson} alt="The Super30 team planning around a laptop" className="mt-16 h-[420px] w-full rounded-3xl object-cover object-bottom sm:h-[560px]" width={1020} height={1541} loading="lazy" />
             <div className="flex flex-col gap-4">
-              <img src={teamCorridorJson.url} alt="Super30 strategists walking through the office" className="h-[220px] w-full rounded-3xl object-cover sm:h-[300px]" loading="lazy" />
-              <img src={teamPortraitJson.url} alt="Super30 digital specialists" className="h-[220px] w-full rounded-3xl object-cover sm:h-[320px]" loading="lazy" />
+              <img src={teamCorridorJson} alt="Super30 strategists walking through the office" className="h-[220px] w-full rounded-3xl object-cover sm:h-[300px]" loading="lazy" />
+              <img src={teamPortraitJson} alt="Super30 digital specialists" className="h-[220px] w-full rounded-3xl object-cover sm:h-[320px]" loading="lazy" />
             </div>
             <Link to="/internet-marketing-agency" aria-label="More about us" className="absolute left-[56%] top-1/2 grid h-32 w-32 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-4 border-background bg-brand text-primary-foreground sm:h-40 sm:w-40">
               <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_14s_linear_infinite]"><defs><path id="c" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" /></defs><text className="fill-current text-[9px] font-semibold tracking-[1.5px]"><textPath href="#c">More About Us * More About Us * More About Us *</textPath></text></svg>
@@ -189,8 +188,8 @@ const Home2 = () => (
             {/* Alignment */}
             <div className="flex flex-col rounded-3xl border border-border bg-background p-6">
               <div className="relative h-32">
-                <img src={strategyDuoJson.url} alt="Strategists aligning on a growth plan" className="absolute left-0 top-3 h-24 w-3/5 rounded-2xl object-cover" loading="lazy" />
-                <img src={teamTabletJson.url} alt="The Super30 team reviewing a plan on a tablet" className="absolute right-0 top-0 h-28 w-1/2 rounded-2xl border-4 border-background object-cover" loading="lazy" />
+                <img src={strategyDuoJson} alt="Strategists aligning on a growth plan" className="absolute left-0 top-3 h-24 w-3/5 rounded-2xl object-cover" loading="lazy" />
+                <img src={teamTabletJson} alt="The Super30 team reviewing a plan on a tablet" className="absolute right-0 top-0 h-28 w-1/2 rounded-2xl border-4 border-background object-cover" loading="lazy" />
               </div>
               <h3 className="mt-5 text-2xl font-semibold text-foreground">Alignment</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">We pair sharp brand strategists with smart AI to eliminate guesswork.</p>
@@ -224,7 +223,7 @@ const Home2 = () => (
             </div>
             {/* Commitment */}
             <div className="flex flex-col gap-6">
-              <img src={teamWindowJson.url} alt="The Super30 team reviewing results on a laptop" className="h-48 w-full rounded-3xl object-cover object-[center_30%] lg:[flex:1_1_0px]" loading="lazy" />
+              <img src={teamWindowJson} alt="The Super30 team reviewing results on a laptop" className="h-48 w-full rounded-3xl object-cover object-[center_30%] lg:[flex:1_1_0px]" loading="lazy" />
               <div className="rounded-3xl border border-border bg-background p-6">
                 <p className="text-base font-semibold uppercase leading-snug tracking-wide text-foreground">
                   Built for ambitious brands
@@ -247,9 +246,9 @@ const Home2 = () => (
         <div className="container relative mx-auto grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div className="relative">
             <div className="grid grid-cols-[1fr_1.15fr] items-start gap-4">
-              <img src={foundersJson.url} alt="Super30 leadership in the office" className="mt-20 h-[300px] w-full rounded-3xl object-cover object-top sm:h-[380px]" loading="lazy" />
+              <img src={foundersJson} alt="Super30 leadership in the office" className="mt-20 h-[300px] w-full rounded-3xl object-cover object-top sm:h-[380px]" loading="lazy" />
               <div className="flex flex-col gap-4">
-                <img src={teamMacbookJson.url} alt="Super30 specialists working on a client strategy" className="h-[300px] w-full rounded-3xl object-cover sm:h-[400px]" loading="lazy" />
+                <img src={teamMacbookJson} alt="Super30 specialists working on a client strategy" className="h-[300px] w-full rounded-3xl object-cover sm:h-[400px]" loading="lazy" />
                 <div className="rounded-2xl border-r-4 border-brand bg-background p-5 shadow-xl sm:p-6">
                   <h3 className="text-lg font-semibold text-foreground">Unified</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Creative storytelling and paid media working as one.</p>

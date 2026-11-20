@@ -30,22 +30,21 @@ import icsLogo from "@/assets/logos/ics.png";
 import digitalAcademy360Logo from "@/assets/logos/digital-academy-360.png";
 
 
-import amitTeam from "@/assets/team/amit-singh.png.asset.json";
-import mayankTeam from "@/assets/team/mayank.png.asset.json";
-import praveenTeam from "@/assets/team/praveen.png.asset.json";
-import harshavardhanTeam from "@/assets/team/harshavardhan.png.asset.json";
-import chandrasekharTeam from "@/assets/team/chandrasekhar.png.asset.json";
-import anandTeam from "@/assets/team/anand.png.asset.json";
-import likhithTeam from "@/assets/team/likhith.png.asset.json";
-
+import amitTeam from "@/assets/team/amit-singh-card.png";
+import mayankTeam from "@/assets/team/mayank-card.png";
+import praveenTeam from "@/assets/team/praveen.png";
+import harshavardhanTeam from "@/assets/team/harshavardhan-card.png";
+import chandrasekharTeam from "@/assets/team/chandrasekhar.png";
+import anandTeam from "@/assets/team/anand.png";
+import likhithTeam from "@/assets/team/likhith.png";
 const seoExperts = [
-  { name: "Amit Singh", role: "Co-Founder", image: amitTeam.url, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
-  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam.url, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
-  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam.url, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
-  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam.url, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
-  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam.url, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
-  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam.url, card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
-  { name: "Likhith P", role: "Video Editor", image: likhithTeam.url, card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
+  { name: "Amit Singh", role: "Co-Founder", image: amitTeam, card: "bg-[#FDE2E4]", blob: "bg-[#F9BEC7]" },
+  { name: "Mayank", role: "VP - Business Growth", image: mayankTeam, card: "bg-[#D8F3DC]", blob: "bg-[#95D5B2]" },
+  { name: "Praveen", role: "Senior Creative Manager", image: praveenTeam, card: "bg-[#E5DEFF]", blob: "bg-[#C4B5FD]" },
+  { name: "Harshavardhan", role: "Graphic Designer", image: harshavardhanTeam, card: "bg-[#D7E3FC]", blob: "bg-[#A5C4F3]" },
+  { name: "G. Chandrasekhar", role: "Team Leader - Digital Marketing", image: chandrasekharTeam, card: "bg-[#FFE5D9]", blob: "bg-[#FFC8A2]" },
+  { name: "Anand Kumar", role: "Performance Marketing Manager", image: anandTeam, card: "bg-[#CFF7E5]", blob: "bg-[#7FE3C0]" },
+  { name: "Likhith P", role: "Video Editor", image: likhithTeam, card: "bg-[#FCE1F0]", blob: "bg-[#F5A8D0]" },
 ];
 
 const industries = [

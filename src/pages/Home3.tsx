@@ -20,15 +20,14 @@ import bhrighuLogo from "@/assets/clients/bhrighu-academy.png";
 import smrLogo from "@/assets/clients/smr-university.png";
 import atriaLogo from "@/assets/clients/atria-institute.png";
 import { ClientLogoChips, logoGroups } from "@/components/landing/ClientLogoChips";
-import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
-import mayankTeamJson from "@/assets/team/mayank.png.asset.json";
-import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
-import harshavardhanTeamJson from "@/assets/team/harshavardhan.png.asset.json";
-
-const amitTeam = amitTeamJson.url;
-const mayankTeam = mayankTeamJson.url;
-const praveenTeam = praveenTeamJson.url;
-const harshavardhanTeam = harshavardhanTeamJson.url;
+import amitTeamJson from "@/assets/team/amit-singh-card.png";
+import mayankTeamJson from "@/assets/team/mayank-card.png";
+import praveenTeamJson from "@/assets/team/praveen.png";
+import harshavardhanTeamJson from "@/assets/team/harshavardhan-card.png";
+const amitTeam = amitTeamJson;
+const mayankTeam = mayankTeamJson;
+const praveenTeam = praveenTeamJson;
+const harshavardhanTeam = harshavardhanTeamJson;
 
 const BlogSection = lazy(() => import("@/components/landing/BlogSection").then((m) => ({ default: m.BlogSection })));
 

@@ -6,11 +6,10 @@ import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import furnitureImage from "@/assets/ecommerce-seo-case-study.jpg";
 import mamaearthLogo from "@/assets/clients/mamaearth-transparent.png";
-import amitTeamJson from "@/assets/team/amit-singh.png.asset.json";
-import praveenTeamJson from "@/assets/team/praveen.png.asset.json";
-
-const amitTeam = amitTeamJson.url;
-const praveenTeam = praveenTeamJson.url;
+import amitTeamJson from "@/assets/team/amit-singh-card.png";
+import praveenTeamJson from "@/assets/team/praveen.png";
+const amitTeam = amitTeamJson;
+const praveenTeam = praveenTeamJson;
 import trafficGrowthChart from "@/assets/case-study/traffic-growth-chart.jpg";
 import keywordRankingsDashboard from "@/assets/case-study/keyword-rankings-dashboard.jpg";
 import organicClicksChart from "@/assets/case-study/organic-clicks-chart.jpg";

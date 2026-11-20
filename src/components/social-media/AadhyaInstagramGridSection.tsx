@@ -2,26 +2,25 @@ import { useState } from "react";
 import { Instagram, X, Grid3X3, Heart, MessageCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import img1 from "@/assets/aadhya/Image-99466.jpg.asset.json";
-import img2 from "@/assets/aadhya/Image-62648.jpg.asset.json";
-import img3 from "@/assets/aadhya/Image-31473.jpg.asset.json";
-import img4 from "@/assets/aadhya/Image-66544.jpg.asset.json";
-import img5 from "@/assets/aadhya/Image-70417.jpg.asset.json";
-import img6 from "@/assets/aadhya/Image-94784.jpg.asset.json";
-import img7 from "@/assets/aadhya/Image-64603.jpg.asset.json";
-import img8 from "@/assets/aadhya/Image-26729.jpg.asset.json";
-import img9 from "@/assets/aadhya/Image-45795.jpg.asset.json";
-
+import img1 from "@/assets/aadhya/Image-99466.jpg";
+import img2 from "@/assets/aadhya/Image-62648.jpg";
+import img3 from "@/assets/aadhya/Image-31473.jpg";
+import img4 from "@/assets/aadhya/Image-66544.jpg";
+import img5 from "@/assets/aadhya/Image-70417.jpg";
+import img6 from "@/assets/aadhya/Image-94784.jpg";
+import img7 from "@/assets/aadhya/Image-64603.jpg";
+import img8 from "@/assets/aadhya/Image-26729.jpg";
+import img9 from "@/assets/aadhya/Image-45795.jpg";
 const posts = [
-  { src: img1.url, caption: "2D vs 3D vs CGI — which does your brand need?" },
-  { src: img2.url, caption: "Campa Cola — nostalgia has never looked this good." },
-  { src: img3.url, caption: "Zero guess work — every frame is intentional." },
-  { src: img4.url, caption: "5 things brands believe about animation that aren't true." },
-  { src: img5.url, caption: "International Labour Day — Happy May Day." },
-  { src: img6.url, caption: "CAT — built to move the earth, animated to move the market." },
-  { src: img7.url, caption: "Anamorphic content — here's the science behind it." },
-  { src: img8.url, caption: "Here's what the brief needs." },
-  { src: img9.url, caption: "Happy Onam — a joyful and prosperous year ahead." },
+  { src: img1, caption: "2D vs 3D vs CGI — which does your brand need?" },
+  { src: img2, caption: "Campa Cola — nostalgia has never looked this good." },
+  { src: img3, caption: "Zero guess work — every frame is intentional." },
+  { src: img4, caption: "5 things brands believe about animation that aren't true." },
+  { src: img5, caption: "International Labour Day — Happy May Day." },
+  { src: img6, caption: "CAT — built to move the earth, animated to move the market." },
+  { src: img7, caption: "Anamorphic content — here's the science behind it." },
+  { src: img8, caption: "Here's what the brief needs." },
+  { src: img9, caption: "Happy Onam — a joyful and prosperous year ahead." },
 ];
 
 export const AadhyaInstagramGridSection = () => {

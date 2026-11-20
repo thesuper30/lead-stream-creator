@@ -19,3 +19,4 @@
 - Careers vacancies live in a data file listed on a page-scoped Careers page, so roles can be added or removed without layout edits.
 - Every website form submits through `submitFormToGoogleSheets` (src/hooks/useFormSubmit.ts), which attaches `getTrackingFields()` and posts to the `submit-form-to-sheet` function that forwards to the Apps Script URL secret; never post to Apps Script from the browser, so the sheet link stays private and every row carries the same tracking columns.
 - Page titles, descriptions, keywords and OG/Twitter text live in src/data/seoMeta.json and render through PageSeo (src/components/seo/PageSeo.tsx); service templates prefer it over their config, so crawler HTML and in-browser tags always match the SEO sheet.
+- Site images are imported as real files from src/assets (no .asset.json CDN pointers in code), so the site builds and serves identically on Vercel or any other host.

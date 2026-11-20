@@ -1,34 +1,33 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import amitImg from "@/assets/team/amit-singh.png.asset.json";
-import mayankImg from "@/assets/team/mayank.png.asset.json";
-import praveenImg from "@/assets/team/praveen.png.asset.json";
-import harshavardhanImg from "@/assets/team/harshavardhan.png.asset.json";
-import chandrasekharImg from "@/assets/team/chandrasekhar.png.asset.json";
-import anandImg from "@/assets/team/anand.png.asset.json";
-import likhithImg from "@/assets/team/likhith.png.asset.json";
-import sujeetImg from "@/assets/team/sujeet.png.asset.json";
-import swanandImg from "@/assets/team/swanand.png.asset.json";
-import madhuImg from "@/assets/team/madhu.png.asset.json";
-import anushImg from "@/assets/team/anush.png.asset.json";
-import abhishekImg from "@/assets/team/abhishek.png.asset.json";
-import azarudheenImg from "@/assets/team/azarudheen.png.asset.json";
-
+import amitImg from "@/assets/team/amit-singh-card.png";
+import mayankImg from "@/assets/team/mayank-card.png";
+import praveenImg from "@/assets/team/praveen.png";
+import harshavardhanImg from "@/assets/team/harshavardhan-card.png";
+import chandrasekharImg from "@/assets/team/chandrasekhar.png";
+import anandImg from "@/assets/team/anand.png";
+import likhithImg from "@/assets/team/likhith.png";
+import sujeetImg from "@/assets/team/sujeet-card.png";
+import swanandImg from "@/assets/team/swanand-card.png";
+import madhuImg from "@/assets/team/madhu-card.png";
+import anushImg from "@/assets/team/anush-card.png";
+import abhishekImg from "@/assets/team/abhishek-card.png";
+import azarudheenImg from "@/assets/team/azarudheen.png";
 const teamMembers = [
-  { name: "Amit Singh", expertise: "Co-Founder", image: amitImg.url, card: "bg-[#FDE2E4]" },
-  { name: "Mayank", expertise: "VP - Business Growth", image: mayankImg.url, card: "bg-[#D8F3DC]" },
-  { name: "Praveen", expertise: "Senior Creative Manager", image: praveenImg.url, card: "bg-[#E5DEFF]" },
-  { name: "Harshavardhan", expertise: "Graphic Designer", image: harshavardhanImg.url, card: "bg-[#D7E3FC]" },
-  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", image: chandrasekharImg.url, card: "bg-[#FFE5D9]" },
-  { name: "Anand Kumar", expertise: "Performance Marketing Manager", image: anandImg.url, card: "bg-[#CFF7E5]" },
-  { name: "Likhith P", expertise: "Video Editor", image: likhithImg.url, card: "bg-[#FCE1F0]" },
-  { name: "Sujeet", expertise: "AI/ML SEO Specialist", image: sujeetImg.url, card: "bg-[#D8F3DC]" },
-  { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", image: swanandImg.url, card: "bg-[#FFF3C4]" },
-  { name: "Madhu", expertise: "E-commerce SEO Expert", image: madhuImg.url, card: "bg-[#CFF7E5]" },
-  { name: "Anush", expertise: "Google Ads Certified, ROI Expert", image: anushImg.url, card: "bg-[#FCE1F0]" },
-  { name: "Abhishek", expertise: "React & Node.js Expert", image: abhishekImg.url, card: "bg-[#FDE2E4]" },
-  { name: "Azarudheen", expertise: "UI/UX & Creative Design", image: azarudheenImg.url, card: "bg-[#D8F3DC]" },
+  { name: "Amit Singh", expertise: "Co-Founder", image: amitImg, card: "bg-[#FDE2E4]" },
+  { name: "Mayank", expertise: "VP - Business Growth", image: mayankImg, card: "bg-[#D8F3DC]" },
+  { name: "Praveen", expertise: "Senior Creative Manager", image: praveenImg, card: "bg-[#E5DEFF]" },
+  { name: "Harshavardhan", expertise: "Graphic Designer", image: harshavardhanImg, card: "bg-[#D7E3FC]" },
+  { name: "G. Chandrasekhar", expertise: "Team Leader - Digital Marketing", image: chandrasekharImg, card: "bg-[#FFE5D9]" },
+  { name: "Anand Kumar", expertise: "Performance Marketing Manager", image: anandImg, card: "bg-[#CFF7E5]" },
+  { name: "Likhith P", expertise: "Video Editor", image: likhithImg, card: "bg-[#FCE1F0]" },
+  { name: "Sujeet", expertise: "AI/ML SEO Specialist", image: sujeetImg, card: "bg-[#D8F3DC]" },
+  { name: "Swanand", expertise: "PPC Specialist, Meta & Google Certified", image: swanandImg, card: "bg-[#FFF3C4]" },
+  { name: "Madhu", expertise: "E-commerce SEO Expert", image: madhuImg, card: "bg-[#CFF7E5]" },
+  { name: "Anush", expertise: "Google Ads Certified, ROI Expert", image: anushImg, card: "bg-[#FCE1F0]" },
+  { name: "Abhishek", expertise: "React & Node.js Expert", image: abhishekImg, card: "bg-[#FDE2E4]" },
+  { name: "Azarudheen", expertise: "UI/UX & Creative Design", image: azarudheenImg, card: "bg-[#D8F3DC]" },
 ];
 
 const TeamCard = ({ member }: { member: typeof teamMembers[0] }) => (
