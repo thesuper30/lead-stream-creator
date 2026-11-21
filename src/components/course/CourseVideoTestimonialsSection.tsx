@@ -130,7 +130,7 @@ const VideoCard = ({ testimonial, isHovered, onHover }: VideoCardProps) => {
       {/* Video/Thumbnail Container */}
       <div className="relative aspect-[9/12] overflow-hidden">
         {/* Thumbnail */}
-        <img
+        <img loading="lazy" decoding="async"
           src={testimonial.thumbnail}
           alt={testimonial.name}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
@@ -139,7 +139,7 @@ const VideoCard = ({ testimonial, isHovered, onHover }: VideoCardProps) => {
         />
         
         {/* Video */}
-        <video
+        <video preload="none"
           ref={videoRef}
           src={testimonial.video}
           muted={isMuted}

@@ -130,7 +130,7 @@ export const Footer = forwardRef<HTMLElement>((props, ref) => {
           {/* Column 1: Company Branding */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/homepage" className="flex items-center mb-4 group">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={super30FooterLogo} 
                 alt="The Super 30 — AI SEO Agency Bangalore" 
                 className="h-8 w-auto group-hover:scale-105 transition-transform duration-300"

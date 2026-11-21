@@ -103,7 +103,7 @@ export const ProjectShowcaseSection = () => {
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
                 </div>
                 {/* Screenshot */}
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={project.image} 
                   alt={project.title}
                   className="w-full aspect-[16/10] object-cover object-top rounded-sm"

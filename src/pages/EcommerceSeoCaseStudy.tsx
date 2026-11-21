@@ -83,7 +83,7 @@ export default function EcommerceSeoCaseStudy() {
               <p className="max-w-xs text-sm leading-relaxed text-study-ink/60">From search visibility to purchase intent. The campaign, at a glance.</p>
             </div>
             <div className="case-brand-intro mb-8 flex flex-col items-start gap-6 border p-7 sm:flex-row sm:items-center sm:gap-10 sm:p-8">
-              <img src={mamaearthLogo} alt="Mamaearth" width={240} height={44} className="h-9 w-auto shrink-0 sm:h-11" />
+              <img loading="lazy" decoding="async" src={mamaearthLogo} alt="Mamaearth" width={240} height={44} className="h-9 w-auto shrink-0 sm:h-11" />
               <p className="text-sm leading-relaxed text-study-ink/70 sm:text-[15px]">Mamaearth is an Indian personal-care brand built on toxin-free, naturally derived formulas for skin, hair and baby care. Founded in 2016, it grew from a single online store into a multi-category consumer brand sold across its own website, marketplaces and modern retail. Today it competes in one of India's most crowded, high-intent search categories.</p>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

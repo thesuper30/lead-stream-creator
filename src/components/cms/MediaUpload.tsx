@@ -133,7 +133,7 @@ export const MediaUpload = ({ value, onChange, accept = "image/*", preview = tru
       {value && (
         <div className="relative">
           {preview && (
-            <img src={value} alt="Media preview" className="rounded-md w-full aspect-video object-cover" />
+            <img loading="lazy" decoding="async" src={value} alt="Media preview" className="rounded-md w-full aspect-video object-cover" />
           )}
           <div className="mt-1 flex items-center gap-2">
             <p className="text-xs text-muted-foreground break-all flex-1">{value}</p>

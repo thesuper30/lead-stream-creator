@@ -151,7 +151,7 @@ export const CaseStudyPopup = ({
             <div className="flex items-center gap-4">
               {logo && (
                 <div className="w-16 h-16 rounded-xl overflow-hidden bg-white shadow-lg">
-                  <img src={logo} alt={brandName} className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={logo} alt={brandName} className="w-full h-full object-cover" />
                 </div>
               )}
               <div>

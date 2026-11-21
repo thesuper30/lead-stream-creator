@@ -472,13 +472,13 @@ const Audit = () => {
       )}
       <Badge variant="secondary" className="text-xs flex items-center gap-1.5">
         Powered by
-        <img 
+        <img loading="lazy" decoding="async" 
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
           alt="Google" 
           className="h-4 w-auto"
         />
         <span className="text-muted-foreground">+</span>
-        <img 
+        <img loading="lazy" decoding="async" 
           src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" 
           alt="Gemini" 
           className="h-4 w-auto"

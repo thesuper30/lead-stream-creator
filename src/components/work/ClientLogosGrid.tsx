@@ -64,7 +64,7 @@ export const ClientLogosGrid = () => {
                 className="group bg-background border border-border/50 rounded-xl p-6 md:p-8 flex flex-col items-center justify-center hover:border-orange-500/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={company.logo} 
                   alt={company.name}
                   className="h-12 md:h-16 w-auto object-contain mb-3"

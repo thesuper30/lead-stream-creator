@@ -239,7 +239,7 @@ const HoverVideo = ({ src, poster }: { src: string; poster?: string }) => {
       <CardContent className="p-0">
         <div className="aspect-[9/16] overflow-hidden relative group">
           {poster && (
-            <img
+            <img loading="lazy" decoding="async"
               src={poster}
               alt=""
               className={`absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-300 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
@@ -353,7 +353,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false, dark = false }: 
                 className={`flex items-center justify-center overflow-hidden transition-colors duration-500 ${homePreview ? "h-32" : "h-44"}`}
                 style={{ backgroundColor: client.bgColor || undefined }}
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={client.logo}
                   alt={client.name}
                   className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ${homePreview ? "p-4" : "p-6"}`}
@@ -400,7 +400,7 @@ const BentoClientGrid = ({ clients, limit, homePreview = false, dark = false }: 
       <Dialog open={reportOpen} onOpenChange={setReportOpen}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-2 bg-background border-border/30">
           {reportImg && (
-            <img src={reportImg} alt="SEO Report" className="w-full h-auto rounded-lg" />
+            <img loading="lazy" decoding="async" src={reportImg} alt="SEO Report" className="w-full h-auto rounded-lg" />
           )}
         </DialogContent>
       </Dialog>

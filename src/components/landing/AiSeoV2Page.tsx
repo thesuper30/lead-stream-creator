@@ -184,7 +184,7 @@ export const AiSeoV2Page = () => {
           <Mesh />
           <div className="container relative mx-auto px-4 pb-14 pt-20 text-center sm:px-6 md:pt-28 lg:px-8">
             <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-primary-foreground/10 bg-primary-foreground/5 py-1.5 pl-1.5 pr-4 text-sm text-primary-foreground/85">
-              <span className="flex -space-x-2">{clientLogos.slice(0, 3).map((c) => <span key={c.name} className="flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-foreground bg-background"><img src={c.src} alt="" className="h-5 w-5 object-contain" /></span>)}</span>
+              <span className="flex -space-x-2">{clientLogos.slice(0, 3).map((c) => <span key={c.name} className="flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-foreground bg-background"><img loading="lazy" decoding="async" src={c.src} alt="" className="h-5 w-5 object-contain" /></span>)}</span>
               Technical SEO • Local SEO • AI Search • Authority
             </div>
             <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-semibold leading-[1.08] text-primary-foreground sm:text-6xl lg:text-7xl">

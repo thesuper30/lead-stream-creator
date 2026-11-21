@@ -202,7 +202,7 @@ export const CourseSocialProofSection = () => {
                   {/* Profile */}
                   <div className="flex items-center gap-3">
                     <div className="relative shrink-0">
-                      <img 
+                      <img loading="lazy" decoding="async" 
                         src={testimonial.image} 
                         alt={testimonial.name}
                         className="w-11 h-11 rounded-full border-2 border-[hsl(var(--brand-orange))]/30 object-cover group-hover:scale-110 group-hover:border-[hsl(var(--brand-orange))]/60 transition-all duration-300"

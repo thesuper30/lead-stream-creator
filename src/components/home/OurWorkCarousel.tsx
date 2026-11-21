@@ -58,7 +58,7 @@ export const OurWorkCarousel = () => {
             >
               <CardContent className="p-0">
                 <div className="flex items-center justify-center h-44 bg-muted/30 border-b border-border/20 p-6">
-                  <img src={client.logo} alt={client.name} className="max-h-20 max-w-[70%] object-contain" />
+                  <img loading="lazy" decoding="async" src={client.logo} alt={client.name} className="max-h-20 max-w-[70%] object-contain" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-base text-foreground">{client.name}</h3>

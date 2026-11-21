@@ -125,7 +125,7 @@ export const AadhyaInstagramGridSection = () => {
             <X className="w-5 h-5" />
           </button>
           <figure className="max-w-md w-full" onClick={(e) => e.stopPropagation()}>
-            <img
+            <img loading="lazy" decoding="async"
               src={posts[active].src}
               alt={posts[active].caption}
               className="w-full rounded-xl shadow-2xl max-h-[75vh] object-contain bg-card"

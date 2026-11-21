@@ -81,13 +81,13 @@ const VideoCard = ({ video, isHovered, onHover, onLeave, index }: VideoCardProps
       onMouseLeave={onLeave}
     >
       <div className="aspect-[9/16] relative bg-black/50">
-        <img 
+        <img loading="lazy" decoding="async" 
           src={video.thumbnail} 
           alt={`${video.name} testimonial`}
           className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${isHovered ? 'opacity-0 scale-110' : 'opacity-100 scale-100'}`}
         />
         
-        <video
+        <video preload="none"
           ref={videoRef}
           src={video.video}
           muted={isMuted}

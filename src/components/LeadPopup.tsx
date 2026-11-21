@@ -122,7 +122,7 @@ const LeadPopup = () => {
 
         {/* Left: image with text */}
         <div className="relative hidden md:block">
-          <img
+          <img loading="lazy" decoding="async"
             src={popupImage}
             alt="The Super 30 team planning a client growth strategy"
             className="absolute inset-0 w-full h-full object-cover"

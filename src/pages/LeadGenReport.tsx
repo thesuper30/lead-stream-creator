@@ -384,7 +384,7 @@ const LeadGenReport = () => {
               className="w-24 h-24 md:w-32 md:h-32 rounded-2xl border border-border/30 shrink-0 flex items-center justify-center p-4 shadow-sm"
               style={{ backgroundColor: client.bgColor }}
             >
-              <img src={client.logo} alt={client.name} className="w-full h-full object-contain" />
+              <img loading="lazy" decoding="async" src={client.logo} alt={client.name} className="w-full h-full object-contain" />
             </div>
             <div className="flex-1">
               <div className="inline-flex items-center gap-1.5 bg-brand/10 text-brand px-3 py-1 rounded-full text-xs font-semibold mb-3">

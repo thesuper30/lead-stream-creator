@@ -157,7 +157,7 @@ const Lightbox = ({ item, currentIndex, totalItems, allItems, onClose, onPrev, o
         )}
 
         {item.type === 'image' ? (
-          <img
+          <img loading="lazy" decoding="async"
             src={item.src}
             alt={item.caption}
             className={`w-full h-auto max-h-[60vh] object-contain rounded-xl transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
@@ -165,7 +165,7 @@ const Lightbox = ({ item, currentIndex, totalItems, allItems, onClose, onPrev, o
           />
         ) : (
           <div className="relative">
-            <video
+            <video preload="none"
               ref={videoRef}
               src={item.src}
               muted={isMuted}
@@ -216,7 +216,7 @@ const Lightbox = ({ item, currentIndex, totalItems, allItems, onClose, onPrev, o
                 : 'border-transparent opacity-60 hover:opacity-100'
             }`}
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={thumbItem.type === 'video' ? thumbItem.thumbnail : thumbItem.src} 
               alt={thumbItem.caption}
               className="w-full h-full object-cover" 
@@ -289,7 +289,7 @@ const GalleryTile = ({ item, isHovered, onHover, onClick }: GalleryTileProps) =>
 
       {/* Video (hidden until hover) */}
       {item.type === 'video' && (
-        <video
+        <video preload="none"
           ref={videoRef}
           src={item.src}
           muted={isMuted}

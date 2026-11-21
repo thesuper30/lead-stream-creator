@@ -149,7 +149,7 @@ export const EnquiryPopup = ({ open, onOpenChange }: EnquiryPopupProps) => {
       <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-xl border border-border/40 shadow-2xl rounded-2xl p-6 sm:p-8">
         {/* Brand mark */}
         <div className="flex items-center justify-center mx-auto">
-          <img
+          <img loading="lazy" decoding="async"
             src={super30Logo}
             alt="Super30"
             className="h-9 w-auto sm:h-10"

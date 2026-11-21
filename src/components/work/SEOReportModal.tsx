@@ -70,7 +70,7 @@ export const SEOReportModal = ({ open, onOpenChange, companyName, logo }: SEORep
             REPORT PERIOD — JAN 1 TO MAR 25, 2026
           </div>
           <div className="flex items-center gap-4 mb-3">
-            {logo && <img src={logo} alt={companyName} className="h-10 w-auto object-contain" />}
+            {logo && <img loading="lazy" decoding="async" src={logo} alt={companyName} className="h-10 w-auto object-contain" />}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
               SEO Work <span className="text-brand italic">Conducted</span>
             </h2>
